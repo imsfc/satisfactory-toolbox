@@ -7,7 +7,7 @@ hero:
   text: 生产规划、资料查询
   tagline: 专为提升《幸福工厂》游戏体验而设计
   image:
-    src: /assets/logo.png
+    src: /logo.webp
     alt: 幸福工厂工具箱
   actions:
     - theme: brand
