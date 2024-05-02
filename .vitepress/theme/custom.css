@@ -1,0 +1,28 @@
+:root {
+  --c-amber-50: #fffbeb;
+  --c-amber-100: #fef3c7;
+  --c-amber-200: #fde68a;
+  --c-amber-300: #fcd34d;
+  --c-amber-400: #fbbf24;
+  --c-amber-500: #f59e0b;
+  --c-amber-600: #d97706;
+  --c-amber-700: #b45309;
+  --c-amber-800: #92400e;
+  --c-amber-900: #78350f;
+  --c-amber-950: #451a03;
+
+  --vp-c-brand-1: var(--c-amber-500);
+  --vp-c-brand-2: var(--c-amber-400);
+  --vp-c-brand-3: var(--c-amber-300);
+
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    var(--c-amber-600) 30%,
+    var(--c-amber-300)
+  );
+
+  --vp-button-brand-bg: var(--c-amber-500);
+  --vp-button-brand-hover-bg: var(--c-amber-600);
+  --vp-button-brand-active-bg: var(--c-amber-700);
+}
