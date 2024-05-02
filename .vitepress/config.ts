@@ -11,17 +11,29 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/assets/logo.png',
 
-    nav: [{ text: '例子', link: '/markdown-examples' }],
-
-    sidebar: [
+    nav: [
       {
-        text: '例子',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
+        text: '游戏资料',
+        link: '/game-info/',
+        activeMatch: '/game-info/',
       },
     ],
+
+    sidebar: {
+      '/game-info/': {
+        base: '/game-info',
+        items: [
+          {
+            text: '游戏资源',
+            items: [],
+          },
+          {
+            text: '游戏进程',
+            items: [],
+          },
+        ],
+      },
+    },
 
     outline: {
       label: '页面导航',
@@ -32,10 +44,11 @@ export default defineConfig({
       next: false,
     },
 
-    darkModeSwitchLabel: '主题',
-    darkModeSwitchTitle: '切换到深色模式',
-    lightModeSwitchTitle: '切换到浅色模式',
-    sidebarMenuLabel: '菜单',
+    langMenuLabel: '多语言',
     returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '主题',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
   },
 })
