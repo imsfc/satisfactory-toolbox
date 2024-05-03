@@ -69,7 +69,12 @@ export default defineConfig({
           },
           {
             text: '游戏进程',
-            items: [],
+            items: [
+              {
+                text: '项目组装阶段',
+                link: '/project-assembly-phases',
+              },
+            ],
           },
         ],
       },
