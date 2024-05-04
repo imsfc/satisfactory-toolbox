@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getImages } from './image'
+import { getImage } from './image'
 
 const props = defineProps<{
   srcName: string
@@ -10,13 +10,13 @@ const props = defineProps<{
   height?: number
 }>()
 
-const images = getImages(props.srcName, props.srcWidth, props.srcHeight)
+const image = getImage(props.srcName, props.srcWidth, props.srcHeight)
 </script>
 
 <template>
   <img
-    :src="images[0]"
-    :srcset="images.join(', ')"
+    :src="image.src"
+    :srcset="image.srcset"
     :alt="alt"
     :width="width"
     :height="height"

@@ -9,7 +9,7 @@ export function resolveKey(
   return [name, width ?? '', height ?? '', format ?? ''].join('_')
 }
 
-function getImage(
+function _getImage(
   name: string,
   width?: number,
   height?: number,
@@ -19,17 +19,20 @@ function getImage(
   return imageMap.get(key)
 }
 
-export function getImages(name: string, width?: number, height?: number) {
-  const ret = []
-  const webp = getImage(name, width, height, 'webp')
-  if (webp) {
-    ret.push(webp)
-  }
-  const avif = getImage(name, width, height, 'avif')
+export function getImage(name: string, width?: number, height?: number) {
+  const list: string[] = []
+  const avif = _getImage(name, width, height, 'avif')
   if (avif) {
-    ret.push(avif)
+    list.push(avif)
   }
-  return ret
+  const webp = _getImage(name, width, height, 'webp')
+  if (webp) {
+    list.push(webp)
+  }
+  return {
+    src: webp || avif,
+    srcset: list.join(', '),
+  }
 }
 
 function addImages(
