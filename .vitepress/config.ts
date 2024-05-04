@@ -104,6 +104,14 @@ export default defineConfig({
     darkModeSwitchLabel: '主题',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
+
+    notFound: {
+      title: '找不到页面？我也是！',
+      quote:
+        '别担心，你并不是唯一一个找不到页面的人。让我们一起探索其他奇妙的地方吧！',
+      linkLabel: '回到首页',
+      linkText: '回到首页',
+    },
   },
   vite: {
     plugins: [imagetools()],
