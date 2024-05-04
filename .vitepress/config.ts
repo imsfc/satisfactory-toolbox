@@ -54,7 +54,7 @@ export default defineConfig({
     nav: [
       {
         text: '游戏资料',
-        link: '/game-info/',
+        link: '/game-info/buildings',
         activeMatch: '/game-info/',
       },
     ],
