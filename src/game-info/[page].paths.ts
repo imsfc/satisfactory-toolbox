@@ -22,7 +22,6 @@ const pages = new Map<string, string>()
         })
     }
   }
-  console.log(content)
   pages.set('buildings', content)
 }
 
