@@ -65,7 +65,16 @@ export default defineConfig({
         items: [
           {
             text: '游戏资源',
-            items: [],
+            items: [
+              {
+                text: '建筑',
+                link: '/buildings',
+              },
+              {
+                text: '物品',
+                link: '/items',
+              },
+            ],
           },
           {
             text: '游戏进程',

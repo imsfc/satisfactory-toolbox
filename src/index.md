@@ -15,7 +15,7 @@ hero:
       link: /
     - theme: alt
       text: 游戏资料
-      link: /game-info/
+      link: /game-info/buildings
 
 features:
   - icon: 🏭
