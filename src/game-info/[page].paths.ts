@@ -16,9 +16,12 @@ const pages = new Map<string, string>()
       content += `\n## ${category}\n`
       buildings
         .filter((building) => building.category === category)
-        .forEach(({ name, description }) => {
+        .forEach(({ name, image, description }) => {
           content += `\n### ${name}\n`
-          content += `\n${description.replace(/\n/g, '  \n')}\n`
+          content += `\n<p style="display: flex">\
+          <Image style="width: 128px; height: 128px" srcName="${image}" :width="128" :height="128" />\
+          <div>${description.replace(/\n/g, '<br>')}</div>\
+          </p>\n`
         })
     }
   }
@@ -39,7 +42,7 @@ const pages = new Map<string, string>()
         .filter((building) => building.category === category)
         .forEach(({ name, description }) => {
           content += `\n### ${name}\n`
-          content += `\n${description.replace(/\n+/, '\n\n')}\n`
+          content += `\n${description.replace(/\n/, '<br>')}\n`
         })
     }
   }
