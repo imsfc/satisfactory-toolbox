@@ -18,10 +18,10 @@ const pages = new Map<string, string>()
         .filter((building) => building.category === category)
         .forEach(({ name, image, description }) => {
           content += `\n### ${name}\n`
-          content += `\n<p style="display: flex">\
-          <Image style="width: 128px; height: 128px" srcName="${image}" :width="128" :height="128" />\
-          <div>${description.replace(/\n/g, '<br>')}</div>\
-          </p>\n`
+          content += `\n<div style="display: flex">`
+          content += `<Image style="width: 128px; height: 128px" srcName="${image}" :width="128" :height="128" />`
+          content += `<div>${description.replace(/\n/g, '<br>')}</div>`
+          content += `</div>\n`
         })
     }
   }

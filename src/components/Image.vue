@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { getImage } from './image'
 
 const props = defineProps<{
@@ -10,7 +11,9 @@ const props = defineProps<{
   height?: number
 }>()
 
-const image = getImage(props.srcName, props.srcWidth, props.srcHeight)
+const image = computed(() =>
+  getImage(props.srcName, props.srcWidth, props.srcHeight),
+)
 </script>
 
 <template>

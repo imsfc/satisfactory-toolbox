@@ -47,6 +47,8 @@ export default defineConfig({
   srcDir: 'src',
   cleanUrls: true,
   lastUpdated: false,
+  metaChunk: true,
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.webp',
