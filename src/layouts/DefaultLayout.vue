@@ -1,16 +1,20 @@
 <script setup lang="ts">
-import { NLayout, NLayoutHeader, NLayoutContent } from 'naive-ui'
+import { NLayout, NLayoutHeader, NLayoutContent, NText } from 'naive-ui'
 </script>
 
 <template>
-  <NLayout style="height: 100vh">
-    <NLayoutHeader style="height: 64px" bordered>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
+  <NLayout class="layout">
+    <NLayoutHeader class="header" style="height: 64px" bordered>
+      <NText class="logo">
+        <img src="@/assets/logo.png" />
+        <span>幸福工厂小助手</span>
+      </NText>
+      <div></div>
+      <div></div>
     </NLayoutHeader>
 
     <NLayoutContent
-      style="top: 64px; bottom: 0"
+      class="content"
       position="absolute"
       :native-scrollbar="false"
     >
@@ -18,3 +22,33 @@ import { NLayout, NLayoutHeader, NLayoutContent } from 'naive-ui'
     </NLayoutContent>
   </NLayout>
 </template>
+
+<style scoped>
+.layout {
+  height: 100vh;
+}
+.header {
+  padding: 0 32px;
+  height: 64px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 240px 1fr auto;
+}
+.header .logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+}
+.header .logo img {
+  margin-right: 12px;
+  width: 32px;
+  height: 32px;
+}
+.content {
+  top: 64px;
+  bottom: 0;
+}
+</style>
