@@ -10,7 +10,9 @@ import { NLayout, NLayoutHeader, NLayoutContent, NText } from 'naive-ui'
         <span>幸福工厂小助手</span>
       </NText>
       <div></div>
-      <div></div>
+      <div>
+        <NText>v0.1</NText>
+      </div>
     </NLayoutHeader>
 
     <NLayoutContent
