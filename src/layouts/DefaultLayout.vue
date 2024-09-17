@@ -15,6 +15,7 @@ import { NLayout, NLayoutHeader, NLayoutContent, NText } from 'naive-ui'
 
     <NLayoutContent
       class="content"
+      content-style="padding: 24px 32px"
       position="absolute"
       :native-scrollbar="false"
     >
