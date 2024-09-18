@@ -1,4 +1,5 @@
 import { computed, defineComponent, ref } from 'vue'
+import { useClipboard, useWindowSize } from '@vueuse/core'
 import {
   NButton,
   NDataTable,
@@ -11,9 +12,7 @@ import {
 
 import ShowOrEdit from '@/components/ShowOrEdit'
 import type { Item } from '@/types'
-
 import { items } from '@/data/items'
-import { useClipboard, useWindowSize } from '@vueuse/core'
 
 const columns: DataTableColumns<Item> = [
   {
