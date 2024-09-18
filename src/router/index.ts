@@ -26,6 +26,10 @@ if (import.meta.env.DEV) {
         path: 'items',
         component: () => import('@/views/dev/ItemsView'),
       },
+      {
+        path: 'buildings',
+        component: () => import('@/views/dev/BuildingsView'),
+      },
     ],
   })
 }
