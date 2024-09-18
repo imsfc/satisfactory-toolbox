@@ -30,7 +30,7 @@ export interface Recipe {
   input: ItemAmount[]
   output: ItemAmount[]
   producedIn: Id
-  duration: number
+  producedInTime: number
 }
 
 export interface Building {
