@@ -72,6 +72,7 @@ const columns: DataTableColumns<Building> = [
           onUpdateValue={(value) => {
             row.powerUsage = value ?? 0
           }}
+          size="small"
         >
           {{
             suffix: () => 'MW',
