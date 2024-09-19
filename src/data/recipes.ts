@@ -238,6 +238,58 @@ export const recipes: Recipe[] = [
     producedIn: 'Assembler',
     producedInTime: 20,
   },
+  {
+    id: 'Copper_Ingot',
+    name: '铜锭',
+    input: [{ itemId: 'Copper_Ore', amount: 1 }],
+    output: [{ itemId: 'Copper_Ingot', amount: 1 }],
+    producedIn: 'Smelter',
+    producedInTime: 2,
+  },
+  {
+    id: 'Tempered_Copper_Ingot',
+    name: '替代: 回火铜锭',
+    input: [
+      { itemId: 'Copper_Ore', amount: 5 },
+      { itemId: 'Petroleum_Coke', amount: 8 },
+    ],
+    output: [{ itemId: 'Copper_Ingot', amount: 12 }],
+    producedIn: 'Foundry',
+    producedInTime: 12,
+  },
+  {
+    id: 'Pure_Copper_Ingot',
+    name: '替代: 高纯度铜锭',
+    input: [
+      { itemId: 'Copper_Ore', amount: 6 },
+      { itemId: 'Water', amount: 4 },
+    ],
+    output: [{ itemId: 'Copper_Ingot', amount: 15 }],
+    producedIn: 'Refinery',
+    producedInTime: 24,
+  },
+  {
+    id: 'Leached_Copper_Ingot',
+    name: '替代: 滤化铜锭',
+    input: [
+      { itemId: 'Copper_Ore', amount: 9 },
+      { itemId: 'Sulfuric_Acid', amount: 5 },
+    ],
+    output: [{ itemId: 'Copper_Ingot', amount: 22 }],
+    producedIn: 'Refinery',
+    producedInTime: 12,
+  },
+  {
+    id: 'Copper_Alloy_Ingot',
+    name: '替代: 铜合金锭',
+    input: [
+      { itemId: 'Copper_Ore', amount: 5 },
+      { itemId: 'Iron_Ore', amount: 5 },
+    ],
+    output: [{ itemId: 'Copper_Ingot', amount: 10 }],
+    producedIn: 'Foundry',
+    producedInTime: 6,
+  },
 ]
 
 /**
