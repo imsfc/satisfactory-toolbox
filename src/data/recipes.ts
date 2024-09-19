@@ -353,6 +353,17 @@ export const recipes: Recipe[] = [
     producedIn: 'Assembler',
     producedInTime: 6,
   },
+  {
+    id: 'Limestone_(Sulfur)',
+    name: '石灰石（硫磺）',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 1 },
+      { itemId: 'Sulfur', amount: 2 },
+    ],
+    output: [{ itemId: 'Limestone', amount: 12 }],
+    producedIn: 'Converter',
+    producedInTime: 6,
+  },
 ]
 
 /**
