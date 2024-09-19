@@ -1,5 +1,7 @@
 export type Id = string
 
+export type PowerUsage = number | [number, number]
+
 export interface AssemblyLine {
   id: Id
   outputItemId: Id | null
@@ -31,10 +33,11 @@ export interface Recipe {
   output: ItemAmount[]
   producedIn: Id
   producedInTime: number
+  powerUsage?: PowerUsage
 }
 
 export interface Building {
   id: Id
   name: string
-  powerUsage: number
+  powerUsage: PowerUsage | 'variable'
 }

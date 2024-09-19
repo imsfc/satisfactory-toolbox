@@ -63,6 +63,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Iron_Ore', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Iron_Plate',
@@ -300,6 +301,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Copper_Ore', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Copper_Ore_(Sulfur)',
@@ -311,6 +313,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Copper_Ore', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Concrete',
@@ -363,6 +366,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Limestone', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Screw',
@@ -607,6 +611,7 @@ export const recipes: Recipe[] = [
     ],
     producedIn: 'Quantum_Encoder',
     producedInTime: 12,
+    powerUsage: [0, 2000],
   },
   {
     id: 'Steel_Ingot',
@@ -662,6 +667,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Coal', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Coal_(Limestone)',
@@ -673,6 +679,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Coal', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Charcoal',
@@ -825,6 +832,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Raw_Quartz', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Raw_Quartz_(Coal)',
@@ -836,6 +844,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Raw_Quartz', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Alien_DNA_Capsule',
@@ -877,6 +886,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Sulfur', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Sulfur_(Iron)',
@@ -888,6 +898,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Sulfur', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Fabric',
@@ -1192,6 +1203,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Caterium_Ore', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Caterium_Ore_(Quartz)',
@@ -1203,6 +1215,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Caterium_Ore', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'SAM_Fluctuator',
@@ -1962,6 +1975,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Bauxite', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Bauxite_(Copper)',
@@ -1973,6 +1987,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Bauxite', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Packaged_Alumina_Solution',
@@ -2212,6 +2227,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Nitrogen_Gas', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Nitrogen_Gas_(Caterium)',
@@ -2223,6 +2239,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Nitrogen_Gas', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Heat_Sink',
@@ -2331,6 +2348,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Uranium', amount: 12 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Electromagnetic_Control_Rod',
@@ -2411,6 +2429,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Plutonium_Pellet', amount: 30 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 60,
+    powerUsage: [250, 750],
   },
   {
     id: 'Encased_Plutonium_Cell',
@@ -2433,6 +2452,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Encased_Plutonium_Cell', amount: 20 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 120,
+    powerUsage: [250, 750],
   },
   {
     id: 'Plutonium_Fuel_Rod',
@@ -2526,6 +2546,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Nuclear_Pasta', amount: 1 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 120,
+    powerUsage: [500, 1500],
   },
   {
     id: 'Thermal_Propulsion_Rocket',
@@ -2596,6 +2617,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Ficsite_Ingot', amount: 1 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Ficsite_Ingot_(Aluminum)',
@@ -2607,6 +2629,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Ficsite_Ingot', amount: 1 }],
     producedIn: 'Converter',
     producedInTime: 2,
+    powerUsage: [100, 400],
   },
   {
     id: 'Ficsite_Ingot_(Caterium)',
@@ -2618,6 +2641,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Ficsite_Ingot', amount: 1 }],
     producedIn: 'Converter',
     producedInTime: 4,
+    powerUsage: [100, 400],
   },
   {
     id: 'Ficsite_Trigon',
@@ -2634,6 +2658,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Diamonds', amount: 1 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 2,
+    powerUsage: [250, 750],
   },
   {
     id: 'Oil-Based_Diamonds',
@@ -2642,6 +2667,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Diamonds', amount: 2 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 3,
+    powerUsage: [250, 750],
   },
   {
     id: 'Pink_Diamonds',
@@ -2653,6 +2679,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Diamonds', amount: 1 }],
     producedIn: 'Converter',
     producedInTime: 4,
+    powerUsage: [100, 400],
   },
   {
     id: 'Cloudy_Diamonds',
@@ -2664,6 +2691,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Diamonds', amount: 1 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 3,
+    powerUsage: [250, 750],
   },
   {
     id: 'Turbo_Diamonds',
@@ -2675,6 +2703,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Diamonds', amount: 3 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 3,
+    powerUsage: [250, 750],
   },
   {
     id: 'Petroleum_Diamonds',
@@ -2683,6 +2712,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Diamonds', amount: 1 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 2,
+    powerUsage: [250, 750],
   },
   {
     id: 'Time_Crystal',
@@ -2691,6 +2721,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Time_Crystal', amount: 1 }],
     producedIn: 'Converter',
     producedInTime: 10,
+    powerUsage: [100, 400],
   },
   {
     id: 'Biochemical_Sculptor',
@@ -2711,6 +2742,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Dark_Matter_Residue', amount: 10 }],
     producedIn: 'Converter',
     producedInTime: 6,
+    powerUsage: [100, 400],
   },
   {
     id: 'Superposition_Oscillator',
@@ -2727,6 +2759,7 @@ export const recipes: Recipe[] = [
     ],
     producedIn: 'Quantum_Encoder',
     producedInTime: 12,
+    powerUsage: [0, 2000],
   },
   {
     id: 'Neural-Quantum_Processor',
@@ -2743,6 +2776,7 @@ export const recipes: Recipe[] = [
     ],
     producedIn: 'Quantum_Encoder',
     producedInTime: 20,
+    powerUsage: [0, 2000],
   },
   {
     id: 'AI_Expansion_Server',
@@ -2759,6 +2793,7 @@ export const recipes: Recipe[] = [
     ],
     producedIn: 'Quantum_Encoder',
     producedInTime: 15,
+    powerUsage: [0, 2000],
   },
   {
     id: 'Ficsonium_Fuel_Rod',
@@ -2775,6 +2810,7 @@ export const recipes: Recipe[] = [
     ],
     producedIn: 'Quantum_Encoder',
     producedInTime: 24,
+    powerUsage: [0, 2000],
   },
   {
     id: 'Alien_Power_Matrix',
@@ -2791,6 +2827,7 @@ export const recipes: Recipe[] = [
     ],
     producedIn: 'Quantum_Encoder',
     producedInTime: 24,
+    powerUsage: [0, 2000],
   },
   {
     id: 'Dark_Matter_Crystal',
@@ -2802,6 +2839,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Dark_Matter_Crystal', amount: 1 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 2,
+    powerUsage: [500, 1500],
   },
   {
     id: 'Dark_Matter_Trap',
@@ -2813,6 +2851,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Dark_Matter_Crystal', amount: 2 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 2,
+    powerUsage: [500, 1500],
   },
   {
     id: 'Dark_Matter_Crystallization',
@@ -2821,6 +2860,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Dark_Matter_Crystal', amount: 1 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 3,
+    powerUsage: [500, 1500],
   },
   {
     id: 'Excited_Photonic_Matter',
@@ -2829,6 +2869,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Excited_Photonic_Matter', amount: 10 }],
     producedIn: 'Converter',
     producedInTime: 3,
+    powerUsage: [100, 400],
   },
   {
     id: 'Explosive_Rebar',
@@ -2894,6 +2935,7 @@ export const recipes: Recipe[] = [
     ],
     producedIn: 'Converter',
     producedInTime: 3,
+    powerUsage: [100, 400],
   },
   {
     id: 'Nitro_Rocket_Fuel',
@@ -2981,6 +3023,7 @@ export const recipes: Recipe[] = [
     output: [{ itemId: 'Ficsonium', amount: 1 }],
     producedIn: 'Particle_Accelerator',
     producedInTime: 6,
+    powerUsage: [500, 1500],
   },
   {
     id: 'Singularity_Cell',

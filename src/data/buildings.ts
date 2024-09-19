@@ -34,17 +34,17 @@ export const buildings: Building[] = [
   {
     id: 'Particle_Accelerator',
     name: '粒子加速器',
-    powerUsage: 0,
+    powerUsage: 'variable',
   },
   {
     id: 'Converter',
     name: '转化站',
-    powerUsage: 0,
+    powerUsage: 'variable',
   },
   {
     id: 'Quantum_Encoder',
     name: '量子编码站',
-    powerUsage: 0,
+    powerUsage: 'variable',
   },
   {
     id: 'Smelter',
