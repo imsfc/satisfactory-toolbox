@@ -203,6 +203,41 @@ export const recipes: Recipe[] = [
     producedIn: 'Refinery',
     producedInTime: 8,
   },
+  {
+    id: 'Wire',
+    name: '电线',
+    input: [{ itemId: 'Copper_Ingot', amount: 1 }],
+    output: [{ itemId: 'Wire', amount: 2 }],
+    producedIn: 'Constructor',
+    producedInTime: 4,
+  },
+  {
+    id: 'Caterium_Wire',
+    name: '替代: 钦金电线',
+    input: [{ itemId: 'Caterium_Ingot', amount: 1 }],
+    output: [{ itemId: 'Wire', amount: 8 }],
+    producedIn: 'Constructor',
+    producedInTime: 4,
+  },
+  {
+    id: 'Iron_Wire',
+    name: '替代: 铁制电线',
+    input: [{ itemId: 'Iron_Ingot', amount: 5 }],
+    output: [{ itemId: 'Wire', amount: 9 }],
+    producedIn: 'Constructor',
+    producedInTime: 24,
+  },
+  {
+    id: 'Fused_Wire',
+    name: '替代: 熔合电线',
+    input: [
+      { itemId: 'Copper_Ingot', amount: 4 },
+      { itemId: 'Caterium_Ingot', amount: 1 },
+    ],
+    output: [{ itemId: 'Wire', amount: 30 }],
+    producedIn: 'Assembler',
+    producedInTime: 20,
+  },
 ]
 
 /**
