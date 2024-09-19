@@ -2842,6 +2842,172 @@ export const recipes: Recipe[] = [
     producedIn: 'Manufacturer',
     producedInTime: 12,
   },
+  {
+    id: 'Compacted_Coal',
+    name: '替代：压缩煤',
+    input: [
+      { itemId: 'Coal', amount: 5 },
+      { itemId: 'Sulfur', amount: 5 },
+    ],
+    output: [{ itemId: 'Compacted_Coal', amount: 5 }],
+    producedIn: 'Assembler',
+    producedInTime: 12,
+  },
+  {
+    id: 'Rocket_Fuel',
+    name: '火箭燃料',
+    input: [
+      { itemId: 'Turbofuel', amount: 6 },
+      { itemId: 'Nitric_Acid', amount: 1 },
+    ],
+    output: [
+      { itemId: 'Rocket_Fuel', amount: 10 },
+      { itemId: 'Compacted_Coal', amount: 1 },
+    ],
+    producedIn: 'Blender',
+    producedInTime: 6,
+  },
+  {
+    id: 'Ionized_Fuel',
+    name: '电离燃油',
+    input: [
+      { itemId: 'Rocket_Fuel', amount: 16 },
+      { itemId: 'Power_Shard', amount: 1 },
+    ],
+    output: [
+      { itemId: 'Ionized_Fuel', amount: 16 },
+      { itemId: 'Compacted_Coal', amount: 2 },
+    ],
+    producedIn: 'Refinery',
+    producedInTime: 24,
+  },
+  {
+    id: 'Dark-Ion_Fuel',
+    name: '替代：暗离子燃料',
+    input: [
+      { itemId: 'Packaged_Rocket_Fuel', amount: 12 },
+      { itemId: 'Dark_Matter_Crystal', amount: 4 },
+    ],
+    output: [
+      { itemId: 'Ionized_Fuel', amount: 10 },
+      { itemId: 'Compacted_Coal', amount: 2 },
+    ],
+    producedIn: 'Converter',
+    producedInTime: 3,
+  },
+  {
+    id: 'Nitro_Rocket_Fuel',
+    name: '替代：硝基火箭燃料',
+    input: [
+      { itemId: 'Fuel', amount: 4 },
+      { itemId: 'Nitrogen_Gas', amount: 3 },
+      { itemId: 'Sulfur', amount: 4 },
+      { itemId: 'Coal', amount: 2 },
+    ],
+    output: [
+      { itemId: 'Rocket_Fuel', amount: 6 },
+      { itemId: 'Compacted_Coal', amount: 1 },
+    ],
+    producedIn: 'Blender',
+    producedInTime: 2.4,
+  },
+  {
+    id: 'Packaged_Rocket_Fuel',
+    name: '桶装火箭燃料',
+    input: [
+      { itemId: 'Rocket_Fuel', amount: 2 },
+      { itemId: 'Empty_Fluid_Tank', amount: 1 },
+    ],
+    output: [{ itemId: 'Packaged_Rocket_Fuel', amount: 1 }],
+    producedIn: 'Packager',
+    producedInTime: 1,
+  },
+  {
+    id: 'Packaged_Ionized_Fuel',
+    name: '桶装电离燃油',
+    input: [
+      { itemId: 'Ionized_Fuel', amount: 4 },
+      { itemId: 'Empty_Fluid_Tank', amount: 2 },
+    ],
+    output: [{ itemId: 'Packaged_Ionized_Fuel', amount: 2 }],
+    producedIn: 'Packager',
+    producedInTime: 3,
+  },
+  {
+    id: 'Turbo_Rifle_Ammo',
+    name: '涡轮步枪弹',
+    input: [
+      { itemId: 'Rifle_Ammo', amount: 25 },
+      { itemId: 'Aluminum_Casing', amount: 3 },
+      { itemId: 'Turbofuel', amount: 3 },
+    ],
+    output: [{ itemId: 'Turbo_Rifle_Ammo', amount: 50 }],
+    producedIn: 'Blender',
+    producedInTime: 12,
+  },
+  {
+    id: 'Turbo_Rifle_Ammo_2',
+    name: '涡轮步枪弹2',
+    input: [
+      { itemId: 'Rifle_Ammo', amount: 25 },
+      { itemId: 'Aluminum_Casing', amount: 3 },
+      { itemId: 'Packaged_Turbofuel', amount: 3 },
+    ],
+    output: [{ itemId: 'Turbo_Rifle_Ammo', amount: 50 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 12,
+  },
+  {
+    id: 'Nuke_Nobelisk',
+    name: '核子诺氏雷筒',
+    input: [
+      { itemId: 'Nobelisk', amount: 5 },
+      { itemId: 'Encased_Uranium_Cell', amount: 20 },
+      { itemId: 'Smokeless_Powder', amount: 10 },
+      { itemId: 'AI_Limiter', amount: 6 },
+    ],
+    output: [{ itemId: 'Nuke_Nobelisk', amount: 1 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 120,
+  },
+  {
+    id: 'Ficsonium',
+    name: '镄',
+    input: [
+      { itemId: 'Plutonium_Waste', amount: 1 },
+      { itemId: 'Singularity_Cell', amount: 1 },
+      { itemId: 'Dark_Matter_Residue', amount: 20 },
+    ],
+    output: [{ itemId: 'Ficsonium', amount: 1 }],
+    producedIn: 'Particle_Accelerator',
+    producedInTime: 6,
+  },
+  {
+    id: 'Singularity_Cell',
+    name: '奇点电池',
+    input: [
+      { itemId: 'Nuclear_Pasta', amount: 1 },
+      { itemId: 'Dark_Matter_Crystal', amount: 20 },
+      { itemId: 'Iron_Plate', amount: 100 },
+      { itemId: 'Concrete', amount: 200 },
+    ],
+    output: [{ itemId: 'Singularity_Cell', amount: 10 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 60,
+  },
+  {
+    id: 'Ballistic_Warp_Drive',
+    name: '弹道跃迁引擎',
+    input: [
+      { itemId: 'Thermal_Propulsion_Rocket', amount: 1 },
+      { itemId: 'Singularity_Cell', amount: 5 },
+      { itemId: 'Superposition_Oscillator', amount: 2 },
+      { itemId: 'Dark_Matter_Crystal', amount: 40 },
+    ],
+    output: [{ itemId: 'Ballistic_Warp_Drive', amount: 1 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 60,
+  },
 ]
 
 /**
