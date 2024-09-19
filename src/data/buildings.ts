@@ -18,7 +18,7 @@ export const buildings: Building[] = [
   },
   {
     id: 'Packager',
-    name: '罐装站',
+    name: '灌装站',
     powerUsage: 10,
   },
   {
