@@ -2,7 +2,7 @@ import { defineComponent, type PropType } from 'vue'
 import { NFlex, NSelect, type SelectRenderLabel } from 'naive-ui'
 
 import type { Id } from '@/types'
-import { items } from '@/data/items'
+import { items } from '@/data'
 
 const options = items.map(({ id, name }) => {
   return {

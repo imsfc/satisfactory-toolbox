@@ -11,10 +11,14 @@ import {
 } from 'naive-ui'
 
 import ShowOrEdit from '@/components/ShowOrEdit'
-import type { Item } from '@/types'
-import { items } from '@/data/items'
+import { items } from '@/data'
 
-const columns: DataTableColumns<Item> = [
+interface OptionalItem {
+  id: string | null
+  name: string | null
+}
+
+const columns: DataTableColumns<OptionalItem> = [
   {
     title: '图片',
     key: 'image',
@@ -52,9 +56,9 @@ const columns: DataTableColumns<Item> = [
     render: (row) => {
       return (
         <ShowOrEdit
-          value={row.id.replace(/_+/g, ' ')}
+          value={row.id?.replace(/_+/g, ' ')}
           onUpdateValue={(value) => {
-            row.id = value.trim().replace(/\s+/g, '_')
+            row.id = value ? value.trim().replace(/\s+/g, '_') : null
           }}
         />
       )
@@ -64,7 +68,7 @@ const columns: DataTableColumns<Item> = [
 
 export default defineComponent({
   setup() {
-    const data = ref<Item[]>(structuredClone(items))
+    const data = ref<OptionalItem[]>(structuredClone(items))
 
     const message = useMessage()
 

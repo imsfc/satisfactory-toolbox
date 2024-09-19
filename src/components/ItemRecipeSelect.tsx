@@ -7,9 +7,7 @@ import {
 } from 'naive-ui'
 
 import type { Id } from '@/types'
-import { getRecipeById, recipes } from '@/data/recipes'
-import { getBuildingById } from '@/data/buildings'
-import { getItemById } from '@/data/items'
+import { getBuildingById, getItemById, getRecipeById, recipes } from '@/data'
 
 const renderLabel: SelectRenderLabel = (option) => {
   const recipe = getRecipeById(option.value as Id)

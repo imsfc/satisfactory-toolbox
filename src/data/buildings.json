@@ -1,0 +1,57 @@
+[
+  {
+    "id": "Constructor",
+    "name": "构筑站",
+    "powerUsage": 4
+  },
+  {
+    "id": "Assembler",
+    "name": "装配站",
+    "powerUsage": 15
+  },
+  {
+    "id": "Manufacturer",
+    "name": "制造站",
+    "powerUsage": 55
+  },
+  {
+    "id": "Packager",
+    "name": "灌装站",
+    "powerUsage": 10
+  },
+  {
+    "id": "Refinery",
+    "name": "精炼站",
+    "powerUsage": 30
+  },
+  {
+    "id": "Blender",
+    "name": "混料站",
+    "powerUsage": 75
+  },
+  {
+    "id": "Particle_Accelerator",
+    "name": "粒子加速器",
+    "powerUsage": "variable"
+  },
+  {
+    "id": "Converter",
+    "name": "转化站",
+    "powerUsage": "variable"
+  },
+  {
+    "id": "Quantum_Encoder",
+    "name": "量子编码站",
+    "powerUsage": "variable"
+  },
+  {
+    "id": "Smelter",
+    "name": "冶炼站",
+    "powerUsage": 4
+  },
+  {
+    "id": "Foundry",
+    "name": "铸造站",
+    "powerUsage": 16
+  }
+]

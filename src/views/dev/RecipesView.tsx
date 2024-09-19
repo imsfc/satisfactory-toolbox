@@ -13,9 +13,8 @@ import {
 } from 'naive-ui'
 
 import ShowOrEdit from '@/components/ShowOrEdit'
-import { recipes } from '@/data/recipes'
+import { buildings, recipes } from '@/data'
 import ItemSelect from '@/components/ItemSelect'
-import { buildings } from '@/data/buildings'
 
 interface OptionalItemAmount {
   itemId: string | null
