@@ -420,6 +420,38 @@ export const recipes: Recipe[] = [
     producedIn: 'Constructor',
     producedInTime: 4,
   },
+  {
+    id: 'Hog_Protein',
+    name: '野猪蛋白质',
+    input: [{ itemId: 'Hog_Remains', amount: 1 }],
+    output: [{ itemId: 'Alien_Protein', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 3,
+  },
+  {
+    id: 'Stinger_Protein',
+    name: '刺蛛蛋白质',
+    input: [{ itemId: 'Stinger_Remains', amount: 1 }],
+    output: [{ itemId: 'Alien_Protein', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 3,
+  },
+  {
+    id: 'Hatcher_Protein',
+    name: '孵化巢蛋白质',
+    input: [{ itemId: 'Hatcher_Remains', amount: 1 }],
+    output: [{ itemId: 'Alien_Protein', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 3,
+  },
+  {
+    id: 'Spitter_Protein',
+    name: '吐射兽蛋白质',
+    input: [{ itemId: 'Spitter_Remains', amount: 1 }],
+    output: [{ itemId: 'Alien_Protein', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 3,
+  },
 ]
 
 /**
