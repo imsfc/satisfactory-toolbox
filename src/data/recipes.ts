@@ -388,6 +388,38 @@ export const recipes: Recipe[] = [
     producedIn: 'Constructor',
     producedInTime: 12,
   },
+  {
+    id: 'Biomass_(Wood)',
+    name: '生物质（木材）',
+    input: [{ itemId: 'Wood', amount: 4 }],
+    output: [{ itemId: 'Biomass', amount: 20 }],
+    producedIn: 'Constructor',
+    producedInTime: 4,
+  },
+  {
+    id: 'Biomass_(Leaves)',
+    name: '生物质（树叶）',
+    input: [{ itemId: 'Leaves', amount: 10 }],
+    output: [{ itemId: 'Biomass', amount: 5 }],
+    producedIn: 'Constructor',
+    producedInTime: 5,
+  },
+  {
+    id: 'Biomass_(Mycelia)',
+    name: '生物质（菌丝体）',
+    input: [{ itemId: 'Mycelia', amount: 1 }],
+    output: [{ itemId: 'Biomass', amount: 10 }],
+    producedIn: 'Constructor',
+    producedInTime: 4,
+  },
+  {
+    id: 'Biomass_(Alien_Protein)',
+    name: '生物质（外星生物蛋白质）',
+    input: [{ itemId: 'Alien_Protein', amount: 1 }],
+    output: [{ itemId: 'Biomass', amount: 100 }],
+    producedIn: 'Constructor',
+    producedInTime: 4,
+  },
 ]
 
 /**
