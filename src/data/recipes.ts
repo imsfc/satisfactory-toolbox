@@ -11,7 +11,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Pure_Iron_Ingot',
-    name: '替代: 高纯度铁锭',
+    name: '替代：高纯度铁锭',
     input: [
       { itemId: 'Iron_Ore', amount: 7 },
       { itemId: 'Water', amount: 4 },
@@ -22,7 +22,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Basic_Iron_Ingot',
-    name: '替代: 基础钢铁',
+    name: '替代：基础钢铁',
     input: [
       { itemId: 'Iron_Ore', amount: 5 },
       { itemId: 'Limestone', amount: 8 },
@@ -33,7 +33,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Iron_Alloy_Ingot',
-    name: '替代: 铁合金锭',
+    name: '替代：铁合金锭',
     input: [
       { itemId: 'Iron_Ore', amount: 8 },
       { itemId: 'Copper_Ore', amount: 2 },
@@ -44,7 +44,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Leached_Iron_Ingot',
-    name: '替代: 滤化铁锭',
+    name: '替代：滤化铁锭',
     input: [
       { itemId: 'Iron_Ore', amount: 5 },
       { itemId: 'Sulfuric_Acid', amount: 1 },
@@ -55,7 +55,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Iron_Ore_(Limestone)',
-    name: '铁矿石 (石灰石)',
+    name: '铁矿石（石灰石）',
     input: [
       { itemId: 'Reanimated_SAM', amount: 1 },
       { itemId: 'Limestone', amount: 24 },
@@ -74,7 +74,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Coated_Iron_Plate',
-    name: '替代: 镀层铁板',
+    name: '替代：镀层铁板',
     input: [
       { itemId: 'Iron_Ingot', amount: 5 },
       { itemId: 'Plastic', amount: 1 },
@@ -85,7 +85,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Steel_Cast_Plate',
-    name: '替代: 铸钢板',
+    name: '替代：铸钢板',
     input: [
       { itemId: 'Iron_Ingot', amount: 1 },
       { itemId: 'Steel_Ingot', amount: 1 },
@@ -104,7 +104,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Steel_Rod',
-    name: '替代: 钢棒',
+    name: '替代：钢棒',
     input: [{ itemId: 'Steel_Ingot', amount: 1 }],
     output: [{ itemId: 'Iron_Rod', amount: 4 }],
     producedIn: 'Constructor',
@@ -112,7 +112,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Aluminum_Rod',
-    name: '替代: 铝棒',
+    name: '替代：铝棒',
     input: [{ itemId: 'Aluminum_Ingot', amount: 1 }],
     output: [{ itemId: 'Iron_Rod', amount: 7 }],
     producedIn: 'Constructor',
@@ -131,7 +131,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Stitched_Iron_Plate',
-    name: '替代: 拼接铁板',
+    name: '替代：拼接铁板',
     input: [
       { itemId: 'Iron_Plate', amount: 10 },
       { itemId: 'Wire', amount: 20 },
@@ -142,7 +142,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Adhered_Iron_Plate',
-    name: '替代: 粘合铁板',
+    name: '替代：粘合铁板',
     input: [
       { itemId: 'Iron_Plate', amount: 3 },
       { itemId: 'Rubber', amount: 1 },
@@ -153,7 +153,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Bolted_Iron_Plate',
-    name: '替代: 铆接铁板',
+    name: '替代：铆接铁板',
     input: [
       { itemId: 'Iron_Plate', amount: 18 },
       { itemId: 'Screw', amount: 50 },
@@ -172,7 +172,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Quickwire_Cable',
-    name: '替代: 急速电缆',
+    name: '替代：急速电缆',
     input: [
       { itemId: 'Quickwire', amount: 3 },
       { itemId: 'Rubber', amount: 2 },
@@ -183,7 +183,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Insulated_Cable',
-    name: '替代: 绝缘电缆',
+    name: '替代：绝缘电缆',
     input: [
       { itemId: 'Wire', amount: 9 },
       { itemId: 'Rubber', amount: 6 },
@@ -194,7 +194,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Coated_Cable',
-    name: '替代: 镀层电缆',
+    name: '替代：镀层电缆',
     input: [
       { itemId: 'Wire', amount: 5 },
       { itemId: 'Heavy_Oil_Residue', amount: 2 },
@@ -213,7 +213,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Caterium_Wire',
-    name: '替代: 钦金电线',
+    name: '替代：钦金电线',
     input: [{ itemId: 'Caterium_Ingot', amount: 1 }],
     output: [{ itemId: 'Wire', amount: 8 }],
     producedIn: 'Constructor',
@@ -221,7 +221,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Iron_Wire',
-    name: '替代: 铁制电线',
+    name: '替代：铁制电线',
     input: [{ itemId: 'Iron_Ingot', amount: 5 }],
     output: [{ itemId: 'Wire', amount: 9 }],
     producedIn: 'Constructor',
@@ -229,7 +229,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Fused_Wire',
-    name: '替代: 熔合电线',
+    name: '替代：熔合电线',
     input: [
       { itemId: 'Copper_Ingot', amount: 4 },
       { itemId: 'Caterium_Ingot', amount: 1 },
@@ -248,7 +248,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Tempered_Copper_Ingot',
-    name: '替代: 回火铜锭',
+    name: '替代：回火铜锭',
     input: [
       { itemId: 'Copper_Ore', amount: 5 },
       { itemId: 'Petroleum_Coke', amount: 8 },
@@ -259,7 +259,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Pure_Copper_Ingot',
-    name: '替代: 高纯度铜锭',
+    name: '替代：高纯度铜锭',
     input: [
       { itemId: 'Copper_Ore', amount: 6 },
       { itemId: 'Water', amount: 4 },
@@ -270,7 +270,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Leached_Copper_Ingot',
-    name: '替代: 滤化铜锭',
+    name: '替代：滤化铜锭',
     input: [
       { itemId: 'Copper_Ore', amount: 9 },
       { itemId: 'Sulfuric_Acid', amount: 5 },
@@ -281,7 +281,7 @@ export const recipes: Recipe[] = [
   },
   {
     id: 'Copper_Alloy_Ingot',
-    name: '替代: 铜合金锭',
+    name: '替代：铜合金锭',
     input: [
       { itemId: 'Copper_Ore', amount: 5 },
       { itemId: 'Iron_Ore', amount: 5 },
