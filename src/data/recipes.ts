@@ -1021,6 +1021,118 @@ export const recipes: Recipe[] = [
     producedIn: 'Assembler',
     producedInTime: 12,
   },
+  {
+    id: 'Encased_Industrial_Beam',
+    name: '钢筋混凝土梁',
+    input: [
+      { itemId: 'Steel_Beam', amount: 3 },
+      { itemId: 'Concrete', amount: 6 },
+    ],
+    output: [{ itemId: 'Encased_Industrial_Beam', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 10,
+  },
+  {
+    id: 'Encased_Industrial_Pipe',
+    name: '替代：钢管混凝土梁',
+    input: [
+      { itemId: 'Steel_Pipe', amount: 6 },
+      { itemId: 'Concrete', amount: 5 },
+    ],
+    output: [{ itemId: 'Encased_Industrial_Beam', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 15,
+  },
+  {
+    id: 'Stator',
+    name: '定子',
+    input: [
+      { itemId: 'Steel_Pipe', amount: 3 },
+      { itemId: 'Wire', amount: 8 },
+    ],
+    output: [{ itemId: 'Stator', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 12,
+  },
+  {
+    id: 'Quickwire_Stator',
+    name: '替代：急速电线定子',
+    input: [
+      { itemId: 'Steel_Pipe', amount: 4 },
+      { itemId: 'Quickwire', amount: 15 },
+    ],
+    output: [{ itemId: 'Stator', amount: 2 }],
+    producedIn: 'Assembler',
+    producedInTime: 15,
+  },
+  {
+    id: 'Motor',
+    name: '马达',
+    input: [
+      { itemId: 'Rotor', amount: 2 },
+      { itemId: 'Stator', amount: 2 },
+    ],
+    output: [{ itemId: 'Motor', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 12,
+  },
+  {
+    id: 'Rigor_Motor',
+    name: '替代：牢固马达',
+    input: [
+      { itemId: 'Rotor', amount: 3 },
+      { itemId: 'Stator', amount: 3 },
+      { itemId: 'Crystal_Oscillator', amount: 1 },
+    ],
+    output: [{ itemId: 'Motor', amount: 6 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 48,
+  },
+  {
+    id: 'Electric_Motor',
+    name: '替代：电磁马达',
+    input: [
+      { itemId: 'Electromagnetic_Control_Rod', amount: 1 },
+      { itemId: 'Rotor', amount: 2 },
+    ],
+    output: [{ itemId: 'Motor', amount: 2 }],
+    producedIn: 'Assembler',
+    producedInTime: 16,
+  },
+  {
+    id: 'Automated_Wiring',
+    name: '自动化线缆',
+    input: [
+      { itemId: 'Stator', amount: 1 },
+      { itemId: 'Cable', amount: 20 },
+    ],
+    output: [{ itemId: 'Automated_Wiring', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 24,
+  },
+  {
+    id: 'Automated_Speed_Wiring',
+    name: '替代：自动化高速线缆',
+    input: [
+      { itemId: 'Stator', amount: 2 },
+      { itemId: 'Wire', amount: 40 },
+      { itemId: 'High-Speed_Connector', amount: 1 },
+    ],
+    output: [{ itemId: 'Automated_Wiring', amount: 4 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 32,
+  },
+  {
+    id: 'Gas_Nobelisk',
+    name: '毒气诺石',
+    input: [
+      { itemId: 'Nobelisk', amount: 1 },
+      { itemId: 'Biomass', amount: 10 },
+    ],
+    output: [{ itemId: 'Gas_Nobelisk', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 12,
+  },
 ]
 
 /**
