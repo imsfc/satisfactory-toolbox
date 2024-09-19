@@ -1133,6 +1133,89 @@ export const recipes: Recipe[] = [
     producedIn: 'Assembler',
     producedInTime: 12,
   },
+  {
+    id: 'Reanimated_SAM',
+    name: '活性SAM物质',
+    input: [{ itemId: 'SAM', amount: 4 }],
+    output: [{ itemId: 'Reanimated_SAM', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 2,
+  },
+  {
+    id: 'Caterium_Ingot',
+    name: '钦金锭',
+    input: [{ itemId: 'Caterium_Ore', amount: 3 }],
+    output: [{ itemId: 'Caterium_Ingot', amount: 1 }],
+    producedIn: 'Smelter',
+    producedInTime: 4,
+  },
+  {
+    id: 'Pure_Caterium_Ingot',
+    name: '替代：高纯度钦金锭',
+    input: [
+      { itemId: 'Caterium_Ore', amount: 2 },
+      { itemId: 'Water', amount: 2 },
+    ],
+    output: [{ itemId: 'Caterium_Ingot', amount: 1 }],
+    producedIn: 'Refinery',
+    producedInTime: 5,
+  },
+  {
+    id: 'Leached_Caterium_Ingot',
+    name: '替代：滤化钦金锭',
+    input: [
+      { itemId: 'Caterium_Ore', amount: 9 },
+      { itemId: 'Sulfuric_Acid', amount: 5 },
+    ],
+    output: [{ itemId: 'Caterium_Ingot', amount: 6 }],
+    producedIn: 'Refinery',
+    producedInTime: 10,
+  },
+  {
+    id: 'Tempered_Caterium_Ingot',
+    name: '替代：回火钦金锭',
+    input: [
+      { itemId: 'Caterium_Ore', amount: 6 },
+      { itemId: 'Petroleum_Coke', amount: 2 },
+    ],
+    output: [{ itemId: 'Caterium_Ingot', amount: 3 }],
+    producedIn: 'Foundry',
+    producedInTime: 8,
+  },
+  {
+    id: 'Caterium_Ore_(Copper)',
+    name: '钦金矿石（铜）',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 1 },
+      { itemId: 'Copper_Ore', amount: 15 },
+    ],
+    output: [{ itemId: 'Caterium_Ore', amount: 12 }],
+    producedIn: 'Converter',
+    producedInTime: 6,
+  },
+  {
+    id: 'Caterium_Ore_(Quartz)',
+    name: '钦金矿石（石英）',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 1 },
+      { itemId: 'Raw_Quartz', amount: 12 },
+    ],
+    output: [{ itemId: 'Caterium_Ore', amount: 12 }],
+    producedIn: 'Converter',
+    producedInTime: 6,
+  },
+  {
+    id: 'SAM_Fluctuator',
+    name: 'SAM物质波波动器',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 6 },
+      { itemId: 'Wire', amount: 5 },
+      { itemId: 'Steel_Pipe', amount: 3 },
+    ],
+    output: [{ itemId: 'SAM_Fluctuator', amount: 1 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 6,
+  },
 ]
 
 /**
