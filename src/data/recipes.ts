@@ -452,6 +452,66 @@ export const recipes: Recipe[] = [
     producedIn: 'Constructor',
     producedInTime: 3,
   },
+  {
+    id: 'Solid_Biofue',
+    name: '固态生物燃料',
+    input: [{ itemId: 'Biomass', amount: 8 }],
+    output: [{ itemId: 'Solid_Biofuel', amount: 4 }],
+    producedIn: 'Constructor',
+    producedInTime: 4,
+  },
+  {
+    id: 'Rotor',
+    name: '转子',
+    input: [
+      { itemId: 'Iron_Rod', amount: 5 },
+      { itemId: 'Screw', amount: 25 },
+    ],
+    output: [{ itemId: 'Rotor', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 15,
+  },
+  {
+    id: 'Copper_Rotor',
+    name: '替代：铜制转子',
+    input: [
+      { itemId: 'Copper_Sheet', amount: 6 },
+      { itemId: 'Screw', amount: 52 },
+    ],
+    output: [{ itemId: 'Rotor', amount: 3 }],
+    producedIn: 'Assembler',
+    producedInTime: 16,
+  },
+  {
+    id: 'Steel_Rotor',
+    name: '替代：钢制转子',
+    input: [
+      { itemId: 'Steel_Pipe', amount: 2 },
+      { itemId: 'Wire', amount: 6 },
+    ],
+    output: [{ itemId: 'Rotor', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 12,
+  },
+  {
+    id: 'Copper_Sheet',
+    name: '铜板',
+    input: [{ itemId: 'Copper_Ingot', amount: 2 }],
+    output: [{ itemId: 'Copper_Sheet', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 6,
+  },
+  {
+    id: 'Steamed_Copper_Sheet',
+    name: '替代：热压铜板',
+    input: [
+      { itemId: 'Copper_Ingot', amount: 3 },
+      { itemId: 'Water', amount: 3 },
+    ],
+    output: [{ itemId: 'Copper_Sheet', amount: 3 }],
+    producedIn: 'Refinery',
+    producedInTime: 8,
+  },
 ]
 
 /**
