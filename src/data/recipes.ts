@@ -744,6 +744,129 @@ export const recipes: Recipe[] = [
     producedIn: 'Constructor',
     producedInTime: 12,
   },
+  {
+    id: 'Versatile_Framework',
+    name: '多功能框架',
+    input: [
+      { itemId: 'Modular_Frame', amount: 1 },
+      { itemId: 'Steel_Beam', amount: 12 },
+    ],
+    output: [{ itemId: 'Versatile_Framework', amount: 2 }],
+    producedIn: 'Assembler',
+    producedInTime: 24,
+  },
+  {
+    id: 'Flexible_Framework',
+    name: '替代：灵活型框架',
+    input: [
+      { itemId: 'Modular_Frame', amount: 1 },
+      { itemId: 'Steel_Beam', amount: 6 },
+      { itemId: 'Rubber', amount: 8 },
+    ],
+    output: [{ itemId: 'Versatile_Framework', amount: 2 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 16,
+  },
+  {
+    id: 'Silica',
+    name: '二氧化硅',
+    input: [{ itemId: 'Raw_Quartz', amount: 3 }],
+    output: [{ itemId: 'Silica', amount: 5 }],
+    producedIn: 'Constructor',
+    producedInTime: 8,
+  },
+  {
+    id: 'Alumina_Solution',
+    name: '氧化铝溶液',
+    input: [
+      { itemId: 'Bauxite', amount: 12 },
+      { itemId: 'Water', amount: 18 },
+    ],
+    output: [
+      { itemId: 'Alumina_Solution', amount: 12 },
+      { itemId: 'Silica', amount: 5 },
+    ],
+    producedIn: 'Refinery',
+    producedInTime: 6,
+  },
+  {
+    id: 'Cheap_Silica',
+    name: '替代：粗制二氧化硅',
+    input: [
+      { itemId: 'Raw_Quartz', amount: 3 },
+      { itemId: 'Limestone', amount: 5 },
+    ],
+    output: [{ itemId: 'Silica', amount: 7 }],
+    producedIn: 'Assembler',
+    producedInTime: 8,
+  },
+  {
+    id: 'Distilled_Silica',
+    name: '替代：提纯二氧化硅',
+    input: [
+      { itemId: 'Dissolved_Silica', amount: 12 },
+      { itemId: 'Limestone', amount: 5 },
+      { itemId: 'Water', amount: 10 },
+    ],
+    output: [
+      { itemId: 'Silica', amount: 27 },
+      { itemId: 'Water', amount: 8 },
+    ],
+    producedIn: 'Blender',
+    producedInTime: 6,
+  },
+  {
+    id: 'Raw_Quartz_(Bauxite)',
+    name: '粗石英（铝土矿）',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 1 },
+      { itemId: 'Bauxite', amount: 10 },
+    ],
+    output: [{ itemId: 'Raw_Quartz', amount: 12 }],
+    producedIn: 'Converter',
+    producedInTime: 6,
+  },
+  {
+    id: 'Raw_Quartz_(Coal)',
+    name: '粗石英（煤）',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 1 },
+      { itemId: 'Coal', amount: 24 },
+    ],
+    output: [{ itemId: 'Raw_Quartz', amount: 12 }],
+    producedIn: 'Converter',
+    producedInTime: 6,
+  },
+  {
+    id: 'Alien_DNA_Capsule',
+    name: '外星DNA胶囊',
+    input: [{ itemId: 'Alien_Protein', amount: 1 }],
+    output: [{ itemId: 'Alien_DNA_Capsule', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 6,
+  },
+  {
+    id: 'Black_Powder',
+    name: '黑火药',
+    input: [
+      { itemId: 'Coal', amount: 1 },
+      { itemId: 'Sulfur', amount: 1 },
+    ],
+    output: [{ itemId: 'Black_Powder', amount: 2 }],
+    producedIn: 'Assembler',
+    producedInTime: 4,
+  },
+  {
+    id: 'Fine_Black_Powder',
+    name: '替代：细末黑火药',
+    input: [
+      { itemId: 'Sulfur', amount: 1 },
+      { itemId: 'Compacted_Coal', amount: 2 },
+    ],
+    output: [{ itemId: 'Black_Powder', amount: 6 }],
+    producedIn: 'Assembler',
+    producedInTime: 8,
+  },
 ]
 
 /**
