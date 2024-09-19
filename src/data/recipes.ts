@@ -312,6 +312,47 @@ export const recipes: Recipe[] = [
     producedIn: 'Converter',
     producedInTime: 6,
   },
+  {
+    id: 'Concrete',
+    name: '混凝土',
+    input: [{ itemId: 'Limestone', amount: 3 }],
+    output: [{ itemId: 'Concrete', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 4,
+  },
+  {
+    id: 'Wet_Concrete',
+    name: '替代：塑性混凝土',
+    input: [
+      { itemId: 'Limestone', amount: 6 },
+      { itemId: 'Water', amount: 5 },
+    ],
+    output: [{ itemId: 'Concrete', amount: 4 }],
+    producedIn: 'Refinery',
+    producedInTime: 3,
+  },
+  {
+    id: 'Fine_Concrete',
+    name: '替代：细末混凝土',
+    input: [
+      { itemId: 'Silica', amount: 3 },
+      { itemId: 'Limestone', amount: 12 },
+    ],
+    output: [{ itemId: 'Concrete', amount: 10 }],
+    producedIn: 'Assembler',
+    producedInTime: 12,
+  },
+  {
+    id: 'Rubber_Concrete',
+    name: '替代：橡胶混凝土',
+    input: [
+      { itemId: 'Limestone', amount: 10 },
+      { itemId: 'Rubber', amount: 2 },
+    ],
+    output: [{ itemId: 'Concrete', amount: 9 }],
+    producedIn: 'Assembler',
+    producedInTime: 6,
+  },
 ]
 
 /**
