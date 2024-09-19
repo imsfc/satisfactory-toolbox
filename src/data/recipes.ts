@@ -290,6 +290,28 @@ export const recipes: Recipe[] = [
     producedIn: 'Foundry',
     producedInTime: 6,
   },
+  {
+    id: 'Copper_Ore_(Quartz)',
+    name: '铜矿石（石英）',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 1 },
+      { itemId: 'Raw_Quartz', amount: 10 },
+    ],
+    output: [{ itemId: 'Copper_Ore', amount: 12 }],
+    producedIn: 'Converter',
+    producedInTime: 6,
+  },
+  {
+    id: 'Copper_Ore_(Sulfur)',
+    name: '铜矿石（硫磺）',
+    input: [
+      { itemId: 'Reanimated_SAM', amount: 1 },
+      { itemId: 'Sulfur', amount: 12 },
+    ],
+    output: [{ itemId: 'Copper_Ore', amount: 12 }],
+    producedIn: 'Converter',
+    producedInTime: 6,
+  },
 ]
 
 /**
