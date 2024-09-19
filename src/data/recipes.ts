@@ -1375,6 +1375,141 @@ export const recipes: Recipe[] = [
     producedIn: 'Assembler',
     producedInTime: 12,
   },
+  {
+    id: 'Residual_Plastic',
+    name: '聚合塑料',
+    input: [
+      { itemId: 'Polymer_Resin', amount: 6 },
+      { itemId: 'Water', amount: 2 },
+    ],
+    output: [{ itemId: 'Plastic', amount: 2 }],
+    producedIn: 'Refinery',
+    producedInTime: 6,
+  },
+  {
+    id: 'Recycled_Plastic',
+    name: '替代：再生塑料',
+    input: [
+      { itemId: 'Rubber', amount: 6 },
+      { itemId: 'Fuel', amount: 6 },
+    ],
+    output: [{ itemId: 'Plastic', amount: 12 }],
+    producedIn: 'Refinery',
+    producedInTime: 12,
+  },
+  {
+    id: 'Fuel',
+    name: '燃料',
+    input: [{ itemId: 'Crude_Oil', amount: 6 }],
+    output: [
+      { itemId: 'Fuel', amount: 4 },
+      { itemId: 'Polymer_Resin', amount: 3 },
+    ],
+    producedIn: 'Refinery',
+    producedInTime: 6,
+  },
+  {
+    id: 'Unpackage_Water',
+    name: '导出水',
+    input: [{ itemId: 'Packaged_Water', amount: 2 }],
+    output: [
+      { itemId: 'Water', amount: 2 },
+      { itemId: 'Empty_Canister', amount: 2 },
+    ],
+    producedIn: 'Packager',
+    producedInTime: 1,
+  },
+  {
+    id: 'Aluminum_Scrap',
+    name: '碎铝渣',
+    input: [
+      { itemId: 'Alumina_Solution', amount: 4 },
+      { itemId: 'Coal', amount: 2 },
+    ],
+    output: [
+      { itemId: 'Aluminum_Scrap', amount: 6 },
+      { itemId: 'Water', amount: 2 },
+    ],
+    producedIn: 'Refinery',
+    producedInTime: 1,
+  },
+  {
+    id: 'Electrode_Aluminum_Scrap',
+    name: '替代：电解制铝',
+    input: [
+      { itemId: 'Alumina_Solution', amount: 12 },
+      { itemId: 'Petroleum_Coke', amount: 4 },
+    ],
+    output: [
+      { itemId: 'Aluminum_Scrap', amount: 20 },
+      { itemId: 'Water', amount: 7 },
+    ],
+    producedIn: 'Refinery',
+    producedInTime: 4,
+  },
+  {
+    id: 'Battery',
+    name: '电池',
+    input: [
+      { itemId: 'Sulfuric_Acid', amount: 2.5 },
+      { itemId: 'Alumina_Solution', amount: 2 },
+      { itemId: 'Aluminum_Casing', amount: 1 },
+    ],
+    output: [
+      { itemId: 'Battery', amount: 1 },
+      { itemId: 'Water', amount: 1.5 },
+    ],
+    producedIn: 'Blender',
+    producedInTime: 3,
+  },
+  {
+    id: 'Non-Fissile_Uranium',
+    name: '非裂变贫铀',
+    input: [
+      { itemId: 'Uranium_Waste', amount: 15 },
+      { itemId: 'Silica', amount: 10 },
+      { itemId: 'Nitric_Acid', amount: 6 },
+      { itemId: 'Sulfuric_Acid', amount: 6 },
+    ],
+    output: [
+      { itemId: 'Non-Fissile_Uranium', amount: 20 },
+      { itemId: 'Water', amount: 6 },
+    ],
+    producedIn: 'Blender',
+    producedInTime: 24,
+  },
+  {
+    id: 'Fertile_Uranium',
+    name: '替代：富铀',
+    input: [
+      { itemId: 'Uranium', amount: 5 },
+      { itemId: 'Uranium_Waste', amount: 5 },
+      { itemId: 'Nitric_Acid', amount: 3 },
+      { itemId: 'Sulfuric_Acid', amount: 5 },
+    ],
+    output: [
+      { itemId: 'Non-Fissile_Uranium', amount: 20 },
+      { itemId: 'Water', amount: 8 },
+    ],
+    producedIn: 'Blender',
+    producedInTime: 12,
+  },
+  {
+    id: 'Instant_Scrap',
+    name: '替代：速成型碎铝渣',
+    input: [
+      { itemId: 'Bauxite', amount: 15 },
+      { itemId: 'Coal', amount: 10 },
+      { itemId: 'Sulfuric_Acid', amount: 5 },
+      { itemId: 'Water', amount: 6 },
+    ],
+    output: [
+      { itemId: 'Aluminum_Scrap', amount: 30 },
+      { itemId: 'Water', amount: 5 },
+    ],
+    producedIn: 'Blender',
+    producedInTime: 6,
+  },
 ]
 
 /**
