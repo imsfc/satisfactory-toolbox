@@ -4,8 +4,8 @@ import { NInput } from 'naive-ui'
 
 export default defineComponent({
   props: {
-    value: String as PropType<string>,
-    onUpdateValue: Function as PropType<(value: string) => void>,
+    value: String as PropType<string | null>,
+    onUpdateValue: Function as PropType<(value: string | null) => void>,
   },
   setup(props) {
     const isEdit = ref(false)
@@ -24,6 +24,7 @@ export default defineComponent({
             value={props.value}
             onUpdateValue={props.onUpdateValue}
             size="small"
+            clearable
           />
         )
       }
