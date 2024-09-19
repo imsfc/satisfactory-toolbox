@@ -512,6 +512,102 @@ export const recipes: Recipe[] = [
     producedIn: 'Refinery',
     producedInTime: 8,
   },
+  {
+    id: 'Modular_Frame',
+    name: '模块化框架',
+    input: [
+      { itemId: 'Reinforced_Iron_Plate', amount: 3 },
+      { itemId: 'Iron_Rod', amount: 12 },
+    ],
+    output: [{ itemId: 'Modular_Frame', amount: 2 }],
+    producedIn: 'Assembler',
+    producedInTime: 60,
+  },
+  {
+    id: 'Bolted_Frame',
+    name: '替代：铆接式框架',
+    input: [
+      { itemId: 'Reinforced_Iron_Plate', amount: 3 },
+      { itemId: 'Screw', amount: 56 },
+    ],
+    output: [{ itemId: 'Modular_Frame', amount: 2 }],
+    producedIn: 'Assembler',
+    producedInTime: 24,
+  },
+  {
+    id: 'Steeled_Frame',
+    name: '替代：钢制框架',
+    input: [
+      { itemId: 'Reinforced_Iron_Plate', amount: 2 },
+      { itemId: 'Steel_Pipe', amount: 10 },
+    ],
+    output: [{ itemId: 'Modular_Frame', amount: 3 }],
+    producedIn: 'Assembler',
+    producedInTime: 60,
+  },
+  {
+    id: 'Smart_Plating',
+    name: '智能嵌板',
+    input: [
+      { itemId: 'Reinforced_Iron_Plate', amount: 1 },
+      { itemId: 'Rotor', amount: 1 },
+    ],
+    output: [{ itemId: 'Smart_Plating', amount: 1 }],
+    producedIn: 'Assembler',
+    producedInTime: 30,
+  },
+  {
+    id: 'Plastic_Smart_Plating',
+    name: '替代：塑料智能嵌板',
+    input: [
+      { itemId: 'Reinforced_Iron_Plate', amount: 1 },
+      { itemId: 'Rotor', amount: 1 },
+      { itemId: 'Plastic', amount: 3 },
+    ],
+    output: [{ itemId: 'Smart_Plating', amount: 2 }],
+    producedIn: 'Manufacturer',
+    producedInTime: 24,
+  },
+  {
+    id: 'Power_Shard_(1)',
+    name: '能量碎片（1）',
+    input: [{ itemId: 'Blue_Power_Slug', amount: 1 }],
+    output: [{ itemId: 'Power_Shard', amount: 1 }],
+    producedIn: 'Constructor',
+    producedInTime: 8,
+  },
+  {
+    id: 'Power_Shard_(2)',
+    name: '能量碎片（2）',
+    input: [{ itemId: 'Yellow_Power_Slug', amount: 1 }],
+    output: [{ itemId: 'Power_Shard', amount: 2 }],
+    producedIn: 'Constructor',
+    producedInTime: 12,
+  },
+  {
+    id: 'Power_Shard_(5)',
+    name: '能量碎片（5）',
+    input: [{ itemId: 'Purple_Power_Slug', amount: 1 }],
+    output: [{ itemId: 'Power_Shard', amount: 5 }],
+    producedIn: 'Constructor',
+    producedInTime: 24,
+  },
+  {
+    id: 'Synthetic_Power_Shard',
+    name: '合成能量碎片',
+    input: [
+      { itemId: 'Time_Crystal', amount: 2 },
+      { itemId: 'Dark_Matter_Crystal', amount: 2 },
+      { itemId: 'Quartz_Crystal', amount: 12 },
+      { itemId: 'Excited_Photonic_Matter', amount: 12 },
+    ],
+    output: [
+      { itemId: 'Power_Shard', amount: 1 },
+      { itemId: 'Dark_Matter_Residue', amount: 12 },
+    ],
+    producedIn: 'Quantum_Encoder',
+    producedInTime: 12,
+  },
 ]
 
 /**
