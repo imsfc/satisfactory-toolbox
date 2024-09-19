@@ -364,6 +364,30 @@ export const recipes: Recipe[] = [
     producedIn: 'Converter',
     producedInTime: 6,
   },
+  {
+    id: 'Screw',
+    name: '螺丝',
+    input: [{ itemId: 'Iron_Rod', amount: 1 }],
+    output: [{ itemId: 'Screw', amount: 4 }],
+    producedIn: 'Constructor',
+    producedInTime: 6,
+  },
+  {
+    id: 'Cast_Screw',
+    name: '替代：铸铁螺丝',
+    input: [{ itemId: 'Iron_Ingot', amount: 5 }],
+    output: [{ itemId: 'Screw', amount: 20 }],
+    producedIn: 'Constructor',
+    producedInTime: 24,
+  },
+  {
+    id: 'Steel_Screw',
+    name: '替代：钢制螺丝',
+    input: [{ itemId: 'Steel_Beam', amount: 1 }],
+    output: [{ itemId: 'Screw', amount: 52 }],
+    producedIn: 'Constructor',
+    producedInTime: 12,
+  },
 ]
 
 /**
