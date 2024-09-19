@@ -251,6 +251,12 @@ export default defineComponent({
 
     const { height: windowHeight } = useWindowSize()
 
+    const vaildDataCount = computed(() => {
+      return new Set(
+        data.value.filter(({ name }) => name).map(({ name }) => name!),
+      ).size
+    })
+
     return () => (
       <>
         <NFlex size="large" vertical>
@@ -273,7 +279,9 @@ export default defineComponent({
               </NButton>
             </NFlex>
             <NFlex align="center">
-              <div>{data.value.length}条数据</div>
+              <div>
+                {vaildDataCount.value}/{data.value.length}条数据
+              </div>
               <NButton
                 onClick={() => {
                   copy().then(() => {
