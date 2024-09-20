@@ -1,6 +1,6 @@
 import { defineConfig } from 'unocss'
-import { presetMini } from 'unocss/preset-mini'
+import { presetUno } from 'unocss/preset-uno'
 
 export default defineConfig({
-  presets: [presetMini()],
+  presets: [presetUno()],
 })
