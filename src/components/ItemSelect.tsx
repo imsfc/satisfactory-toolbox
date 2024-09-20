@@ -2,9 +2,10 @@ import { computed, defineComponent, type PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NSelect, type SelectRenderLabel } from 'naive-ui'
 
-import ItemImage from '@/components/ItemImage'
 import type { Id } from '@/types'
 import { items, recipes } from '@/data'
+
+import ItemImage from './ItemImage'
 
 const renderLabel: SelectRenderLabel = (option) => {
   return (

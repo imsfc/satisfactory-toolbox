@@ -1,9 +1,6 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useWindowSize } from '@vueuse/core'
-
-import type { AssemblyLine, Id, ModuleFactory } from '@/types'
-import { getModuleFactory, newAssemblyLine, removeAssemblyLine } from '@/store'
 import {
   NButton,
   NDataTable,
@@ -17,7 +14,11 @@ import {
   NPopconfirm,
   type DataTableColumns,
 } from 'naive-ui'
-import ItemSelect from '@/components/ItemSelect'
+
+import type { AssemblyLine, Id, ModuleFactory } from '@/types'
+import { getModuleFactory, newAssemblyLine, removeAssemblyLine } from '@/store'
+
+import ItemSelect from './ItemSelect'
 import ItemRecipeSelect from './ItemRecipeSelect'
 
 function createColumns({

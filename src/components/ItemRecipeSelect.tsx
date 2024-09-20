@@ -7,10 +7,11 @@ import {
   type SelectRenderTag,
 } from 'naive-ui'
 
-import BuildingImage from '@/components/BuildingImage'
-import ItemImage from '@/components/ItemImage'
 import type { Id } from '@/types'
 import { getRecipeById, recipes } from '@/data'
+
+import BuildingImage from './BuildingImage'
+import ItemImage from './ItemImage'
 
 const renderItem = (itemId: Id, quantity: number, perMinute: number) => {
   const { t } = useI18n()
