@@ -27,7 +27,7 @@ export default defineComponent({
         <NLayoutHeader class="px-8 h-16 flex items-center gap-4" bordered>
           <NFlex class="cursor-pointer" align="center">
             <img src={logo} width={32} height={32} />
-            <div class="text-lg text-bold leading-none">{t('logoTitle')}</div>
+            <div class="text-lg font-bold leading-none">{t('logoTitle')}</div>
           </NFlex>
           <div class="flex-1"></div>
           <NFlex align="center">
