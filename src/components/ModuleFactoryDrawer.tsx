@@ -73,7 +73,7 @@ function createColumns({
             max={1000000}
           >
             {{
-              suffix: () => '/min',
+              suffix: () => t('perMinute'),
             }}
           </NInputNumber>
         )
