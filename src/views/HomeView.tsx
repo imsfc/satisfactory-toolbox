@@ -106,13 +106,13 @@ export default defineComponent({
               >
                 {t('newFactory')}
               </NButton>
-              <NButton>{t('globalConfig')}</NButton>
+              <NButton disabled>{t('globalConfig')}</NButton>
             </NFlex>
             <NFlex>
-              <NButton strong secondary>
+              <NButton strong secondary disabled>
                 {t('import')}
               </NButton>
-              <NButton strong secondary>
+              <NButton strong secondary disabled>
                 {t('export')}
               </NButton>
               <NPopconfirm
