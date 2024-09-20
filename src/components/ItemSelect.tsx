@@ -1,21 +1,12 @@
-import { defineComponent, type PropType } from 'vue'
+import { computed, defineComponent, type PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { NFlex, NSelect, type SelectRenderLabel } from 'naive-ui'
 
 import ItemImage from '@/components/ItemImage'
 import type { Id } from '@/types'
-import { items } from '@/data'
-
-const options = items.map(({ id }) => {
-  return {
-    label: id,
-    value: id,
-  }
-})
+import { items, recipes } from '@/data'
 
 const renderLabel: SelectRenderLabel = (option) => {
-  const { t } = useI18n()
-
   return (
     <NFlex size="small" align="center" wrap={false}>
       <ItemImage
@@ -24,7 +15,7 @@ const renderLabel: SelectRenderLabel = (option) => {
         formats={['avif', 'webp', 'png']}
       />
       <div style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-        {t(`items.${option.label}`)}
+        {option.label}
       </div>
     </NFlex>
   )
@@ -39,13 +30,30 @@ export default defineComponent({
     'update:value': (value: Id | null) => true,
   },
   setup(props, { emit }) {
+    const { t } = useI18n()
+
+    const options = computed(() =>
+      items
+        .filter(({ id }) => {
+          return recipes.some(({ outputs }) => {
+            return outputs.some(({ itemId }) => itemId === id)
+          })
+        })
+        .map(({ id }) => {
+          return {
+            label: t(`items.${id}`),
+            value: id,
+          }
+        }),
+    )
+
     return () => (
       <NSelect
         value={props.value}
         onUpdateValue={(newValue) => {
           emit('update:value', newValue)
         }}
-        options={options}
+        options={options.value}
         consistent-menu-width={false}
         renderLabel={renderLabel}
         filterable
