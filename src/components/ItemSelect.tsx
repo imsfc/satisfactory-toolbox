@@ -11,10 +11,12 @@ const renderLabel: SelectRenderLabel = (option) => {
     <NFlex size="small" align="center" wrap={false}>
       <ItemImage
         name={option.value as string}
-        sizes={[24, 48, 72]}
+        sizes={[32, 64, 96]}
         formats={['avif', 'webp', 'png']}
+        width={24}
+        height={24}
       />
-      <div class="overflow-hidden text-ellipsis">{option.label}</div>
+      <div class="truncate">{option.label}</div>
     </NFlex>
   )
 }

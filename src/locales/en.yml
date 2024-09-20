@@ -33,3 +33,5 @@ recipe: Recipe
 targetItem: Target Item
 building: Building
 targetItemSpeed: Target Item Speed
+perMinute: /min
+seconds: s

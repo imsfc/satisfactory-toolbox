@@ -1,10 +1,10 @@
 const images = import.meta.glob<string[]>('./*.png', {
-  query: `?w=72;48;24&format=avif;webp;png`,
+  query: `?w=96;64;32&format=avif;webp;png`,
   import: 'default',
   eager: true,
 })
 
-const sizes = [72, 48, 24] as const
+const sizes = [96, 64, 32] as const
 const formats = ['avif', 'webp', 'png'] as const
 
 export type Size = (typeof sizes)[number]

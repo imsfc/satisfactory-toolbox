@@ -33,3 +33,5 @@ recipe: 配方
 targetItem: 目标物品
 building: 建筑
 targetItemSpeed: 目标物品速率
+perMinute: /分钟
+seconds: 秒

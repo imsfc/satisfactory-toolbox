@@ -1,6 +1,11 @@
 import { computed, defineComponent, watch, type PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { NSelect, type SelectRenderLabel, type SelectRenderTag } from 'naive-ui'
+import {
+  NFlex,
+  NSelect,
+  type SelectRenderLabel,
+  type SelectRenderTag,
+} from 'naive-ui'
 
 import BuildingImage from '@/components/BuildingImage'
 import ItemImage from '@/components/ItemImage'
@@ -11,19 +16,26 @@ const renderItem = (itemId: Id, quantity: number, perMinute: number) => {
   const { t } = useI18n()
 
   return (
-    <div class="w-12 h-11 flex flex-col items-center gap-0.5">
+    <NFlex size={4} align="center" vertical>
       <ItemImage
         name={itemId}
-        sizes={[24, 48, 72]}
+        sizes={[32, 64, 96]}
         formats={['avif', 'webp', 'png']}
       />
-      <div class="w-2/1 h-2 origin-top-center scale-50 text-sm leading-none text-center text-nowrap">
-        {t(`items.${itemId}`)}
-      </div>
-      <div class="w-2/1 h-2 origin-top-center scale-50 text-sm leading-none text-center text-nowrap">
-        {quantity}({perMinute}/min)
-      </div>
-    </div>
+      <NFlex
+        class="w-16 text-xs text-center whitespace-normal grow"
+        size={0}
+        vertical
+      >
+        <div class="grow line-clamp-2">
+          {quantity}×{t(`items.${itemId}`)}
+        </div>
+        <div class="opacity-75 truncate">
+          {perMinute}
+          {t('perMinute')}
+        </div>
+      </NFlex>
+    </NFlex>
   )
 }
 
@@ -33,37 +45,45 @@ const renderLabel: SelectRenderLabel = (option) => {
   const recipe = getRecipeById(option.value as Id)
 
   return (
-    <div class="p-2 flex gap-2">
-      <div class="w-16 flex flex-col justify-center items-center gap-1">
+    <NFlex class="py-2" align="center">
+      <NFlex vertical>
         <BuildingImage
           name={recipe.producedIn}
           sizes={[48, 96, 144]}
           formats={['avif', 'webp', 'png']}
         />
-        <div class="text-xs leading-none">
+        <div class="w-12 text-xs text-center whitespace-normal">
           {t(`buildings.${recipe.producedIn}`)}
         </div>
-      </div>
-      <div class="h-16 flex flex-col gap-2">
-        <div class="text-sm leading-none font-medium">{option.label}</div>
-        <div class="flex">
-          <div class="w-48 flex">
+      </NFlex>
+      <NFlex size={8} vertical>
+        <div class="text-sm">{option.label}</div>
+        <NFlex>
+          <NFlex>
             {recipe.inputs.map(({ itemId, quantity, quantityPerMinute }) =>
               renderItem(itemId, quantity, quantityPerMinute),
             )}
-          </div>
-          <div class="w-12 flex flex-col justify-center items-center">
-            <div class="text-sm leading-none">→</div>
-            <div class="text-xs leading-none">{recipe.productionDuration}s</div>
-          </div>
-          <div class="flex">
+          </NFlex>
+          <NFlex
+            class="w-12 self-center"
+            justify="center"
+            align="center"
+            vertical
+          >
+            <div class="text-xl leading-none">→</div>
+            <div class="text-sm leading-none">
+              {recipe.productionDuration}
+              {t('seconds')}
+            </div>
+          </NFlex>
+          <NFlex>
             {recipe.outputs.map(({ itemId, quantity, quantityPerMinute }) =>
               renderItem(itemId, quantity, quantityPerMinute),
             )}
-          </div>
-        </div>
-      </div>
-    </div>
+          </NFlex>
+        </NFlex>
+      </NFlex>
+    </NFlex>
   )
 }
 
