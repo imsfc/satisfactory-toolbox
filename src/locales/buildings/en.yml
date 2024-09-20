@@ -1,0 +1,12 @@
+buildings:
+  Constructor: Constructor
+  Assembler: Assembler
+  Manufacturer: Manufacturer
+  Packager: Packager
+  Refinery: Refinery
+  Blender: Blender
+  Particle_Accelerator: Particle Accelerator
+  Converter: Converter
+  Quantum_Encoder: Quantum Encoder
+  Smelter: Smelter
+  Foundry: Foundry

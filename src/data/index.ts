@@ -11,7 +11,6 @@ export const items: Item[] = itemsJson as Item[]
 export const recipes = recipesJson.map(
   ({
     id,
-    name,
     inputs,
     outputs,
     producedIn,
@@ -20,7 +19,6 @@ export const recipes = recipesJson.map(
   }): Recipe => {
     return {
       id,
-      name,
       inputs: inputs.map(({ itemId, quantity }) => {
         return {
           itemId,

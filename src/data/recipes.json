@@ -1,7 +1,6 @@
 [
   {
     "id": "Iron_Ingot",
-    "name": "铁锭",
     "inputs": [{ "itemId": "Iron_Ore", "quantity": 1 }],
     "outputs": [{ "itemId": "Iron_Ingot", "quantity": 1 }],
     "producedIn": "Smelter",
@@ -9,7 +8,6 @@
   },
   {
     "id": "Pure_Iron_Ingot",
-    "name": "替代：高纯度铁锭",
     "inputs": [
       { "itemId": "Iron_Ore", "quantity": 7 },
       { "itemId": "Water", "quantity": 4 }
@@ -20,7 +18,6 @@
   },
   {
     "id": "Basic_Iron_Ingot",
-    "name": "替代：基础钢铁",
     "inputs": [
       { "itemId": "Iron_Ore", "quantity": 5 },
       { "itemId": "Limestone", "quantity": 8 }
@@ -31,7 +28,6 @@
   },
   {
     "id": "Iron_Alloy_Ingot",
-    "name": "替代：铁合金锭",
     "inputs": [
       { "itemId": "Iron_Ore", "quantity": 8 },
       { "itemId": "Copper_Ore", "quantity": 2 }
@@ -42,7 +38,6 @@
   },
   {
     "id": "Leached_Iron_Ingot",
-    "name": "替代：滤化铁锭",
     "inputs": [
       { "itemId": "Iron_Ore", "quantity": 5 },
       { "itemId": "Sulfuric_Acid", "quantity": 1 }
@@ -53,7 +48,6 @@
   },
   {
     "id": "Iron_Ore_(Limestone)",
-    "name": "铁矿石（石灰石）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Limestone", "quantity": 24 }
@@ -65,7 +59,6 @@
   },
   {
     "id": "Iron_Plate",
-    "name": "铁板",
     "inputs": [{ "itemId": "Iron_Ingot", "quantity": 3 }],
     "outputs": [{ "itemId": "Iron_Plate", "quantity": 2 }],
     "producedIn": "Constructor",
@@ -73,7 +66,6 @@
   },
   {
     "id": "Coated_Iron_Plate",
-    "name": "替代：镀层铁板",
     "inputs": [
       { "itemId": "Iron_Ingot", "quantity": 5 },
       { "itemId": "Plastic", "quantity": 1 }
@@ -84,7 +76,6 @@
   },
   {
     "id": "Steel_Cast_Plate",
-    "name": "替代：铸钢板",
     "inputs": [
       { "itemId": "Iron_Ingot", "quantity": 1 },
       { "itemId": "Steel_Ingot", "quantity": 1 }
@@ -95,7 +86,6 @@
   },
   {
     "id": "Iron_Rod",
-    "name": "铁棒",
     "inputs": [{ "itemId": "Iron_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Iron_Rod", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -103,7 +93,6 @@
   },
   {
     "id": "Steel_Rod",
-    "name": "替代：钢棒",
     "inputs": [{ "itemId": "Steel_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Iron_Rod", "quantity": 4 }],
     "producedIn": "Constructor",
@@ -111,7 +100,6 @@
   },
   {
     "id": "Aluminum_Rod",
-    "name": "替代：铝棒",
     "inputs": [{ "itemId": "Aluminum_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Iron_Rod", "quantity": 7 }],
     "producedIn": "Constructor",
@@ -119,7 +107,6 @@
   },
   {
     "id": "Reinforced_Iron_Plate",
-    "name": "强化铁板",
     "inputs": [
       { "itemId": "Iron_Plate", "quantity": 6 },
       { "itemId": "Screw", "quantity": 12 }
@@ -130,7 +117,6 @@
   },
   {
     "id": "Stitched_Iron_Plate",
-    "name": "替代：拼接铁板",
     "inputs": [
       { "itemId": "Iron_Plate", "quantity": 10 },
       { "itemId": "Wire", "quantity": 20 }
@@ -141,7 +127,6 @@
   },
   {
     "id": "Adhered_Iron_Plate",
-    "name": "替代：粘合铁板",
     "inputs": [
       { "itemId": "Iron_Plate", "quantity": 3 },
       { "itemId": "Rubber", "quantity": 1 }
@@ -152,7 +137,6 @@
   },
   {
     "id": "Bolted_Iron_Plate",
-    "name": "替代：铆接铁板",
     "inputs": [
       { "itemId": "Iron_Plate", "quantity": 18 },
       { "itemId": "Screw", "quantity": 50 }
@@ -163,7 +147,6 @@
   },
   {
     "id": "Cable",
-    "name": "电缆",
     "inputs": [{ "itemId": "Wire", "quantity": 2 }],
     "outputs": [{ "itemId": "Cable", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -171,7 +154,6 @@
   },
   {
     "id": "Quickwire_Cable",
-    "name": "替代：急速电缆",
     "inputs": [
       { "itemId": "Quickwire", "quantity": 3 },
       { "itemId": "Rubber", "quantity": 2 }
@@ -182,7 +164,6 @@
   },
   {
     "id": "Insulated_Cable",
-    "name": "替代：绝缘电缆",
     "inputs": [
       { "itemId": "Wire", "quantity": 9 },
       { "itemId": "Rubber", "quantity": 6 }
@@ -193,7 +174,6 @@
   },
   {
     "id": "Coated_Cable",
-    "name": "替代：镀层电缆",
     "inputs": [
       { "itemId": "Wire", "quantity": 5 },
       { "itemId": "Heavy_Oil_Residue", "quantity": 2 }
@@ -204,7 +184,6 @@
   },
   {
     "id": "Wire",
-    "name": "电线",
     "inputs": [{ "itemId": "Copper_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Wire", "quantity": 2 }],
     "producedIn": "Constructor",
@@ -212,7 +191,6 @@
   },
   {
     "id": "Caterium_Wire",
-    "name": "替代：钦金电线",
     "inputs": [{ "itemId": "Caterium_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Wire", "quantity": 8 }],
     "producedIn": "Constructor",
@@ -220,7 +198,6 @@
   },
   {
     "id": "Iron_Wire",
-    "name": "替代：铁制电线",
     "inputs": [{ "itemId": "Iron_Ingot", "quantity": 5 }],
     "outputs": [{ "itemId": "Wire", "quantity": 9 }],
     "producedIn": "Constructor",
@@ -228,7 +205,6 @@
   },
   {
     "id": "Fused_Wire",
-    "name": "替代：熔合电线",
     "inputs": [
       { "itemId": "Copper_Ingot", "quantity": 4 },
       { "itemId": "Caterium_Ingot", "quantity": 1 }
@@ -239,7 +215,6 @@
   },
   {
     "id": "Copper_Ingot",
-    "name": "铜锭",
     "inputs": [{ "itemId": "Copper_Ore", "quantity": 1 }],
     "outputs": [{ "itemId": "Copper_Ingot", "quantity": 1 }],
     "producedIn": "Smelter",
@@ -247,7 +222,6 @@
   },
   {
     "id": "Tempered_Copper_Ingot",
-    "name": "替代：回火铜锭",
     "inputs": [
       { "itemId": "Copper_Ore", "quantity": 5 },
       { "itemId": "Petroleum_Coke", "quantity": 8 }
@@ -258,7 +232,6 @@
   },
   {
     "id": "Pure_Copper_Ingot",
-    "name": "替代：高纯度铜锭",
     "inputs": [
       { "itemId": "Copper_Ore", "quantity": 6 },
       { "itemId": "Water", "quantity": 4 }
@@ -269,7 +242,6 @@
   },
   {
     "id": "Leached_Copper_Ingot",
-    "name": "替代：滤化铜锭",
     "inputs": [
       { "itemId": "Copper_Ore", "quantity": 9 },
       { "itemId": "Sulfuric_Acid", "quantity": 5 }
@@ -280,7 +252,6 @@
   },
   {
     "id": "Copper_Alloy_Ingot",
-    "name": "替代：铜合金锭",
     "inputs": [
       { "itemId": "Copper_Ore", "quantity": 5 },
       { "itemId": "Iron_Ore", "quantity": 5 }
@@ -291,7 +262,6 @@
   },
   {
     "id": "Copper_Ore_(Quartz)",
-    "name": "铜矿石（石英）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Raw_Quartz", "quantity": 10 }
@@ -303,7 +273,6 @@
   },
   {
     "id": "Copper_Ore_(Sulfur)",
-    "name": "铜矿石（硫磺）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Sulfur", "quantity": 12 }
@@ -315,7 +284,6 @@
   },
   {
     "id": "Concrete",
-    "name": "混凝土",
     "inputs": [{ "itemId": "Limestone", "quantity": 3 }],
     "outputs": [{ "itemId": "Concrete", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -323,7 +291,6 @@
   },
   {
     "id": "Wet_Concrete",
-    "name": "替代：塑性混凝土",
     "inputs": [
       { "itemId": "Limestone", "quantity": 6 },
       { "itemId": "Water", "quantity": 5 }
@@ -334,7 +301,6 @@
   },
   {
     "id": "Fine_Concrete",
-    "name": "替代：细末混凝土",
     "inputs": [
       { "itemId": "Silica", "quantity": 3 },
       { "itemId": "Limestone", "quantity": 12 }
@@ -345,7 +311,6 @@
   },
   {
     "id": "Rubber_Concrete",
-    "name": "替代：橡胶混凝土",
     "inputs": [
       { "itemId": "Limestone", "quantity": 10 },
       { "itemId": "Rubber", "quantity": 2 }
@@ -356,7 +321,6 @@
   },
   {
     "id": "Limestone_(Sulfur)",
-    "name": "石灰石（硫磺）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Sulfur", "quantity": 2 }
@@ -368,7 +332,6 @@
   },
   {
     "id": "Screw",
-    "name": "螺丝",
     "inputs": [{ "itemId": "Iron_Rod", "quantity": 1 }],
     "outputs": [{ "itemId": "Screw", "quantity": 4 }],
     "producedIn": "Constructor",
@@ -376,7 +339,6 @@
   },
   {
     "id": "Cast_Screw",
-    "name": "替代：铸铁螺丝",
     "inputs": [{ "itemId": "Iron_Ingot", "quantity": 5 }],
     "outputs": [{ "itemId": "Screw", "quantity": 20 }],
     "producedIn": "Constructor",
@@ -384,7 +346,6 @@
   },
   {
     "id": "Steel_Screw",
-    "name": "替代：钢制螺丝",
     "inputs": [{ "itemId": "Steel_Beam", "quantity": 1 }],
     "outputs": [{ "itemId": "Screw", "quantity": 52 }],
     "producedIn": "Constructor",
@@ -392,7 +353,6 @@
   },
   {
     "id": "Biomass_(Wood)",
-    "name": "生物质（木材）",
     "inputs": [{ "itemId": "Wood", "quantity": 4 }],
     "outputs": [{ "itemId": "Biomass", "quantity": 20 }],
     "producedIn": "Constructor",
@@ -400,7 +360,6 @@
   },
   {
     "id": "Biomass_(Leaves)",
-    "name": "生物质（树叶）",
     "inputs": [{ "itemId": "Leaves", "quantity": 10 }],
     "outputs": [{ "itemId": "Biomass", "quantity": 5 }],
     "producedIn": "Constructor",
@@ -408,7 +367,6 @@
   },
   {
     "id": "Biomass_(Mycelia)",
-    "name": "生物质（菌丝体）",
     "inputs": [{ "itemId": "Mycelia", "quantity": 1 }],
     "outputs": [{ "itemId": "Biomass", "quantity": 10 }],
     "producedIn": "Constructor",
@@ -416,7 +374,6 @@
   },
   {
     "id": "Biomass_(Alien_Protein)",
-    "name": "生物质（外星生物蛋白质）",
     "inputs": [{ "itemId": "Alien_Protein", "quantity": 1 }],
     "outputs": [{ "itemId": "Biomass", "quantity": 100 }],
     "producedIn": "Constructor",
@@ -424,7 +381,6 @@
   },
   {
     "id": "Hog_Protein",
-    "name": "野猪蛋白质",
     "inputs": [{ "itemId": "Hog_Remains", "quantity": 1 }],
     "outputs": [{ "itemId": "Alien_Protein", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -432,7 +388,6 @@
   },
   {
     "id": "Stinger_Protein",
-    "name": "刺蛛蛋白质",
     "inputs": [{ "itemId": "Stinger_Remains", "quantity": 1 }],
     "outputs": [{ "itemId": "Alien_Protein", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -440,7 +395,6 @@
   },
   {
     "id": "Hatcher_Protein",
-    "name": "孵化巢蛋白质",
     "inputs": [{ "itemId": "Hatcher_Remains", "quantity": 1 }],
     "outputs": [{ "itemId": "Alien_Protein", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -448,7 +402,6 @@
   },
   {
     "id": "Spitter_Protein",
-    "name": "吐射兽蛋白质",
     "inputs": [{ "itemId": "Spitter_Remains", "quantity": 1 }],
     "outputs": [{ "itemId": "Alien_Protein", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -456,7 +409,6 @@
   },
   {
     "id": "Solid_Biofue",
-    "name": "固态生物燃料",
     "inputs": [{ "itemId": "Biomass", "quantity": 8 }],
     "outputs": [{ "itemId": "Solid_Biofuel", "quantity": 4 }],
     "producedIn": "Constructor",
@@ -464,7 +416,6 @@
   },
   {
     "id": "Rotor",
-    "name": "转子",
     "inputs": [
       { "itemId": "Iron_Rod", "quantity": 5 },
       { "itemId": "Screw", "quantity": 25 }
@@ -475,7 +426,6 @@
   },
   {
     "id": "Copper_Rotor",
-    "name": "替代：铜制转子",
     "inputs": [
       { "itemId": "Copper_Sheet", "quantity": 6 },
       { "itemId": "Screw", "quantity": 52 }
@@ -486,7 +436,6 @@
   },
   {
     "id": "Steel_Rotor",
-    "name": "替代：钢制转子",
     "inputs": [
       { "itemId": "Steel_Pipe", "quantity": 2 },
       { "itemId": "Wire", "quantity": 6 }
@@ -497,7 +446,6 @@
   },
   {
     "id": "Copper_Sheet",
-    "name": "铜板",
     "inputs": [{ "itemId": "Copper_Ingot", "quantity": 2 }],
     "outputs": [{ "itemId": "Copper_Sheet", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -505,7 +453,6 @@
   },
   {
     "id": "Steamed_Copper_Sheet",
-    "name": "替代：热压铜板",
     "inputs": [
       { "itemId": "Copper_Ingot", "quantity": 3 },
       { "itemId": "Water", "quantity": 3 }
@@ -516,7 +463,6 @@
   },
   {
     "id": "Modular_Frame",
-    "name": "模块化框架",
     "inputs": [
       { "itemId": "Reinforced_Iron_Plate", "quantity": 3 },
       { "itemId": "Iron_Rod", "quantity": 12 }
@@ -527,7 +473,6 @@
   },
   {
     "id": "Bolted_Frame",
-    "name": "替代：铆接式框架",
     "inputs": [
       { "itemId": "Reinforced_Iron_Plate", "quantity": 3 },
       { "itemId": "Screw", "quantity": 56 }
@@ -538,7 +483,6 @@
   },
   {
     "id": "Steeled_Frame",
-    "name": "替代：钢制框架",
     "inputs": [
       { "itemId": "Reinforced_Iron_Plate", "quantity": 2 },
       { "itemId": "Steel_Pipe", "quantity": 10 }
@@ -549,7 +493,6 @@
   },
   {
     "id": "Smart_Plating",
-    "name": "智能嵌板",
     "inputs": [
       { "itemId": "Reinforced_Iron_Plate", "quantity": 1 },
       { "itemId": "Rotor", "quantity": 1 }
@@ -560,7 +503,6 @@
   },
   {
     "id": "Plastic_Smart_Plating",
-    "name": "替代：塑料智能嵌板",
     "inputs": [
       { "itemId": "Reinforced_Iron_Plate", "quantity": 1 },
       { "itemId": "Rotor", "quantity": 1 },
@@ -572,7 +514,6 @@
   },
   {
     "id": "Power_Shard_(1)",
-    "name": "能量碎片（1）",
     "inputs": [{ "itemId": "Blue_Power_Slug", "quantity": 1 }],
     "outputs": [{ "itemId": "Power_Shard", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -580,7 +521,6 @@
   },
   {
     "id": "Power_Shard_(2)",
-    "name": "能量碎片（2）",
     "inputs": [{ "itemId": "Yellow_Power_Slug", "quantity": 1 }],
     "outputs": [{ "itemId": "Power_Shard", "quantity": 2 }],
     "producedIn": "Constructor",
@@ -588,7 +528,6 @@
   },
   {
     "id": "Power_Shard_(5)",
-    "name": "能量碎片（5）",
     "inputs": [{ "itemId": "Purple_Power_Slug", "quantity": 1 }],
     "outputs": [{ "itemId": "Power_Shard", "quantity": 5 }],
     "producedIn": "Constructor",
@@ -596,7 +535,6 @@
   },
   {
     "id": "Synthetic_Power_Shard",
-    "name": "合成能量碎片",
     "inputs": [
       { "itemId": "Time_Crystal", "quantity": 2 },
       { "itemId": "Dark_Matter_Crystal", "quantity": 2 },
@@ -613,7 +551,6 @@
   },
   {
     "id": "Steel_Ingot",
-    "name": "钢锭",
     "inputs": [
       { "itemId": "Iron_Ore", "quantity": 3 },
       { "itemId": "Coal", "quantity": 3 }
@@ -624,7 +561,6 @@
   },
   {
     "id": "Solid_Steel_Ingot",
-    "name": "替代：坚固钢锭",
     "inputs": [
       { "itemId": "Iron_Ingot", "quantity": 2 },
       { "itemId": "Coal", "quantity": 2 }
@@ -635,7 +571,6 @@
   },
   {
     "id": "Coke_Steel_Ingot",
-    "name": "替代：高碳钢锭",
     "inputs": [
       { "itemId": "Iron_Ore", "quantity": 15 },
       { "itemId": "Petroleum_Coke", "quantity": 15 }
@@ -646,7 +581,6 @@
   },
   {
     "id": "Compacted_Steel_Ingot",
-    "name": "替代：致密钢锭",
     "inputs": [
       { "itemId": "Iron_Ore", "quantity": 2 },
       { "itemId": "Compacted_Coal", "quantity": 1 }
@@ -657,7 +591,6 @@
   },
   {
     "id": "Coal_(Iron)",
-    "name": "煤（铁）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Iron_Ore", "quantity": 18 }
@@ -669,7 +602,6 @@
   },
   {
     "id": "Coal_(Limestone)",
-    "name": "煤（石灰石）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Limestone", "quantity": 36 }
@@ -681,7 +613,6 @@
   },
   {
     "id": "Charcoal",
-    "name": "替代：木炭",
     "inputs": [{ "itemId": "Wood", "quantity": 1 }],
     "outputs": [{ "itemId": "Coal", "quantity": 10 }],
     "producedIn": "Constructor",
@@ -689,7 +620,6 @@
   },
   {
     "id": "Biocoal",
-    "name": "替代：生物煤",
     "inputs": [{ "itemId": "Biomass", "quantity": 5 }],
     "outputs": [{ "itemId": "Coal", "quantity": 6 }],
     "producedIn": "Constructor",
@@ -697,7 +627,6 @@
   },
   {
     "id": "Steel_Beam",
-    "name": "钢梁",
     "inputs": [{ "itemId": "Steel_Ingot", "quantity": 4 }],
     "outputs": [{ "itemId": "Steel_Beam", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -705,7 +634,6 @@
   },
   {
     "id": "Molded_Beam",
-    "name": "替代：浇铸梁",
     "inputs": [
       { "itemId": "Steel_Ingot", "quantity": 24 },
       { "itemId": "Limestone", "quantity": 16 }
@@ -716,7 +644,6 @@
   },
   {
     "id": "Aluminum_Beam",
-    "name": "替代：铝制梁",
     "inputs": [{ "itemId": "Aluminum_Ingot", "quantity": 3 }],
     "outputs": [{ "itemId": "Steel_Beam", "quantity": 3 }],
     "producedIn": "Constructor",
@@ -724,7 +651,6 @@
   },
   {
     "id": "Steel_Pipe",
-    "name": "钢管",
     "inputs": [{ "itemId": "Steel_Ingot", "quantity": 3 }],
     "outputs": [{ "itemId": "Steel_Pipe", "quantity": 2 }],
     "producedIn": "Constructor",
@@ -732,7 +658,6 @@
   },
   {
     "id": "Molded_Steel_Pipe",
-    "name": "替代：浇铸钢管",
     "inputs": [
       { "itemId": "Steel_Ingot", "quantity": 5 },
       { "itemId": "Concrete", "quantity": 3 }
@@ -743,7 +668,6 @@
   },
   {
     "id": "Iron_Pipe",
-    "name": "替代：铁制管道",
     "inputs": [{ "itemId": "Iron_Ingot", "quantity": 20 }],
     "outputs": [{ "itemId": "Steel_Pipe", "quantity": 5 }],
     "producedIn": "Constructor",
@@ -751,7 +675,6 @@
   },
   {
     "id": "Versatile_Framework",
-    "name": "多功能框架",
     "inputs": [
       { "itemId": "Modular_Frame", "quantity": 1 },
       { "itemId": "Steel_Beam", "quantity": 12 }
@@ -762,7 +685,6 @@
   },
   {
     "id": "Flexible_Framework",
-    "name": "替代：灵活型框架",
     "inputs": [
       { "itemId": "Modular_Frame", "quantity": 1 },
       { "itemId": "Steel_Beam", "quantity": 6 },
@@ -774,7 +696,6 @@
   },
   {
     "id": "Silica",
-    "name": "二氧化硅",
     "inputs": [{ "itemId": "Raw_Quartz", "quantity": 3 }],
     "outputs": [{ "itemId": "Silica", "quantity": 5 }],
     "producedIn": "Constructor",
@@ -782,7 +703,6 @@
   },
   {
     "id": "Alumina_Solution",
-    "name": "氧化铝溶液",
     "inputs": [
       { "itemId": "Bauxite", "quantity": 12 },
       { "itemId": "Water", "quantity": 18 }
@@ -796,7 +716,6 @@
   },
   {
     "id": "Cheap_Silica",
-    "name": "替代：粗制二氧化硅",
     "inputs": [
       { "itemId": "Raw_Quartz", "quantity": 3 },
       { "itemId": "Limestone", "quantity": 5 }
@@ -807,7 +726,6 @@
   },
   {
     "id": "Distilled_Silica",
-    "name": "替代：提纯二氧化硅",
     "inputs": [
       { "itemId": "Dissolved_Silica", "quantity": 12 },
       { "itemId": "Limestone", "quantity": 5 },
@@ -822,7 +740,6 @@
   },
   {
     "id": "Raw_Quartz_(Bauxite)",
-    "name": "粗石英（铝土矿）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Bauxite", "quantity": 10 }
@@ -834,7 +751,6 @@
   },
   {
     "id": "Raw_Quartz_(Coal)",
-    "name": "粗石英（煤）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Coal", "quantity": 24 }
@@ -846,7 +762,6 @@
   },
   {
     "id": "Alien_DNA_Capsule",
-    "name": "外星DNA胶囊",
     "inputs": [{ "itemId": "Alien_Protein", "quantity": 1 }],
     "outputs": [{ "itemId": "Alien_DNA_Capsule", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -854,7 +769,6 @@
   },
   {
     "id": "Black_Powder",
-    "name": "黑火药",
     "inputs": [
       { "itemId": "Coal", "quantity": 1 },
       { "itemId": "Sulfur", "quantity": 1 }
@@ -865,7 +779,6 @@
   },
   {
     "id": "Fine_Black_Powder",
-    "name": "替代：细末黑火药",
     "inputs": [
       { "itemId": "Sulfur", "quantity": 1 },
       { "itemId": "Compacted_Coal", "quantity": 2 }
@@ -876,7 +789,6 @@
   },
   {
     "id": "Sulfur_(Coal)",
-    "name": "硫磺（煤）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Coal", "quantity": 20 }
@@ -888,7 +800,6 @@
   },
   {
     "id": "Sulfur_(Iron)",
-    "name": "硫磺（铁）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Iron_Ore", "quantity": 30 }
@@ -900,7 +811,6 @@
   },
   {
     "id": "Fabric",
-    "name": "纤维织物",
     "inputs": [
       { "itemId": "Mycelia", "quantity": 1 },
       { "itemId": "Biomass", "quantity": 5 }
@@ -911,7 +821,6 @@
   },
   {
     "id": "Polyester_Fabric",
-    "name": "替代：聚酯纤维织物",
     "inputs": [
       { "itemId": "Polymer_Resin", "quantity": 1 },
       { "itemId": "Water", "quantity": 1 }
@@ -922,7 +831,6 @@
   },
   {
     "id": "Iron_Rebar",
-    "name": "铁棒弹",
     "inputs": [{ "itemId": "Iron_Rod", "quantity": 1 }],
     "outputs": [{ "itemId": "Iron_Rebar", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -930,7 +838,6 @@
   },
   {
     "id": "Gas_Filter",
-    "name": "气体过滤器",
     "inputs": [
       { "itemId": "Fabric", "quantity": 2 },
       { "itemId": "Coal", "quantity": 4 },
@@ -942,7 +849,6 @@
   },
   {
     "id": "Nobelisk",
-    "name": "诺氏雷筒",
     "inputs": [
       { "itemId": "Black_Powder", "quantity": 2 },
       { "itemId": "Steel_Pipe", "quantity": 2 }
@@ -953,7 +859,6 @@
   },
   {
     "id": "Quartz_Crystal",
-    "name": "石英晶体",
     "inputs": [{ "itemId": "Raw_Quartz", "quantity": 5 }],
     "outputs": [{ "itemId": "Quartz_Crystal", "quantity": 3 }],
     "producedIn": "Constructor",
@@ -961,7 +866,6 @@
   },
   {
     "id": "Pure_Quartz_Crystal",
-    "name": "替代：纯石英晶体",
     "inputs": [
       { "itemId": "Raw_Quartz", "quantity": 9 },
       { "itemId": "Water", "quantity": 5 }
@@ -972,7 +876,6 @@
   },
   {
     "id": "Quartz_Purification",
-    "name": "替代：石英净化",
     "inputs": [
       { "itemId": "Raw_Quartz", "quantity": 24 },
       { "itemId": "Nitric_Acid", "quantity": 2 }
@@ -986,7 +889,6 @@
   },
   {
     "id": "Fused_Quartz_Crystal",
-    "name": "替代：熔合石英晶体",
     "inputs": [
       { "itemId": "Raw_Quartz", "quantity": 25 },
       { "itemId": "Coal", "quantity": 12 }
@@ -997,7 +899,6 @@
   },
   {
     "id": "Crystal_Oscillator",
-    "name": "晶体振荡器",
     "inputs": [
       { "itemId": "Quartz_Crystal", "quantity": 36 },
       { "itemId": "Cable", "quantity": 28 },
@@ -1009,7 +910,6 @@
   },
   {
     "id": "Insulated_Crystal_Oscillator",
-    "name": "替代：绝缘晶体振荡器",
     "inputs": [
       { "itemId": "Quartz_Crystal", "quantity": 10 },
       { "itemId": "Rubber", "quantity": 7 },
@@ -1021,7 +921,6 @@
   },
   {
     "id": "Shatter_Rebar",
-    "name": "散射铁棒弹",
     "inputs": [
       { "itemId": "Iron_Rebar", "quantity": 2 },
       { "itemId": "Quartz_Crystal", "quantity": 3 }
@@ -1032,7 +931,6 @@
   },
   {
     "id": "Encased_Industrial_Beam",
-    "name": "钢筋混凝土梁",
     "inputs": [
       { "itemId": "Steel_Beam", "quantity": 3 },
       { "itemId": "Concrete", "quantity": 6 }
@@ -1043,7 +941,6 @@
   },
   {
     "id": "Encased_Industrial_Pipe",
-    "name": "替代：钢管混凝土梁",
     "inputs": [
       { "itemId": "Steel_Pipe", "quantity": 6 },
       { "itemId": "Concrete", "quantity": 5 }
@@ -1054,7 +951,6 @@
   },
   {
     "id": "Stator",
-    "name": "定子",
     "inputs": [
       { "itemId": "Steel_Pipe", "quantity": 3 },
       { "itemId": "Wire", "quantity": 8 }
@@ -1065,7 +961,6 @@
   },
   {
     "id": "Quickwire_Stator",
-    "name": "替代：急速电线定子",
     "inputs": [
       { "itemId": "Steel_Pipe", "quantity": 4 },
       { "itemId": "Quickwire", "quantity": 15 }
@@ -1076,7 +971,6 @@
   },
   {
     "id": "Motor",
-    "name": "马达",
     "inputs": [
       { "itemId": "Rotor", "quantity": 2 },
       { "itemId": "Stator", "quantity": 2 }
@@ -1087,7 +981,6 @@
   },
   {
     "id": "Rigor_Motor",
-    "name": "替代：牢固马达",
     "inputs": [
       { "itemId": "Rotor", "quantity": 3 },
       { "itemId": "Stator", "quantity": 3 },
@@ -1099,7 +992,6 @@
   },
   {
     "id": "Electric_Motor",
-    "name": "替代：电磁马达",
     "inputs": [
       { "itemId": "Electromagnetic_Control_Rod", "quantity": 1 },
       { "itemId": "Rotor", "quantity": 2 }
@@ -1110,7 +1002,6 @@
   },
   {
     "id": "Automated_Wiring",
-    "name": "自动化线缆",
     "inputs": [
       { "itemId": "Stator", "quantity": 1 },
       { "itemId": "Cable", "quantity": 20 }
@@ -1121,7 +1012,6 @@
   },
   {
     "id": "Automated_Speed_Wiring",
-    "name": "替代：自动化高速线缆",
     "inputs": [
       { "itemId": "Stator", "quantity": 2 },
       { "itemId": "Wire", "quantity": 40 },
@@ -1133,7 +1023,6 @@
   },
   {
     "id": "Gas_Nobelisk",
-    "name": "毒气诺石",
     "inputs": [
       { "itemId": "Nobelisk", "quantity": 1 },
       { "itemId": "Biomass", "quantity": 10 }
@@ -1144,7 +1033,6 @@
   },
   {
     "id": "Reanimated_SAM",
-    "name": "活性SAM物质",
     "inputs": [{ "itemId": "SAM", "quantity": 4 }],
     "outputs": [{ "itemId": "Reanimated_SAM", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -1152,7 +1040,6 @@
   },
   {
     "id": "Caterium_Ingot",
-    "name": "钦金锭",
     "inputs": [{ "itemId": "Caterium_Ore", "quantity": 3 }],
     "outputs": [{ "itemId": "Caterium_Ingot", "quantity": 1 }],
     "producedIn": "Smelter",
@@ -1160,7 +1047,6 @@
   },
   {
     "id": "Pure_Caterium_Ingot",
-    "name": "替代：高纯度钦金锭",
     "inputs": [
       { "itemId": "Caterium_Ore", "quantity": 2 },
       { "itemId": "Water", "quantity": 2 }
@@ -1171,7 +1057,6 @@
   },
   {
     "id": "Leached_Caterium_Ingot",
-    "name": "替代：滤化钦金锭",
     "inputs": [
       { "itemId": "Caterium_Ore", "quantity": 9 },
       { "itemId": "Sulfuric_Acid", "quantity": 5 }
@@ -1182,7 +1067,6 @@
   },
   {
     "id": "Tempered_Caterium_Ingot",
-    "name": "替代：回火钦金锭",
     "inputs": [
       { "itemId": "Caterium_Ore", "quantity": 6 },
       { "itemId": "Petroleum_Coke", "quantity": 2 }
@@ -1193,7 +1077,6 @@
   },
   {
     "id": "Caterium_Ore_(Copper)",
-    "name": "钦金矿石（铜）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Copper_Ore", "quantity": 15 }
@@ -1205,7 +1088,6 @@
   },
   {
     "id": "Caterium_Ore_(Quartz)",
-    "name": "钦金矿石（石英）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Raw_Quartz", "quantity": 12 }
@@ -1217,7 +1099,6 @@
   },
   {
     "id": "SAM_Fluctuator",
-    "name": "SAM物质波波动器",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 6 },
       { "itemId": "Wire", "quantity": 5 },
@@ -1229,7 +1110,6 @@
   },
   {
     "id": "Quickwire",
-    "name": "急速电线",
     "inputs": [{ "itemId": "Caterium_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Quickwire", "quantity": 5 }],
     "producedIn": "Constructor",
@@ -1237,7 +1117,6 @@
   },
   {
     "id": "Fused_Quickwire",
-    "name": "替代：熔合急速电线",
     "inputs": [
       { "itemId": "Caterium_Ingot", "quantity": 1 },
       { "itemId": "Copper_Ingot", "quantity": 5 }
@@ -1248,7 +1127,6 @@
   },
   {
     "id": "Stun_Rebar",
-    "name": "电击铁棒弹",
     "inputs": [
       { "itemId": "Iron_Rebar", "quantity": 1 },
       { "itemId": "Quickwire", "quantity": 5 }
@@ -1259,7 +1137,6 @@
   },
   {
     "id": "AI_Limiter",
-    "name": "AI限制器",
     "inputs": [
       { "itemId": "Copper_Sheet", "quantity": 5 },
       { "itemId": "Quickwire", "quantity": 20 }
@@ -1270,7 +1147,6 @@
   },
   {
     "id": "Plastic_AI_Limiter",
-    "name": "替代：塑料AI限制器",
     "inputs": [
       { "itemId": "Quickwire", "quantity": 30 },
       { "itemId": "Plastic", "quantity": 7 }
@@ -1281,7 +1157,6 @@
   },
   {
     "id": "Petroleum_Coke",
-    "name": "石油焦",
     "inputs": [{ "itemId": "Heavy_Oil_Residue", "quantity": 4 }],
     "outputs": [{ "itemId": "Petroleum_Coke", "quantity": 12 }],
     "producedIn": "Refinery",
@@ -1289,7 +1164,6 @@
   },
   {
     "id": "Plastic",
-    "name": "塑料",
     "inputs": [{ "itemId": "Crude_Oil", "quantity": 3 }],
     "outputs": [
       { "itemId": "Plastic", "quantity": 2 },
@@ -1300,7 +1174,6 @@
   },
   {
     "id": "Rubber",
-    "name": "橡胶",
     "inputs": [{ "itemId": "Crude_Oil", "quantity": 3 }],
     "outputs": [
       { "itemId": "Rubber", "quantity": 2 },
@@ -1311,7 +1184,6 @@
   },
   {
     "id": "Unpackage_Heavy_Oil_Residue",
-    "name": "导出重油残渣",
     "inputs": [{ "itemId": "Packaged_Heavy_Oil_Residue", "quantity": 2 }],
     "outputs": [
       { "itemId": "Heavy_Oil_Residue", "quantity": 2 },
@@ -1322,7 +1194,6 @@
   },
   {
     "id": "Polymer_Resin",
-    "name": "替代：聚合树脂",
     "inputs": [{ "itemId": "Crude_Oil", "quantity": 6 }],
     "outputs": [
       { "itemId": "Polymer_Resin", "quantity": 13 },
@@ -1333,7 +1204,6 @@
   },
   {
     "id": "Heavy_Oil_Residue",
-    "name": "替代：重油残渣",
     "inputs": [{ "itemId": "Crude_Oil", "quantity": 3 }],
     "outputs": [
       { "itemId": "Heavy_Oil_Residue", "quantity": 4 },
@@ -1344,7 +1214,6 @@
   },
   {
     "id": "Circuit_Board",
-    "name": "电路板",
     "inputs": [
       { "itemId": "Copper_Sheet", "quantity": 2 },
       { "itemId": "Plastic", "quantity": 4 }
@@ -1355,7 +1224,6 @@
   },
   {
     "id": "Silicon_Circuit_Board",
-    "name": "替代：硅基电路板",
     "inputs": [
       { "itemId": "Copper_Sheet", "quantity": 11 },
       { "itemId": "Silica", "quantity": 11 }
@@ -1366,7 +1234,6 @@
   },
   {
     "id": "Caterium_Circuit_Board",
-    "name": "替代：钦金电路板",
     "inputs": [
       { "itemId": "Plastic", "quantity": 10 },
       { "itemId": "Quickwire", "quantity": 30 }
@@ -1377,7 +1244,6 @@
   },
   {
     "id": "Electrode_Circuit_Board",
-    "name": "替代：电极电路板",
     "inputs": [
       { "itemId": "Rubber", "quantity": 4 },
       { "itemId": "Petroleum_Coke", "quantity": 8 }
@@ -1388,7 +1254,6 @@
   },
   {
     "id": "Residual_Plastic",
-    "name": "聚合塑料",
     "inputs": [
       { "itemId": "Polymer_Resin", "quantity": 6 },
       { "itemId": "Water", "quantity": 2 }
@@ -1399,7 +1264,6 @@
   },
   {
     "id": "Recycled_Plastic",
-    "name": "替代：再生塑料",
     "inputs": [
       { "itemId": "Rubber", "quantity": 6 },
       { "itemId": "Fuel", "quantity": 6 }
@@ -1410,7 +1274,6 @@
   },
   {
     "id": "Fuel",
-    "name": "燃料",
     "inputs": [{ "itemId": "Crude_Oil", "quantity": 6 }],
     "outputs": [
       { "itemId": "Fuel", "quantity": 4 },
@@ -1421,7 +1284,6 @@
   },
   {
     "id": "Unpackage_Water",
-    "name": "导出水",
     "inputs": [{ "itemId": "Packaged_Water", "quantity": 2 }],
     "outputs": [
       { "itemId": "Water", "quantity": 2 },
@@ -1432,7 +1294,6 @@
   },
   {
     "id": "Aluminum_Scrap",
-    "name": "碎铝渣",
     "inputs": [
       { "itemId": "Alumina_Solution", "quantity": 4 },
       { "itemId": "Coal", "quantity": 2 }
@@ -1446,7 +1307,6 @@
   },
   {
     "id": "Electrode_Aluminum_Scrap",
-    "name": "替代：电解制铝",
     "inputs": [
       { "itemId": "Alumina_Solution", "quantity": 12 },
       { "itemId": "Petroleum_Coke", "quantity": 4 }
@@ -1460,7 +1320,6 @@
   },
   {
     "id": "Battery",
-    "name": "电池",
     "inputs": [
       { "itemId": "Sulfuric_Acid", "quantity": 2.5 },
       { "itemId": "Alumina_Solution", "quantity": 2 },
@@ -1475,7 +1334,6 @@
   },
   {
     "id": "Non-Fissile_Uranium",
-    "name": "非裂变贫铀",
     "inputs": [
       { "itemId": "Uranium_Waste", "quantity": 15 },
       { "itemId": "Silica", "quantity": 10 },
@@ -1491,7 +1349,6 @@
   },
   {
     "id": "Fertile_Uranium",
-    "name": "替代：富铀",
     "inputs": [
       { "itemId": "Uranium", "quantity": 5 },
       { "itemId": "Uranium_Waste", "quantity": 5 },
@@ -1507,7 +1364,6 @@
   },
   {
     "id": "Instant_Scrap",
-    "name": "替代：速成型碎铝渣",
     "inputs": [
       { "itemId": "Bauxite", "quantity": 15 },
       { "itemId": "Coal", "quantity": 10 },
@@ -1523,7 +1379,6 @@
   },
   {
     "id": "Residual_Rubber",
-    "name": "聚合橡胶",
     "inputs": [
       { "itemId": "Polymer_Resin", "quantity": 4 },
       { "itemId": "Water", "quantity": 4 }
@@ -1534,7 +1389,6 @@
   },
   {
     "id": "Recycled_Rubber",
-    "name": "替代：再生橡胶",
     "inputs": [
       { "itemId": "Plastic", "quantity": 6 },
       { "itemId": "Fuel", "quantity": 6 }
@@ -1545,7 +1399,6 @@
   },
   {
     "id": "Residual_Fuel",
-    "name": "残渣燃料油",
     "inputs": [{ "itemId": "Heavy_Oil_Residue", "quantity": 6 }],
     "outputs": [{ "itemId": "Fuel", "quantity": 4 }],
     "producedIn": "Refinery",
@@ -1553,7 +1406,6 @@
   },
   {
     "id": "Unpackage_Fuel",
-    "name": "导出燃油",
     "inputs": [{ "itemId": "Packaged_Fuel", "quantity": 2 }],
     "outputs": [
       { "itemId": "Fuel", "quantity": 2 },
@@ -1564,7 +1416,6 @@
   },
   {
     "id": "Diluted_Fuel",
-    "name": "替代：稀释燃油",
     "inputs": [
       { "itemId": "Heavy_Oil_Residue", "quantity": 5 },
       { "itemId": "Water", "quantity": 10 }
@@ -1575,7 +1426,6 @@
   },
   {
     "id": "Unpackage_Oil",
-    "name": "导出原油",
     "inputs": [{ "itemId": "Packaged_Oil", "quantity": 2 }],
     "outputs": [
       { "itemId": "Crude_Oil", "quantity": 2 },
@@ -1586,7 +1436,6 @@
   },
   {
     "id": "High-Speed_Connector",
-    "name": "高速连接器",
     "inputs": [
       { "itemId": "Quickwire", "quantity": 56 },
       { "itemId": "Cable", "quantity": 10 },
@@ -1598,7 +1447,6 @@
   },
   {
     "id": "Silicon_High-Speed_Connector",
-    "name": "替代：硅基高速连接器",
     "inputs": [
       { "itemId": "Quickwire", "quantity": 60 },
       { "itemId": "Silica", "quantity": 25 },
@@ -1610,7 +1458,6 @@
   },
   {
     "id": "Empty_Canister",
-    "name": "空桶",
     "inputs": [{ "itemId": "Plastic", "quantity": 2 }],
     "outputs": [{ "itemId": "Empty_Canister", "quantity": 4 }],
     "producedIn": "Constructor",
@@ -1618,7 +1465,6 @@
   },
   {
     "id": "Unpackage_Liquid_Biofuel",
-    "name": "导出液态生物燃料",
     "inputs": [{ "itemId": "Packaged_Liquid_Biofuel", "quantity": 2 }],
     "outputs": [
       { "itemId": "Liquid_Biofuel", "quantity": 2 },
@@ -1629,7 +1475,6 @@
   },
   {
     "id": "Coated_Iron_Canister",
-    "name": "替代：镀层铁桶",
     "inputs": [
       { "itemId": "Iron_Plate", "quantity": 2 },
       { "itemId": "Copper_Sheet", "quantity": 1 }
@@ -1640,7 +1485,6 @@
   },
   {
     "id": "Unpackage_Alumina_Solution",
-    "name": "导出氧化铝溶液",
     "inputs": [{ "itemId": "Packaged_Alumina_Solution", "quantity": 2 }],
     "outputs": [
       { "itemId": "Alumina_Solution", "quantity": 2 },
@@ -1651,7 +1495,6 @@
   },
   {
     "id": "Steel_Canister",
-    "name": "替代：钢桶",
     "inputs": [{ "itemId": "Steel_Ingot", "quantity": 4 }],
     "outputs": [{ "itemId": "Empty_Canister", "quantity": 4 }],
     "producedIn": "Constructor",
@@ -1659,7 +1502,6 @@
   },
   {
     "id": "Unpackage_Sulfuric_Acid",
-    "name": "导出硫酸",
     "inputs": [{ "itemId": "Packaged_Sulfuric_Acid", "quantity": 1 }],
     "outputs": [
       { "itemId": "Sulfuric_Acid", "quantity": 1 },
@@ -1670,7 +1512,6 @@
   },
   {
     "id": "Unpackage_Turbofuel",
-    "name": "导出涡轮燃油",
     "inputs": [{ "itemId": "Packaged_Turbofuel", "quantity": 2 }],
     "outputs": [
       { "itemId": "Turbofuel", "quantity": 2 },
@@ -1681,7 +1522,6 @@
   },
   {
     "id": "Packaged_Water",
-    "name": "桶装水",
     "inputs": [
       { "itemId": "Water", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -1692,7 +1532,6 @@
   },
   {
     "id": "Packaged_Oil",
-    "name": "桶装原油",
     "inputs": [
       { "itemId": "Crude_Oil", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -1703,7 +1542,6 @@
   },
   {
     "id": "Packaged_Fuel",
-    "name": "桶装燃油",
     "inputs": [
       { "itemId": "Fuel", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -1714,7 +1552,6 @@
   },
   {
     "id": "Diluted_Packaged_Fuel",
-    "name": "替代：桶装稀释燃油",
     "inputs": [
       { "itemId": "Heavy_Oil_Residue", "quantity": 1 },
       { "itemId": "Packaged_Water", "quantity": 2 }
@@ -1725,7 +1562,6 @@
   },
   {
     "id": "Packaged_Heavy_Oil_Residue",
-    "name": "桶装重油残渣",
     "inputs": [
       { "itemId": "Heavy_Oil_Residue", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -1736,7 +1572,6 @@
   },
   {
     "id": "Packaged_Liquid_Biofuel",
-    "name": "桶装液态生物燃料",
     "inputs": [
       { "itemId": "Liquid_Biofuel", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -1747,7 +1582,6 @@
   },
   {
     "id": "Liquid_Biofuel",
-    "name": "液态生物燃料",
     "inputs": [
       { "itemId": "Solid_Biofuel", "quantity": 6 },
       { "itemId": "Water", "quantity": 3 }
@@ -1758,7 +1592,6 @@
   },
   {
     "id": "Computer",
-    "name": "计算机",
     "inputs": [
       { "itemId": "Circuit_Board", "quantity": 4 },
       { "itemId": "Cable", "quantity": 8 },
@@ -1770,7 +1603,6 @@
   },
   {
     "id": "Caterium_Computer",
-    "name": "替代：钦金计算机",
     "inputs": [
       { "itemId": "Circuit_Board", "quantity": 4 },
       { "itemId": "Quickwire", "quantity": 14 },
@@ -1782,7 +1614,6 @@
   },
   {
     "id": "Crystal_Computer",
-    "name": "替代：晶体计算机",
     "inputs": [
       { "itemId": "Circuit_Board", "quantity": 3 },
       { "itemId": "Crystal_Oscillator", "quantity": 1 }
@@ -1793,7 +1624,6 @@
   },
   {
     "id": "Heavy_Modular_Frame",
-    "name": "重型模块化框架",
     "inputs": [
       { "itemId": "Modular_Frame", "quantity": 5 },
       { "itemId": "Steel_Pipe", "quantity": 20 },
@@ -1806,7 +1636,6 @@
   },
   {
     "id": "Heavy_Encased_Frame",
-    "name": "替代：重型封闭式框架",
     "inputs": [
       { "itemId": "Modular_Frame", "quantity": 8 },
       { "itemId": "Encased_Industrial_Beam", "quantity": 10 },
@@ -1819,7 +1648,6 @@
   },
   {
     "id": "Heavy_Flexible_Frame",
-    "name": "替代：重型柔韧框架",
     "inputs": [
       { "itemId": "Modular_Frame", "quantity": 5 },
       { "itemId": "Encased_Industrial_Beam", "quantity": 3 },
@@ -1832,7 +1660,6 @@
   },
   {
     "id": "Modular_Engine",
-    "name": "模块化引擎",
     "inputs": [
       { "itemId": "Motor", "quantity": 2 },
       { "itemId": "Rubber", "quantity": 15 },
@@ -1844,7 +1671,6 @@
   },
   {
     "id": "Adaptive_Control_Unit",
-    "name": "自适应控制单元",
     "inputs": [
       { "itemId": "Automated_Wiring", "quantity": 5 },
       { "itemId": "Circuit_Board", "quantity": 5 },
@@ -1857,7 +1683,6 @@
   },
   {
     "id": "Smokeless_Powder",
-    "name": "无烟火药",
     "inputs": [
       { "itemId": "Black_Powder", "quantity": 2 },
       { "itemId": "Heavy_Oil_Residue", "quantity": 1 }
@@ -1868,7 +1693,6 @@
   },
   {
     "id": "Pulse_Nobelisk",
-    "name": "脉冲诺石",
     "inputs": [
       { "itemId": "Nobelisk", "quantity": 5 },
       { "itemId": "Crystal_Oscillator", "quantity": 1 }
@@ -1879,7 +1703,6 @@
   },
   {
     "id": "Rifle_Ammo",
-    "name": "步枪弹药",
     "inputs": [
       { "itemId": "Copper_Sheet", "quantity": 3 },
       { "itemId": "Smokeless_Powder", "quantity": 2 }
@@ -1890,7 +1713,6 @@
   },
   {
     "id": "Alclad_Aluminum_Sheet",
-    "name": "复合铝板",
     "inputs": [
       { "itemId": "Aluminum_Ingot", "quantity": 3 },
       { "itemId": "Copper_Ingot", "quantity": 1 }
@@ -1901,7 +1723,6 @@
   },
   {
     "id": "Iodine-Infused_Filter",
-    "name": "碘化过滤器",
     "inputs": [
       { "itemId": "Gas_Filter", "quantity": 1 },
       { "itemId": "Quickwire", "quantity": 8 },
@@ -1913,7 +1734,6 @@
   },
   {
     "id": "Aluminum_Casing",
-    "name": "铝制外壳",
     "inputs": [{ "itemId": "Aluminum_Ingot", "quantity": 3 }],
     "outputs": [{ "itemId": "Aluminum_Casing", "quantity": 2 }],
     "producedIn": "Constructor",
@@ -1921,7 +1741,6 @@
   },
   {
     "id": "Alclad_Casing",
-    "name": "替代：复合铝外壳",
     "inputs": [
       { "itemId": "Aluminum_Ingot", "quantity": 20 },
       { "itemId": "Copper_Ingot", "quantity": 10 }
@@ -1932,7 +1751,6 @@
   },
   {
     "id": "Cluster_Nobelisk",
-    "name": "集束诺氏雷筒",
     "inputs": [
       { "itemId": "Nobelisk", "quantity": 3 },
       { "itemId": "Smokeless_Powder", "quantity": 4 }
@@ -1943,7 +1761,6 @@
   },
   {
     "id": "Homing_Rifle_Ammo",
-    "name": "追踪步枪弹",
     "inputs": [
       { "itemId": "Rifle_Ammo", "quantity": 20 },
       { "itemId": "High-Speed_Connector", "quantity": 1 }
@@ -1954,7 +1771,6 @@
   },
   {
     "id": "Sloppy_Alumina",
-    "name": "替代：氧化铝匀浆",
     "inputs": [
       { "itemId": "Bauxite", "quantity": 10 },
       { "itemId": "Water", "quantity": 10 }
@@ -1965,7 +1781,6 @@
   },
   {
     "id": "Bauxite_(Caterium)",
-    "name": "铝土矿（钦金）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Caterium_Ore", "quantity": 15 }
@@ -1977,7 +1792,6 @@
   },
   {
     "id": "Bauxite_(Copper)",
-    "name": "铝土矿（铜）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Copper_Ore", "quantity": 18 }
@@ -1989,7 +1803,6 @@
   },
   {
     "id": "Packaged_Alumina_Solution",
-    "name": "桶装氧化铝溶液",
     "inputs": [
       { "itemId": "Alumina_Solution", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -2000,7 +1813,6 @@
   },
   {
     "id": "Aluminum_Ingot",
-    "name": "铝锭",
     "inputs": [
       { "itemId": "Aluminum_Scrap", "quantity": 6 },
       { "itemId": "Silica", "quantity": 5 }
@@ -2011,7 +1823,6 @@
   },
   {
     "id": "Pure_Aluminum_Ingot",
-    "name": "替代：高纯度铝锭",
     "inputs": [{ "itemId": "Aluminum_Scrap", "quantity": 2 }],
     "outputs": [{ "itemId": "Aluminum_Ingot", "quantity": 1 }],
     "producedIn": "Smelter",
@@ -2019,7 +1830,6 @@
   },
   {
     "id": "Sulfuric_Acid",
-    "name": "硫酸",
     "inputs": [
       { "itemId": "Sulfur", "quantity": 5 },
       { "itemId": "Water", "quantity": 5 }
@@ -2030,7 +1840,6 @@
   },
   {
     "id": "Encased_Uranium_Cell",
-    "name": "封装铀棒",
     "inputs": [
       { "itemId": "Uranium", "quantity": 10 },
       { "itemId": "Concrete", "quantity": 3 },
@@ -2045,7 +1854,6 @@
   },
   {
     "id": "Packaged_Sulfuric_Acid",
-    "name": "桶装硫酸",
     "inputs": [
       { "itemId": "Sulfuric_Acid", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -2056,7 +1864,6 @@
   },
   {
     "id": "Classic_Battery",
-    "name": "替代：传统电池",
     "inputs": [
       { "itemId": "Sulfur", "quantity": 6 },
       { "itemId": "Alclad_Aluminum_Sheet", "quantity": 7 },
@@ -2069,7 +1876,6 @@
   },
   {
     "id": "Radio_Control_Unit",
-    "name": "无线电控制单元",
     "inputs": [
       { "itemId": "Aluminum_Casing", "quantity": 32 },
       { "itemId": "Crystal_Oscillator", "quantity": 1 },
@@ -2081,7 +1887,6 @@
   },
   {
     "id": "Radio_Control_System",
-    "name": "替代：无线电控制系统",
     "inputs": [
       { "itemId": "Crystal_Oscillator", "quantity": 1 },
       { "itemId": "Circuit_Board", "quantity": 10 },
@@ -2094,7 +1899,6 @@
   },
   {
     "id": "Radio_Connection_Unit",
-    "name": "替代：无线电连接单元",
     "inputs": [
       { "itemId": "Heat_Sink", "quantity": 4 },
       { "itemId": "High-Speed_Connector", "quantity": 2 },
@@ -2106,7 +1910,6 @@
   },
   {
     "id": "Supercomputer",
-    "name": "超级计算机",
     "inputs": [
       { "itemId": "Computer", "quantity": 4 },
       { "itemId": "AI_Limiter", "quantity": 2 },
@@ -2119,7 +1922,6 @@
   },
   {
     "id": "OC_Supercomputer",
-    "name": "替代：超频超级计算机",
     "inputs": [
       { "itemId": "Radio_Control_Unit", "quantity": 2 },
       { "itemId": "Cooling_System", "quantity": 2 }
@@ -2130,7 +1932,6 @@
   },
   {
     "id": "Super-State_Computer",
-    "name": "替代：超状态计算机",
     "inputs": [
       { "itemId": "Computer", "quantity": 3 },
       { "itemId": "Electromagnetic_Control_Rod", "quantity": 1 },
@@ -2143,7 +1944,6 @@
   },
   {
     "id": "Assembly_Director_System",
-    "name": "组装编导系统",
     "inputs": [
       { "itemId": "Adaptive_Control_Unit", "quantity": 2 },
       { "itemId": "Supercomputer", "quantity": 1 }
@@ -2154,7 +1954,6 @@
   },
   {
     "id": "Empty_Fluid_Tank",
-    "name": "空瓶",
     "inputs": [{ "itemId": "Aluminum_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Empty_Fluid_Tank", "quantity": 1 }],
     "producedIn": "Constructor",
@@ -2162,7 +1961,6 @@
   },
   {
     "id": "Unpackage_Nitrogen_Gas",
-    "name": "导出氮气",
     "inputs": [{ "itemId": "Packaged_Nitrogen_Gas", "quantity": 1 }],
     "outputs": [
       { "itemId": "Nitrogen_Gas", "quantity": 4 },
@@ -2173,7 +1971,6 @@
   },
   {
     "id": "Unpackage_Nitric_Acid",
-    "name": "导出硝酸",
     "inputs": [{ "itemId": "Packaged_Nitric_Acid", "quantity": 1 }],
     "outputs": [
       { "itemId": "Nitric_Acid", "quantity": 1 },
@@ -2184,7 +1981,6 @@
   },
   {
     "id": "Unpackage_Rocket_Fuel",
-    "name": "导出火箭燃料",
     "inputs": [{ "itemId": "Packaged_Rocket_Fuel", "quantity": 1 }],
     "outputs": [
       { "itemId": "Rocket_Fuel", "quantity": 2 },
@@ -2195,7 +1991,6 @@
   },
   {
     "id": "Unpackage_Ionized_Fuel",
-    "name": "导出电离燃油",
     "inputs": [{ "itemId": "Packaged_Ionized_Fuel", "quantity": 2 }],
     "outputs": [
       { "itemId": "Ionized_Fuel", "quantity": 4 },
@@ -2206,7 +2001,6 @@
   },
   {
     "id": "Packaged_Nitrogen_Gas",
-    "name": "瓶装氮气",
     "inputs": [
       { "itemId": "Nitrogen_Gas", "quantity": 4 },
       { "itemId": "Empty_Fluid_Tank", "quantity": 1 }
@@ -2217,7 +2011,6 @@
   },
   {
     "id": "Nitrogen_Gas_(Bauxite)",
-    "name": "氮气（铝土矿）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Bauxite", "quantity": 10 }
@@ -2229,7 +2022,6 @@
   },
   {
     "id": "Nitrogen_Gas_(Caterium)",
-    "name": "氮气（钦金）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Caterium_Ore", "quantity": 12 }
@@ -2241,7 +2033,6 @@
   },
   {
     "id": "Heat_Sink",
-    "name": "散热器",
     "inputs": [
       { "itemId": "Alclad_Aluminum_Sheet", "quantity": 5 },
       { "itemId": "Copper_Sheet", "quantity": 3 }
@@ -2252,7 +2043,6 @@
   },
   {
     "id": "Heat_Exchanger",
-    "name": "替代：热交换器",
     "inputs": [
       { "itemId": "Aluminum_Casing", "quantity": 3 },
       { "itemId": "Rubber", "quantity": 3 }
@@ -2263,7 +2053,6 @@
   },
   {
     "id": "Cooling_System",
-    "name": "冷却系统",
     "inputs": [
       { "itemId": "Heat_Sink", "quantity": 2 },
       { "itemId": "Rubber", "quantity": 2 },
@@ -2276,7 +2065,6 @@
   },
   {
     "id": "Cooling_Device",
-    "name": "替代：冷却装置",
     "inputs": [
       { "itemId": "Heat_Sink", "quantity": 4 },
       { "itemId": "Motor", "quantity": 1 },
@@ -2288,7 +2076,6 @@
   },
   {
     "id": "Fused_Modular_Frame",
-    "name": "焊接模块化框架",
     "inputs": [
       { "itemId": "Heavy_Modular_Frame", "quantity": 1 },
       { "itemId": "Aluminum_Casing", "quantity": 50 },
@@ -2300,7 +2087,6 @@
   },
   {
     "id": "Heat-Fused_Frame",
-    "name": "替代：热熔框架",
     "inputs": [
       { "itemId": "Heavy_Modular_Frame", "quantity": 1 },
       { "itemId": "Aluminum_Ingot", "quantity": 50 },
@@ -2313,7 +2099,6 @@
   },
   {
     "id": "Nitric_Acid",
-    "name": "硝酸",
     "inputs": [
       { "itemId": "Nitrogen_Gas", "quantity": 12 },
       { "itemId": "Water", "quantity": 3 },
@@ -2325,7 +2110,6 @@
   },
   {
     "id": "Infused_Uranium_Cell",
-    "name": "替代：混合型铀棒",
     "inputs": [
       { "itemId": "Uranium", "quantity": 5 },
       { "itemId": "Silica", "quantity": 3 },
@@ -2338,7 +2122,6 @@
   },
   {
     "id": "Uranium_Ore_(Bauxite)",
-    "name": "铀矿石（铝土矿）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 1 },
       { "itemId": "Bauxite", "quantity": 48 }
@@ -2350,7 +2133,6 @@
   },
   {
     "id": "Electromagnetic_Control_Rod",
-    "name": "电磁控制杆",
     "inputs": [
       { "itemId": "Stator", "quantity": 3 },
       { "itemId": "AI_Limiter", "quantity": 2 }
@@ -2361,7 +2143,6 @@
   },
   {
     "id": "Electromagnetic_Connection_Rod",
-    "name": "替代：电磁连接杆",
     "inputs": [
       { "itemId": "Stator", "quantity": 2 },
       { "itemId": "High-Speed_Connector", "quantity": 1 }
@@ -2372,7 +2153,6 @@
   },
   {
     "id": "Uranium_Fuel_Rod",
-    "name": "铀燃料棒",
     "inputs": [
       { "itemId": "Encased_Uranium_Cell", "quantity": 50 },
       { "itemId": "Encased_Industrial_Beam", "quantity": 3 },
@@ -2384,7 +2164,6 @@
   },
   {
     "id": "Uranium_Fuel_Unit",
-    "name": "替代：铀燃料单元",
     "inputs": [
       { "itemId": "Encased_Uranium_Cell", "quantity": 100 },
       { "itemId": "Electromagnetic_Control_Rod", "quantity": 10 },
@@ -2397,7 +2176,6 @@
   },
   {
     "id": "Magnetic_Field_Generator",
-    "name": "磁场发生器",
     "inputs": [
       { "itemId": "Versatile_Framework", "quantity": 5 },
       { "itemId": "Electromagnetic_Control_Rod", "quantity": 5 }
@@ -2408,7 +2186,6 @@
   },
   {
     "id": "Packaged_Nitric_Acid",
-    "name": "桶装硝酸",
     "inputs": [
       { "itemId": "Nitric_Acid", "quantity": 1 },
       { "itemId": "Empty_Fluid_Tank", "quantity": 1 }
@@ -2419,7 +2196,6 @@
   },
   {
     "id": "Plutonium_Pellet",
-    "name": "钚丸",
     "inputs": [
       { "itemId": "Non-Fissile_Uranium", "quantity": 100 },
       { "itemId": "Uranium_Waste", "quantity": 25 }
@@ -2431,7 +2207,6 @@
   },
   {
     "id": "Encased_Plutonium_Cell",
-    "name": "封装钚棒",
     "inputs": [
       { "itemId": "Plutonium_Pellet", "quantity": 2 },
       { "itemId": "Concrete", "quantity": 4 }
@@ -2442,7 +2217,6 @@
   },
   {
     "id": "Instant_Plutonium_Cell",
-    "name": "替代：速成型钚棒",
     "inputs": [
       { "itemId": "Non-Fissile_Uranium", "quantity": 150 },
       { "itemId": "Aluminum_Casing", "quantity": 20 }
@@ -2454,7 +2228,6 @@
   },
   {
     "id": "Plutonium_Fuel_Rod",
-    "name": "钚燃料棒",
     "inputs": [
       { "itemId": "Encased_Plutonium_Cell", "quantity": 30 },
       { "itemId": "Steel_Beam", "quantity": 18 },
@@ -2467,7 +2240,6 @@
   },
   {
     "id": "Plutonium_Fuel_Unit",
-    "name": "替代：钚燃料单元",
     "inputs": [
       { "itemId": "Encased_Plutonium_Cell", "quantity": 20 },
       { "itemId": "Pressure_Conversion_Cube", "quantity": 1 }
@@ -2478,7 +2250,6 @@
   },
   {
     "id": "Turbo_Motor",
-    "name": "涡轮马达",
     "inputs": [
       { "itemId": "Cooling_System", "quantity": 4 },
       { "itemId": "Radio_Control_Unit", "quantity": 2 },
@@ -2491,7 +2262,6 @@
   },
   {
     "id": "Turbo_Electric_Motor",
-    "name": "替代：涡轮电磁马达",
     "inputs": [
       { "itemId": "Motor", "quantity": 7 },
       { "itemId": "Radio_Control_Unit", "quantity": 9 },
@@ -2504,7 +2274,6 @@
   },
   {
     "id": "Turbo_Pressure_Motor",
-    "name": "替代：涡轮增压马达",
     "inputs": [
       { "itemId": "Motor", "quantity": 4 },
       { "itemId": "Pressure_Conversion_Cube", "quantity": 1 },
@@ -2517,7 +2286,6 @@
   },
   {
     "id": "Copper_Powder",
-    "name": "铜粉",
     "inputs": [{ "itemId": "Copper_Ingot", "quantity": 30 }],
     "outputs": [{ "itemId": "Copper_Powder", "quantity": 5 }],
     "producedIn": "Constructor",
@@ -2525,7 +2293,6 @@
   },
   {
     "id": "Pressure_Conversion_Cube",
-    "name": "封压方块",
     "inputs": [
       { "itemId": "Fused_Modular_Frame", "quantity": 1 },
       { "itemId": "Radio_Control_Unit", "quantity": 2 }
@@ -2536,7 +2303,6 @@
   },
   {
     "id": "Nuclear_Pasta",
-    "name": "核意面",
     "inputs": [
       { "itemId": "Copper_Powder", "quantity": 200 },
       { "itemId": "Pressure_Conversion_Cube", "quantity": 1 }
@@ -2548,7 +2314,6 @@
   },
   {
     "id": "Thermal_Propulsion_Rocket",
-    "name": "热能推进火箭",
     "inputs": [
       { "itemId": "Modular_Engine", "quantity": 5 },
       { "itemId": "Turbo_Motor", "quantity": 2 },
@@ -2561,7 +2326,6 @@
   },
   {
     "id": "Turbo_Blend_Fuel",
-    "name": "替代：混合涡轮燃油",
     "inputs": [
       { "itemId": "Fuel", "quantity": 2 },
       { "itemId": "Heavy_Oil_Residue", "quantity": 4 },
@@ -2574,7 +2338,6 @@
   },
   {
     "id": "Turbofuel",
-    "name": "涡轮燃油",
     "inputs": [
       { "itemId": "Fuel", "quantity": 6 },
       { "itemId": "Compacted_Coal", "quantity": 4 }
@@ -2585,7 +2348,6 @@
   },
   {
     "id": "Turbo_Heavy_Fuel",
-    "name": "替代：重质涡轮燃油",
     "inputs": [
       { "itemId": "Heavy_Oil_Residue", "quantity": 5 },
       { "itemId": "Compacted_Coal", "quantity": 4 }
@@ -2596,7 +2358,6 @@
   },
   {
     "id": "Packaged_Turbofuel",
-    "name": "桶装涡轮燃油",
     "inputs": [
       { "itemId": "Turbofuel", "quantity": 2 },
       { "itemId": "Empty_Canister", "quantity": 2 }
@@ -2607,7 +2368,6 @@
   },
   {
     "id": "Ficsite_Ingot_(Iron)",
-    "name": "F金锭（铁）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 4 },
       { "itemId": "Iron_Ingot", "quantity": 24 }
@@ -2619,7 +2379,6 @@
   },
   {
     "id": "Ficsite_Ingot_(Aluminum)",
-    "name": "F金锭（铝）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 2 },
       { "itemId": "Aluminum_Ingot", "quantity": 4 }
@@ -2631,7 +2390,6 @@
   },
   {
     "id": "Ficsite_Ingot_(Caterium)",
-    "name": "F金锭（钦金）",
     "inputs": [
       { "itemId": "Reanimated_SAM", "quantity": 3 },
       { "itemId": "Caterium_Ingot", "quantity": 4 }
@@ -2643,7 +2401,6 @@
   },
   {
     "id": "Ficsite_Trigon",
-    "name": "F金三角",
     "inputs": [{ "itemId": "Ficsite_Ingot", "quantity": 1 }],
     "outputs": [{ "itemId": "Ficsite_Trigon", "quantity": 3 }],
     "producedIn": "Constructor",
@@ -2651,7 +2408,6 @@
   },
   {
     "id": "Diamonds",
-    "name": "钻石",
     "inputs": [{ "itemId": "Coal", "quantity": 20 }],
     "outputs": [{ "itemId": "Diamonds", "quantity": 1 }],
     "producedIn": "Particle_Accelerator",
@@ -2660,7 +2416,6 @@
   },
   {
     "id": "Oil-Based_Diamonds",
-    "name": "替代：油基钻石",
     "inputs": [{ "itemId": "Crude_Oil", "quantity": 10 }],
     "outputs": [{ "itemId": "Diamonds", "quantity": 2 }],
     "producedIn": "Particle_Accelerator",
@@ -2669,7 +2424,6 @@
   },
   {
     "id": "Pink_Diamonds",
-    "name": "替代：粉钻",
     "inputs": [
       { "itemId": "Coal", "quantity": 8 },
       { "itemId": "Quartz_Crystal", "quantity": 3 }
@@ -2681,7 +2435,6 @@
   },
   {
     "id": "Cloudy_Diamonds",
-    "name": "替代：雾状钻石",
     "inputs": [
       { "itemId": "Coal", "quantity": 12 },
       { "itemId": "Limestone", "quantity": 24 }
@@ -2693,7 +2446,6 @@
   },
   {
     "id": "Turbo_Diamonds",
-    "name": "替代：涡轮钻石",
     "inputs": [
       { "itemId": "Coal", "quantity": 30 },
       { "itemId": "Packaged_Turbofuel", "quantity": 2 }
@@ -2705,7 +2457,6 @@
   },
   {
     "id": "Petroleum_Diamonds",
-    "name": "替代：石油钻石",
     "inputs": [{ "itemId": "Petroleum_Coke", "quantity": 24 }],
     "outputs": [{ "itemId": "Diamonds", "quantity": 1 }],
     "producedIn": "Particle_Accelerator",
@@ -2714,7 +2465,6 @@
   },
   {
     "id": "Time_Crystal",
-    "name": "时间水晶",
     "inputs": [{ "itemId": "Diamonds", "quantity": 2 }],
     "outputs": [{ "itemId": "Time_Crystal", "quantity": 1 }],
     "producedIn": "Converter",
@@ -2723,7 +2473,6 @@
   },
   {
     "id": "Biochemical_Sculptor",
-    "name": "生化塑造器",
     "inputs": [
       { "itemId": "Assembly_Director_System", "quantity": 1 },
       { "itemId": "Ficsite_Trigon", "quantity": 80 },
@@ -2735,7 +2484,6 @@
   },
   {
     "id": "Dark_Matter_Residue",
-    "name": "暗物质残渣",
     "inputs": [{ "itemId": "Reanimated_SAM", "quantity": 5 }],
     "outputs": [{ "itemId": "Dark_Matter_Residue", "quantity": 10 }],
     "producedIn": "Converter",
@@ -2744,7 +2492,6 @@
   },
   {
     "id": "Superposition_Oscillator",
-    "name": "叠加态振荡器",
     "inputs": [
       { "itemId": "Dark_Matter_Crystal", "quantity": 6 },
       { "itemId": "Crystal_Oscillator", "quantity": 1 },
@@ -2761,7 +2508,6 @@
   },
   {
     "id": "Neural-Quantum_Processor",
-    "name": "神经量子处理器",
     "inputs": [
       { "itemId": "Time_Crystal", "quantity": 5 },
       { "itemId": "Supercomputer", "quantity": 1 },
@@ -2778,7 +2524,6 @@
   },
   {
     "id": "AI_Expansion_Server",
-    "name": "AI扩展伺服器",
     "inputs": [
       { "itemId": "Magnetic_Field_Generator", "quantity": 1 },
       { "itemId": "Neural-Quantum_Processor", "quantity": 1 },
@@ -2795,7 +2540,6 @@
   },
   {
     "id": "Ficsonium_Fuel_Rod",
-    "name": "镄燃料棒",
     "inputs": [
       { "itemId": "Ficsonium", "quantity": 2 },
       { "itemId": "Electromagnetic_Control_Rod", "quantity": 2 },
@@ -2812,7 +2556,6 @@
   },
   {
     "id": "Alien_Power_Matrix",
-    "name": "外星能量矩阵",
     "inputs": [
       { "itemId": "SAM_Fluctuator", "quantity": 5 },
       { "itemId": "Power_Shard", "quantity": 3 },
@@ -2829,7 +2572,6 @@
   },
   {
     "id": "Dark_Matter_Crystal",
-    "name": "暗物质晶体",
     "inputs": [
       { "itemId": "Diamonds", "quantity": 1 },
       { "itemId": "Dark_Matter_Residue", "quantity": 5 }
@@ -2841,7 +2583,6 @@
   },
   {
     "id": "Dark_Matter_Trap",
-    "name": "替代：暗物质捕获器",
     "inputs": [
       { "itemId": "Time_Crystal", "quantity": 1 },
       { "itemId": "Dark_Matter_Residue", "quantity": 5 }
@@ -2853,7 +2594,6 @@
   },
   {
     "id": "Dark_Matter_Crystallization",
-    "name": "替代：晶体化暗物质",
     "inputs": [{ "itemId": "Dark_Matter_Residue", "quantity": 10 }],
     "outputs": [{ "itemId": "Dark_Matter_Crystal", "quantity": 1 }],
     "producedIn": "Particle_Accelerator",
@@ -2862,7 +2602,6 @@
   },
   {
     "id": "Excited_Photonic_Matter",
-    "name": "激发态光子物质",
     "inputs": [],
     "outputs": [{ "itemId": "Excited_Photonic_Matter", "quantity": 10 }],
     "producedIn": "Converter",
@@ -2871,7 +2610,6 @@
   },
   {
     "id": "Explosive_Rebar",
-    "name": "爆炸铁棒弹",
     "inputs": [
       { "itemId": "Iron_Rebar", "quantity": 2 },
       { "itemId": "Smokeless_Powder", "quantity": 2 },
@@ -2883,7 +2621,6 @@
   },
   {
     "id": "Compacted_Coal",
-    "name": "替代：压缩煤",
     "inputs": [
       { "itemId": "Coal", "quantity": 5 },
       { "itemId": "Sulfur", "quantity": 5 }
@@ -2894,7 +2631,6 @@
   },
   {
     "id": "Rocket_Fuel",
-    "name": "火箭燃料",
     "inputs": [
       { "itemId": "Turbofuel", "quantity": 6 },
       { "itemId": "Nitric_Acid", "quantity": 1 }
@@ -2908,7 +2644,6 @@
   },
   {
     "id": "Ionized_Fuel",
-    "name": "电离燃油",
     "inputs": [
       { "itemId": "Rocket_Fuel", "quantity": 16 },
       { "itemId": "Power_Shard", "quantity": 1 }
@@ -2922,7 +2657,6 @@
   },
   {
     "id": "Dark-Ion_Fuel",
-    "name": "替代：暗离子燃料",
     "inputs": [
       { "itemId": "Packaged_Rocket_Fuel", "quantity": 12 },
       { "itemId": "Dark_Matter_Crystal", "quantity": 4 }
@@ -2937,7 +2671,6 @@
   },
   {
     "id": "Nitro_Rocket_Fuel",
-    "name": "替代：硝基火箭燃料",
     "inputs": [
       { "itemId": "Fuel", "quantity": 4 },
       { "itemId": "Nitrogen_Gas", "quantity": 3 },
@@ -2953,7 +2686,6 @@
   },
   {
     "id": "Packaged_Rocket_Fuel",
-    "name": "桶装火箭燃料",
     "inputs": [
       { "itemId": "Rocket_Fuel", "quantity": 2 },
       { "itemId": "Empty_Fluid_Tank", "quantity": 1 }
@@ -2964,7 +2696,6 @@
   },
   {
     "id": "Packaged_Ionized_Fuel",
-    "name": "桶装电离燃油",
     "inputs": [
       { "itemId": "Ionized_Fuel", "quantity": 4 },
       { "itemId": "Empty_Fluid_Tank", "quantity": 2 }
@@ -2975,7 +2706,6 @@
   },
   {
     "id": "Turbo_Rifle_Ammo",
-    "name": "涡轮步枪弹",
     "inputs": [
       { "itemId": "Rifle_Ammo", "quantity": 25 },
       { "itemId": "Aluminum_Casing", "quantity": 3 },
@@ -2987,7 +2717,6 @@
   },
   {
     "id": "Turbo_Rifle_Ammo_2",
-    "name": "涡轮步枪弹2",
     "inputs": [
       { "itemId": "Rifle_Ammo", "quantity": 25 },
       { "itemId": "Aluminum_Casing", "quantity": 3 },
@@ -2999,7 +2728,6 @@
   },
   {
     "id": "Nuke_Nobelisk",
-    "name": "核子诺氏雷筒",
     "inputs": [
       { "itemId": "Nobelisk", "quantity": 5 },
       { "itemId": "Encased_Uranium_Cell", "quantity": 20 },
@@ -3012,7 +2740,6 @@
   },
   {
     "id": "Ficsonium",
-    "name": "镄",
     "inputs": [
       { "itemId": "Plutonium_Waste", "quantity": 1 },
       { "itemId": "Singularity_Cell", "quantity": 1 },
@@ -3025,7 +2752,6 @@
   },
   {
     "id": "Singularity_Cell",
-    "name": "奇点电池",
     "inputs": [
       { "itemId": "Nuclear_Pasta", "quantity": 1 },
       { "itemId": "Dark_Matter_Crystal", "quantity": 20 },
@@ -3038,7 +2764,6 @@
   },
   {
     "id": "Ballistic_Warp_Drive",
-    "name": "弹道跃迁引擎",
     "inputs": [
       { "itemId": "Thermal_Propulsion_Rocket", "quantity": 1 },
       { "itemId": "Singularity_Cell", "quantity": 5 },

@@ -1,18 +1,21 @@
 import { defineComponent, type PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { NFlex, NSelect, type SelectRenderLabel } from 'naive-ui'
 
 import ItemImage from '@/components/ItemImage'
 import type { Id } from '@/types'
 import { items } from '@/data'
 
-const options = items.map(({ id, name }) => {
+const options = items.map(({ id }) => {
   return {
-    label: name,
+    label: id,
     value: id,
   }
 })
 
 const renderLabel: SelectRenderLabel = (option) => {
+  const { t } = useI18n()
+
   return (
     <NFlex size="small" align="center" wrap={false}>
       <ItemImage
@@ -21,7 +24,7 @@ const renderLabel: SelectRenderLabel = (option) => {
         formats={['avif', 'webp', 'png']}
       />
       <div style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-        {option.label}
+        {t(`items.${option.label}`)}
       </div>
     </NFlex>
   )

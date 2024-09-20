@@ -18,7 +18,6 @@ export interface ModuleFactory {
 
 export interface Item {
   id: Id
-  name: string
 }
 
 export interface ItemQuantity {
@@ -32,7 +31,6 @@ export interface RecipeItemQuantity extends ItemQuantity {
 
 export interface Recipe {
   id: Id
-  name: string
   inputs: RecipeItemQuantity[]
   outputs: RecipeItemQuantity[]
   producedIn: Id
@@ -42,6 +40,5 @@ export interface Recipe {
 
 export interface Building {
   id: Id
-  name: string
   powerUsage: PowerUsage | 'variable'
 }

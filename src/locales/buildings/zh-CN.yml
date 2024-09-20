@@ -1,0 +1,12 @@
+buildings:
+  Constructor: 构筑站
+  Assembler: 装配站
+  Manufacturer: 制造站
+  Packager: 灌装站
+  Refinery: 精炼站
+  Blender: 混料站
+  Particle_Accelerator: 粒子加速器
+  Converter: 转化站
+  Quantum_Encoder: 量子编码站
+  Smelter: 冶炼站
+  Foundry: 铸造站

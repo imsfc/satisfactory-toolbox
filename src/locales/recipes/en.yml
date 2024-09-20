@@ -1,0 +1,276 @@
+recipes:
+  Iron_Ingot: Iron Ingot
+  Pure_Iron_Ingot: Pure Iron Ingot
+  Basic_Iron_Ingot: Basic Iron Ingot
+  Iron_Alloy_Ingot: Iron Alloy Ingot
+  Leached_Iron_Ingot: Leached Iron Ingot
+  Iron_Ore_(Limestone): Iron Ore (Limestone)
+  Iron_Plate: Iron Plate
+  Coated_Iron_Plate: Coated Iron Plate
+  Steel_Cast_Plate: Steel Cast Plate
+  Iron_Rod: Iron Rod
+  Steel_Rod: Steel Rod
+  Aluminum_Rod: Aluminum Rod
+  Reinforced_Iron_Plate: Reinforced Iron Plate
+  Stitched_Iron_Plate: Stitched Iron Plate
+  Adhered_Iron_Plate: Adhered Iron Plate
+  Bolted_Iron_Plate: Bolted Iron Plate
+  Cable: Cable
+  Quickwire_Cable: Quickwire Cable
+  Insulated_Cable: Insulated Cable
+  Coated_Cable: Coated Cable
+  Wire: Wire
+  Caterium_Wire: Caterium Wire
+  Iron_Wire: Iron Wire
+  Fused_Wire: Fused Wire
+  Copper_Ingot: Copper Ingot
+  Tempered_Copper_Ingot: Tempered Copper Ingot
+  Pure_Copper_Ingot: Pure Copper Ingot
+  Leached_Copper_Ingot: Leached Copper Ingot
+  Copper_Alloy_Ingot: Copper Alloy Ingot
+  Copper_Ore_(Quartz): Copper Ore (Quartz)
+  Copper_Ore_(Sulfur): Copper Ore (Sulfur)
+  Concrete: Concrete
+  Wet_Concrete: Wet Concrete
+  Fine_Concrete: Fine Concrete
+  Rubber_Concrete: Rubber Concrete
+  Limestone_(Sulfur): Limestone (Sulfur)
+  Screw: Screw
+  Cast_Screw: Cast Screw
+  Steel_Screw: Steel Screw
+  Biomass_(Wood): Biomass (Wood)
+  Biomass_(Leaves): Biomass (Leaves)
+  Biomass_(Mycelia): Biomass (Mycelia)
+  Biomass_(Alien_Protein): Biomass (Alien Protein)
+  Hog_Protein: Hog Protein
+  Stinger_Protein: Stinger Protein
+  Hatcher_Protein: Hatcher Protein
+  Spitter_Protein: Spitter Protein
+  Solid_Biofue: Solid Biofue
+  Rotor: Rotor
+  Copper_Rotor: Copper Rotor
+  Steel_Rotor: Steel Rotor
+  Copper_Sheet: Copper Sheet
+  Steamed_Copper_Sheet: Steamed Copper Sheet
+  Modular_Frame: Modular Frame
+  Bolted_Frame: Bolted Frame
+  Steeled_Frame: Steeled Frame
+  Smart_Plating: Smart Plating
+  Plastic_Smart_Plating: Plastic Smart Plating
+  Power_Shard_(1): Power Shard (1)
+  Power_Shard_(2): Power Shard (2)
+  Power_Shard_(5): Power Shard (5)
+  Synthetic_Power_Shard: Synthetic Power Shard
+  Steel_Ingot: Steel Ingot
+  Solid_Steel_Ingot: Solid Steel Ingot
+  Coke_Steel_Ingot: Coke Steel Ingot
+  Compacted_Steel_Ingot: Compacted Steel Ingot
+  Coal_(Iron): Coal (Iron)
+  Coal_(Limestone): Coal (Limestone)
+  Charcoal: Charcoal
+  Biocoal: Biocoal
+  Steel_Beam: Steel Beam
+  Molded_Beam: Molded Beam
+  Aluminum_Beam: Aluminum Beam
+  Steel_Pipe: Steel Pipe
+  Molded_Steel_Pipe: Molded Steel Pipe
+  Iron_Pipe: Iron Pipe
+  Versatile_Framework: Versatile Framework
+  Flexible_Framework: Flexible Framework
+  Silica: Silica
+  Alumina_Solution: Alumina Solution
+  Cheap_Silica: Cheap Silica
+  Distilled_Silica: Distilled Silica
+  Raw_Quartz_(Bauxite): Raw Quartz (Bauxite)
+  Raw_Quartz_(Coal): Raw Quartz (Coal)
+  Alien_DNA_Capsule: Alien DNA Capsule
+  Black_Powder: Black Powder
+  Fine_Black_Powder: Fine Black Powder
+  Sulfur_(Coal): Sulfur (Coal)
+  Sulfur_(Iron): Sulfur (Iron)
+  Fabric: Fabric
+  Polyester_Fabric: Polyester Fabric
+  Iron_Rebar: Iron Rebar
+  Gas_Filter: Gas Filter
+  Nobelisk: Nobelisk
+  Quartz_Crystal: Quartz Crystal
+  Pure_Quartz_Crystal: Pure Quartz Crystal
+  Quartz_Purification: Quartz Purification
+  Fused_Quartz_Crystal: Fused Quartz Crystal
+  Crystal_Oscillator: Crystal Oscillator
+  Insulated_Crystal_Oscillator: Insulated Crystal Oscillator
+  Shatter_Rebar: Shatter Rebar
+  Encased_Industrial_Beam: Encased Industrial Beam
+  Encased_Industrial_Pipe: Encased Industrial Pipe
+  Stator: Stator
+  Quickwire_Stator: Quickwire Stator
+  Motor: Motor
+  Rigor_Motor: Rigor Motor
+  Electric_Motor: Electric Motor
+  Automated_Wiring: Automated Wiring
+  Automated_Speed_Wiring: Automated Speed Wiring
+  Gas_Nobelisk: Gas Nobelisk
+  Reanimated_SAM: Reanimated SAM
+  Caterium_Ingot: Caterium Ingot
+  Pure_Caterium_Ingot: Pure Caterium Ingot
+  Leached_Caterium_Ingot: Leached Caterium Ingot
+  Tempered_Caterium_Ingot: Tempered Caterium Ingot
+  Caterium_Ore_(Copper): Caterium Ore (Copper)
+  Caterium_Ore_(Quartz): Caterium Ore (Quartz)
+  SAM_Fluctuator: SAM Fluctuator
+  Quickwire: Quickwire
+  Fused_Quickwire: Fused Quickwire
+  Stun_Rebar: Stun Rebar
+  AI_Limiter: AI Limiter
+  Plastic_AI_Limiter: Plastic AI Limiter
+  Petroleum_Coke: Petroleum Coke
+  Plastic: Plastic
+  Rubber: Rubber
+  Unpackage_Heavy_Oil_Residue: Unpackage Heavy Oil Residue
+  Polymer_Resin: Polymer Resin
+  Heavy_Oil_Residue: Heavy Oil Residue
+  Circuit_Board: Circuit Board
+  Silicon_Circuit_Board: Silicon Circuit Board
+  Caterium_Circuit_Board: Caterium Circuit Board
+  Electrode_Circuit_Board: Electrode Circuit Board
+  Residual_Plastic: Residual Plastic
+  Recycled_Plastic: Recycled Plastic
+  Fuel: Fuel
+  Unpackage_Water: Unpackage Water
+  Aluminum_Scrap: Aluminum Scrap
+  Electrode_Aluminum_Scrap: Electrode Aluminum Scrap
+  Battery: Battery
+  Non-Fissile_Uranium: Non-Fissile Uranium
+  Fertile_Uranium: Fertile Uranium
+  Instant_Scrap: Instant Scrap
+  Residual_Rubber: Residual Rubber
+  Recycled_Rubber: Recycled Rubber
+  Residual_Fuel: Residual Fuel
+  Unpackage_Fuel: Unpackage Fuel
+  Diluted_Fuel: Diluted Fuel
+  Unpackage_Oil: Unpackage Oil
+  High-Speed_Connector: High-Speed Connector
+  Silicon_High-Speed_Connector: Silicon High-Speed Connector
+  Empty_Canister: Empty Canister
+  Unpackage_Liquid_Biofuel: Unpackage Liquid Biofuel
+  Coated_Iron_Canister: Coated Iron Canister
+  Unpackage_Alumina_Solution: Unpackage Alumina Solution
+  Steel_Canister: Steel Canister
+  Unpackage_Sulfuric_Acid: Unpackage Sulfuric Acid
+  Unpackage_Turbofuel: Unpackage Turbofuel
+  Packaged_Water: Packaged Water
+  Packaged_Oil: Packaged Oil
+  Packaged_Fuel: Packaged Fuel
+  Diluted_Packaged_Fuel: Diluted Packaged Fuel
+  Packaged_Heavy_Oil_Residue: Packaged Heavy Oil Residue
+  Packaged_Liquid_Biofuel: Packaged Liquid Biofuel
+  Liquid_Biofuel: Liquid Biofuel
+  Computer: Computer
+  Caterium_Computer: Caterium Computer
+  Crystal_Computer: Crystal Computer
+  Heavy_Modular_Frame: Heavy Modular Frame
+  Heavy_Encased_Frame: Heavy Encased Frame
+  Heavy_Flexible_Frame: Heavy Flexible Frame
+  Modular_Engine: Modular Engine
+  Adaptive_Control_Unit: Adaptive Control Unit
+  Smokeless_Powder: Smokeless Powder
+  Pulse_Nobelisk: Pulse Nobelisk
+  Rifle_Ammo: Rifle Ammo
+  Alclad_Aluminum_Sheet: Alclad Aluminum Sheet
+  Iodine-Infused_Filter: Iodine-Infused Filter
+  Aluminum_Casing: Aluminum Casing
+  Alclad_Casing: Alclad Casing
+  Cluster_Nobelisk: Cluster Nobelisk
+  Homing_Rifle_Ammo: Homing Rifle Ammo
+  Sloppy_Alumina: Sloppy Alumina
+  Bauxite_(Caterium): Bauxite (Caterium)
+  Bauxite_(Copper): Bauxite (Copper)
+  Packaged_Alumina_Solution: Packaged Alumina Solution
+  Aluminum_Ingot: Aluminum Ingot
+  Pure_Aluminum_Ingot: Pure Aluminum Ingot
+  Sulfuric_Acid: Sulfuric Acid
+  Encased_Uranium_Cell: Encased Uranium Cell
+  Packaged_Sulfuric_Acid: Packaged Sulfuric Acid
+  Classic_Battery: Classic Battery
+  Radio_Control_Unit: Radio Control Unit
+  Radio_Control_System: Radio Control System
+  Radio_Connection_Unit: Radio Connection Unit
+  Supercomputer: Supercomputer
+  OC_Supercomputer: OC Supercomputer
+  Super-State_Computer: Super-State Computer
+  Assembly_Director_System: Assembly Director System
+  Empty_Fluid_Tank: Empty Fluid Tank
+  Unpackage_Nitrogen_Gas: Unpackage Nitrogen Gas
+  Unpackage_Nitric_Acid: Unpackage Nitric Acid
+  Unpackage_Rocket_Fuel: Unpackage Rocket Fuel
+  Unpackage_Ionized_Fuel: Unpackage Ionized Fuel
+  Packaged_Nitrogen_Gas: Packaged Nitrogen Gas
+  Nitrogen_Gas_(Bauxite): Nitrogen Gas (Bauxite)
+  Nitrogen_Gas_(Caterium): Nitrogen Gas (Caterium)
+  Heat_Sink: Heat Sink
+  Heat_Exchanger: Heat Exchanger
+  Cooling_System: Cooling System
+  Cooling_Device: Cooling Device
+  Fused_Modular_Frame: Fused Modular Frame
+  Heat-Fused_Frame: Heat-Fused Frame
+  Nitric_Acid: Nitric Acid
+  Infused_Uranium_Cell: Infused Uranium Cell
+  Uranium_Ore_(Bauxite): Uranium Ore (Bauxite)
+  Electromagnetic_Control_Rod: Electromagnetic Control Rod
+  Electromagnetic_Connection_Rod: Electromagnetic Connection Rod
+  Uranium_Fuel_Rod: Uranium Fuel Rod
+  Uranium_Fuel_Unit: Uranium Fuel Unit
+  Magnetic_Field_Generator: Magnetic Field Generator
+  Packaged_Nitric_Acid: Packaged Nitric Acid
+  Plutonium_Pellet: Plutonium Pellet
+  Encased_Plutonium_Cell: Encased Plutonium Cell
+  Instant_Plutonium_Cell: Instant Plutonium Cell
+  Plutonium_Fuel_Rod: Plutonium Fuel Rod
+  Plutonium_Fuel_Unit: Plutonium Fuel Unit
+  Turbo_Motor: Turbo Motor
+  Turbo_Electric_Motor: Turbo Electric Motor
+  Turbo_Pressure_Motor: Turbo Pressure Motor
+  Copper_Powder: Copper Powder
+  Pressure_Conversion_Cube: Pressure Conversion Cube
+  Nuclear_Pasta: Nuclear Pasta
+  Thermal_Propulsion_Rocket: Thermal Propulsion Rocket
+  Turbo_Blend_Fuel: Turbo Blend Fuel
+  Turbofuel: Turbofuel
+  Turbo_Heavy_Fuel: Turbo Heavy Fuel
+  Packaged_Turbofuel: Packaged Turbofuel
+  Ficsite_Ingot_(Iron): Ficsite Ingot (Iron)
+  Ficsite_Ingot_(Aluminum): Ficsite Ingot (Aluminum)
+  Ficsite_Ingot_(Caterium): Ficsite Ingot (Caterium)
+  Ficsite_Trigon: Ficsite Trigon
+  Diamonds: Diamonds
+  Oil-Based_Diamonds: Oil-Based Diamonds
+  Pink_Diamonds: Pink Diamonds
+  Cloudy_Diamonds: Cloudy Diamonds
+  Turbo_Diamonds: Turbo Diamonds
+  Petroleum_Diamonds: Petroleum Diamonds
+  Time_Crystal: Time Crystal
+  Biochemical_Sculptor: Biochemical Sculptor
+  Dark_Matter_Residue: Dark Matter Residue
+  Superposition_Oscillator: Superposition Oscillator
+  Neural-Quantum_Processor: Neural-Quantum Processor
+  AI_Expansion_Server: AI Expansion Server
+  Ficsonium_Fuel_Rod: Ficsonium Fuel Rod
+  Alien_Power_Matrix: Alien Power Matrix
+  Dark_Matter_Crystal: Dark Matter Crystal
+  Dark_Matter_Trap: Dark Matter Trap
+  Dark_Matter_Crystallization: Dark Matter Crystallization
+  Excited_Photonic_Matter: Excited Photonic Matter
+  Explosive_Rebar: Explosive Rebar
+  Compacted_Coal: Compacted Coal
+  Rocket_Fuel: Rocket Fuel
+  Ionized_Fuel: Ionized Fuel
+  Dark-Ion_Fuel: Dark-Ion Fuel
+  Nitro_Rocket_Fuel: Nitro Rocket Fuel
+  Packaged_Rocket_Fuel: Packaged Rocket Fuel
+  Packaged_Ionized_Fuel: Packaged Ionized Fuel
+  Turbo_Rifle_Ammo: Turbo Rifle Ammo
+  Turbo_Rifle_Ammo_2: Turbo Rifle Ammo
+  Nuke_Nobelisk: Nuke Nobelisk
+  Ficsonium: Ficsonium
+  Singularity_Cell: Singularity Cell
+  Ballistic_Warp_Drive: Ballistic Warp Drive
