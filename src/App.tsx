@@ -10,19 +10,19 @@ import {
   zhCN,
 } from 'naive-ui'
 
-const colorMode = useColorMode()
-
-const isDark = computed(() => {
-  return (
-    (colorMode.store.value === 'auto'
-      ? colorMode.system.value
-      : colorMode.store.value) === 'dark'
-  )
-})
-
 export default defineComponent({
   setup() {
     const { locale } = useI18n()
+
+    const colorMode = useColorMode()
+
+    const isDark = computed(() => {
+      return (
+        (colorMode.store.value === 'auto'
+          ? colorMode.system.value
+          : colorMode.store.value) === 'dark'
+      )
+    })
 
     return () => (
       <NConfigProvider
