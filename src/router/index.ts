@@ -17,25 +17,4 @@ const router = createRouter({
   ],
 })
 
-if (import.meta.env.DEV) {
-  router.addRoute({
-    path: '/dev',
-    component: Layout,
-    children: [
-      {
-        path: 'items',
-        component: () => import('@/views/dev/ItemsView'),
-      },
-      {
-        path: 'buildings',
-        component: () => import('@/views/dev/BuildingsView'),
-      },
-      {
-        path: 'recipes',
-        component: () => import('@/views/dev/RecipesView'),
-      },
-    ],
-  })
-}
-
 export default router
