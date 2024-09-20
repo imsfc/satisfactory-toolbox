@@ -4,17 +4,18 @@ import {
   NButton,
   NDataTable,
   NFlex,
-  NImage,
   NModal,
   useMessage,
   type DataTableColumns,
 } from 'naive-ui'
 
 import ShowOrEdit from '@/components/ShowOrEdit'
+import type { Id } from '@/types'
 import { items } from '@/data'
+import ItemImage from '@/components/ItemImage'
 
 interface OptionalItem {
-  id: string | null
+  id: Id | null
   name: string | null
 }
 
@@ -25,9 +26,10 @@ const columns: DataTableColumns<OptionalItem> = [
     width: 60,
     render: (row) => {
       return (
-        <NImage
-          style={{ display: 'flex' }}
-          src={`\\items\\${row.id}.png`}
+        <ItemImage
+          name={row.id ?? ''}
+          sizes={[48, 72]}
+          formats={['avif', 'webp', 'png']}
           width={28}
           height={28}
         />

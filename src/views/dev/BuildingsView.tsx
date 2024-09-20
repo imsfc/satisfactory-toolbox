@@ -4,27 +4,31 @@ import {
   NButton,
   NDataTable,
   NFlex,
-  NImage,
-  NInputNumber,
   NModal,
   useMessage,
   type DataTableColumns,
 } from 'naive-ui'
 
 import ShowOrEdit from '@/components/ShowOrEdit'
-import type { Building } from '@/types'
-import { buildings } from '@/data/buildings'
+import { buildings } from '@/data'
+import BuildingImage from '@/components/BuildingImage'
 
-const columns: DataTableColumns<Building> = [
+interface OptionalBuilding {
+  id: string | null
+  name: string | null
+}
+
+const columns: DataTableColumns<OptionalBuilding> = [
   {
     title: '图片',
     key: 'image',
     width: 60,
     render: (row) => {
       return (
-        <NImage
-          style={{ display: 'flex' }}
-          src={`\\buildings\\${row.id}.png`}
+        <BuildingImage
+          name={row.id ?? ''}
+          sizes={[48, 96]}
+          formats={['avif', 'webp', 'png']}
           width={28}
           height={28}
         />
@@ -53,31 +57,11 @@ const columns: DataTableColumns<Building> = [
     render: (row) => {
       return (
         <ShowOrEdit
-          value={row.id.replace(/_+/g, ' ')}
+          value={row.id?.replace(/_+/g, ' ')}
           onUpdateValue={(value) => {
-            row.id = value.trim().replace(/\s+/g, '_')
+            row.id = value ? value.trim().replace(/\s+/g, '_') : null
           }}
         />
-      )
-    },
-  },
-  {
-    title: '功率',
-    key: 'powerUsage',
-    width: 200,
-    render: (row) => {
-      return (
-        <NInputNumber
-          value={row.powerUsage}
-          onUpdateValue={(value) => {
-            row.powerUsage = value ?? 0
-          }}
-          size="small"
-        >
-          {{
-            suffix: () => 'MW',
-          }}
-        </NInputNumber>
       )
     },
   },
@@ -85,7 +69,7 @@ const columns: DataTableColumns<Building> = [
 
 export default defineComponent({
   setup() {
-    const data = ref<Building[]>(structuredClone(buildings))
+    const data = ref<OptionalBuilding[]>(structuredClone(buildings))
 
     const message = useMessage()
 
@@ -105,7 +89,6 @@ export default defineComponent({
                   data.value.push({
                     id: '',
                     name: '',
-                    powerUsage: 0,
                   })
                 }}
               >
