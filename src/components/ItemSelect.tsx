@@ -14,9 +14,7 @@ const renderLabel: SelectRenderLabel = (option) => {
         sizes={[24, 48, 72]}
         formats={['avif', 'webp', 'png']}
       />
-      <div style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
-        {option.label}
-      </div>
+      <div class="overflow-hidden text-ellipsis">{option.label}</div>
     </NFlex>
   )
 }
