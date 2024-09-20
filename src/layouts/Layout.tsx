@@ -1,6 +1,7 @@
 import { defineComponent, watchEffect } from 'vue'
 import { RouterView } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useColorMode } from '@vueuse/core'
 import {
   NLayout,
   NLayoutHeader,
@@ -19,6 +20,8 @@ export default defineComponent({
     watchEffect(() => {
       localStorage.setItem('locale', locale.value)
     })
+
+    const colorMode = useColorMode()
 
     return () => (
       <NLayout style={{ height: '100vh' }}>
@@ -57,6 +60,26 @@ export default defineComponent({
               }}
             >
               {t('switchLanguage')}
+            </NButton>
+            <NButton
+              quaternary
+              onClick={() => {
+                colorMode.store.value = (
+                  {
+                    auto: 'light',
+                    light: 'dark',
+                    dark: 'auto',
+                  } as const
+                )[colorMode.store.value]
+              }}
+            >
+              {
+                {
+                  auto: t('light'),
+                  light: t('dark'),
+                  dark: t('auto'),
+                }[colorMode.store.value]
+              }
             </NButton>
             <div class="leading-none">v0.1</div>
           </NFlex>

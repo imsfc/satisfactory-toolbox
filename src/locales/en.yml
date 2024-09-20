@@ -1,6 +1,9 @@
 logoTitle: Satisfactory Helper
 switchLanguage: 中文
 switchLanguageCode: zh-CN
+auto: Auto
+light: Light
+dark: Dark
 
 import: Import
 export: Export
