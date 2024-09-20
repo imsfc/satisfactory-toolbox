@@ -16,6 +16,8 @@ export default defineComponent({
       type: Array as PropType<Format[]>,
       required: true,
     },
+    width: Number,
+    height: Number,
   },
   setup(props) {
     return () => (
@@ -40,13 +42,16 @@ export default defineComponent({
             return (
               <img
                 src={img(props.name, props.sizes[0], format)}
-                width={props.sizes[0]}
-                height={props.sizes[0]}
+                width={props.width ?? props.sizes[0]}
+                height={props.height ?? props.sizes[0]}
               />
             )
           })
         ) : (
-          <img width={props.sizes[0]} height={props.sizes[0]} />
+          <img
+            width={props.width ?? props.sizes[0]}
+            height={props.height ?? props.sizes[0]}
+          />
         )}
       </picture>
     )
