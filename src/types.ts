@@ -21,18 +21,22 @@ export interface Item {
   name: string
 }
 
-export interface ItemAmount {
+export interface ItemQuantity {
   itemId: Id
-  amount: number
+  quantity: number
+}
+
+export interface RecipeItemQuantity extends ItemQuantity {
+  quantityPerMinute: number
 }
 
 export interface Recipe {
   id: Id
   name: string
-  input: ItemAmount[]
-  output: ItemAmount[]
+  inputs: RecipeItemQuantity[]
+  outputs: RecipeItemQuantity[]
   producedIn: Id
-  producedInTime: number
+  productionDuration: number
   powerUsage?: PowerUsage
 }
 

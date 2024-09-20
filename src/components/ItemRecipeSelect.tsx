@@ -1,83 +1,82 @@
 import { computed, defineComponent, watch, type PropType } from 'vue'
-import {
-  NFlex,
-  NSelect,
-  type SelectRenderLabel,
-  type SelectRenderTag,
-} from 'naive-ui'
+import { NSelect, type SelectRenderLabel, type SelectRenderTag } from 'naive-ui'
 
+import BuildingImage from '@/components/BuildingImage'
+import ItemImage from '@/components/ItemImage'
 import type { Id } from '@/types'
 import { getBuildingById, getItemById, getRecipeById, recipes } from '@/data'
+
+const renderItem = (
+  itemId: Id,
+  itemName: string,
+  quantity: number,
+  perMinute: number,
+) => {
+  return (
+    <div class="w-12 h-11 flex flex-col items-center gap-0.5">
+      <ItemImage
+        name={itemId}
+        sizes={[24, 48, 72]}
+        formats={['avif', 'webp', 'png']}
+      />
+      <div class="w-2/1 h-2 origin-top-center scale-50 text-sm leading-none text-center text-nowrap">
+        {itemName}
+      </div>
+      <div class="w-2/1 h-2 origin-top-center scale-50 text-sm leading-none text-center text-nowrap">
+        {quantity}({perMinute}/min)
+      </div>
+    </div>
+  )
+}
 
 const renderLabel: SelectRenderLabel = (option) => {
   const recipe = getRecipeById(option.value as Id)
   const building = getBuildingById(recipe.producedIn)
 
-  const inputs = recipe.input.map(({ itemId, amount }) => {
+  const inputs = recipe.inputs.map(({ itemId, ...data }) => {
     return {
+      ...data,
       item: getItemById(itemId),
-      amount,
     }
   })
 
-  const outputs = recipe.output.map(({ itemId, amount }) => {
+  const outputs = recipe.outputs.map(({ itemId, ...data }) => {
     return {
+      ...data,
       item: getItemById(itemId),
-      amount,
     }
   })
 
   return (
-    <NFlex
-      style={{ padding: '8px 0' }}
-      size="small"
-      align="center"
-      wrap={false}
-    >
-      <NFlex size={4} justify="center" wrap={false} vertical>
-        <img
-          src={`\\buildings\\${recipe.producedIn}.png`}
-          width={48}
-          height={48}
+    <div class="p-2 flex gap-2">
+      <div class="w-16 flex flex-col justify-center items-center gap-1">
+        <BuildingImage
+          name={recipe.producedIn}
+          sizes={[48, 96, 144]}
+          formats={['avif', 'webp', 'png']}
         />
-        <div style={{ fontSize: '12px', lineHeight: 1 }}>{building.name}</div>
-      </NFlex>
-      <NFlex size={8} vertical>
-        <div style={{ fontSize: '16px', lineHeight: 1 }}>{option.label}</div>
-        <NFlex>
-          <NFlex>
-            {inputs.map(({ item, amount }) => (
-              <NFlex size={4} align="center" vertical>
-                <img src={`\\items\\${item.id}.png`} width={24} height={24} />
-                <div style={{ fontSize: '12px', lineHeight: 1 }}>
-                  {amount}×{item.name}
-                </div>
-                <div style={{ fontSize: '12px', lineHeight: 1 }}>
-                  {(amount * 60) / recipe.producedInTime}/min
-                </div>
-              </NFlex>
-            ))}
-          </NFlex>
-          <NFlex size={0} align="center" vertical>
-            <div>→</div>
-            <div style={{ fontSize: '12px' }}>{recipe.producedInTime}s</div>
-          </NFlex>
-          <NFlex>
-            {outputs.map(({ item, amount }) => (
-              <NFlex size={4} align="center" vertical>
-                <img src={`\\items\\${item.id}.png`} width={24} height={24} />
-                <div style={{ fontSize: '12px', lineHeight: 1 }}>
-                  {amount}×{item.name}
-                </div>
-                <div style={{ fontSize: '12px', lineHeight: 1 }}>
-                  {(amount * 60) / recipe.producedInTime}/min
-                </div>
-              </NFlex>
-            ))}
-          </NFlex>
-        </NFlex>
-      </NFlex>
-    </NFlex>
+        <div class="text-xs leading-none">{building.name}</div>
+      </div>
+      <div class="h-16 flex flex-col gap-2">
+        <div class="text-sm leading-none font-medium">{recipe.name}</div>
+        <div class="flex">
+          <div class="w-48 flex">
+            {inputs.map(({ item, quantity, quantityPerMinute: perMinute }) =>
+              renderItem(item.id, item.name, quantity, perMinute),
+            )}
+          </div>
+          <div class="w-12 flex flex-col justify-center items-center">
+            <div class="text-sm leading-none">→</div>
+            <div class="text-xs leading-none">{recipe.productionDuration}s</div>
+          </div>
+          <div class="flex">
+            {outputs.map(({ item, quantity, quantityPerMinute: perMinute }) =>
+              renderItem(item.id, item.name, quantity, perMinute),
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -96,8 +95,8 @@ export default defineComponent({
     const options = computed(() => {
       if (props.itemId) {
         return recipes
-          .filter(({ output }) => {
-            return output.some(({ itemId }) => itemId === props.itemId)
+          .filter(({ outputs }) => {
+            return outputs.some(({ itemId }) => itemId === props.itemId)
           })
           .map(({ id, name }) => {
             return {

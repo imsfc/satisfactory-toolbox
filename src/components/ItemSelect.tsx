@@ -1,6 +1,7 @@
 import { defineComponent, type PropType } from 'vue'
 import { NFlex, NSelect, type SelectRenderLabel } from 'naive-ui'
 
+import ItemImage from '@/components/ItemImage'
 import type { Id } from '@/types'
 import { items } from '@/data'
 
@@ -14,7 +15,11 @@ const options = items.map(({ id, name }) => {
 const renderLabel: SelectRenderLabel = (option) => {
   return (
     <NFlex size="small" align="center" wrap={false}>
-      <img src={`\\items\\${option.value}.png`} width={24} height={24} />
+      <ItemImage
+        name={option.value as string}
+        sizes={[24, 48, 72]}
+        formats={['avif', 'webp', 'png']}
+      />
       <div style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
         {option.label}
       </div>

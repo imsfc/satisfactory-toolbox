@@ -16,18 +16,18 @@ import ShowOrEdit from '@/components/ShowOrEdit'
 import { buildings, recipes } from '@/data'
 import ItemSelect from '@/components/ItemSelect'
 
-interface OptionalItemAmount {
+interface OptionalItemQuantity {
   itemId: string | null
-  amount: number | null
+  quantity: number | null
 }
 
 interface OptionalRecipe {
   id: string | null
   name: string | null
-  input: OptionalItemAmount[]
-  output: OptionalItemAmount[]
+  inputs: OptionalItemQuantity[]
+  outputs: OptionalItemQuantity[]
   producedIn: string | null
-  producedInTime: number | null
+  productionDuration: number | null
 }
 
 const buildingsOptions = buildings.map((building) => {
@@ -101,18 +101,18 @@ const createColumns = ({
       render: (row) => {
         return (
           <NFlex vertical>
-            {row.input.map((input, index) => (
+            {row.inputs.map((item, index) => (
               <NFlex key={index} size="small" align="center" wrap={false}>
                 <NInputNumber
-                  value={input.amount}
+                  value={item.quantity}
                   onUpdateValue={(value) => {
-                    input.amount = value
+                    item.quantity = value
                   }}
                 />
                 <ItemSelect
-                  value={input.itemId}
+                  value={item.itemId}
                   onUpdate:value={(value) => {
-                    input.itemId = value
+                    item.itemId = value
                   }}
                 />
                 <NButton
@@ -120,7 +120,7 @@ const createColumns = ({
                   size="tiny"
                   ghost
                   onClick={() => {
-                    row.input.splice(index, 1)
+                    row.inputs.splice(index, 1)
                   }}
                 >
                   删
@@ -129,9 +129,9 @@ const createColumns = ({
             ))}
             <NButton
               onClick={() => {
-                row.input.push({
+                row.inputs.push({
                   itemId: null,
-                  amount: null,
+                  quantity: null,
                 })
               }}
               size="small"
@@ -150,18 +150,18 @@ const createColumns = ({
       render: (row) => {
         return (
           <NFlex vertical>
-            {row.output.map((output, index) => (
+            {row.outputs.map((item, index) => (
               <NFlex key={index} size="small" align="center" wrap={false}>
                 <NInputNumber
-                  value={output.amount}
+                  value={item.quantity}
                   onUpdateValue={(value) => {
-                    output.amount = value
+                    item.quantity = value
                   }}
                 />
                 <ItemSelect
-                  value={output.itemId}
+                  value={item.itemId}
                   onUpdate:value={(value) => {
-                    output.itemId = value
+                    item.itemId = value
                   }}
                 />
                 <NButton
@@ -169,7 +169,7 @@ const createColumns = ({
                   size="tiny"
                   ghost
                   onClick={() => {
-                    row.output.splice(index, 1)
+                    row.outputs.splice(index, 1)
                   }}
                 >
                   删
@@ -178,9 +178,9 @@ const createColumns = ({
             ))}
             <NButton
               onClick={() => {
-                row.output.push({
+                row.outputs.push({
                   itemId: null,
-                  amount: null,
+                  quantity: null,
                 })
               }}
               size="small"
@@ -194,14 +194,14 @@ const createColumns = ({
     },
     {
       title: '生产周期',
-      key: 'producedInTime',
+      key: 'productionDuration',
       width: 160,
       render: (row) => {
         return (
           <NInputNumber
-            value={row.producedInTime}
+            value={row.productionDuration}
             onUpdateValue={(value) => {
-              row.producedInTime = value ?? 0
+              row.productionDuration = value ?? 0
             }}
           >
             {{
@@ -267,10 +267,10 @@ export default defineComponent({
                   data.value.push({
                     id: null,
                     name: null,
-                    input: [],
-                    output: [],
+                    inputs: [],
+                    outputs: [],
                     producedIn: null,
-                    producedInTime: null,
+                    productionDuration: null,
                   })
                 }}
               >

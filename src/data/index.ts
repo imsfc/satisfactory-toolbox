@@ -1,11 +1,50 @@
-import type { Building, Id, Item, Recipe } from '@/types'
+import { Decimal } from 'decimal.js'
+
+import type { Building, Id, Item, PowerUsage, Recipe } from '@/types'
+
 import buildingsJson from './buildings.json'
 import itemsJson from './items.json'
 import recipesJson from './recipes.json'
 
 export const buildings: Building[] = buildingsJson as Building[]
 export const items: Item[] = itemsJson as Item[]
-export const recipes: Recipe[] = recipesJson as Recipe[]
+export const recipes = recipesJson.map(
+  ({
+    id,
+    name,
+    inputs,
+    outputs,
+    producedIn,
+    productionDuration,
+    powerUsage,
+  }): Recipe => {
+    return {
+      id,
+      name,
+      inputs: inputs.map(({ itemId, quantity }) => {
+        return {
+          itemId,
+          quantity,
+          quantityPerMinute: new Decimal(quantity)
+            .div(new Decimal(productionDuration).div(60))
+            .toNumber(),
+        }
+      }),
+      outputs: outputs.map(({ itemId, quantity }) => {
+        return {
+          itemId,
+          quantity,
+          quantityPerMinute: new Decimal(quantity)
+            .div(new Decimal(productionDuration).div(60))
+            .toNumber(),
+        }
+      }),
+      producedIn,
+      productionDuration,
+      powerUsage: powerUsage as PowerUsage | undefined,
+    }
+  },
+)
 
 /**
  * 获取建筑
