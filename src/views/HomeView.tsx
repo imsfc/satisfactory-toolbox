@@ -1,4 +1,5 @@
 import { defineComponent, useTemplateRef } from 'vue'
+import { useI18n } from 'vue-i18n'
 import {
   NButton,
   NDataTable,
@@ -25,31 +26,33 @@ function createColumns({
   open: (id: Id) => void
   remove: (id: Id) => void
 }): DataTableColumns<ModuleFactory> {
+  const { t } = useI18n()
+
   return [
     {
-      title: '名称',
+      title: t('name'),
       key: 'name',
     },
     {
-      title: '备注',
+      title: t('remark'),
       key: 'remark',
     },
     {
-      title: '电力',
+      title: t('power'),
       key: 'power',
     },
     {
-      title: '输入',
-      key: 'input',
+      title: t('inputs'),
+      key: 'inputs',
     },
     {
-      title: '输出',
-      key: 'output',
+      title: t('outputs'),
+      key: 'outputs',
     },
     {
-      title: '操作',
+      title: t('action'),
       key: 'action',
-      width: 132,
+      width: 180,
       render(row) {
         return (
           <NFlex>
@@ -59,7 +62,7 @@ function createColumns({
                 open(row.id)
               }}
             >
-              配置
+              {t('config')}
             </NButton>
             <NPopconfirm
               onPositiveClick={() => {
@@ -67,10 +70,10 @@ function createColumns({
               }}
             >
               {{
-                default: () => '确认删除？',
+                default: () => t('deleteConfirm'),
                 trigger: () => (
                   <NButton type="error" size="small" ghost>
-                    删除
+                    {t('delete')}
                   </NButton>
                 ),
               }}
@@ -84,6 +87,8 @@ function createColumns({
 
 export default defineComponent({
   setup() {
+    const { t } = useI18n()
+
     const moduleFactoryInstance = useTemplateRef<
       InstanceType<typeof ModuleFactoryDrawer> & ModuleFactoryDrawerExposed
     >('moduleFactoryInstance')
@@ -99,16 +104,16 @@ export default defineComponent({
                   moduleFactoryInstance.value!.open(newModuleFactory())
                 }}
               >
-                新增工厂
+                {t('newFactory')}
               </NButton>
-              <NButton>全局配置</NButton>
+              <NButton>{t('globalConfig')}</NButton>
             </NFlex>
             <NFlex>
               <NButton strong secondary>
-                导入
+                {t('import')}
               </NButton>
               <NButton strong secondary>
-                导出
+                {t('export')}
               </NButton>
               <NPopconfirm
                 placement="bottom"
@@ -117,8 +122,10 @@ export default defineComponent({
                 }}
               >
                 {{
-                  default: () => '确认清空全部数据？',
-                  trigger: () => <NButton type="error">清空全部数据</NButton>,
+                  default: () => t('clearAllDataConfirm'),
+                  trigger: () => (
+                    <NButton type="error">{t('clearAllData')}</NButton>
+                  ),
                 }}
               </NPopconfirm>
             </NFlex>

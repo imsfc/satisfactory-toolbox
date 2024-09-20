@@ -1,0 +1,32 @@
+logoTitle: Satisfactory Helper
+switchLanguage: 中文
+switchLanguageCode: zh-CN
+
+import: Import
+export: Export
+
+newFactory: New Factory
+globalConfig: Global Config
+clearAllData: Clear All Data
+clearAllDataConfirm: Are you sure you want to clear all data?
+
+name: Name
+remark: Remark
+power: Power
+inputs: Inputs
+outputs: Outputs
+action: Action
+
+delete: Delete
+deleteConfirm: Are you sure you want to delete?
+
+config: Config
+factoryConfig: Factory Config
+factoryName: Factory Name
+
+newAssemblyLine: New Assembly Line
+
+recipe: Recipe
+targetItem: Target Item
+building: Building
+targetItemSpeed: Target Item Speed

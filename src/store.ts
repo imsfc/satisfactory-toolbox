@@ -32,7 +32,7 @@ export function newModuleFactory(): Id {
   const id = nanoid()
   moduleFactoryList.value.unshift({
     id,
-    name: `新工厂-${id.slice(0, 5)}`,
+    name: `Factory_${id.slice(0, 5)}`,
     remark: '',
     data: [],
   })

@@ -1,5 +1,6 @@
 import { computed, defineComponent } from 'vue'
 import { RouterView } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { useColorMode } from '@vueuse/core'
 import {
   darkTheme,
@@ -21,11 +22,13 @@ const isDark = computed(() => {
 
 export default defineComponent({
   setup() {
+    const { locale } = useI18n()
+
     return () => (
       <NConfigProvider
         theme={isDark.value ? darkTheme : undefined}
-        locale={zhCN}
-        dateLocale={dateZhCN}
+        locale={locale.value === 'zh-CN' ? zhCN : undefined}
+        dateLocale={locale.value === 'zh-CN' ? dateZhCN : undefined}
       >
         <NMessageProvider>
           <RouterView />

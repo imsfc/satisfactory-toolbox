@@ -1,11 +1,25 @@
-import { defineComponent } from 'vue'
+import { defineComponent, watchEffect } from 'vue'
 import { RouterView } from 'vue-router'
-import { NLayout, NLayoutHeader, NLayoutContent, NText } from 'naive-ui'
+import { useI18n } from 'vue-i18n'
+import {
+  NLayout,
+  NLayoutHeader,
+  NLayoutContent,
+  NText,
+  NButton,
+  NFlex,
+} from 'naive-ui'
 
 import logo from '@/assets/logo.png'
 
 export default defineComponent({
   setup() {
+    const { t, locale } = useI18n()
+
+    watchEffect(() => {
+      localStorage.setItem('locale', locale.value)
+    })
+
     return () => (
       <NLayout style={{ height: '100vh' }}>
         <NLayoutHeader
@@ -32,12 +46,20 @@ export default defineComponent({
               style={{ marginRight: '12px', width: '32px', height: '32px' }}
               src={logo}
             />
-            <span>幸福工厂小助手</span>
+            <div>{t('logoTitle')}</div>
           </NText>
           <div></div>
-          <div>
-            <NText>v0.11</NText>
-          </div>
+          <NFlex align="center">
+            <NButton
+              quaternary
+              onClick={() => {
+                locale.value = t('switchLanguageCode')
+              }}
+            >
+              {t('switchLanguage')}
+            </NButton>
+            <div class="leading-none">v0.1</div>
+          </NFlex>
         </NLayoutHeader>
 
         <NLayoutContent

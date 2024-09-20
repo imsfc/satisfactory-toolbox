@@ -1,0 +1,32 @@
+logoTitle: 幸福工厂小助手
+switchLanguage: English
+switchLanguageCode: en
+
+import: 导入
+export: 导出
+
+newFactory: 新增工厂
+globalConfig: 全局配置
+clearAllData: 清空全部数据
+clearAllDataConfirm: 确定清空全部数据吗？
+
+name: 名称
+remark: 备注
+power: 功率
+inputs: 输入
+outputs: 输出
+action: 操作
+
+delete: 删除
+deleteConfirm: 确定要删除吗？
+
+config: 配置
+factoryConfig: 工厂配置
+factoryName: 工厂名称
+
+newAssemblyLine: 新增流水线
+
+recipe: 配方
+targetItem: 目标物品
+building: 建筑
+targetItemSpeed: 目标物品速率

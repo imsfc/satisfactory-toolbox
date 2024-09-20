@@ -1,4 +1,5 @@
 import { defineComponent, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useWindowSize } from '@vueuse/core'
 
 import type { AssemblyLine, Id, ModuleFactory } from '@/types'
@@ -24,10 +25,12 @@ function createColumns({
 }: {
   remove: (id: Id) => void
 }): DataTableColumns<AssemblyLine> {
+  const { t } = useI18n()
+
   return [
     {
-      title: '生产物品',
-      key: 'outputItem',
+      title: t('targetItem'),
+      key: 'targetItem',
       minWidth: 160,
       render(row) {
         return (
@@ -41,7 +44,7 @@ function createColumns({
       },
     },
     {
-      title: '生产配方',
+      title: t('recipe'),
       key: 'recipe',
       minWidth: 160,
       render(row) {
@@ -55,8 +58,8 @@ function createColumns({
       },
     },
     {
-      title: '生产速率',
-      key: 'outputsPerMinute',
+      title: t('targetItemSpeed'),
+      key: 'targetItemSpeed',
       minWidth: 180,
       width: 200,
       render(row) {
@@ -77,7 +80,7 @@ function createColumns({
       },
     },
     {
-      title: '建筑',
+      title: t('building'),
       key: 'building',
       minWidth: 160,
       // render(row) {
@@ -90,8 +93,8 @@ function createColumns({
       // },
     },
     {
-      title: '电力',
-      key: 'powerUsage',
+      title: t('power'),
+      key: 'power',
       minWidth: 80,
       // render(row) {
       //   return h(AssemblyLinePowerDisplay, {
@@ -103,8 +106,8 @@ function createColumns({
       // },
     },
     {
-      title: '输入',
-      key: 'input',
+      title: t('inputs'),
+      key: 'inputs',
       minWidth: 160,
       // render(row) {
       //   return h(AssemblyLineItemDisplay, {
@@ -116,8 +119,8 @@ function createColumns({
       // },
     },
     {
-      title: '输出',
-      key: 'output',
+      title: t('outputs'),
+      key: 'outputs',
       minWidth: 160,
       // render(row) {
       //   return h(AssemblyLineItemDisplay, {
@@ -129,9 +132,9 @@ function createColumns({
       // },
     },
     {
-      title: '操作',
+      title: t('action'),
       key: 'action',
-      width: 72,
+      width: 100,
       render(row) {
         return (
           <NFlex>
@@ -141,10 +144,10 @@ function createColumns({
               }}
             >
               {{
-                default: () => '确认删除？',
+                default: () => t('deleteConfirm'),
                 trigger: () => (
                   <NButton type="error" size="small" ghost>
-                    删除
+                    {t('delete')}
                   </NButton>
                 ),
               }}
@@ -162,6 +165,8 @@ export interface Exposed {
 
 export default defineComponent({
   setup(props, { expose }) {
+    const { t } = useI18n()
+
     const { height: windowHeight } = useWindowSize()
 
     const show = ref(false)
@@ -185,10 +190,14 @@ export default defineComponent({
         height={windowHeight.value - 64}
         placement="bottom"
       >
-        <NDrawerContent title="工厂配置" nativeScrollbar={false} closable>
+        <NDrawerContent
+          title={t('factoryConfig')}
+          nativeScrollbar={false}
+          closable
+        >
           <NFlex size="large" vertical align="start">
             <NForm labelPlacement="left" labelWidth="auto" inline>
-              <NFormItem label="模块名" path="name">
+              <NFormItem label={t('factoryName')} path="name">
                 <NInput
                   value={moduleFactory.value!.name}
                   onUpdate:value={(value) => {
@@ -198,7 +207,7 @@ export default defineComponent({
                   showCount
                 />
               </NFormItem>
-              <NFormItem label="备注" path="remark">
+              <NFormItem label={t('remark')} path="remark">
                 <NInput
                   value={moduleFactory.value!.remark}
                   onUpdate:value={(value) => {
@@ -217,7 +226,7 @@ export default defineComponent({
                   newAssemblyLine(moduleFactory.value!.id)
                 }}
               >
-                新增流水线
+                {t('newAssemblyLine')}
               </NButton>
             </NFlex>
 
