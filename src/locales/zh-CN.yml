@@ -33,5 +33,7 @@ targetItem: 目标物品
 building: 建筑
 targetItemSpeed: 目标物品速率
 perMinute: /分钟
+itemUnitName: 个
+fluidUnitName: 立方米
+unitsPerMinute: '每分钟 {0} {1}'
 seconds: 秒
-buildingUnits: 台

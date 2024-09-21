@@ -33,5 +33,7 @@ targetItem: Target Item
 building: Building
 targetItemSpeed: Target Item Speed
 perMinute: /min
+itemUnitName: unit | units
+fluidUnitName: m³
+unitsPerMinute: '{0} {1}/min'
 seconds: s
-buildingUnits: ' units'

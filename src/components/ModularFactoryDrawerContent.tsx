@@ -1,5 +1,5 @@
 import { computed, defineComponent, type PropType } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { I18nT, useI18n } from 'vue-i18n'
 import {
   NButton,
   NDataTable,
@@ -31,6 +31,12 @@ const renderItemQuantityPerMinute = ({
 
   const item = getItemById(itemId)
 
+  const quantityPerMinuteCeil2 = new Decimal(quantityPerMinute)
+    .mul(100)
+    .ceil()
+    .div(100)
+    .toNumber()
+
   return (
     <NFlex align="center" wrap={false}>
       <ItemImage
@@ -41,8 +47,10 @@ const renderItemQuantityPerMinute = ({
       <NFlex size={2} vertical>
         <div class="text-sm leading-3.5 truncate">{t(`items.${item.key}`)}</div>
         <div class="text-xs leading-4 opacity-75 truncate">
-          {new Decimal(quantityPerMinute).mul(100).ceil().div(100).toNumber()}
-          {t(`perMinute`)}
+          <I18nT keypath="unitsPerMinute">
+            <b>{quantityPerMinuteCeil2}</b>
+            {t('itemUnitName', quantityPerMinuteCeil2)}
+          </I18nT>
         </div>
       </NFlex>
     </NFlex>
@@ -104,11 +112,7 @@ function createColumns({
             }}
             min={0}
             max={1000000}
-          >
-            {{
-              suffix: () => t('perMinute'),
-            }}
-          </NInputNumber>
+          />
         )
       },
     },
@@ -147,11 +151,10 @@ function createColumns({
                 {t(`buildings.${building.key}`)}
               </div>
               <div class="text-xs leading-4 opacity-75">
-                {buildingQuantityCeil}
+                <b>{buildingQuantityCeil}</b>
                 {buildingQuantityCeil !== buildingQuantityCeil2 && (
-                  <>({buildingQuantityCeil2})</>
+                  <> ({buildingQuantityCeil2})</>
                 )}
-                {t(`buildingUnits`)}
               </div>
             </NFlex>
           </NFlex>
@@ -171,9 +174,11 @@ function createColumns({
         return (
           <NFlex vertical>
             <div class="text-sm leading-3.5">
-              {new Decimal(assemblyLineComputed.averageTotalPowerUsage)
-                .ceil()
-                .toNumber()}
+              <b>
+                {new Decimal(assemblyLineComputed.averageTotalPowerUsage)
+                  .ceil()
+                  .toNumber()}
+              </b>
               {' MW'}
             </div>
             {isArray(assemblyLineComputed.totalPowerUsage) && (
