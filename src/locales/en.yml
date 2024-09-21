@@ -34,5 +34,4 @@ building: Building
 targetItemSpeed: Target Item Speed
 perMinute: /min
 seconds: s
-buildingUnit: unit
-buildingUnits: units
+buildingUnits: ' units'

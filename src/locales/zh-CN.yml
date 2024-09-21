@@ -34,5 +34,4 @@ building: 建筑
 targetItemSpeed: 目标物品速率
 perMinute: /分钟
 seconds: 秒
-buildingUnit: 台
 buildingUnits: 台

@@ -12,6 +12,7 @@ import {
   type DataTableColumns,
 } from 'naive-ui'
 import { isArray } from 'radash'
+import Decimal from 'decimal.js'
 
 import type { AssemblyLine, Id, ItemQuantityPerMinute } from '@/types'
 import { getBuildingById, getItemById } from '@/data'
@@ -40,7 +41,7 @@ const renderItemQuantityPerMinute = ({
       <NFlex size={2} vertical>
         <div class="text-sm leading-3.5 truncate">{t(`items.${item.key}`)}</div>
         <div class="text-xs leading-4 opacity-75 truncate">
-          {quantityPerMinute}
+          {new Decimal(quantityPerMinute).mul(100).ceil().div(100).toNumber()}
           {t(`perMinute`)}
         </div>
       </NFlex>
@@ -122,6 +123,18 @@ function createColumns({
           return null
         }
         const building = getBuildingById(assemblyLineComputed.buildingId)
+        const buildingQuantityCeil = new Decimal(
+          assemblyLineComputed.buildingQuantity,
+        )
+          .ceil()
+          .toNumber()
+        const buildingQuantityCeil2 = new Decimal(
+          assemblyLineComputed.buildingQuantity,
+        )
+          .mul(100)
+          .ceil()
+          .div(100)
+          .toNumber()
         return (
           <NFlex align="center" wrap={false}>
             <BuildingImage
@@ -133,11 +146,12 @@ function createColumns({
               <div class="text-sm leading-3.5 truncate">
                 {t(`buildings.${building.key}`)}
               </div>
-              <div class="text-xs leading-4 opacity-75 truncate">
-                {assemblyLineComputed.buildingQuantity}
-                {assemblyLineComputed.buildingQuantity > 1
-                  ? t(`buildingUnits`)
-                  : t(`buildingUnit`)}
+              <div class="text-xs leading-4 opacity-75">
+                {buildingQuantityCeil}
+                {buildingQuantityCeil !== buildingQuantityCeil2 && (
+                  <>({buildingQuantityCeil2})</>
+                )}
+                {t(`buildingUnits`)}
               </div>
             </NFlex>
           </NFlex>
@@ -154,10 +168,26 @@ function createColumns({
         if (!assemblyLineComputed?.averageTotalPowerUsage) {
           return null
         }
-        if (isArray(assemblyLineComputed.totalPowerUsage)) {
-          return `${assemblyLineComputed.totalPowerUsage.join(' - ')}MW 平均${assemblyLineComputed.averageTotalPowerUsage}`
-        }
-        return `${assemblyLineComputed.averageTotalPowerUsage}MW`
+        return (
+          <NFlex vertical>
+            <div class="text-sm leading-3.5">
+              {new Decimal(assemblyLineComputed.averageTotalPowerUsage)
+                .ceil()
+                .toNumber()}
+              {' MW'}
+            </div>
+            {isArray(assemblyLineComputed.totalPowerUsage) && (
+              <div class="text-xs leading-4 opacity-75">
+                {assemblyLineComputed.totalPowerUsage
+                  .map(
+                    (powerUsage) =>
+                      `${new Decimal(powerUsage).ceil().toNumber()} MW`,
+                  )
+                  .join(' - ')}
+              </div>
+            )}
+          </NFlex>
+        )
       },
     },
     {
