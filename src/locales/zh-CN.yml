@@ -25,7 +25,6 @@ deleteConfirm: 确定要删除吗？
 
 config: 配置
 factoryConfig: 工厂配置
-factoryName: 工厂名称
 
 newAssemblyLine: 新增流水线
 
@@ -35,3 +34,5 @@ building: 建筑
 targetItemSpeed: 目标物品速率
 perMinute: /分钟
 seconds: 秒
+buildingUnit: 台
+buildingUnits: 台

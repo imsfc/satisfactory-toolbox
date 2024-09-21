@@ -13,16 +13,21 @@ export interface Item {
   key: string
 }
 
-export interface ItemQuantity {
+export interface ItemQuantityPerCycle {
   itemId: Id
-  quantity: number
+  quantityPerCycle: number
+}
+
+export interface ItemQuantityPerMinute {
+  itemId: Id
+  quantityPerMinute: number
 }
 
 export interface Recipe {
   id: Id
   key: string
-  inputs: ItemQuantity[]
-  outputs: ItemQuantity[]
+  inputs: ItemQuantityPerCycle[]
+  outputs: ItemQuantityPerCycle[]
   producedInId: Id
   productionDuration: number
   powerUsage?: PowerUsage // producedIn.powerUsage === 'variable' 时生效
@@ -40,4 +45,14 @@ export interface AssemblyLine {
   targetItemId: Id | null
   targetItemSpeed: number | null
   recipeId: Id | null
+}
+
+export interface AssemblyLineComputed {
+  buildingId: Id
+  buildingQuantity: number
+  powerUsage?: PowerUsage
+  totalPowerUsage?: PowerUsage
+  averageTotalPowerUsage?: number
+  inputs: ItemQuantityPerMinute[]
+  outputs: ItemQuantityPerMinute[]
 }

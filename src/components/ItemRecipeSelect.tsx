@@ -14,7 +14,11 @@ import { calculateQuantityPerMinute } from '@/utils/dataCalculators'
 import BuildingImage from './BuildingImage'
 import ItemImage from './ItemImage'
 
-const renderItem = (itemId: Id, quantity: number, perMinute: number) => {
+const renderItem = (
+  itemId: Id,
+  quantityPerCycle: number,
+  quantityPerMinute: number,
+) => {
   const { t } = useI18n()
 
   const item = getItemById(itemId)
@@ -32,10 +36,10 @@ const renderItem = (itemId: Id, quantity: number, perMinute: number) => {
         vertical
       >
         <div class="grow line-clamp-2">
-          {quantity}×{t(`items.${item.key}`)}
+          {quantityPerCycle}×{t(`items.${item.key}`)}
         </div>
         <div class="opacity-75 truncate">
-          {perMinute}
+          {quantityPerMinute}
           {t('perMinute')}
         </div>
       </NFlex>
@@ -65,11 +69,14 @@ const renderLabel: SelectRenderLabel = (option) => {
         <div class="text-sm">{option.label}</div>
         <NFlex>
           <NFlex>
-            {recipe.inputs.map(({ itemId, quantity }) =>
+            {recipe.inputs.map(({ itemId, quantityPerCycle }) =>
               renderItem(
                 itemId,
-                quantity,
-                calculateQuantityPerMinute(quantity, recipe.productionDuration),
+                quantityPerCycle,
+                calculateQuantityPerMinute(
+                  quantityPerCycle,
+                  recipe.productionDuration,
+                ),
               ),
             )}
           </NFlex>
@@ -86,11 +93,14 @@ const renderLabel: SelectRenderLabel = (option) => {
             </div>
           </NFlex>
           <NFlex>
-            {recipe.outputs.map(({ itemId, quantity }) =>
+            {recipe.outputs.map(({ itemId, quantityPerCycle }) =>
               renderItem(
                 itemId,
-                quantity,
-                calculateQuantityPerMinute(quantity, recipe.productionDuration),
+                quantityPerCycle,
+                calculateQuantityPerMinute(
+                  quantityPerCycle,
+                  recipe.productionDuration,
+                ),
               ),
             )}
           </NFlex>

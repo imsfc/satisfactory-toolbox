@@ -2,8 +2,8 @@
   {
     "id": 1,
     "key": "Iron_Ingot",
-    "inputs": [{ "itemId": 2, "quantity": 1 }],
-    "outputs": [{ "itemId": 1, "quantity": 1 }],
+    "inputs": [{ "itemId": 2, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 1, "quantityPerCycle": 1 }],
     "producedInId": 10,
     "productionDuration": 2
   },
@@ -11,10 +11,10 @@
     "id": 2,
     "key": "Pure_Iron_Ingot",
     "inputs": [
-      { "itemId": 2, "quantity": 7 },
-      { "itemId": 67, "quantity": 4 }
+      { "itemId": 2, "quantityPerCycle": 7 },
+      { "itemId": 67, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 1, "quantity": 13 }],
+    "outputs": [{ "itemId": 1, "quantityPerCycle": 13 }],
     "producedInId": 5,
     "productionDuration": 12
   },
@@ -22,10 +22,10 @@
     "id": 3,
     "key": "Basic_Iron_Ingot",
     "inputs": [
-      { "itemId": 2, "quantity": 5 },
-      { "itemId": 11, "quantity": 8 }
+      { "itemId": 2, "quantityPerCycle": 5 },
+      { "itemId": 11, "quantityPerCycle": 8 }
     ],
-    "outputs": [{ "itemId": 1, "quantity": 10 }],
+    "outputs": [{ "itemId": 1, "quantityPerCycle": 10 }],
     "producedInId": 11,
     "productionDuration": 12
   },
@@ -33,10 +33,10 @@
     "id": 4,
     "key": "Iron_Alloy_Ingot",
     "inputs": [
-      { "itemId": 2, "quantity": 8 },
-      { "itemId": 9, "quantity": 2 }
+      { "itemId": 2, "quantityPerCycle": 8 },
+      { "itemId": 9, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 1, "quantity": 15 }],
+    "outputs": [{ "itemId": 1, "quantityPerCycle": 15 }],
     "producedInId": 11,
     "productionDuration": 12
   },
@@ -44,10 +44,10 @@
     "id": 5,
     "key": "Leached_Iron_Ingot",
     "inputs": [
-      { "itemId": 2, "quantity": 5 },
-      { "itemId": 97, "quantity": 1 }
+      { "itemId": 2, "quantityPerCycle": 5 },
+      { "itemId": 97, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 1, "quantity": 10 }],
+    "outputs": [{ "itemId": 1, "quantityPerCycle": 10 }],
     "producedInId": 5,
     "productionDuration": 6
   },
@@ -55,10 +55,10 @@
     "id": 6,
     "key": "Iron_Ore_(Limestone)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 11, "quantity": 24 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 11, "quantityPerCycle": 24 }
     ],
-    "outputs": [{ "itemId": 2, "quantity": 12 }],
+    "outputs": [{ "itemId": 2, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -66,8 +66,8 @@
   {
     "id": 7,
     "key": "Iron_Plate",
-    "inputs": [{ "itemId": 1, "quantity": 3 }],
-    "outputs": [{ "itemId": 3, "quantity": 2 }],
+    "inputs": [{ "itemId": 1, "quantityPerCycle": 3 }],
+    "outputs": [{ "itemId": 3, "quantityPerCycle": 2 }],
     "producedInId": 1,
     "productionDuration": 6
   },
@@ -75,10 +75,10 @@
     "id": 8,
     "key": "Coated_Iron_Plate",
     "inputs": [
-      { "itemId": 1, "quantity": 5 },
-      { "itemId": 65, "quantity": 1 }
+      { "itemId": 1, "quantityPerCycle": 5 },
+      { "itemId": 65, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 3, "quantity": 10 }],
+    "outputs": [{ "itemId": 3, "quantityPerCycle": 10 }],
     "producedInId": 2,
     "productionDuration": 8
   },
@@ -86,34 +86,34 @@
     "id": 9,
     "key": "Steel_Cast_Plate",
     "inputs": [
-      { "itemId": 1, "quantity": 1 },
-      { "itemId": 26, "quantity": 1 }
+      { "itemId": 1, "quantityPerCycle": 1 },
+      { "itemId": 26, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 3, "quantity": 3 }],
+    "outputs": [{ "itemId": 3, "quantityPerCycle": 3 }],
     "producedInId": 11,
     "productionDuration": 4
   },
   {
     "id": 10,
     "key": "Iron_Rod",
-    "inputs": [{ "itemId": 1, "quantity": 1 }],
-    "outputs": [{ "itemId": 4, "quantity": 1 }],
+    "inputs": [{ "itemId": 1, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 4, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 11,
     "key": "Steel_Rod",
-    "inputs": [{ "itemId": 26, "quantity": 1 }],
-    "outputs": [{ "itemId": 4, "quantity": 4 }],
+    "inputs": [{ "itemId": 26, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 4, "quantityPerCycle": 4 }],
     "producedInId": 1,
     "productionDuration": 5
   },
   {
     "id": 12,
     "key": "Aluminum_Rod",
-    "inputs": [{ "itemId": 96, "quantity": 1 }],
-    "outputs": [{ "itemId": 4, "quantity": 7 }],
+    "inputs": [{ "itemId": 96, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 4, "quantityPerCycle": 7 }],
     "producedInId": 1,
     "productionDuration": 8
   },
@@ -121,10 +121,10 @@
     "id": 13,
     "key": "Reinforced_Iron_Plate",
     "inputs": [
-      { "itemId": 3, "quantity": 6 },
-      { "itemId": 12, "quantity": 12 }
+      { "itemId": 3, "quantityPerCycle": 6 },
+      { "itemId": 12, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 5, "quantity": 1 }],
+    "outputs": [{ "itemId": 5, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -132,10 +132,10 @@
     "id": 14,
     "key": "Stitched_Iron_Plate",
     "inputs": [
-      { "itemId": 3, "quantity": 10 },
-      { "itemId": 7, "quantity": 20 }
+      { "itemId": 3, "quantityPerCycle": 10 },
+      { "itemId": 7, "quantityPerCycle": 20 }
     ],
-    "outputs": [{ "itemId": 5, "quantity": 3 }],
+    "outputs": [{ "itemId": 5, "quantityPerCycle": 3 }],
     "producedInId": 2,
     "productionDuration": 32
   },
@@ -143,10 +143,10 @@
     "id": 15,
     "key": "Adhered_Iron_Plate",
     "inputs": [
-      { "itemId": 3, "quantity": 3 },
-      { "itemId": 68, "quantity": 1 }
+      { "itemId": 3, "quantityPerCycle": 3 },
+      { "itemId": 68, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 5, "quantity": 1 }],
+    "outputs": [{ "itemId": 5, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 16
   },
@@ -154,18 +154,18 @@
     "id": 16,
     "key": "Bolted_Iron_Plate",
     "inputs": [
-      { "itemId": 3, "quantity": 18 },
-      { "itemId": 12, "quantity": 50 }
+      { "itemId": 3, "quantityPerCycle": 18 },
+      { "itemId": 12, "quantityPerCycle": 50 }
     ],
-    "outputs": [{ "itemId": 5, "quantity": 3 }],
+    "outputs": [{ "itemId": 5, "quantityPerCycle": 3 }],
     "producedInId": 2,
     "productionDuration": 12
   },
   {
     "id": 17,
     "key": "Cable",
-    "inputs": [{ "itemId": 7, "quantity": 2 }],
-    "outputs": [{ "itemId": 6, "quantity": 1 }],
+    "inputs": [{ "itemId": 7, "quantityPerCycle": 2 }],
+    "outputs": [{ "itemId": 6, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 2
   },
@@ -173,10 +173,10 @@
     "id": 18,
     "key": "Quickwire_Cable",
     "inputs": [
-      { "itemId": 59, "quantity": 3 },
-      { "itemId": 68, "quantity": 2 }
+      { "itemId": 59, "quantityPerCycle": 3 },
+      { "itemId": 68, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 6, "quantity": 11 }],
+    "outputs": [{ "itemId": 6, "quantityPerCycle": 11 }],
     "producedInId": 2,
     "productionDuration": 24
   },
@@ -184,10 +184,10 @@
     "id": 19,
     "key": "Insulated_Cable",
     "inputs": [
-      { "itemId": 7, "quantity": 9 },
-      { "itemId": 68, "quantity": 6 }
+      { "itemId": 7, "quantityPerCycle": 9 },
+      { "itemId": 68, "quantityPerCycle": 6 }
     ],
-    "outputs": [{ "itemId": 6, "quantity": 20 }],
+    "outputs": [{ "itemId": 6, "quantityPerCycle": 20 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -195,34 +195,34 @@
     "id": 20,
     "key": "Coated_Cable",
     "inputs": [
-      { "itemId": 7, "quantity": 5 },
-      { "itemId": 63, "quantity": 2 }
+      { "itemId": 7, "quantityPerCycle": 5 },
+      { "itemId": 63, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 6, "quantity": 9 }],
+    "outputs": [{ "itemId": 6, "quantityPerCycle": 9 }],
     "producedInId": 5,
     "productionDuration": 8
   },
   {
     "id": 21,
     "key": "Wire",
-    "inputs": [{ "itemId": 8, "quantity": 1 }],
-    "outputs": [{ "itemId": 7, "quantity": 2 }],
+    "inputs": [{ "itemId": 8, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 7, "quantityPerCycle": 2 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 22,
     "key": "Caterium_Wire",
-    "inputs": [{ "itemId": 55, "quantity": 1 }],
-    "outputs": [{ "itemId": 7, "quantity": 8 }],
+    "inputs": [{ "itemId": 55, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 7, "quantityPerCycle": 8 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 23,
     "key": "Iron_Wire",
-    "inputs": [{ "itemId": 1, "quantity": 5 }],
-    "outputs": [{ "itemId": 7, "quantity": 9 }],
+    "inputs": [{ "itemId": 1, "quantityPerCycle": 5 }],
+    "outputs": [{ "itemId": 7, "quantityPerCycle": 9 }],
     "producedInId": 1,
     "productionDuration": 24
   },
@@ -230,18 +230,18 @@
     "id": 24,
     "key": "Fused_Wire",
     "inputs": [
-      { "itemId": 8, "quantity": 4 },
-      { "itemId": 55, "quantity": 1 }
+      { "itemId": 8, "quantityPerCycle": 4 },
+      { "itemId": 55, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 7, "quantity": 30 }],
+    "outputs": [{ "itemId": 7, "quantityPerCycle": 30 }],
     "producedInId": 2,
     "productionDuration": 20
   },
   {
     "id": 25,
     "key": "Copper_Ingot",
-    "inputs": [{ "itemId": 9, "quantity": 1 }],
-    "outputs": [{ "itemId": 8, "quantity": 1 }],
+    "inputs": [{ "itemId": 9, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 8, "quantityPerCycle": 1 }],
     "producedInId": 10,
     "productionDuration": 2
   },
@@ -249,10 +249,10 @@
     "id": 26,
     "key": "Tempered_Copper_Ingot",
     "inputs": [
-      { "itemId": 9, "quantity": 5 },
-      { "itemId": 62, "quantity": 8 }
+      { "itemId": 9, "quantityPerCycle": 5 },
+      { "itemId": 62, "quantityPerCycle": 8 }
     ],
-    "outputs": [{ "itemId": 8, "quantity": 12 }],
+    "outputs": [{ "itemId": 8, "quantityPerCycle": 12 }],
     "producedInId": 11,
     "productionDuration": 12
   },
@@ -260,10 +260,10 @@
     "id": 27,
     "key": "Pure_Copper_Ingot",
     "inputs": [
-      { "itemId": 9, "quantity": 6 },
-      { "itemId": 67, "quantity": 4 }
+      { "itemId": 9, "quantityPerCycle": 6 },
+      { "itemId": 67, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 8, "quantity": 15 }],
+    "outputs": [{ "itemId": 8, "quantityPerCycle": 15 }],
     "producedInId": 5,
     "productionDuration": 24
   },
@@ -271,10 +271,10 @@
     "id": 28,
     "key": "Leached_Copper_Ingot",
     "inputs": [
-      { "itemId": 9, "quantity": 9 },
-      { "itemId": 97, "quantity": 5 }
+      { "itemId": 9, "quantityPerCycle": 9 },
+      { "itemId": 97, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 8, "quantity": 22 }],
+    "outputs": [{ "itemId": 8, "quantityPerCycle": 22 }],
     "producedInId": 5,
     "productionDuration": 12
   },
@@ -282,10 +282,10 @@
     "id": 29,
     "key": "Copper_Alloy_Ingot",
     "inputs": [
-      { "itemId": 9, "quantity": 5 },
-      { "itemId": 2, "quantity": 5 }
+      { "itemId": 9, "quantityPerCycle": 5 },
+      { "itemId": 2, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 8, "quantity": 10 }],
+    "outputs": [{ "itemId": 8, "quantityPerCycle": 10 }],
     "producedInId": 11,
     "productionDuration": 6
   },
@@ -293,10 +293,10 @@
     "id": 30,
     "key": "Copper_Ore_(Quartz)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 33, "quantity": 10 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 33, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 9, "quantity": 12 }],
+    "outputs": [{ "itemId": 9, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -305,10 +305,10 @@
     "id": 31,
     "key": "Copper_Ore_(Sulfur)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 39, "quantity": 12 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 39, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 9, "quantity": 12 }],
+    "outputs": [{ "itemId": 9, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -316,8 +316,8 @@
   {
     "id": 32,
     "key": "Concrete",
-    "inputs": [{ "itemId": 11, "quantity": 3 }],
-    "outputs": [{ "itemId": 10, "quantity": 1 }],
+    "inputs": [{ "itemId": 11, "quantityPerCycle": 3 }],
+    "outputs": [{ "itemId": 10, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 4
   },
@@ -325,10 +325,10 @@
     "id": 33,
     "key": "Wet_Concrete",
     "inputs": [
-      { "itemId": 11, "quantity": 6 },
-      { "itemId": 67, "quantity": 5 }
+      { "itemId": 11, "quantityPerCycle": 6 },
+      { "itemId": 67, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 10, "quantity": 4 }],
+    "outputs": [{ "itemId": 10, "quantityPerCycle": 4 }],
     "producedInId": 5,
     "productionDuration": 3
   },
@@ -336,10 +336,10 @@
     "id": 34,
     "key": "Fine_Concrete",
     "inputs": [
-      { "itemId": 32, "quantity": 3 },
-      { "itemId": 11, "quantity": 12 }
+      { "itemId": 32, "quantityPerCycle": 3 },
+      { "itemId": 11, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 10, "quantity": 10 }],
+    "outputs": [{ "itemId": 10, "quantityPerCycle": 10 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -347,10 +347,10 @@
     "id": 35,
     "key": "Rubber_Concrete",
     "inputs": [
-      { "itemId": 11, "quantity": 10 },
-      { "itemId": 68, "quantity": 2 }
+      { "itemId": 11, "quantityPerCycle": 10 },
+      { "itemId": 68, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 10, "quantity": 9 }],
+    "outputs": [{ "itemId": 10, "quantityPerCycle": 9 }],
     "producedInId": 2,
     "productionDuration": 6
   },
@@ -358,10 +358,10 @@
     "id": 36,
     "key": "Limestone_(Sulfur)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 39, "quantity": 2 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 39, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 11, "quantity": 12 }],
+    "outputs": [{ "itemId": 11, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -369,96 +369,96 @@
   {
     "id": 37,
     "key": "Screw",
-    "inputs": [{ "itemId": 4, "quantity": 1 }],
-    "outputs": [{ "itemId": 12, "quantity": 4 }],
+    "inputs": [{ "itemId": 4, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 12, "quantityPerCycle": 4 }],
     "producedInId": 1,
     "productionDuration": 6
   },
   {
     "id": 38,
     "key": "Cast_Screw",
-    "inputs": [{ "itemId": 1, "quantity": 5 }],
-    "outputs": [{ "itemId": 12, "quantity": 20 }],
+    "inputs": [{ "itemId": 1, "quantityPerCycle": 5 }],
+    "outputs": [{ "itemId": 12, "quantityPerCycle": 20 }],
     "producedInId": 1,
     "productionDuration": 24
   },
   {
     "id": 39,
     "key": "Steel_Screw",
-    "inputs": [{ "itemId": 28, "quantity": 1 }],
-    "outputs": [{ "itemId": 12, "quantity": 52 }],
+    "inputs": [{ "itemId": 28, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 12, "quantityPerCycle": 52 }],
     "producedInId": 1,
     "productionDuration": 12
   },
   {
     "id": 40,
     "key": "Biomass_(Wood)",
-    "inputs": [{ "itemId": 14, "quantity": 4 }],
-    "outputs": [{ "itemId": 13, "quantity": 20 }],
+    "inputs": [{ "itemId": 14, "quantityPerCycle": 4 }],
+    "outputs": [{ "itemId": 13, "quantityPerCycle": 20 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 41,
     "key": "Biomass_(Leaves)",
-    "inputs": [{ "itemId": 15, "quantity": 10 }],
-    "outputs": [{ "itemId": 13, "quantity": 5 }],
+    "inputs": [{ "itemId": 15, "quantityPerCycle": 10 }],
+    "outputs": [{ "itemId": 13, "quantityPerCycle": 5 }],
     "producedInId": 1,
     "productionDuration": 5
   },
   {
     "id": 42,
     "key": "Biomass_(Mycelia)",
-    "inputs": [{ "itemId": 25, "quantity": 1 }],
-    "outputs": [{ "itemId": 13, "quantity": 10 }],
+    "inputs": [{ "itemId": 25, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 13, "quantityPerCycle": 10 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 43,
     "key": "Biomass_(Alien_Protein)",
-    "inputs": [{ "itemId": 16, "quantity": 1 }],
-    "outputs": [{ "itemId": 13, "quantity": 100 }],
+    "inputs": [{ "itemId": 16, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 13, "quantityPerCycle": 100 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 44,
     "key": "Hog_Protein",
-    "inputs": [{ "itemId": 17, "quantity": 1 }],
-    "outputs": [{ "itemId": 16, "quantity": 1 }],
+    "inputs": [{ "itemId": 17, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 16, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 3
   },
   {
     "id": 45,
     "key": "Stinger_Protein",
-    "inputs": [{ "itemId": 31, "quantity": 1 }],
-    "outputs": [{ "itemId": 16, "quantity": 1 }],
+    "inputs": [{ "itemId": 31, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 16, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 3
   },
   {
     "id": 46,
     "key": "Hatcher_Protein",
-    "inputs": [{ "itemId": 35, "quantity": 1 }],
-    "outputs": [{ "itemId": 16, "quantity": 1 }],
+    "inputs": [{ "itemId": 35, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 16, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 3
   },
   {
     "id": 47,
     "key": "Spitter_Protein",
-    "inputs": [{ "itemId": 36, "quantity": 1 }],
-    "outputs": [{ "itemId": 16, "quantity": 1 }],
+    "inputs": [{ "itemId": 36, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 16, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 3
   },
   {
     "id": 48,
     "key": "Solid_Biofue",
-    "inputs": [{ "itemId": 13, "quantity": 8 }],
-    "outputs": [{ "itemId": 18, "quantity": 4 }],
+    "inputs": [{ "itemId": 13, "quantityPerCycle": 8 }],
+    "outputs": [{ "itemId": 18, "quantityPerCycle": 4 }],
     "producedInId": 1,
     "productionDuration": 4
   },
@@ -466,10 +466,10 @@
     "id": 49,
     "key": "Rotor",
     "inputs": [
-      { "itemId": 4, "quantity": 5 },
-      { "itemId": 12, "quantity": 25 }
+      { "itemId": 4, "quantityPerCycle": 5 },
+      { "itemId": 12, "quantityPerCycle": 25 }
     ],
-    "outputs": [{ "itemId": 19, "quantity": 1 }],
+    "outputs": [{ "itemId": 19, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 15
   },
@@ -477,10 +477,10 @@
     "id": 50,
     "key": "Copper_Rotor",
     "inputs": [
-      { "itemId": 20, "quantity": 6 },
-      { "itemId": 12, "quantity": 52 }
+      { "itemId": 20, "quantityPerCycle": 6 },
+      { "itemId": 12, "quantityPerCycle": 52 }
     ],
-    "outputs": [{ "itemId": 19, "quantity": 3 }],
+    "outputs": [{ "itemId": 19, "quantityPerCycle": 3 }],
     "producedInId": 2,
     "productionDuration": 16
   },
@@ -488,18 +488,18 @@
     "id": 51,
     "key": "Steel_Rotor",
     "inputs": [
-      { "itemId": 29, "quantity": 2 },
-      { "itemId": 7, "quantity": 6 }
+      { "itemId": 29, "quantityPerCycle": 2 },
+      { "itemId": 7, "quantityPerCycle": 6 }
     ],
-    "outputs": [{ "itemId": 19, "quantity": 1 }],
+    "outputs": [{ "itemId": 19, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
   {
     "id": 52,
     "key": "Copper_Sheet",
-    "inputs": [{ "itemId": 8, "quantity": 2 }],
-    "outputs": [{ "itemId": 20, "quantity": 1 }],
+    "inputs": [{ "itemId": 8, "quantityPerCycle": 2 }],
+    "outputs": [{ "itemId": 20, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 6
   },
@@ -507,10 +507,10 @@
     "id": 53,
     "key": "Steamed_Copper_Sheet",
     "inputs": [
-      { "itemId": 8, "quantity": 3 },
-      { "itemId": 67, "quantity": 3 }
+      { "itemId": 8, "quantityPerCycle": 3 },
+      { "itemId": 67, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 20, "quantity": 3 }],
+    "outputs": [{ "itemId": 20, "quantityPerCycle": 3 }],
     "producedInId": 5,
     "productionDuration": 8
   },
@@ -518,10 +518,10 @@
     "id": 54,
     "key": "Modular_Frame",
     "inputs": [
-      { "itemId": 5, "quantity": 3 },
-      { "itemId": 4, "quantity": 12 }
+      { "itemId": 5, "quantityPerCycle": 3 },
+      { "itemId": 4, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 21, "quantity": 2 }],
+    "outputs": [{ "itemId": 21, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 60
   },
@@ -529,10 +529,10 @@
     "id": 55,
     "key": "Bolted_Frame",
     "inputs": [
-      { "itemId": 5, "quantity": 3 },
-      { "itemId": 12, "quantity": 56 }
+      { "itemId": 5, "quantityPerCycle": 3 },
+      { "itemId": 12, "quantityPerCycle": 56 }
     ],
-    "outputs": [{ "itemId": 21, "quantity": 2 }],
+    "outputs": [{ "itemId": 21, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 24
   },
@@ -540,10 +540,10 @@
     "id": 56,
     "key": "Steeled_Frame",
     "inputs": [
-      { "itemId": 5, "quantity": 2 },
-      { "itemId": 29, "quantity": 10 }
+      { "itemId": 5, "quantityPerCycle": 2 },
+      { "itemId": 29, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 21, "quantity": 3 }],
+    "outputs": [{ "itemId": 21, "quantityPerCycle": 3 }],
     "producedInId": 2,
     "productionDuration": 60
   },
@@ -551,10 +551,10 @@
     "id": 57,
     "key": "Smart_Plating",
     "inputs": [
-      { "itemId": 5, "quantity": 1 },
-      { "itemId": 19, "quantity": 1 }
+      { "itemId": 5, "quantityPerCycle": 1 },
+      { "itemId": 19, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 22, "quantity": 1 }],
+    "outputs": [{ "itemId": 22, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 30
   },
@@ -562,35 +562,35 @@
     "id": 58,
     "key": "Plastic_Smart_Plating",
     "inputs": [
-      { "itemId": 5, "quantity": 1 },
-      { "itemId": 19, "quantity": 1 },
-      { "itemId": 65, "quantity": 3 }
+      { "itemId": 5, "quantityPerCycle": 1 },
+      { "itemId": 19, "quantityPerCycle": 1 },
+      { "itemId": 65, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 22, "quantity": 2 }],
+    "outputs": [{ "itemId": 22, "quantityPerCycle": 2 }],
     "producedInId": 3,
     "productionDuration": 24
   },
   {
     "id": 59,
     "key": "Power_Shard_(1)",
-    "inputs": [{ "itemId": 24, "quantity": 1 }],
-    "outputs": [{ "itemId": 23, "quantity": 1 }],
+    "inputs": [{ "itemId": 24, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 23, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 8
   },
   {
     "id": 60,
     "key": "Power_Shard_(2)",
-    "inputs": [{ "itemId": 34, "quantity": 1 }],
-    "outputs": [{ "itemId": 23, "quantity": 2 }],
+    "inputs": [{ "itemId": 34, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 23, "quantityPerCycle": 2 }],
     "producedInId": 1,
     "productionDuration": 12
   },
   {
     "id": 61,
     "key": "Power_Shard_(5)",
-    "inputs": [{ "itemId": 52, "quantity": 1 }],
-    "outputs": [{ "itemId": 23, "quantity": 5 }],
+    "inputs": [{ "itemId": 52, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 23, "quantityPerCycle": 5 }],
     "producedInId": 1,
     "productionDuration": 24
   },
@@ -598,14 +598,14 @@
     "id": 62,
     "key": "Synthetic_Power_Shard",
     "inputs": [
-      { "itemId": 132, "quantity": 2 },
-      { "itemId": 135, "quantity": 2 },
-      { "itemId": 44, "quantity": 12 },
-      { "itemId": 136, "quantity": 12 }
+      { "itemId": 132, "quantityPerCycle": 2 },
+      { "itemId": 135, "quantityPerCycle": 2 },
+      { "itemId": 44, "quantityPerCycle": 12 },
+      { "itemId": 136, "quantityPerCycle": 12 }
     ],
     "outputs": [
-      { "itemId": 23, "quantity": 1 },
-      { "itemId": 134, "quantity": 12 }
+      { "itemId": 23, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 12 }
     ],
     "producedInId": 9,
     "productionDuration": 12,
@@ -615,10 +615,10 @@
     "id": 63,
     "key": "Steel_Ingot",
     "inputs": [
-      { "itemId": 2, "quantity": 3 },
-      { "itemId": 27, "quantity": 3 }
+      { "itemId": 2, "quantityPerCycle": 3 },
+      { "itemId": 27, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 26, "quantity": 3 }],
+    "outputs": [{ "itemId": 26, "quantityPerCycle": 3 }],
     "producedInId": 11,
     "productionDuration": 4
   },
@@ -626,10 +626,10 @@
     "id": 64,
     "key": "Solid_Steel_Ingot",
     "inputs": [
-      { "itemId": 1, "quantity": 2 },
-      { "itemId": 27, "quantity": 2 }
+      { "itemId": 1, "quantityPerCycle": 2 },
+      { "itemId": 27, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 26, "quantity": 3 }],
+    "outputs": [{ "itemId": 26, "quantityPerCycle": 3 }],
     "producedInId": 11,
     "productionDuration": 3
   },
@@ -637,10 +637,10 @@
     "id": 65,
     "key": "Coke_Steel_Ingot",
     "inputs": [
-      { "itemId": 2, "quantity": 15 },
-      { "itemId": 62, "quantity": 15 }
+      { "itemId": 2, "quantityPerCycle": 15 },
+      { "itemId": 62, "quantityPerCycle": 15 }
     ],
-    "outputs": [{ "itemId": 26, "quantity": 20 }],
+    "outputs": [{ "itemId": 26, "quantityPerCycle": 20 }],
     "producedInId": 11,
     "productionDuration": 12
   },
@@ -648,10 +648,10 @@
     "id": 66,
     "key": "Compacted_Steel_Ingot",
     "inputs": [
-      { "itemId": 2, "quantity": 2 },
-      { "itemId": 138, "quantity": 1 }
+      { "itemId": 2, "quantityPerCycle": 2 },
+      { "itemId": 138, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 26, "quantity": 4 }],
+    "outputs": [{ "itemId": 26, "quantityPerCycle": 4 }],
     "producedInId": 11,
     "productionDuration": 24
   },
@@ -659,10 +659,10 @@
     "id": 67,
     "key": "Coal_(Iron)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 2, "quantity": 18 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 2, "quantityPerCycle": 18 }
     ],
-    "outputs": [{ "itemId": 27, "quantity": 12 }],
+    "outputs": [{ "itemId": 27, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -671,10 +671,10 @@
     "id": 68,
     "key": "Coal_(Limestone)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 11, "quantity": 36 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 11, "quantityPerCycle": 36 }
     ],
-    "outputs": [{ "itemId": 27, "quantity": 12 }],
+    "outputs": [{ "itemId": 27, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -682,24 +682,24 @@
   {
     "id": 69,
     "key": "Charcoal",
-    "inputs": [{ "itemId": 14, "quantity": 1 }],
-    "outputs": [{ "itemId": 27, "quantity": 10 }],
+    "inputs": [{ "itemId": 14, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 27, "quantityPerCycle": 10 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 70,
     "key": "Biocoal",
-    "inputs": [{ "itemId": 13, "quantity": 5 }],
-    "outputs": [{ "itemId": 27, "quantity": 6 }],
+    "inputs": [{ "itemId": 13, "quantityPerCycle": 5 }],
+    "outputs": [{ "itemId": 27, "quantityPerCycle": 6 }],
     "producedInId": 1,
     "productionDuration": 8
   },
   {
     "id": 71,
     "key": "Steel_Beam",
-    "inputs": [{ "itemId": 26, "quantity": 4 }],
-    "outputs": [{ "itemId": 28, "quantity": 1 }],
+    "inputs": [{ "itemId": 26, "quantityPerCycle": 4 }],
+    "outputs": [{ "itemId": 28, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 4
   },
@@ -707,26 +707,26 @@
     "id": 72,
     "key": "Molded_Beam",
     "inputs": [
-      { "itemId": 26, "quantity": 24 },
-      { "itemId": 11, "quantity": 16 }
+      { "itemId": 26, "quantityPerCycle": 24 },
+      { "itemId": 11, "quantityPerCycle": 16 }
     ],
-    "outputs": [{ "itemId": 28, "quantity": 9 }],
+    "outputs": [{ "itemId": 28, "quantityPerCycle": 9 }],
     "producedInId": 11,
     "productionDuration": 12
   },
   {
     "id": 73,
     "key": "Aluminum_Beam",
-    "inputs": [{ "itemId": 96, "quantity": 3 }],
-    "outputs": [{ "itemId": 28, "quantity": 3 }],
+    "inputs": [{ "itemId": 96, "quantityPerCycle": 3 }],
+    "outputs": [{ "itemId": 28, "quantityPerCycle": 3 }],
     "producedInId": 1,
     "productionDuration": 8
   },
   {
     "id": 74,
     "key": "Steel_Pipe",
-    "inputs": [{ "itemId": 26, "quantity": 3 }],
-    "outputs": [{ "itemId": 29, "quantity": 2 }],
+    "inputs": [{ "itemId": 26, "quantityPerCycle": 3 }],
+    "outputs": [{ "itemId": 29, "quantityPerCycle": 2 }],
     "producedInId": 1,
     "productionDuration": 6
   },
@@ -734,18 +734,18 @@
     "id": 75,
     "key": "Molded_Steel_Pipe",
     "inputs": [
-      { "itemId": 26, "quantity": 5 },
-      { "itemId": 10, "quantity": 3 }
+      { "itemId": 26, "quantityPerCycle": 5 },
+      { "itemId": 10, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 29, "quantity": 5 }],
+    "outputs": [{ "itemId": 29, "quantityPerCycle": 5 }],
     "producedInId": 11,
     "productionDuration": 6
   },
   {
     "id": 76,
     "key": "Iron_Pipe",
-    "inputs": [{ "itemId": 1, "quantity": 20 }],
-    "outputs": [{ "itemId": 29, "quantity": 5 }],
+    "inputs": [{ "itemId": 1, "quantityPerCycle": 20 }],
+    "outputs": [{ "itemId": 29, "quantityPerCycle": 5 }],
     "producedInId": 1,
     "productionDuration": 12
   },
@@ -753,10 +753,10 @@
     "id": 77,
     "key": "Versatile_Framework",
     "inputs": [
-      { "itemId": 21, "quantity": 1 },
-      { "itemId": 28, "quantity": 12 }
+      { "itemId": 21, "quantityPerCycle": 1 },
+      { "itemId": 28, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 30, "quantity": 2 }],
+    "outputs": [{ "itemId": 30, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 24
   },
@@ -764,19 +764,19 @@
     "id": 78,
     "key": "Flexible_Framework",
     "inputs": [
-      { "itemId": 21, "quantity": 1 },
-      { "itemId": 28, "quantity": 6 },
-      { "itemId": 68, "quantity": 8 }
+      { "itemId": 21, "quantityPerCycle": 1 },
+      { "itemId": 28, "quantityPerCycle": 6 },
+      { "itemId": 68, "quantityPerCycle": 8 }
     ],
-    "outputs": [{ "itemId": 30, "quantity": 2 }],
+    "outputs": [{ "itemId": 30, "quantityPerCycle": 2 }],
     "producedInId": 3,
     "productionDuration": 16
   },
   {
     "id": 79,
     "key": "Silica",
-    "inputs": [{ "itemId": 33, "quantity": 3 }],
-    "outputs": [{ "itemId": 32, "quantity": 5 }],
+    "inputs": [{ "itemId": 33, "quantityPerCycle": 3 }],
+    "outputs": [{ "itemId": 32, "quantityPerCycle": 5 }],
     "producedInId": 1,
     "productionDuration": 8
   },
@@ -784,12 +784,12 @@
     "id": 80,
     "key": "Alumina_Solution",
     "inputs": [
-      { "itemId": 93, "quantity": 12 },
-      { "itemId": 67, "quantity": 18 }
+      { "itemId": 93, "quantityPerCycle": 12 },
+      { "itemId": 67, "quantityPerCycle": 18 }
     ],
     "outputs": [
-      { "itemId": 92, "quantity": 12 },
-      { "itemId": 32, "quantity": 5 }
+      { "itemId": 92, "quantityPerCycle": 12 },
+      { "itemId": 32, "quantityPerCycle": 5 }
     ],
     "producedInId": 5,
     "productionDuration": 6
@@ -798,10 +798,10 @@
     "id": 81,
     "key": "Cheap_Silica",
     "inputs": [
-      { "itemId": 33, "quantity": 3 },
-      { "itemId": 11, "quantity": 5 }
+      { "itemId": 33, "quantityPerCycle": 3 },
+      { "itemId": 11, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 32, "quantity": 7 }],
+    "outputs": [{ "itemId": 32, "quantityPerCycle": 7 }],
     "producedInId": 2,
     "productionDuration": 8
   },
@@ -809,13 +809,13 @@
     "id": 82,
     "key": "Distilled_Silica",
     "inputs": [
-      { "itemId": 109, "quantity": 12 },
-      { "itemId": 11, "quantity": 5 },
-      { "itemId": 67, "quantity": 10 }
+      { "itemId": 109, "quantityPerCycle": 12 },
+      { "itemId": 11, "quantityPerCycle": 5 },
+      { "itemId": 67, "quantityPerCycle": 10 }
     ],
     "outputs": [
-      { "itemId": 32, "quantity": 27 },
-      { "itemId": 67, "quantity": 8 }
+      { "itemId": 32, "quantityPerCycle": 27 },
+      { "itemId": 67, "quantityPerCycle": 8 }
     ],
     "producedInId": 6,
     "productionDuration": 6
@@ -824,10 +824,10 @@
     "id": 83,
     "key": "Raw_Quartz_(Bauxite)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 93, "quantity": 10 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 93, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 33, "quantity": 12 }],
+    "outputs": [{ "itemId": 33, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -836,10 +836,10 @@
     "id": 84,
     "key": "Raw_Quartz_(Coal)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 27, "quantity": 24 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 27, "quantityPerCycle": 24 }
     ],
-    "outputs": [{ "itemId": 33, "quantity": 12 }],
+    "outputs": [{ "itemId": 33, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -847,8 +847,8 @@
   {
     "id": 85,
     "key": "Alien_DNA_Capsule",
-    "inputs": [{ "itemId": 16, "quantity": 1 }],
-    "outputs": [{ "itemId": 37, "quantity": 1 }],
+    "inputs": [{ "itemId": 16, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 37, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 6
   },
@@ -856,10 +856,10 @@
     "id": 86,
     "key": "Black_Powder",
     "inputs": [
-      { "itemId": 27, "quantity": 1 },
-      { "itemId": 39, "quantity": 1 }
+      { "itemId": 27, "quantityPerCycle": 1 },
+      { "itemId": 39, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 38, "quantity": 2 }],
+    "outputs": [{ "itemId": 38, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 4
   },
@@ -867,10 +867,10 @@
     "id": 87,
     "key": "Fine_Black_Powder",
     "inputs": [
-      { "itemId": 39, "quantity": 1 },
-      { "itemId": 138, "quantity": 2 }
+      { "itemId": 39, "quantityPerCycle": 1 },
+      { "itemId": 138, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 38, "quantity": 6 }],
+    "outputs": [{ "itemId": 38, "quantityPerCycle": 6 }],
     "producedInId": 2,
     "productionDuration": 8
   },
@@ -878,10 +878,10 @@
     "id": 88,
     "key": "Sulfur_(Coal)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 27, "quantity": 20 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 27, "quantityPerCycle": 20 }
     ],
-    "outputs": [{ "itemId": 39, "quantity": 12 }],
+    "outputs": [{ "itemId": 39, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -890,10 +890,10 @@
     "id": 89,
     "key": "Sulfur_(Iron)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 2, "quantity": 30 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 2, "quantityPerCycle": 30 }
     ],
-    "outputs": [{ "itemId": 39, "quantity": 12 }],
+    "outputs": [{ "itemId": 39, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -902,10 +902,10 @@
     "id": 90,
     "key": "Fabric",
     "inputs": [
-      { "itemId": 25, "quantity": 1 },
-      { "itemId": 13, "quantity": 5 }
+      { "itemId": 25, "quantityPerCycle": 1 },
+      { "itemId": 13, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 40, "quantity": 1 }],
+    "outputs": [{ "itemId": 40, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 4
   },
@@ -913,18 +913,18 @@
     "id": 91,
     "key": "Polyester_Fabric",
     "inputs": [
-      { "itemId": 66, "quantity": 1 },
-      { "itemId": 67, "quantity": 1 }
+      { "itemId": 66, "quantityPerCycle": 1 },
+      { "itemId": 67, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 40, "quantity": 1 }],
+    "outputs": [{ "itemId": 40, "quantityPerCycle": 1 }],
     "producedInId": 5,
     "productionDuration": 2
   },
   {
     "id": 92,
     "key": "Iron_Rebar",
-    "inputs": [{ "itemId": 4, "quantity": 1 }],
-    "outputs": [{ "itemId": 41, "quantity": 1 }],
+    "inputs": [{ "itemId": 4, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 41, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 4
   },
@@ -932,11 +932,11 @@
     "id": 93,
     "key": "Gas_Filter",
     "inputs": [
-      { "itemId": 40, "quantity": 2 },
-      { "itemId": 27, "quantity": 4 },
-      { "itemId": 3, "quantity": 2 }
+      { "itemId": 40, "quantityPerCycle": 2 },
+      { "itemId": 27, "quantityPerCycle": 4 },
+      { "itemId": 3, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 42, "quantity": 1 }],
+    "outputs": [{ "itemId": 42, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 8
   },
@@ -944,18 +944,18 @@
     "id": 94,
     "key": "Nobelisk",
     "inputs": [
-      { "itemId": 38, "quantity": 2 },
-      { "itemId": 29, "quantity": 2 }
+      { "itemId": 38, "quantityPerCycle": 2 },
+      { "itemId": 29, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 43, "quantity": 1 }],
+    "outputs": [{ "itemId": 43, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 6
   },
   {
     "id": 95,
     "key": "Quartz_Crystal",
-    "inputs": [{ "itemId": 33, "quantity": 5 }],
-    "outputs": [{ "itemId": 44, "quantity": 3 }],
+    "inputs": [{ "itemId": 33, "quantityPerCycle": 5 }],
+    "outputs": [{ "itemId": 44, "quantityPerCycle": 3 }],
     "producedInId": 1,
     "productionDuration": 8
   },
@@ -963,10 +963,10 @@
     "id": 96,
     "key": "Pure_Quartz_Crystal",
     "inputs": [
-      { "itemId": 33, "quantity": 9 },
-      { "itemId": 67, "quantity": 5 }
+      { "itemId": 33, "quantityPerCycle": 9 },
+      { "itemId": 67, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 44, "quantity": 7 }],
+    "outputs": [{ "itemId": 44, "quantityPerCycle": 7 }],
     "producedInId": 5,
     "productionDuration": 8
   },
@@ -974,12 +974,12 @@
     "id": 97,
     "key": "Quartz_Purification",
     "inputs": [
-      { "itemId": 33, "quantity": 24 },
-      { "itemId": 110, "quantity": 2 }
+      { "itemId": 33, "quantityPerCycle": 24 },
+      { "itemId": 110, "quantityPerCycle": 2 }
     ],
     "outputs": [
-      { "itemId": 44, "quantity": 15 },
-      { "itemId": 109, "quantity": 12 }
+      { "itemId": 44, "quantityPerCycle": 15 },
+      { "itemId": 109, "quantityPerCycle": 12 }
     ],
     "producedInId": 5,
     "productionDuration": 12
@@ -988,10 +988,10 @@
     "id": 98,
     "key": "Fused_Quartz_Crystal",
     "inputs": [
-      { "itemId": 33, "quantity": 25 },
-      { "itemId": 27, "quantity": 12 }
+      { "itemId": 33, "quantityPerCycle": 25 },
+      { "itemId": 27, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 44, "quantity": 18 }],
+    "outputs": [{ "itemId": 44, "quantityPerCycle": 18 }],
     "producedInId": 11,
     "productionDuration": 20
   },
@@ -999,11 +999,11 @@
     "id": 99,
     "key": "Crystal_Oscillator",
     "inputs": [
-      { "itemId": 44, "quantity": 36 },
-      { "itemId": 6, "quantity": 28 },
-      { "itemId": 5, "quantity": 5 }
+      { "itemId": 44, "quantityPerCycle": 36 },
+      { "itemId": 6, "quantityPerCycle": 28 },
+      { "itemId": 5, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 45, "quantity": 2 }],
+    "outputs": [{ "itemId": 45, "quantityPerCycle": 2 }],
     "producedInId": 3,
     "productionDuration": 120
   },
@@ -1011,11 +1011,11 @@
     "id": 100,
     "key": "Insulated_Crystal_Oscillator",
     "inputs": [
-      { "itemId": 44, "quantity": 10 },
-      { "itemId": 68, "quantity": 7 },
-      { "itemId": 61, "quantity": 1 }
+      { "itemId": 44, "quantityPerCycle": 10 },
+      { "itemId": 68, "quantityPerCycle": 7 },
+      { "itemId": 61, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 45, "quantity": 1 }],
+    "outputs": [{ "itemId": 45, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 32
   },
@@ -1023,10 +1023,10 @@
     "id": 101,
     "key": "Shatter_Rebar",
     "inputs": [
-      { "itemId": 41, "quantity": 2 },
-      { "itemId": 44, "quantity": 3 }
+      { "itemId": 41, "quantityPerCycle": 2 },
+      { "itemId": 44, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 46, "quantity": 1 }],
+    "outputs": [{ "itemId": 46, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -1034,10 +1034,10 @@
     "id": 102,
     "key": "Encased_Industrial_Beam",
     "inputs": [
-      { "itemId": 28, "quantity": 3 },
-      { "itemId": 10, "quantity": 6 }
+      { "itemId": 28, "quantityPerCycle": 3 },
+      { "itemId": 10, "quantityPerCycle": 6 }
     ],
-    "outputs": [{ "itemId": 47, "quantity": 1 }],
+    "outputs": [{ "itemId": 47, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 10
   },
@@ -1045,10 +1045,10 @@
     "id": 103,
     "key": "Encased_Industrial_Pipe",
     "inputs": [
-      { "itemId": 29, "quantity": 6 },
-      { "itemId": 10, "quantity": 5 }
+      { "itemId": 29, "quantityPerCycle": 6 },
+      { "itemId": 10, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 47, "quantity": 1 }],
+    "outputs": [{ "itemId": 47, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 15
   },
@@ -1056,10 +1056,10 @@
     "id": 104,
     "key": "Stator",
     "inputs": [
-      { "itemId": 29, "quantity": 3 },
-      { "itemId": 7, "quantity": 8 }
+      { "itemId": 29, "quantityPerCycle": 3 },
+      { "itemId": 7, "quantityPerCycle": 8 }
     ],
-    "outputs": [{ "itemId": 48, "quantity": 1 }],
+    "outputs": [{ "itemId": 48, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -1067,10 +1067,10 @@
     "id": 105,
     "key": "Quickwire_Stator",
     "inputs": [
-      { "itemId": 29, "quantity": 4 },
-      { "itemId": 59, "quantity": 15 }
+      { "itemId": 29, "quantityPerCycle": 4 },
+      { "itemId": 59, "quantityPerCycle": 15 }
     ],
-    "outputs": [{ "itemId": 48, "quantity": 2 }],
+    "outputs": [{ "itemId": 48, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 15
   },
@@ -1078,10 +1078,10 @@
     "id": 106,
     "key": "Motor",
     "inputs": [
-      { "itemId": 19, "quantity": 2 },
-      { "itemId": 48, "quantity": 2 }
+      { "itemId": 19, "quantityPerCycle": 2 },
+      { "itemId": 48, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 49, "quantity": 1 }],
+    "outputs": [{ "itemId": 49, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -1089,11 +1089,11 @@
     "id": 107,
     "key": "Rigor_Motor",
     "inputs": [
-      { "itemId": 19, "quantity": 3 },
-      { "itemId": 48, "quantity": 3 },
-      { "itemId": 45, "quantity": 1 }
+      { "itemId": 19, "quantityPerCycle": 3 },
+      { "itemId": 48, "quantityPerCycle": 3 },
+      { "itemId": 45, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 49, "quantity": 6 }],
+    "outputs": [{ "itemId": 49, "quantityPerCycle": 6 }],
     "producedInId": 3,
     "productionDuration": 48
   },
@@ -1101,10 +1101,10 @@
     "id": 108,
     "key": "Electric_Motor",
     "inputs": [
-      { "itemId": 113, "quantity": 1 },
-      { "itemId": 19, "quantity": 2 }
+      { "itemId": 113, "quantityPerCycle": 1 },
+      { "itemId": 19, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 49, "quantity": 2 }],
+    "outputs": [{ "itemId": 49, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 16
   },
@@ -1112,10 +1112,10 @@
     "id": 109,
     "key": "Automated_Wiring",
     "inputs": [
-      { "itemId": 48, "quantity": 1 },
-      { "itemId": 6, "quantity": 20 }
+      { "itemId": 48, "quantityPerCycle": 1 },
+      { "itemId": 6, "quantityPerCycle": 20 }
     ],
-    "outputs": [{ "itemId": 50, "quantity": 1 }],
+    "outputs": [{ "itemId": 50, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 24
   },
@@ -1123,11 +1123,11 @@
     "id": 110,
     "key": "Automated_Speed_Wiring",
     "inputs": [
-      { "itemId": 48, "quantity": 2 },
-      { "itemId": 7, "quantity": 40 },
-      { "itemId": 71, "quantity": 1 }
+      { "itemId": 48, "quantityPerCycle": 2 },
+      { "itemId": 7, "quantityPerCycle": 40 },
+      { "itemId": 71, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 50, "quantity": 4 }],
+    "outputs": [{ "itemId": 50, "quantityPerCycle": 4 }],
     "producedInId": 3,
     "productionDuration": 32
   },
@@ -1135,26 +1135,26 @@
     "id": 111,
     "key": "Gas_Nobelisk",
     "inputs": [
-      { "itemId": 43, "quantity": 1 },
-      { "itemId": 13, "quantity": 10 }
+      { "itemId": 43, "quantityPerCycle": 1 },
+      { "itemId": 13, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 51, "quantity": 1 }],
+    "outputs": [{ "itemId": 51, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
   {
     "id": 112,
     "key": "Reanimated_SAM",
-    "inputs": [{ "itemId": 54, "quantity": 4 }],
-    "outputs": [{ "itemId": 53, "quantity": 1 }],
+    "inputs": [{ "itemId": 54, "quantityPerCycle": 4 }],
+    "outputs": [{ "itemId": 53, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 2
   },
   {
     "id": 113,
     "key": "Caterium_Ingot",
-    "inputs": [{ "itemId": 56, "quantity": 3 }],
-    "outputs": [{ "itemId": 55, "quantity": 1 }],
+    "inputs": [{ "itemId": 56, "quantityPerCycle": 3 }],
+    "outputs": [{ "itemId": 55, "quantityPerCycle": 1 }],
     "producedInId": 10,
     "productionDuration": 4
   },
@@ -1162,10 +1162,10 @@
     "id": 114,
     "key": "Pure_Caterium_Ingot",
     "inputs": [
-      { "itemId": 56, "quantity": 2 },
-      { "itemId": 67, "quantity": 2 }
+      { "itemId": 56, "quantityPerCycle": 2 },
+      { "itemId": 67, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 55, "quantity": 1 }],
+    "outputs": [{ "itemId": 55, "quantityPerCycle": 1 }],
     "producedInId": 5,
     "productionDuration": 5
   },
@@ -1173,10 +1173,10 @@
     "id": 115,
     "key": "Leached_Caterium_Ingot",
     "inputs": [
-      { "itemId": 56, "quantity": 9 },
-      { "itemId": 97, "quantity": 5 }
+      { "itemId": 56, "quantityPerCycle": 9 },
+      { "itemId": 97, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 55, "quantity": 6 }],
+    "outputs": [{ "itemId": 55, "quantityPerCycle": 6 }],
     "producedInId": 5,
     "productionDuration": 10
   },
@@ -1184,10 +1184,10 @@
     "id": 116,
     "key": "Tempered_Caterium_Ingot",
     "inputs": [
-      { "itemId": 56, "quantity": 6 },
-      { "itemId": 62, "quantity": 2 }
+      { "itemId": 56, "quantityPerCycle": 6 },
+      { "itemId": 62, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 55, "quantity": 3 }],
+    "outputs": [{ "itemId": 55, "quantityPerCycle": 3 }],
     "producedInId": 11,
     "productionDuration": 8
   },
@@ -1195,10 +1195,10 @@
     "id": 117,
     "key": "Caterium_Ore_(Copper)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 9, "quantity": 15 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 9, "quantityPerCycle": 15 }
     ],
-    "outputs": [{ "itemId": 56, "quantity": 12 }],
+    "outputs": [{ "itemId": 56, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -1207,10 +1207,10 @@
     "id": 118,
     "key": "Caterium_Ore_(Quartz)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 33, "quantity": 12 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 33, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 56, "quantity": 12 }],
+    "outputs": [{ "itemId": 56, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -1219,19 +1219,19 @@
     "id": 119,
     "key": "SAM_Fluctuator",
     "inputs": [
-      { "itemId": 53, "quantity": 6 },
-      { "itemId": 7, "quantity": 5 },
-      { "itemId": 29, "quantity": 3 }
+      { "itemId": 53, "quantityPerCycle": 6 },
+      { "itemId": 7, "quantityPerCycle": 5 },
+      { "itemId": 29, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 57, "quantity": 1 }],
+    "outputs": [{ "itemId": 57, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 6
   },
   {
     "id": 120,
     "key": "Quickwire",
-    "inputs": [{ "itemId": 55, "quantity": 1 }],
-    "outputs": [{ "itemId": 59, "quantity": 5 }],
+    "inputs": [{ "itemId": 55, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 59, "quantityPerCycle": 5 }],
     "producedInId": 1,
     "productionDuration": 5
   },
@@ -1239,10 +1239,10 @@
     "id": 121,
     "key": "Fused_Quickwire",
     "inputs": [
-      { "itemId": 55, "quantity": 1 },
-      { "itemId": 8, "quantity": 5 }
+      { "itemId": 55, "quantityPerCycle": 1 },
+      { "itemId": 8, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 59, "quantity": 12 }],
+    "outputs": [{ "itemId": 59, "quantityPerCycle": 12 }],
     "producedInId": 2,
     "productionDuration": 8
   },
@@ -1250,10 +1250,10 @@
     "id": 122,
     "key": "Stun_Rebar",
     "inputs": [
-      { "itemId": 41, "quantity": 1 },
-      { "itemId": 59, "quantity": 5 }
+      { "itemId": 41, "quantityPerCycle": 1 },
+      { "itemId": 59, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 60, "quantity": 1 }],
+    "outputs": [{ "itemId": 60, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 6
   },
@@ -1261,10 +1261,10 @@
     "id": 123,
     "key": "AI_Limiter",
     "inputs": [
-      { "itemId": 20, "quantity": 5 },
-      { "itemId": 59, "quantity": 20 }
+      { "itemId": 20, "quantityPerCycle": 5 },
+      { "itemId": 59, "quantityPerCycle": 20 }
     ],
-    "outputs": [{ "itemId": 61, "quantity": 1 }],
+    "outputs": [{ "itemId": 61, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -1272,28 +1272,28 @@
     "id": 124,
     "key": "Plastic_AI_Limiter",
     "inputs": [
-      { "itemId": 59, "quantity": 30 },
-      { "itemId": 65, "quantity": 7 }
+      { "itemId": 59, "quantityPerCycle": 30 },
+      { "itemId": 65, "quantityPerCycle": 7 }
     ],
-    "outputs": [{ "itemId": 61, "quantity": 2 }],
+    "outputs": [{ "itemId": 61, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 15
   },
   {
     "id": 125,
     "key": "Petroleum_Coke",
-    "inputs": [{ "itemId": 63, "quantity": 4 }],
-    "outputs": [{ "itemId": 62, "quantity": 12 }],
+    "inputs": [{ "itemId": 63, "quantityPerCycle": 4 }],
+    "outputs": [{ "itemId": 62, "quantityPerCycle": 12 }],
     "producedInId": 5,
     "productionDuration": 6
   },
   {
     "id": 126,
     "key": "Plastic",
-    "inputs": [{ "itemId": 70, "quantity": 3 }],
+    "inputs": [{ "itemId": 70, "quantityPerCycle": 3 }],
     "outputs": [
-      { "itemId": 65, "quantity": 2 },
-      { "itemId": 63, "quantity": 1 }
+      { "itemId": 65, "quantityPerCycle": 2 },
+      { "itemId": 63, "quantityPerCycle": 1 }
     ],
     "producedInId": 5,
     "productionDuration": 6
@@ -1301,10 +1301,10 @@
   {
     "id": 127,
     "key": "Rubber",
-    "inputs": [{ "itemId": 70, "quantity": 3 }],
+    "inputs": [{ "itemId": 70, "quantityPerCycle": 3 }],
     "outputs": [
-      { "itemId": 68, "quantity": 2 },
-      { "itemId": 63, "quantity": 2 }
+      { "itemId": 68, "quantityPerCycle": 2 },
+      { "itemId": 63, "quantityPerCycle": 2 }
     ],
     "producedInId": 5,
     "productionDuration": 6
@@ -1312,10 +1312,10 @@
   {
     "id": 128,
     "key": "Unpackage_Heavy_Oil_Residue",
-    "inputs": [{ "itemId": 76, "quantity": 2 }],
+    "inputs": [{ "itemId": 76, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 63, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 63, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 6
@@ -1323,10 +1323,10 @@
   {
     "id": 129,
     "key": "Polymer_Resin",
-    "inputs": [{ "itemId": 70, "quantity": 6 }],
+    "inputs": [{ "itemId": 70, "quantityPerCycle": 6 }],
     "outputs": [
-      { "itemId": 66, "quantity": 13 },
-      { "itemId": 63, "quantity": 2 }
+      { "itemId": 66, "quantityPerCycle": 13 },
+      { "itemId": 63, "quantityPerCycle": 2 }
     ],
     "producedInId": 5,
     "productionDuration": 6
@@ -1334,10 +1334,10 @@
   {
     "id": 130,
     "key": "Heavy_Oil_Residue",
-    "inputs": [{ "itemId": 70, "quantity": 3 }],
+    "inputs": [{ "itemId": 70, "quantityPerCycle": 3 }],
     "outputs": [
-      { "itemId": 63, "quantity": 4 },
-      { "itemId": 66, "quantity": 2 }
+      { "itemId": 63, "quantityPerCycle": 4 },
+      { "itemId": 66, "quantityPerCycle": 2 }
     ],
     "producedInId": 5,
     "productionDuration": 6
@@ -1346,10 +1346,10 @@
     "id": 131,
     "key": "Circuit_Board",
     "inputs": [
-      { "itemId": 20, "quantity": 2 },
-      { "itemId": 65, "quantity": 4 }
+      { "itemId": 20, "quantityPerCycle": 2 },
+      { "itemId": 65, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 64, "quantity": 1 }],
+    "outputs": [{ "itemId": 64, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 8
   },
@@ -1357,10 +1357,10 @@
     "id": 132,
     "key": "Silicon_Circuit_Board",
     "inputs": [
-      { "itemId": 20, "quantity": 11 },
-      { "itemId": 32, "quantity": 11 }
+      { "itemId": 20, "quantityPerCycle": 11 },
+      { "itemId": 32, "quantityPerCycle": 11 }
     ],
-    "outputs": [{ "itemId": 64, "quantity": 5 }],
+    "outputs": [{ "itemId": 64, "quantityPerCycle": 5 }],
     "producedInId": 2,
     "productionDuration": 24
   },
@@ -1368,10 +1368,10 @@
     "id": 133,
     "key": "Caterium_Circuit_Board",
     "inputs": [
-      { "itemId": 65, "quantity": 10 },
-      { "itemId": 59, "quantity": 30 }
+      { "itemId": 65, "quantityPerCycle": 10 },
+      { "itemId": 59, "quantityPerCycle": 30 }
     ],
-    "outputs": [{ "itemId": 64, "quantity": 7 }],
+    "outputs": [{ "itemId": 64, "quantityPerCycle": 7 }],
     "producedInId": 2,
     "productionDuration": 48
   },
@@ -1379,10 +1379,10 @@
     "id": 134,
     "key": "Electrode_Circuit_Board",
     "inputs": [
-      { "itemId": 68, "quantity": 4 },
-      { "itemId": 62, "quantity": 8 }
+      { "itemId": 68, "quantityPerCycle": 4 },
+      { "itemId": 62, "quantityPerCycle": 8 }
     ],
-    "outputs": [{ "itemId": 64, "quantity": 1 }],
+    "outputs": [{ "itemId": 64, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -1390,10 +1390,10 @@
     "id": 135,
     "key": "Residual_Plastic",
     "inputs": [
-      { "itemId": 66, "quantity": 6 },
-      { "itemId": 67, "quantity": 2 }
+      { "itemId": 66, "quantityPerCycle": 6 },
+      { "itemId": 67, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 65, "quantity": 2 }],
+    "outputs": [{ "itemId": 65, "quantityPerCycle": 2 }],
     "producedInId": 5,
     "productionDuration": 6
   },
@@ -1401,20 +1401,20 @@
     "id": 136,
     "key": "Recycled_Plastic",
     "inputs": [
-      { "itemId": 68, "quantity": 6 },
-      { "itemId": 69, "quantity": 6 }
+      { "itemId": 68, "quantityPerCycle": 6 },
+      { "itemId": 69, "quantityPerCycle": 6 }
     ],
-    "outputs": [{ "itemId": 65, "quantity": 12 }],
+    "outputs": [{ "itemId": 65, "quantityPerCycle": 12 }],
     "producedInId": 5,
     "productionDuration": 12
   },
   {
     "id": 137,
     "key": "Fuel",
-    "inputs": [{ "itemId": 70, "quantity": 6 }],
+    "inputs": [{ "itemId": 70, "quantityPerCycle": 6 }],
     "outputs": [
-      { "itemId": 69, "quantity": 4 },
-      { "itemId": 66, "quantity": 3 }
+      { "itemId": 69, "quantityPerCycle": 4 },
+      { "itemId": 66, "quantityPerCycle": 3 }
     ],
     "producedInId": 5,
     "productionDuration": 6
@@ -1422,10 +1422,10 @@
   {
     "id": 138,
     "key": "Unpackage_Water",
-    "inputs": [{ "itemId": 73, "quantity": 2 }],
+    "inputs": [{ "itemId": 73, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 67, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 67, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 1
@@ -1434,12 +1434,12 @@
     "id": 139,
     "key": "Aluminum_Scrap",
     "inputs": [
-      { "itemId": 92, "quantity": 4 },
-      { "itemId": 27, "quantity": 2 }
+      { "itemId": 92, "quantityPerCycle": 4 },
+      { "itemId": 27, "quantityPerCycle": 2 }
     ],
     "outputs": [
-      { "itemId": 95, "quantity": 6 },
-      { "itemId": 67, "quantity": 2 }
+      { "itemId": 95, "quantityPerCycle": 6 },
+      { "itemId": 67, "quantityPerCycle": 2 }
     ],
     "producedInId": 5,
     "productionDuration": 1
@@ -1448,12 +1448,12 @@
     "id": 140,
     "key": "Electrode_Aluminum_Scrap",
     "inputs": [
-      { "itemId": 92, "quantity": 12 },
-      { "itemId": 62, "quantity": 4 }
+      { "itemId": 92, "quantityPerCycle": 12 },
+      { "itemId": 62, "quantityPerCycle": 4 }
     ],
     "outputs": [
-      { "itemId": 95, "quantity": 20 },
-      { "itemId": 67, "quantity": 7 }
+      { "itemId": 95, "quantityPerCycle": 20 },
+      { "itemId": 67, "quantityPerCycle": 7 }
     ],
     "producedInId": 5,
     "productionDuration": 4
@@ -1462,13 +1462,13 @@
     "id": 141,
     "key": "Battery",
     "inputs": [
-      { "itemId": 97, "quantity": 2.5 },
-      { "itemId": 92, "quantity": 2 },
-      { "itemId": 89, "quantity": 1 }
+      { "itemId": 97, "quantityPerCycle": 2.5 },
+      { "itemId": 92, "quantityPerCycle": 2 },
+      { "itemId": 89, "quantityPerCycle": 1 }
     ],
     "outputs": [
-      { "itemId": 99, "quantity": 1 },
-      { "itemId": 67, "quantity": 1.5 }
+      { "itemId": 99, "quantityPerCycle": 1 },
+      { "itemId": 67, "quantityPerCycle": 1.5 }
     ],
     "producedInId": 6,
     "productionDuration": 3
@@ -1477,14 +1477,14 @@
     "id": 142,
     "key": "Non-Fissile_Uranium",
     "inputs": [
-      { "itemId": 118, "quantity": 15 },
-      { "itemId": 32, "quantity": 10 },
-      { "itemId": 110, "quantity": 6 },
-      { "itemId": 97, "quantity": 6 }
+      { "itemId": 118, "quantityPerCycle": 15 },
+      { "itemId": 32, "quantityPerCycle": 10 },
+      { "itemId": 110, "quantityPerCycle": 6 },
+      { "itemId": 97, "quantityPerCycle": 6 }
     ],
     "outputs": [
-      { "itemId": 117, "quantity": 20 },
-      { "itemId": 67, "quantity": 6 }
+      { "itemId": 117, "quantityPerCycle": 20 },
+      { "itemId": 67, "quantityPerCycle": 6 }
     ],
     "producedInId": 6,
     "productionDuration": 24
@@ -1493,14 +1493,14 @@
     "id": 143,
     "key": "Fertile_Uranium",
     "inputs": [
-      { "itemId": 112, "quantity": 5 },
-      { "itemId": 118, "quantity": 5 },
-      { "itemId": 110, "quantity": 3 },
-      { "itemId": 97, "quantity": 5 }
+      { "itemId": 112, "quantityPerCycle": 5 },
+      { "itemId": 118, "quantityPerCycle": 5 },
+      { "itemId": 110, "quantityPerCycle": 3 },
+      { "itemId": 97, "quantityPerCycle": 5 }
     ],
     "outputs": [
-      { "itemId": 117, "quantity": 20 },
-      { "itemId": 67, "quantity": 8 }
+      { "itemId": 117, "quantityPerCycle": 20 },
+      { "itemId": 67, "quantityPerCycle": 8 }
     ],
     "producedInId": 6,
     "productionDuration": 12
@@ -1509,14 +1509,14 @@
     "id": 144,
     "key": "Instant_Scrap",
     "inputs": [
-      { "itemId": 93, "quantity": 15 },
-      { "itemId": 27, "quantity": 10 },
-      { "itemId": 97, "quantity": 5 },
-      { "itemId": 67, "quantity": 6 }
+      { "itemId": 93, "quantityPerCycle": 15 },
+      { "itemId": 27, "quantityPerCycle": 10 },
+      { "itemId": 97, "quantityPerCycle": 5 },
+      { "itemId": 67, "quantityPerCycle": 6 }
     ],
     "outputs": [
-      { "itemId": 95, "quantity": 30 },
-      { "itemId": 67, "quantity": 5 }
+      { "itemId": 95, "quantityPerCycle": 30 },
+      { "itemId": 67, "quantityPerCycle": 5 }
     ],
     "producedInId": 6,
     "productionDuration": 6
@@ -1525,10 +1525,10 @@
     "id": 145,
     "key": "Residual_Rubber",
     "inputs": [
-      { "itemId": 66, "quantity": 4 },
-      { "itemId": 67, "quantity": 4 }
+      { "itemId": 66, "quantityPerCycle": 4 },
+      { "itemId": 67, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 68, "quantity": 2 }],
+    "outputs": [{ "itemId": 68, "quantityPerCycle": 2 }],
     "producedInId": 5,
     "productionDuration": 6
   },
@@ -1536,28 +1536,28 @@
     "id": 146,
     "key": "Recycled_Rubber",
     "inputs": [
-      { "itemId": 65, "quantity": 6 },
-      { "itemId": 69, "quantity": 6 }
+      { "itemId": 65, "quantityPerCycle": 6 },
+      { "itemId": 69, "quantityPerCycle": 6 }
     ],
-    "outputs": [{ "itemId": 68, "quantity": 12 }],
+    "outputs": [{ "itemId": 68, "quantityPerCycle": 12 }],
     "producedInId": 5,
     "productionDuration": 12
   },
   {
     "id": 147,
     "key": "Residual_Fuel",
-    "inputs": [{ "itemId": 63, "quantity": 6 }],
-    "outputs": [{ "itemId": 69, "quantity": 4 }],
+    "inputs": [{ "itemId": 63, "quantityPerCycle": 6 }],
+    "outputs": [{ "itemId": 69, "quantityPerCycle": 4 }],
     "producedInId": 5,
     "productionDuration": 6
   },
   {
     "id": 148,
     "key": "Unpackage_Fuel",
-    "inputs": [{ "itemId": 75, "quantity": 2 }],
+    "inputs": [{ "itemId": 75, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 69, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 69, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 2
@@ -1566,20 +1566,20 @@
     "id": 149,
     "key": "Diluted_Fuel",
     "inputs": [
-      { "itemId": 63, "quantity": 5 },
-      { "itemId": 67, "quantity": 10 }
+      { "itemId": 63, "quantityPerCycle": 5 },
+      { "itemId": 67, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 69, "quantity": 10 }],
+    "outputs": [{ "itemId": 69, "quantityPerCycle": 10 }],
     "producedInId": 6,
     "productionDuration": 6
   },
   {
     "id": 150,
     "key": "Unpackage_Oil",
-    "inputs": [{ "itemId": 74, "quantity": 2 }],
+    "inputs": [{ "itemId": 74, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 70, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 70, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 2
@@ -1588,11 +1588,11 @@
     "id": 151,
     "key": "High-Speed_Connector",
     "inputs": [
-      { "itemId": 59, "quantity": 56 },
-      { "itemId": 6, "quantity": 10 },
-      { "itemId": 64, "quantity": 1 }
+      { "itemId": 59, "quantityPerCycle": 56 },
+      { "itemId": 6, "quantityPerCycle": 10 },
+      { "itemId": 64, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 71, "quantity": 1 }],
+    "outputs": [{ "itemId": 71, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 16
   },
@@ -1600,29 +1600,29 @@
     "id": 152,
     "key": "Silicon_High-Speed_Connector",
     "inputs": [
-      { "itemId": 59, "quantity": 60 },
-      { "itemId": 32, "quantity": 25 },
-      { "itemId": 64, "quantity": 2 }
+      { "itemId": 59, "quantityPerCycle": 60 },
+      { "itemId": 32, "quantityPerCycle": 25 },
+      { "itemId": 64, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 71, "quantity": 2 }],
+    "outputs": [{ "itemId": 71, "quantityPerCycle": 2 }],
     "producedInId": 3,
     "productionDuration": 40
   },
   {
     "id": 153,
     "key": "Empty_Canister",
-    "inputs": [{ "itemId": 65, "quantity": 2 }],
-    "outputs": [{ "itemId": 72, "quantity": 4 }],
+    "inputs": [{ "itemId": 65, "quantityPerCycle": 2 }],
+    "outputs": [{ "itemId": 72, "quantityPerCycle": 4 }],
     "producedInId": 1,
     "productionDuration": 4
   },
   {
     "id": 154,
     "key": "Unpackage_Liquid_Biofuel",
-    "inputs": [{ "itemId": 77, "quantity": 2 }],
+    "inputs": [{ "itemId": 77, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 78, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 78, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 2
@@ -1631,20 +1631,20 @@
     "id": 155,
     "key": "Coated_Iron_Canister",
     "inputs": [
-      { "itemId": 3, "quantity": 2 },
-      { "itemId": 20, "quantity": 1 }
+      { "itemId": 3, "quantityPerCycle": 2 },
+      { "itemId": 20, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 72, "quantity": 4 }],
+    "outputs": [{ "itemId": 72, "quantityPerCycle": 4 }],
     "producedInId": 2,
     "productionDuration": 4
   },
   {
     "id": 156,
     "key": "Unpackage_Alumina_Solution",
-    "inputs": [{ "itemId": 94, "quantity": 2 }],
+    "inputs": [{ "itemId": 94, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 92, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 92, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 1
@@ -1652,18 +1652,18 @@
   {
     "id": 157,
     "key": "Steel_Canister",
-    "inputs": [{ "itemId": 26, "quantity": 4 }],
-    "outputs": [{ "itemId": 72, "quantity": 4 }],
+    "inputs": [{ "itemId": 26, "quantityPerCycle": 4 }],
+    "outputs": [{ "itemId": 72, "quantityPerCycle": 4 }],
     "producedInId": 1,
     "productionDuration": 6
   },
   {
     "id": 158,
     "key": "Unpackage_Sulfuric_Acid",
-    "inputs": [{ "itemId": 98, "quantity": 1 }],
+    "inputs": [{ "itemId": 98, "quantityPerCycle": 1 }],
     "outputs": [
-      { "itemId": 97, "quantity": 1 },
-      { "itemId": 72, "quantity": 1 }
+      { "itemId": 97, "quantityPerCycle": 1 },
+      { "itemId": 72, "quantityPerCycle": 1 }
     ],
     "producedInId": 4,
     "productionDuration": 1
@@ -1671,10 +1671,10 @@
   {
     "id": 159,
     "key": "Unpackage_Turbofuel",
-    "inputs": [{ "itemId": 128, "quantity": 2 }],
+    "inputs": [{ "itemId": 128, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 127, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 127, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 6
@@ -1683,10 +1683,10 @@
     "id": 160,
     "key": "Packaged_Water",
     "inputs": [
-      { "itemId": 67, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 67, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 73, "quantity": 2 }],
+    "outputs": [{ "itemId": 73, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 2
   },
@@ -1694,10 +1694,10 @@
     "id": 161,
     "key": "Packaged_Oil",
     "inputs": [
-      { "itemId": 70, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 70, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 74, "quantity": 2 }],
+    "outputs": [{ "itemId": 74, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 4
   },
@@ -1705,10 +1705,10 @@
     "id": 162,
     "key": "Packaged_Fuel",
     "inputs": [
-      { "itemId": 69, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 69, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 75, "quantity": 2 }],
+    "outputs": [{ "itemId": 75, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 3
   },
@@ -1716,10 +1716,10 @@
     "id": 163,
     "key": "Diluted_Packaged_Fuel",
     "inputs": [
-      { "itemId": 63, "quantity": 1 },
-      { "itemId": 73, "quantity": 2 }
+      { "itemId": 63, "quantityPerCycle": 1 },
+      { "itemId": 73, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 75, "quantity": 2 }],
+    "outputs": [{ "itemId": 75, "quantityPerCycle": 2 }],
     "producedInId": 5,
     "productionDuration": 2
   },
@@ -1727,10 +1727,10 @@
     "id": 164,
     "key": "Packaged_Heavy_Oil_Residue",
     "inputs": [
-      { "itemId": 63, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 63, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 76, "quantity": 2 }],
+    "outputs": [{ "itemId": 76, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 4
   },
@@ -1738,10 +1738,10 @@
     "id": 165,
     "key": "Packaged_Liquid_Biofuel",
     "inputs": [
-      { "itemId": 78, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 78, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 77, "quantity": 2 }],
+    "outputs": [{ "itemId": 77, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 3
   },
@@ -1749,10 +1749,10 @@
     "id": 166,
     "key": "Liquid_Biofuel",
     "inputs": [
-      { "itemId": 18, "quantity": 6 },
-      { "itemId": 67, "quantity": 3 }
+      { "itemId": 18, "quantityPerCycle": 6 },
+      { "itemId": 67, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 78, "quantity": 4 }],
+    "outputs": [{ "itemId": 78, "quantityPerCycle": 4 }],
     "producedInId": 5,
     "productionDuration": 4
   },
@@ -1760,11 +1760,11 @@
     "id": 167,
     "key": "Computer",
     "inputs": [
-      { "itemId": 64, "quantity": 4 },
-      { "itemId": 6, "quantity": 8 },
-      { "itemId": 65, "quantity": 16 }
+      { "itemId": 64, "quantityPerCycle": 4 },
+      { "itemId": 6, "quantityPerCycle": 8 },
+      { "itemId": 65, "quantityPerCycle": 16 }
     ],
-    "outputs": [{ "itemId": 79, "quantity": 1 }],
+    "outputs": [{ "itemId": 79, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 24
   },
@@ -1772,11 +1772,11 @@
     "id": 168,
     "key": "Caterium_Computer",
     "inputs": [
-      { "itemId": 64, "quantity": 4 },
-      { "itemId": 59, "quantity": 14 },
-      { "itemId": 68, "quantity": 6 }
+      { "itemId": 64, "quantityPerCycle": 4 },
+      { "itemId": 59, "quantityPerCycle": 14 },
+      { "itemId": 68, "quantityPerCycle": 6 }
     ],
-    "outputs": [{ "itemId": 79, "quantity": 1 }],
+    "outputs": [{ "itemId": 79, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 16
   },
@@ -1784,10 +1784,10 @@
     "id": 169,
     "key": "Crystal_Computer",
     "inputs": [
-      { "itemId": 64, "quantity": 3 },
-      { "itemId": 45, "quantity": 1 }
+      { "itemId": 64, "quantityPerCycle": 3 },
+      { "itemId": 45, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 79, "quantity": 2 }],
+    "outputs": [{ "itemId": 79, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 36
   },
@@ -1795,12 +1795,12 @@
     "id": 170,
     "key": "Heavy_Modular_Frame",
     "inputs": [
-      { "itemId": 21, "quantity": 5 },
-      { "itemId": 29, "quantity": 20 },
-      { "itemId": 47, "quantity": 5 },
-      { "itemId": 12, "quantity": 120 }
+      { "itemId": 21, "quantityPerCycle": 5 },
+      { "itemId": 29, "quantityPerCycle": 20 },
+      { "itemId": 47, "quantityPerCycle": 5 },
+      { "itemId": 12, "quantityPerCycle": 120 }
     ],
-    "outputs": [{ "itemId": 80, "quantity": 1 }],
+    "outputs": [{ "itemId": 80, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 30
   },
@@ -1808,12 +1808,12 @@
     "id": 171,
     "key": "Heavy_Encased_Frame",
     "inputs": [
-      { "itemId": 21, "quantity": 8 },
-      { "itemId": 47, "quantity": 10 },
-      { "itemId": 29, "quantity": 36 },
-      { "itemId": 10, "quantity": 22 }
+      { "itemId": 21, "quantityPerCycle": 8 },
+      { "itemId": 47, "quantityPerCycle": 10 },
+      { "itemId": 29, "quantityPerCycle": 36 },
+      { "itemId": 10, "quantityPerCycle": 22 }
     ],
-    "outputs": [{ "itemId": 80, "quantity": 3 }],
+    "outputs": [{ "itemId": 80, "quantityPerCycle": 3 }],
     "producedInId": 3,
     "productionDuration": 64
   },
@@ -1821,12 +1821,12 @@
     "id": 172,
     "key": "Heavy_Flexible_Frame",
     "inputs": [
-      { "itemId": 21, "quantity": 5 },
-      { "itemId": 47, "quantity": 3 },
-      { "itemId": 68, "quantity": 20 },
-      { "itemId": 12, "quantity": 104 }
+      { "itemId": 21, "quantityPerCycle": 5 },
+      { "itemId": 47, "quantityPerCycle": 3 },
+      { "itemId": 68, "quantityPerCycle": 20 },
+      { "itemId": 12, "quantityPerCycle": 104 }
     ],
-    "outputs": [{ "itemId": 80, "quantity": 1 }],
+    "outputs": [{ "itemId": 80, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 16
   },
@@ -1834,11 +1834,11 @@
     "id": 173,
     "key": "Modular_Engine",
     "inputs": [
-      { "itemId": 49, "quantity": 2 },
-      { "itemId": 68, "quantity": 15 },
-      { "itemId": 22, "quantity": 2 }
+      { "itemId": 49, "quantityPerCycle": 2 },
+      { "itemId": 68, "quantityPerCycle": 15 },
+      { "itemId": 22, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 81, "quantity": 1 }],
+    "outputs": [{ "itemId": 81, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 60
   },
@@ -1846,12 +1846,12 @@
     "id": 174,
     "key": "Adaptive_Control_Unit",
     "inputs": [
-      { "itemId": 50, "quantity": 5 },
-      { "itemId": 64, "quantity": 5 },
-      { "itemId": 80, "quantity": 1 },
-      { "itemId": 79, "quantity": 2 }
+      { "itemId": 50, "quantityPerCycle": 5 },
+      { "itemId": 64, "quantityPerCycle": 5 },
+      { "itemId": 80, "quantityPerCycle": 1 },
+      { "itemId": 79, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 82, "quantity": 1 }],
+    "outputs": [{ "itemId": 82, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 60
   },
@@ -1859,10 +1859,10 @@
     "id": 175,
     "key": "Smokeless_Powder",
     "inputs": [
-      { "itemId": 38, "quantity": 2 },
-      { "itemId": 63, "quantity": 1 }
+      { "itemId": 38, "quantityPerCycle": 2 },
+      { "itemId": 63, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 83, "quantity": 2 }],
+    "outputs": [{ "itemId": 83, "quantityPerCycle": 2 }],
     "producedInId": 5,
     "productionDuration": 6
   },
@@ -1870,10 +1870,10 @@
     "id": 176,
     "key": "Pulse_Nobelisk",
     "inputs": [
-      { "itemId": 43, "quantity": 5 },
-      { "itemId": 45, "quantity": 1 }
+      { "itemId": 43, "quantityPerCycle": 5 },
+      { "itemId": 45, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 85, "quantity": 5 }],
+    "outputs": [{ "itemId": 85, "quantityPerCycle": 5 }],
     "producedInId": 2,
     "productionDuration": 60
   },
@@ -1881,10 +1881,10 @@
     "id": 177,
     "key": "Rifle_Ammo",
     "inputs": [
-      { "itemId": 20, "quantity": 3 },
-      { "itemId": 83, "quantity": 2 }
+      { "itemId": 20, "quantityPerCycle": 3 },
+      { "itemId": 83, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 86, "quantity": 15 }],
+    "outputs": [{ "itemId": 86, "quantityPerCycle": 15 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -1892,10 +1892,10 @@
     "id": 178,
     "key": "Alclad_Aluminum_Sheet",
     "inputs": [
-      { "itemId": 96, "quantity": 3 },
-      { "itemId": 8, "quantity": 1 }
+      { "itemId": 96, "quantityPerCycle": 3 },
+      { "itemId": 8, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 87, "quantity": 3 }],
+    "outputs": [{ "itemId": 87, "quantityPerCycle": 3 }],
     "producedInId": 2,
     "productionDuration": 6
   },
@@ -1903,19 +1903,19 @@
     "id": 179,
     "key": "Iodine-Infused_Filter",
     "inputs": [
-      { "itemId": 42, "quantity": 1 },
-      { "itemId": 59, "quantity": 8 },
-      { "itemId": 89, "quantity": 1 }
+      { "itemId": 42, "quantityPerCycle": 1 },
+      { "itemId": 59, "quantityPerCycle": 8 },
+      { "itemId": 89, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 88, "quantity": 1 }],
+    "outputs": [{ "itemId": 88, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 16
   },
   {
     "id": 180,
     "key": "Aluminum_Casing",
-    "inputs": [{ "itemId": 96, "quantity": 3 }],
-    "outputs": [{ "itemId": 89, "quantity": 2 }],
+    "inputs": [{ "itemId": 96, "quantityPerCycle": 3 }],
+    "outputs": [{ "itemId": 89, "quantityPerCycle": 2 }],
     "producedInId": 1,
     "productionDuration": 2
   },
@@ -1923,10 +1923,10 @@
     "id": 181,
     "key": "Alclad_Casing",
     "inputs": [
-      { "itemId": 96, "quantity": 20 },
-      { "itemId": 8, "quantity": 10 }
+      { "itemId": 96, "quantityPerCycle": 20 },
+      { "itemId": 8, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 89, "quantity": 15 }],
+    "outputs": [{ "itemId": 89, "quantityPerCycle": 15 }],
     "producedInId": 2,
     "productionDuration": 8
   },
@@ -1934,10 +1934,10 @@
     "id": 182,
     "key": "Cluster_Nobelisk",
     "inputs": [
-      { "itemId": 43, "quantity": 3 },
-      { "itemId": 83, "quantity": 4 }
+      { "itemId": 43, "quantityPerCycle": 3 },
+      { "itemId": 83, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 90, "quantity": 1 }],
+    "outputs": [{ "itemId": 90, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 24
   },
@@ -1945,10 +1945,10 @@
     "id": 183,
     "key": "Homing_Rifle_Ammo",
     "inputs": [
-      { "itemId": 86, "quantity": 20 },
-      { "itemId": 71, "quantity": 1 }
+      { "itemId": 86, "quantityPerCycle": 20 },
+      { "itemId": 71, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 91, "quantity": 10 }],
+    "outputs": [{ "itemId": 91, "quantityPerCycle": 10 }],
     "producedInId": 2,
     "productionDuration": 24
   },
@@ -1956,10 +1956,10 @@
     "id": 184,
     "key": "Sloppy_Alumina",
     "inputs": [
-      { "itemId": 93, "quantity": 10 },
-      { "itemId": 67, "quantity": 10 }
+      { "itemId": 93, "quantityPerCycle": 10 },
+      { "itemId": 67, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 92, "quantity": 12 }],
+    "outputs": [{ "itemId": 92, "quantityPerCycle": 12 }],
     "producedInId": 5,
     "productionDuration": 3
   },
@@ -1967,10 +1967,10 @@
     "id": 185,
     "key": "Bauxite_(Caterium)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 56, "quantity": 15 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 56, "quantityPerCycle": 15 }
     ],
-    "outputs": [{ "itemId": 93, "quantity": 12 }],
+    "outputs": [{ "itemId": 93, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -1979,10 +1979,10 @@
     "id": 186,
     "key": "Bauxite_(Copper)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 9, "quantity": 18 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 9, "quantityPerCycle": 18 }
     ],
-    "outputs": [{ "itemId": 93, "quantity": 12 }],
+    "outputs": [{ "itemId": 93, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -1991,10 +1991,10 @@
     "id": 187,
     "key": "Packaged_Alumina_Solution",
     "inputs": [
-      { "itemId": 92, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 92, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 94, "quantity": 2 }],
+    "outputs": [{ "itemId": 94, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 1
   },
@@ -2002,18 +2002,18 @@
     "id": 188,
     "key": "Aluminum_Ingot",
     "inputs": [
-      { "itemId": 95, "quantity": 6 },
-      { "itemId": 32, "quantity": 5 }
+      { "itemId": 95, "quantityPerCycle": 6 },
+      { "itemId": 32, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 96, "quantity": 4 }],
+    "outputs": [{ "itemId": 96, "quantityPerCycle": 4 }],
     "producedInId": 11,
     "productionDuration": 4
   },
   {
     "id": 189,
     "key": "Pure_Aluminum_Ingot",
-    "inputs": [{ "itemId": 95, "quantity": 2 }],
-    "outputs": [{ "itemId": 96, "quantity": 1 }],
+    "inputs": [{ "itemId": 95, "quantityPerCycle": 2 }],
+    "outputs": [{ "itemId": 96, "quantityPerCycle": 1 }],
     "producedInId": 10,
     "productionDuration": 2
   },
@@ -2021,10 +2021,10 @@
     "id": 190,
     "key": "Sulfuric_Acid",
     "inputs": [
-      { "itemId": 39, "quantity": 5 },
-      { "itemId": 67, "quantity": 5 }
+      { "itemId": 39, "quantityPerCycle": 5 },
+      { "itemId": 67, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 97, "quantity": 5 }],
+    "outputs": [{ "itemId": 97, "quantityPerCycle": 5 }],
     "producedInId": 5,
     "productionDuration": 6
   },
@@ -2032,13 +2032,13 @@
     "id": 191,
     "key": "Encased_Uranium_Cell",
     "inputs": [
-      { "itemId": 112, "quantity": 10 },
-      { "itemId": 10, "quantity": 3 },
-      { "itemId": 97, "quantity": 8 }
+      { "itemId": 112, "quantityPerCycle": 10 },
+      { "itemId": 10, "quantityPerCycle": 3 },
+      { "itemId": 97, "quantityPerCycle": 8 }
     ],
     "outputs": [
-      { "itemId": 111, "quantity": 5 },
-      { "itemId": 97, "quantity": 2 }
+      { "itemId": 111, "quantityPerCycle": 5 },
+      { "itemId": 97, "quantityPerCycle": 2 }
     ],
     "producedInId": 6,
     "productionDuration": 12
@@ -2047,10 +2047,10 @@
     "id": 192,
     "key": "Packaged_Sulfuric_Acid",
     "inputs": [
-      { "itemId": 97, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 97, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 98, "quantity": 2 }],
+    "outputs": [{ "itemId": 98, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 3
   },
@@ -2058,12 +2058,12 @@
     "id": 193,
     "key": "Classic_Battery",
     "inputs": [
-      { "itemId": 39, "quantity": 6 },
-      { "itemId": 87, "quantity": 7 },
-      { "itemId": 65, "quantity": 8 },
-      { "itemId": 7, "quantity": 12 }
+      { "itemId": 39, "quantityPerCycle": 6 },
+      { "itemId": 87, "quantityPerCycle": 7 },
+      { "itemId": 65, "quantityPerCycle": 8 },
+      { "itemId": 7, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 99, "quantity": 4 }],
+    "outputs": [{ "itemId": 99, "quantityPerCycle": 4 }],
     "producedInId": 3,
     "productionDuration": 8
   },
@@ -2071,11 +2071,11 @@
     "id": 194,
     "key": "Radio_Control_Unit",
     "inputs": [
-      { "itemId": 89, "quantity": 32 },
-      { "itemId": 45, "quantity": 1 },
-      { "itemId": 79, "quantity": 2 }
+      { "itemId": 89, "quantityPerCycle": 32 },
+      { "itemId": 45, "quantityPerCycle": 1 },
+      { "itemId": 79, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 100, "quantity": 2 }],
+    "outputs": [{ "itemId": 100, "quantityPerCycle": 2 }],
     "producedInId": 3,
     "productionDuration": 48
   },
@@ -2083,12 +2083,12 @@
     "id": 195,
     "key": "Radio_Control_System",
     "inputs": [
-      { "itemId": 45, "quantity": 1 },
-      { "itemId": 64, "quantity": 10 },
-      { "itemId": 89, "quantity": 60 },
-      { "itemId": 68, "quantity": 30 }
+      { "itemId": 45, "quantityPerCycle": 1 },
+      { "itemId": 64, "quantityPerCycle": 10 },
+      { "itemId": 89, "quantityPerCycle": 60 },
+      { "itemId": 68, "quantityPerCycle": 30 }
     ],
-    "outputs": [{ "itemId": 100, "quantity": 3 }],
+    "outputs": [{ "itemId": 100, "quantityPerCycle": 3 }],
     "producedInId": 3,
     "productionDuration": 40
   },
@@ -2096,11 +2096,11 @@
     "id": 196,
     "key": "Radio_Connection_Unit",
     "inputs": [
-      { "itemId": 106, "quantity": 4 },
-      { "itemId": 71, "quantity": 2 },
-      { "itemId": 44, "quantity": 12 }
+      { "itemId": 106, "quantityPerCycle": 4 },
+      { "itemId": 71, "quantityPerCycle": 2 },
+      { "itemId": 44, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 100, "quantity": 1 }],
+    "outputs": [{ "itemId": 100, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 16
   },
@@ -2108,12 +2108,12 @@
     "id": 197,
     "key": "Supercomputer",
     "inputs": [
-      { "itemId": 79, "quantity": 4 },
-      { "itemId": 61, "quantity": 2 },
-      { "itemId": 71, "quantity": 3 },
-      { "itemId": 65, "quantity": 28 }
+      { "itemId": 79, "quantityPerCycle": 4 },
+      { "itemId": 61, "quantityPerCycle": 2 },
+      { "itemId": 71, "quantityPerCycle": 3 },
+      { "itemId": 65, "quantityPerCycle": 28 }
     ],
-    "outputs": [{ "itemId": 101, "quantity": 1 }],
+    "outputs": [{ "itemId": 101, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 32
   },
@@ -2121,10 +2121,10 @@
     "id": 198,
     "key": "OC_Supercomputer",
     "inputs": [
-      { "itemId": 100, "quantity": 2 },
-      { "itemId": 107, "quantity": 2 }
+      { "itemId": 100, "quantityPerCycle": 2 },
+      { "itemId": 107, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 101, "quantity": 1 }],
+    "outputs": [{ "itemId": 101, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 20
   },
@@ -2132,12 +2132,12 @@
     "id": 199,
     "key": "Super-State_Computer",
     "inputs": [
-      { "itemId": 79, "quantity": 3 },
-      { "itemId": 113, "quantity": 1 },
-      { "itemId": 99, "quantity": 10 },
-      { "itemId": 7, "quantity": 25 }
+      { "itemId": 79, "quantityPerCycle": 3 },
+      { "itemId": 113, "quantityPerCycle": 1 },
+      { "itemId": 99, "quantityPerCycle": 10 },
+      { "itemId": 7, "quantityPerCycle": 25 }
     ],
-    "outputs": [{ "itemId": 101, "quantity": 1 }],
+    "outputs": [{ "itemId": 101, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 25
   },
@@ -2145,28 +2145,28 @@
     "id": 200,
     "key": "Assembly_Director_System",
     "inputs": [
-      { "itemId": 82, "quantity": 2 },
-      { "itemId": 101, "quantity": 1 }
+      { "itemId": 82, "quantityPerCycle": 2 },
+      { "itemId": 101, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 102, "quantity": 1 }],
+    "outputs": [{ "itemId": 102, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 80
   },
   {
     "id": 201,
     "key": "Empty_Fluid_Tank",
-    "inputs": [{ "itemId": 96, "quantity": 1 }],
-    "outputs": [{ "itemId": 103, "quantity": 1 }],
+    "inputs": [{ "itemId": 96, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 103, "quantityPerCycle": 1 }],
     "producedInId": 1,
     "productionDuration": 1
   },
   {
     "id": 202,
     "key": "Unpackage_Nitrogen_Gas",
-    "inputs": [{ "itemId": 104, "quantity": 1 }],
+    "inputs": [{ "itemId": 104, "quantityPerCycle": 1 }],
     "outputs": [
-      { "itemId": 105, "quantity": 4 },
-      { "itemId": 103, "quantity": 1 }
+      { "itemId": 105, "quantityPerCycle": 4 },
+      { "itemId": 103, "quantityPerCycle": 1 }
     ],
     "producedInId": 4,
     "productionDuration": 1
@@ -2174,10 +2174,10 @@
   {
     "id": 203,
     "key": "Unpackage_Nitric_Acid",
-    "inputs": [{ "itemId": 116, "quantity": 1 }],
+    "inputs": [{ "itemId": 116, "quantityPerCycle": 1 }],
     "outputs": [
-      { "itemId": 110, "quantity": 1 },
-      { "itemId": 103, "quantity": 1 }
+      { "itemId": 110, "quantityPerCycle": 1 },
+      { "itemId": 103, "quantityPerCycle": 1 }
     ],
     "producedInId": 4,
     "productionDuration": 3
@@ -2185,10 +2185,10 @@
   {
     "id": 204,
     "key": "Unpackage_Rocket_Fuel",
-    "inputs": [{ "itemId": 140, "quantity": 1 }],
+    "inputs": [{ "itemId": 140, "quantityPerCycle": 1 }],
     "outputs": [
-      { "itemId": 139, "quantity": 2 },
-      { "itemId": 103, "quantity": 1 }
+      { "itemId": 139, "quantityPerCycle": 2 },
+      { "itemId": 103, "quantityPerCycle": 1 }
     ],
     "producedInId": 4,
     "productionDuration": 1
@@ -2196,10 +2196,10 @@
   {
     "id": 205,
     "key": "Unpackage_Ionized_Fuel",
-    "inputs": [{ "itemId": 142, "quantity": 2 }],
+    "inputs": [{ "itemId": 142, "quantityPerCycle": 2 }],
     "outputs": [
-      { "itemId": 141, "quantity": 4 },
-      { "itemId": 103, "quantity": 2 }
+      { "itemId": 141, "quantityPerCycle": 4 },
+      { "itemId": 103, "quantityPerCycle": 2 }
     ],
     "producedInId": 4,
     "productionDuration": 3
@@ -2208,10 +2208,10 @@
     "id": 206,
     "key": "Packaged_Nitrogen_Gas",
     "inputs": [
-      { "itemId": 105, "quantity": 4 },
-      { "itemId": 103, "quantity": 1 }
+      { "itemId": 105, "quantityPerCycle": 4 },
+      { "itemId": 103, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 104, "quantity": 1 }],
+    "outputs": [{ "itemId": 104, "quantityPerCycle": 1 }],
     "producedInId": 4,
     "productionDuration": 1
   },
@@ -2219,10 +2219,10 @@
     "id": 207,
     "key": "Nitrogen_Gas_(Bauxite)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 93, "quantity": 10 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 93, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 105, "quantity": 12 }],
+    "outputs": [{ "itemId": 105, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -2231,10 +2231,10 @@
     "id": 208,
     "key": "Nitrogen_Gas_(Caterium)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 56, "quantity": 12 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 56, "quantityPerCycle": 12 }
     ],
-    "outputs": [{ "itemId": 105, "quantity": 12 }],
+    "outputs": [{ "itemId": 105, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -2243,10 +2243,10 @@
     "id": 209,
     "key": "Heat_Sink",
     "inputs": [
-      { "itemId": 87, "quantity": 5 },
-      { "itemId": 20, "quantity": 3 }
+      { "itemId": 87, "quantityPerCycle": 5 },
+      { "itemId": 20, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 106, "quantity": 1 }],
+    "outputs": [{ "itemId": 106, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 8
   },
@@ -2254,10 +2254,10 @@
     "id": 210,
     "key": "Heat_Exchanger",
     "inputs": [
-      { "itemId": 89, "quantity": 3 },
-      { "itemId": 68, "quantity": 3 }
+      { "itemId": 89, "quantityPerCycle": 3 },
+      { "itemId": 68, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 106, "quantity": 1 }],
+    "outputs": [{ "itemId": 106, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 6
   },
@@ -2265,12 +2265,12 @@
     "id": 211,
     "key": "Cooling_System",
     "inputs": [
-      { "itemId": 106, "quantity": 2 },
-      { "itemId": 68, "quantity": 2 },
-      { "itemId": 67, "quantity": 5 },
-      { "itemId": 105, "quantity": 25 }
+      { "itemId": 106, "quantityPerCycle": 2 },
+      { "itemId": 68, "quantityPerCycle": 2 },
+      { "itemId": 67, "quantityPerCycle": 5 },
+      { "itemId": 105, "quantityPerCycle": 25 }
     ],
-    "outputs": [{ "itemId": 107, "quantity": 1 }],
+    "outputs": [{ "itemId": 107, "quantityPerCycle": 1 }],
     "producedInId": 6,
     "productionDuration": 10
   },
@@ -2278,11 +2278,11 @@
     "id": 212,
     "key": "Cooling_Device",
     "inputs": [
-      { "itemId": 106, "quantity": 4 },
-      { "itemId": 49, "quantity": 1 },
-      { "itemId": 105, "quantity": 24 }
+      { "itemId": 106, "quantityPerCycle": 4 },
+      { "itemId": 49, "quantityPerCycle": 1 },
+      { "itemId": 105, "quantityPerCycle": 24 }
     ],
-    "outputs": [{ "itemId": 107, "quantity": 2 }],
+    "outputs": [{ "itemId": 107, "quantityPerCycle": 2 }],
     "producedInId": 6,
     "productionDuration": 24
   },
@@ -2290,11 +2290,11 @@
     "id": 213,
     "key": "Fused_Modular_Frame",
     "inputs": [
-      { "itemId": 80, "quantity": 1 },
-      { "itemId": 89, "quantity": 50 },
-      { "itemId": 105, "quantity": 25 }
+      { "itemId": 80, "quantityPerCycle": 1 },
+      { "itemId": 89, "quantityPerCycle": 50 },
+      { "itemId": 105, "quantityPerCycle": 25 }
     ],
-    "outputs": [{ "itemId": 108, "quantity": 1 }],
+    "outputs": [{ "itemId": 108, "quantityPerCycle": 1 }],
     "producedInId": 6,
     "productionDuration": 40
   },
@@ -2302,12 +2302,12 @@
     "id": 214,
     "key": "Heat-Fused_Frame",
     "inputs": [
-      { "itemId": 80, "quantity": 1 },
-      { "itemId": 96, "quantity": 50 },
-      { "itemId": 110, "quantity": 8 },
-      { "itemId": 69, "quantity": 10 }
+      { "itemId": 80, "quantityPerCycle": 1 },
+      { "itemId": 96, "quantityPerCycle": 50 },
+      { "itemId": 110, "quantityPerCycle": 8 },
+      { "itemId": 69, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 108, "quantity": 1 }],
+    "outputs": [{ "itemId": 108, "quantityPerCycle": 1 }],
     "producedInId": 6,
     "productionDuration": 20
   },
@@ -2315,11 +2315,11 @@
     "id": 215,
     "key": "Nitric_Acid",
     "inputs": [
-      { "itemId": 105, "quantity": 12 },
-      { "itemId": 67, "quantity": 3 },
-      { "itemId": 3, "quantity": 1 }
+      { "itemId": 105, "quantityPerCycle": 12 },
+      { "itemId": 67, "quantityPerCycle": 3 },
+      { "itemId": 3, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 110, "quantity": 3 }],
+    "outputs": [{ "itemId": 110, "quantityPerCycle": 3 }],
     "producedInId": 6,
     "productionDuration": 6
   },
@@ -2327,12 +2327,12 @@
     "id": 216,
     "key": "Infused_Uranium_Cell",
     "inputs": [
-      { "itemId": 112, "quantity": 5 },
-      { "itemId": 32, "quantity": 3 },
-      { "itemId": 39, "quantity": 5 },
-      { "itemId": 59, "quantity": 15 }
+      { "itemId": 112, "quantityPerCycle": 5 },
+      { "itemId": 32, "quantityPerCycle": 3 },
+      { "itemId": 39, "quantityPerCycle": 5 },
+      { "itemId": 59, "quantityPerCycle": 15 }
     ],
-    "outputs": [{ "itemId": 111, "quantity": 4 }],
+    "outputs": [{ "itemId": 111, "quantityPerCycle": 4 }],
     "producedInId": 3,
     "productionDuration": 12
   },
@@ -2340,10 +2340,10 @@
     "id": 217,
     "key": "Uranium_Ore_(Bauxite)",
     "inputs": [
-      { "itemId": 53, "quantity": 1 },
-      { "itemId": 93, "quantity": 48 }
+      { "itemId": 53, "quantityPerCycle": 1 },
+      { "itemId": 93, "quantityPerCycle": 48 }
     ],
-    "outputs": [{ "itemId": 112, "quantity": 12 }],
+    "outputs": [{ "itemId": 112, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -2352,10 +2352,10 @@
     "id": 218,
     "key": "Electromagnetic_Control_Rod",
     "inputs": [
-      { "itemId": 48, "quantity": 3 },
-      { "itemId": 61, "quantity": 2 }
+      { "itemId": 48, "quantityPerCycle": 3 },
+      { "itemId": 61, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 113, "quantity": 2 }],
+    "outputs": [{ "itemId": 113, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 30
   },
@@ -2363,10 +2363,10 @@
     "id": 219,
     "key": "Electromagnetic_Connection_Rod",
     "inputs": [
-      { "itemId": 48, "quantity": 2 },
-      { "itemId": 71, "quantity": 1 }
+      { "itemId": 48, "quantityPerCycle": 2 },
+      { "itemId": 71, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 113, "quantity": 2 }],
+    "outputs": [{ "itemId": 113, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 15
   },
@@ -2374,11 +2374,11 @@
     "id": 220,
     "key": "Uranium_Fuel_Rod",
     "inputs": [
-      { "itemId": 111, "quantity": 50 },
-      { "itemId": 47, "quantity": 3 },
-      { "itemId": 113, "quantity": 5 }
+      { "itemId": 111, "quantityPerCycle": 50 },
+      { "itemId": 47, "quantityPerCycle": 3 },
+      { "itemId": 113, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 114, "quantity": 1 }],
+    "outputs": [{ "itemId": 114, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 150
   },
@@ -2386,12 +2386,12 @@
     "id": 221,
     "key": "Uranium_Fuel_Unit",
     "inputs": [
-      { "itemId": 111, "quantity": 100 },
-      { "itemId": 113, "quantity": 10 },
-      { "itemId": 45, "quantity": 3 },
-      { "itemId": 19, "quantity": 10 }
+      { "itemId": 111, "quantityPerCycle": 100 },
+      { "itemId": 113, "quantityPerCycle": 10 },
+      { "itemId": 45, "quantityPerCycle": 3 },
+      { "itemId": 19, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 114, "quantity": 3 }],
+    "outputs": [{ "itemId": 114, "quantityPerCycle": 3 }],
     "producedInId": 3,
     "productionDuration": 300
   },
@@ -2399,10 +2399,10 @@
     "id": 222,
     "key": "Magnetic_Field_Generator",
     "inputs": [
-      { "itemId": 30, "quantity": 5 },
-      { "itemId": 113, "quantity": 5 }
+      { "itemId": 30, "quantityPerCycle": 5 },
+      { "itemId": 113, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 115, "quantity": 2 }],
+    "outputs": [{ "itemId": 115, "quantityPerCycle": 2 }],
     "producedInId": 2,
     "productionDuration": 120
   },
@@ -2410,10 +2410,10 @@
     "id": 223,
     "key": "Packaged_Nitric_Acid",
     "inputs": [
-      { "itemId": 110, "quantity": 1 },
-      { "itemId": 103, "quantity": 1 }
+      { "itemId": 110, "quantityPerCycle": 1 },
+      { "itemId": 103, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 116, "quantity": 1 }],
+    "outputs": [{ "itemId": 116, "quantityPerCycle": 1 }],
     "producedInId": 4,
     "productionDuration": 2
   },
@@ -2421,10 +2421,10 @@
     "id": 224,
     "key": "Plutonium_Pellet",
     "inputs": [
-      { "itemId": 117, "quantity": 100 },
-      { "itemId": 118, "quantity": 25 }
+      { "itemId": 117, "quantityPerCycle": 100 },
+      { "itemId": 118, "quantityPerCycle": 25 }
     ],
-    "outputs": [{ "itemId": 119, "quantity": 30 }],
+    "outputs": [{ "itemId": 119, "quantityPerCycle": 30 }],
     "producedInId": 7,
     "productionDuration": 60,
     "powerUsage": [250, 750]
@@ -2433,10 +2433,10 @@
     "id": 225,
     "key": "Encased_Plutonium_Cell",
     "inputs": [
-      { "itemId": 119, "quantity": 2 },
-      { "itemId": 10, "quantity": 4 }
+      { "itemId": 119, "quantityPerCycle": 2 },
+      { "itemId": 10, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 120, "quantity": 1 }],
+    "outputs": [{ "itemId": 120, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -2444,10 +2444,10 @@
     "id": 226,
     "key": "Instant_Plutonium_Cell",
     "inputs": [
-      { "itemId": 117, "quantity": 150 },
-      { "itemId": 89, "quantity": 20 }
+      { "itemId": 117, "quantityPerCycle": 150 },
+      { "itemId": 89, "quantityPerCycle": 20 }
     ],
-    "outputs": [{ "itemId": 120, "quantity": 20 }],
+    "outputs": [{ "itemId": 120, "quantityPerCycle": 20 }],
     "producedInId": 7,
     "productionDuration": 120,
     "powerUsage": [250, 750]
@@ -2456,12 +2456,12 @@
     "id": 227,
     "key": "Plutonium_Fuel_Rod",
     "inputs": [
-      { "itemId": 120, "quantity": 30 },
-      { "itemId": 28, "quantity": 18 },
-      { "itemId": 113, "quantity": 6 },
-      { "itemId": 106, "quantity": 10 }
+      { "itemId": 120, "quantityPerCycle": 30 },
+      { "itemId": 28, "quantityPerCycle": 18 },
+      { "itemId": 113, "quantityPerCycle": 6 },
+      { "itemId": 106, "quantityPerCycle": 10 }
     ],
-    "outputs": [{ "itemId": 121, "quantity": 1 }],
+    "outputs": [{ "itemId": 121, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 240
   },
@@ -2469,10 +2469,10 @@
     "id": 228,
     "key": "Plutonium_Fuel_Unit",
     "inputs": [
-      { "itemId": 120, "quantity": 20 },
-      { "itemId": 124, "quantity": 1 }
+      { "itemId": 120, "quantityPerCycle": 20 },
+      { "itemId": 124, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 121, "quantity": 1 }],
+    "outputs": [{ "itemId": 121, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 120
   },
@@ -2480,12 +2480,12 @@
     "id": 229,
     "key": "Turbo_Motor",
     "inputs": [
-      { "itemId": 107, "quantity": 4 },
-      { "itemId": 100, "quantity": 2 },
-      { "itemId": 49, "quantity": 4 },
-      { "itemId": 68, "quantity": 24 }
+      { "itemId": 107, "quantityPerCycle": 4 },
+      { "itemId": 100, "quantityPerCycle": 2 },
+      { "itemId": 49, "quantityPerCycle": 4 },
+      { "itemId": 68, "quantityPerCycle": 24 }
     ],
-    "outputs": [{ "itemId": 122, "quantity": 1 }],
+    "outputs": [{ "itemId": 122, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 32
   },
@@ -2493,12 +2493,12 @@
     "id": 230,
     "key": "Turbo_Electric_Motor",
     "inputs": [
-      { "itemId": 49, "quantity": 7 },
-      { "itemId": 100, "quantity": 9 },
-      { "itemId": 113, "quantity": 5 },
-      { "itemId": 19, "quantity": 7 }
+      { "itemId": 49, "quantityPerCycle": 7 },
+      { "itemId": 100, "quantityPerCycle": 9 },
+      { "itemId": 113, "quantityPerCycle": 5 },
+      { "itemId": 19, "quantityPerCycle": 7 }
     ],
-    "outputs": [{ "itemId": 122, "quantity": 3 }],
+    "outputs": [{ "itemId": 122, "quantityPerCycle": 3 }],
     "producedInId": 3,
     "productionDuration": 64
   },
@@ -2506,20 +2506,20 @@
     "id": 231,
     "key": "Turbo_Pressure_Motor",
     "inputs": [
-      { "itemId": 49, "quantity": 4 },
-      { "itemId": 124, "quantity": 1 },
-      { "itemId": 104, "quantity": 24 },
-      { "itemId": 48, "quantity": 8 }
+      { "itemId": 49, "quantityPerCycle": 4 },
+      { "itemId": 124, "quantityPerCycle": 1 },
+      { "itemId": 104, "quantityPerCycle": 24 },
+      { "itemId": 48, "quantityPerCycle": 8 }
     ],
-    "outputs": [{ "itemId": 122, "quantity": 2 }],
+    "outputs": [{ "itemId": 122, "quantityPerCycle": 2 }],
     "producedInId": 3,
     "productionDuration": 32
   },
   {
     "id": 232,
     "key": "Copper_Powder",
-    "inputs": [{ "itemId": 8, "quantity": 30 }],
-    "outputs": [{ "itemId": 123, "quantity": 5 }],
+    "inputs": [{ "itemId": 8, "quantityPerCycle": 30 }],
+    "outputs": [{ "itemId": 123, "quantityPerCycle": 5 }],
     "producedInId": 1,
     "productionDuration": 6
   },
@@ -2527,10 +2527,10 @@
     "id": 233,
     "key": "Pressure_Conversion_Cube",
     "inputs": [
-      { "itemId": 108, "quantity": 1 },
-      { "itemId": 100, "quantity": 2 }
+      { "itemId": 108, "quantityPerCycle": 1 },
+      { "itemId": 100, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 124, "quantity": 1 }],
+    "outputs": [{ "itemId": 124, "quantityPerCycle": 1 }],
     "producedInId": 2,
     "productionDuration": 60
   },
@@ -2538,10 +2538,10 @@
     "id": 234,
     "key": "Nuclear_Pasta",
     "inputs": [
-      { "itemId": 123, "quantity": 200 },
-      { "itemId": 124, "quantity": 1 }
+      { "itemId": 123, "quantityPerCycle": 200 },
+      { "itemId": 124, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 125, "quantity": 1 }],
+    "outputs": [{ "itemId": 125, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 120,
     "powerUsage": [500, 1500]
@@ -2550,12 +2550,12 @@
     "id": 235,
     "key": "Thermal_Propulsion_Rocket",
     "inputs": [
-      { "itemId": 81, "quantity": 5 },
-      { "itemId": 122, "quantity": 2 },
-      { "itemId": 107, "quantity": 6 },
-      { "itemId": 108, "quantity": 2 }
+      { "itemId": 81, "quantityPerCycle": 5 },
+      { "itemId": 122, "quantityPerCycle": 2 },
+      { "itemId": 107, "quantityPerCycle": 6 },
+      { "itemId": 108, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 126, "quantity": 2 }],
+    "outputs": [{ "itemId": 126, "quantityPerCycle": 2 }],
     "producedInId": 3,
     "productionDuration": 120
   },
@@ -2563,12 +2563,12 @@
     "id": 236,
     "key": "Turbo_Blend_Fuel",
     "inputs": [
-      { "itemId": 69, "quantity": 2 },
-      { "itemId": 63, "quantity": 4 },
-      { "itemId": 39, "quantity": 3 },
-      { "itemId": 62, "quantity": 3 }
+      { "itemId": 69, "quantityPerCycle": 2 },
+      { "itemId": 63, "quantityPerCycle": 4 },
+      { "itemId": 39, "quantityPerCycle": 3 },
+      { "itemId": 62, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 127, "quantity": 6 }],
+    "outputs": [{ "itemId": 127, "quantityPerCycle": 6 }],
     "producedInId": 6,
     "productionDuration": 8
   },
@@ -2576,10 +2576,10 @@
     "id": 237,
     "key": "Turbofuel",
     "inputs": [
-      { "itemId": 69, "quantity": 6 },
-      { "itemId": 138, "quantity": 4 }
+      { "itemId": 69, "quantityPerCycle": 6 },
+      { "itemId": 138, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 127, "quantity": 5 }],
+    "outputs": [{ "itemId": 127, "quantityPerCycle": 5 }],
     "producedInId": 5,
     "productionDuration": 16
   },
@@ -2587,10 +2587,10 @@
     "id": 238,
     "key": "Turbo_Heavy_Fuel",
     "inputs": [
-      { "itemId": 63, "quantity": 5 },
-      { "itemId": 138, "quantity": 4 }
+      { "itemId": 63, "quantityPerCycle": 5 },
+      { "itemId": 138, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 127, "quantity": 4 }],
+    "outputs": [{ "itemId": 127, "quantityPerCycle": 4 }],
     "producedInId": 5,
     "productionDuration": 8
   },
@@ -2598,10 +2598,10 @@
     "id": 239,
     "key": "Packaged_Turbofuel",
     "inputs": [
-      { "itemId": 127, "quantity": 2 },
-      { "itemId": 72, "quantity": 2 }
+      { "itemId": 127, "quantityPerCycle": 2 },
+      { "itemId": 72, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 128, "quantity": 2 }],
+    "outputs": [{ "itemId": 128, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 6
   },
@@ -2609,10 +2609,10 @@
     "id": 240,
     "key": "Ficsite_Ingot_(Iron)",
     "inputs": [
-      { "itemId": 53, "quantity": 4 },
-      { "itemId": 1, "quantity": 24 }
+      { "itemId": 53, "quantityPerCycle": 4 },
+      { "itemId": 1, "quantityPerCycle": 24 }
     ],
-    "outputs": [{ "itemId": 129, "quantity": 1 }],
+    "outputs": [{ "itemId": 129, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -2621,10 +2621,10 @@
     "id": 241,
     "key": "Ficsite_Ingot_(Aluminum)",
     "inputs": [
-      { "itemId": 53, "quantity": 2 },
-      { "itemId": 96, "quantity": 4 }
+      { "itemId": 53, "quantityPerCycle": 2 },
+      { "itemId": 96, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 129, "quantity": 1 }],
+    "outputs": [{ "itemId": 129, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 2,
     "powerUsage": [100, 400]
@@ -2633,10 +2633,10 @@
     "id": 242,
     "key": "Ficsite_Ingot_(Caterium)",
     "inputs": [
-      { "itemId": 53, "quantity": 3 },
-      { "itemId": 55, "quantity": 4 }
+      { "itemId": 53, "quantityPerCycle": 3 },
+      { "itemId": 55, "quantityPerCycle": 4 }
     ],
-    "outputs": [{ "itemId": 129, "quantity": 1 }],
+    "outputs": [{ "itemId": 129, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 4,
     "powerUsage": [100, 400]
@@ -2644,16 +2644,16 @@
   {
     "id": 243,
     "key": "Ficsite_Trigon",
-    "inputs": [{ "itemId": 129, "quantity": 1 }],
-    "outputs": [{ "itemId": 130, "quantity": 3 }],
+    "inputs": [{ "itemId": 129, "quantityPerCycle": 1 }],
+    "outputs": [{ "itemId": 130, "quantityPerCycle": 3 }],
     "producedInId": 1,
     "productionDuration": 6
   },
   {
     "id": 244,
     "key": "Diamonds",
-    "inputs": [{ "itemId": 27, "quantity": 20 }],
-    "outputs": [{ "itemId": 131, "quantity": 1 }],
+    "inputs": [{ "itemId": 27, "quantityPerCycle": 20 }],
+    "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 2,
     "powerUsage": [250, 750]
@@ -2661,8 +2661,8 @@
   {
     "id": 245,
     "key": "Oil-Based_Diamonds",
-    "inputs": [{ "itemId": 70, "quantity": 10 }],
-    "outputs": [{ "itemId": 131, "quantity": 2 }],
+    "inputs": [{ "itemId": 70, "quantityPerCycle": 10 }],
+    "outputs": [{ "itemId": 131, "quantityPerCycle": 2 }],
     "producedInId": 7,
     "productionDuration": 3,
     "powerUsage": [250, 750]
@@ -2671,10 +2671,10 @@
     "id": 246,
     "key": "Pink_Diamonds",
     "inputs": [
-      { "itemId": 27, "quantity": 8 },
-      { "itemId": 44, "quantity": 3 }
+      { "itemId": 27, "quantityPerCycle": 8 },
+      { "itemId": 44, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 131, "quantity": 1 }],
+    "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 4,
     "powerUsage": [100, 400]
@@ -2683,10 +2683,10 @@
     "id": 247,
     "key": "Cloudy_Diamonds",
     "inputs": [
-      { "itemId": 27, "quantity": 12 },
-      { "itemId": 11, "quantity": 24 }
+      { "itemId": 27, "quantityPerCycle": 12 },
+      { "itemId": 11, "quantityPerCycle": 24 }
     ],
-    "outputs": [{ "itemId": 131, "quantity": 1 }],
+    "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 3,
     "powerUsage": [250, 750]
@@ -2695,10 +2695,10 @@
     "id": 248,
     "key": "Turbo_Diamonds",
     "inputs": [
-      { "itemId": 27, "quantity": 30 },
-      { "itemId": 128, "quantity": 2 }
+      { "itemId": 27, "quantityPerCycle": 30 },
+      { "itemId": 128, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 131, "quantity": 3 }],
+    "outputs": [{ "itemId": 131, "quantityPerCycle": 3 }],
     "producedInId": 7,
     "productionDuration": 3,
     "powerUsage": [250, 750]
@@ -2706,8 +2706,8 @@
   {
     "id": 249,
     "key": "Petroleum_Diamonds",
-    "inputs": [{ "itemId": 62, "quantity": 24 }],
-    "outputs": [{ "itemId": 131, "quantity": 1 }],
+    "inputs": [{ "itemId": 62, "quantityPerCycle": 24 }],
+    "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 2,
     "powerUsage": [250, 750]
@@ -2715,8 +2715,8 @@
   {
     "id": 250,
     "key": "Time_Crystal",
-    "inputs": [{ "itemId": 131, "quantity": 2 }],
-    "outputs": [{ "itemId": 132, "quantity": 1 }],
+    "inputs": [{ "itemId": 131, "quantityPerCycle": 2 }],
+    "outputs": [{ "itemId": 132, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 10,
     "powerUsage": [100, 400]
@@ -2725,19 +2725,19 @@
     "id": 251,
     "key": "Biochemical_Sculptor",
     "inputs": [
-      { "itemId": 102, "quantity": 1 },
-      { "itemId": 130, "quantity": 80 },
-      { "itemId": 67, "quantity": 20 }
+      { "itemId": 102, "quantityPerCycle": 1 },
+      { "itemId": 130, "quantityPerCycle": 80 },
+      { "itemId": 67, "quantityPerCycle": 20 }
     ],
-    "outputs": [{ "itemId": 133, "quantity": 4 }],
+    "outputs": [{ "itemId": 133, "quantityPerCycle": 4 }],
     "producedInId": 6,
     "productionDuration": 120
   },
   {
     "id": 252,
     "key": "Dark_Matter_Residue",
-    "inputs": [{ "itemId": 53, "quantity": 5 }],
-    "outputs": [{ "itemId": 134, "quantity": 10 }],
+    "inputs": [{ "itemId": 53, "quantityPerCycle": 5 }],
+    "outputs": [{ "itemId": 134, "quantityPerCycle": 10 }],
     "producedInId": 8,
     "productionDuration": 6,
     "powerUsage": [100, 400]
@@ -2746,14 +2746,14 @@
     "id": 253,
     "key": "Superposition_Oscillator",
     "inputs": [
-      { "itemId": 135, "quantity": 6 },
-      { "itemId": 45, "quantity": 1 },
-      { "itemId": 87, "quantity": 9 },
-      { "itemId": 136, "quantity": 25 }
+      { "itemId": 135, "quantityPerCycle": 6 },
+      { "itemId": 45, "quantityPerCycle": 1 },
+      { "itemId": 87, "quantityPerCycle": 9 },
+      { "itemId": 136, "quantityPerCycle": 25 }
     ],
     "outputs": [
-      { "itemId": 144, "quantity": 1 },
-      { "itemId": 134, "quantity": 25 }
+      { "itemId": 144, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 25 }
     ],
     "producedInId": 9,
     "productionDuration": 12,
@@ -2763,14 +2763,14 @@
     "id": 254,
     "key": "Neural-Quantum_Processor",
     "inputs": [
-      { "itemId": 132, "quantity": 5 },
-      { "itemId": 101, "quantity": 1 },
-      { "itemId": 130, "quantity": 15 },
-      { "itemId": 136, "quantity": 25 }
+      { "itemId": 132, "quantityPerCycle": 5 },
+      { "itemId": 101, "quantityPerCycle": 1 },
+      { "itemId": 130, "quantityPerCycle": 15 },
+      { "itemId": 136, "quantityPerCycle": 25 }
     ],
     "outputs": [
-      { "itemId": 145, "quantity": 1 },
-      { "itemId": 134, "quantity": 25 }
+      { "itemId": 145, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 25 }
     ],
     "producedInId": 9,
     "productionDuration": 20,
@@ -2780,14 +2780,14 @@
     "id": 255,
     "key": "AI_Expansion_Server",
     "inputs": [
-      { "itemId": 115, "quantity": 1 },
-      { "itemId": 145, "quantity": 1 },
-      { "itemId": 144, "quantity": 1 },
-      { "itemId": 136, "quantity": 25 }
+      { "itemId": 115, "quantityPerCycle": 1 },
+      { "itemId": 145, "quantityPerCycle": 1 },
+      { "itemId": 144, "quantityPerCycle": 1 },
+      { "itemId": 136, "quantityPerCycle": 25 }
     ],
     "outputs": [
-      { "itemId": 146, "quantity": 1 },
-      { "itemId": 134, "quantity": 25 }
+      { "itemId": 146, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 25 }
     ],
     "producedInId": 9,
     "productionDuration": 15,
@@ -2797,14 +2797,14 @@
     "id": 256,
     "key": "Ficsonium_Fuel_Rod",
     "inputs": [
-      { "itemId": 148, "quantity": 2 },
-      { "itemId": 113, "quantity": 2 },
-      { "itemId": 130, "quantity": 40 },
-      { "itemId": 136, "quantity": 20 }
+      { "itemId": 148, "quantityPerCycle": 2 },
+      { "itemId": 113, "quantityPerCycle": 2 },
+      { "itemId": 130, "quantityPerCycle": 40 },
+      { "itemId": 136, "quantityPerCycle": 20 }
     ],
     "outputs": [
-      { "itemId": 151, "quantity": 1 },
-      { "itemId": 134, "quantity": 20 }
+      { "itemId": 151, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 20 }
     ],
     "producedInId": 9,
     "productionDuration": 24,
@@ -2814,14 +2814,14 @@
     "id": 257,
     "key": "Alien_Power_Matrix",
     "inputs": [
-      { "itemId": 57, "quantity": 5 },
-      { "itemId": 23, "quantity": 3 },
-      { "itemId": 144, "quantity": 3 },
-      { "itemId": 136, "quantity": 24 }
+      { "itemId": 57, "quantityPerCycle": 5 },
+      { "itemId": 23, "quantityPerCycle": 3 },
+      { "itemId": 144, "quantityPerCycle": 3 },
+      { "itemId": 136, "quantityPerCycle": 24 }
     ],
     "outputs": [
-      { "itemId": 153, "quantity": 1 },
-      { "itemId": 134, "quantity": 24 }
+      { "itemId": 153, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 24 }
     ],
     "producedInId": 9,
     "productionDuration": 24,
@@ -2831,10 +2831,10 @@
     "id": 258,
     "key": "Dark_Matter_Crystal",
     "inputs": [
-      { "itemId": 131, "quantity": 1 },
-      { "itemId": 134, "quantity": 5 }
+      { "itemId": 131, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 135, "quantity": 1 }],
+    "outputs": [{ "itemId": 135, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 2,
     "powerUsage": [500, 1500]
@@ -2843,10 +2843,10 @@
     "id": 259,
     "key": "Dark_Matter_Trap",
     "inputs": [
-      { "itemId": 132, "quantity": 1 },
-      { "itemId": 134, "quantity": 5 }
+      { "itemId": 132, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 135, "quantity": 2 }],
+    "outputs": [{ "itemId": 135, "quantityPerCycle": 2 }],
     "producedInId": 7,
     "productionDuration": 2,
     "powerUsage": [500, 1500]
@@ -2854,8 +2854,8 @@
   {
     "id": 260,
     "key": "Dark_Matter_Crystallization",
-    "inputs": [{ "itemId": 134, "quantity": 10 }],
-    "outputs": [{ "itemId": 135, "quantity": 1 }],
+    "inputs": [{ "itemId": 134, "quantityPerCycle": 10 }],
+    "outputs": [{ "itemId": 135, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 3,
     "powerUsage": [500, 1500]
@@ -2864,7 +2864,7 @@
     "id": 261,
     "key": "Excited_Photonic_Matter",
     "inputs": [],
-    "outputs": [{ "itemId": 136, "quantity": 10 }],
+    "outputs": [{ "itemId": 136, "quantityPerCycle": 10 }],
     "producedInId": 8,
     "productionDuration": 3,
     "powerUsage": [100, 400]
@@ -2873,11 +2873,11 @@
     "id": 262,
     "key": "Explosive_Rebar",
     "inputs": [
-      { "itemId": 41, "quantity": 2 },
-      { "itemId": 83, "quantity": 2 },
-      { "itemId": 29, "quantity": 2 }
+      { "itemId": 41, "quantityPerCycle": 2 },
+      { "itemId": 83, "quantityPerCycle": 2 },
+      { "itemId": 29, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 137, "quantity": 1 }],
+    "outputs": [{ "itemId": 137, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 12
   },
@@ -2885,10 +2885,10 @@
     "id": 263,
     "key": "Compacted_Coal",
     "inputs": [
-      { "itemId": 27, "quantity": 5 },
-      { "itemId": 39, "quantity": 5 }
+      { "itemId": 27, "quantityPerCycle": 5 },
+      { "itemId": 39, "quantityPerCycle": 5 }
     ],
-    "outputs": [{ "itemId": 138, "quantity": 5 }],
+    "outputs": [{ "itemId": 138, "quantityPerCycle": 5 }],
     "producedInId": 2,
     "productionDuration": 12
   },
@@ -2896,12 +2896,12 @@
     "id": 264,
     "key": "Rocket_Fuel",
     "inputs": [
-      { "itemId": 127, "quantity": 6 },
-      { "itemId": 110, "quantity": 1 }
+      { "itemId": 127, "quantityPerCycle": 6 },
+      { "itemId": 110, "quantityPerCycle": 1 }
     ],
     "outputs": [
-      { "itemId": 139, "quantity": 10 },
-      { "itemId": 138, "quantity": 1 }
+      { "itemId": 139, "quantityPerCycle": 10 },
+      { "itemId": 138, "quantityPerCycle": 1 }
     ],
     "producedInId": 6,
     "productionDuration": 6
@@ -2910,12 +2910,12 @@
     "id": 265,
     "key": "Ionized_Fuel",
     "inputs": [
-      { "itemId": 139, "quantity": 16 },
-      { "itemId": 23, "quantity": 1 }
+      { "itemId": 139, "quantityPerCycle": 16 },
+      { "itemId": 23, "quantityPerCycle": 1 }
     ],
     "outputs": [
-      { "itemId": 141, "quantity": 16 },
-      { "itemId": 138, "quantity": 2 }
+      { "itemId": 141, "quantityPerCycle": 16 },
+      { "itemId": 138, "quantityPerCycle": 2 }
     ],
     "producedInId": 5,
     "productionDuration": 24
@@ -2924,12 +2924,12 @@
     "id": 266,
     "key": "Dark-Ion_Fuel",
     "inputs": [
-      { "itemId": 140, "quantity": 12 },
-      { "itemId": 135, "quantity": 4 }
+      { "itemId": 140, "quantityPerCycle": 12 },
+      { "itemId": 135, "quantityPerCycle": 4 }
     ],
     "outputs": [
-      { "itemId": 141, "quantity": 10 },
-      { "itemId": 138, "quantity": 2 }
+      { "itemId": 141, "quantityPerCycle": 10 },
+      { "itemId": 138, "quantityPerCycle": 2 }
     ],
     "producedInId": 8,
     "productionDuration": 3,
@@ -2939,14 +2939,14 @@
     "id": 267,
     "key": "Nitro_Rocket_Fuel",
     "inputs": [
-      { "itemId": 69, "quantity": 4 },
-      { "itemId": 105, "quantity": 3 },
-      { "itemId": 39, "quantity": 4 },
-      { "itemId": 27, "quantity": 2 }
+      { "itemId": 69, "quantityPerCycle": 4 },
+      { "itemId": 105, "quantityPerCycle": 3 },
+      { "itemId": 39, "quantityPerCycle": 4 },
+      { "itemId": 27, "quantityPerCycle": 2 }
     ],
     "outputs": [
-      { "itemId": 139, "quantity": 6 },
-      { "itemId": 138, "quantity": 1 }
+      { "itemId": 139, "quantityPerCycle": 6 },
+      { "itemId": 138, "quantityPerCycle": 1 }
     ],
     "producedInId": 6,
     "productionDuration": 2.4
@@ -2955,10 +2955,10 @@
     "id": 268,
     "key": "Packaged_Rocket_Fuel",
     "inputs": [
-      { "itemId": 139, "quantity": 2 },
-      { "itemId": 103, "quantity": 1 }
+      { "itemId": 139, "quantityPerCycle": 2 },
+      { "itemId": 103, "quantityPerCycle": 1 }
     ],
-    "outputs": [{ "itemId": 140, "quantity": 1 }],
+    "outputs": [{ "itemId": 140, "quantityPerCycle": 1 }],
     "producedInId": 4,
     "productionDuration": 1
   },
@@ -2966,10 +2966,10 @@
     "id": 269,
     "key": "Packaged_Ionized_Fuel",
     "inputs": [
-      { "itemId": 141, "quantity": 4 },
-      { "itemId": 103, "quantity": 2 }
+      { "itemId": 141, "quantityPerCycle": 4 },
+      { "itemId": 103, "quantityPerCycle": 2 }
     ],
-    "outputs": [{ "itemId": 142, "quantity": 2 }],
+    "outputs": [{ "itemId": 142, "quantityPerCycle": 2 }],
     "producedInId": 4,
     "productionDuration": 3
   },
@@ -2977,11 +2977,11 @@
     "id": 270,
     "key": "Turbo_Rifle_Ammo",
     "inputs": [
-      { "itemId": 86, "quantity": 25 },
-      { "itemId": 89, "quantity": 3 },
-      { "itemId": 127, "quantity": 3 }
+      { "itemId": 86, "quantityPerCycle": 25 },
+      { "itemId": 89, "quantityPerCycle": 3 },
+      { "itemId": 127, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 143, "quantity": 50 }],
+    "outputs": [{ "itemId": 143, "quantityPerCycle": 50 }],
     "producedInId": 6,
     "productionDuration": 12
   },
@@ -2989,11 +2989,11 @@
     "id": 271,
     "key": "Turbo_Rifle_Ammo",
     "inputs": [
-      { "itemId": 86, "quantity": 25 },
-      { "itemId": 89, "quantity": 3 },
-      { "itemId": 128, "quantity": 3 }
+      { "itemId": 86, "quantityPerCycle": 25 },
+      { "itemId": 89, "quantityPerCycle": 3 },
+      { "itemId": 128, "quantityPerCycle": 3 }
     ],
-    "outputs": [{ "itemId": 143, "quantity": 50 }],
+    "outputs": [{ "itemId": 143, "quantityPerCycle": 50 }],
     "producedInId": 3,
     "productionDuration": 12
   },
@@ -3001,12 +3001,12 @@
     "id": 272,
     "key": "Nuke_Nobelisk",
     "inputs": [
-      { "itemId": 43, "quantity": 5 },
-      { "itemId": 111, "quantity": 20 },
-      { "itemId": 83, "quantity": 10 },
-      { "itemId": 61, "quantity": 6 }
+      { "itemId": 43, "quantityPerCycle": 5 },
+      { "itemId": 111, "quantityPerCycle": 20 },
+      { "itemId": 83, "quantityPerCycle": 10 },
+      { "itemId": 61, "quantityPerCycle": 6 }
     ],
-    "outputs": [{ "itemId": 147, "quantity": 1 }],
+    "outputs": [{ "itemId": 147, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 120
   },
@@ -3014,11 +3014,11 @@
     "id": 273,
     "key": "Ficsonium",
     "inputs": [
-      { "itemId": 149, "quantity": 1 },
-      { "itemId": 150, "quantity": 1 },
-      { "itemId": 134, "quantity": 20 }
+      { "itemId": 149, "quantityPerCycle": 1 },
+      { "itemId": 150, "quantityPerCycle": 1 },
+      { "itemId": 134, "quantityPerCycle": 20 }
     ],
-    "outputs": [{ "itemId": 148, "quantity": 1 }],
+    "outputs": [{ "itemId": 148, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 6,
     "powerUsage": [500, 1500]
@@ -3027,12 +3027,12 @@
     "id": 274,
     "key": "Singularity_Cell",
     "inputs": [
-      { "itemId": 125, "quantity": 1 },
-      { "itemId": 135, "quantity": 20 },
-      { "itemId": 3, "quantity": 100 },
-      { "itemId": 10, "quantity": 200 }
+      { "itemId": 125, "quantityPerCycle": 1 },
+      { "itemId": 135, "quantityPerCycle": 20 },
+      { "itemId": 3, "quantityPerCycle": 100 },
+      { "itemId": 10, "quantityPerCycle": 200 }
     ],
-    "outputs": [{ "itemId": 150, "quantity": 10 }],
+    "outputs": [{ "itemId": 150, "quantityPerCycle": 10 }],
     "producedInId": 3,
     "productionDuration": 60
   },
@@ -3040,12 +3040,12 @@
     "id": 275,
     "key": "Ballistic_Warp_Drive",
     "inputs": [
-      { "itemId": 126, "quantity": 1 },
-      { "itemId": 150, "quantity": 5 },
-      { "itemId": 144, "quantity": 2 },
-      { "itemId": 135, "quantity": 40 }
+      { "itemId": 126, "quantityPerCycle": 1 },
+      { "itemId": 150, "quantityPerCycle": 5 },
+      { "itemId": 144, "quantityPerCycle": 2 },
+      { "itemId": 135, "quantityPerCycle": 40 }
     ],
-    "outputs": [{ "itemId": 152, "quantity": 1 }],
+    "outputs": [{ "itemId": 152, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 60
   }

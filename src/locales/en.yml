@@ -25,7 +25,6 @@ deleteConfirm: Are you sure you want to delete?
 
 config: Config
 factoryConfig: Factory Config
-factoryName: Factory Name
 
 newAssemblyLine: New Assembly Line
 
@@ -35,3 +34,5 @@ building: Building
 targetItemSpeed: Target Item Speed
 perMinute: /min
 seconds: s
+buildingUnit: unit
+buildingUnits: units

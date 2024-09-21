@@ -11,12 +11,42 @@ import {
   NPopconfirm,
   type DataTableColumns,
 } from 'naive-ui'
+import { isArray } from 'radash'
 
-import type { AssemblyLine, Id } from '@/types'
+import type { AssemblyLine, Id, ItemQuantityPerMinute } from '@/types'
+import { getBuildingById, getItemById } from '@/data'
 import { useModularFactoryList } from '@/stores/modularFactoryList'
 
-import ItemSelect from './ItemSelect'
+import BuildingImage from './BuildingImage'
+import ItemImage from './ItemImage'
 import ItemRecipeSelect from './ItemRecipeSelect'
+import ItemSelect from './ItemSelect'
+
+const renderItemQuantityPerMinute = ({
+  itemId,
+  quantityPerMinute,
+}: ItemQuantityPerMinute) => {
+  const { t } = useI18n()
+
+  const item = getItemById(itemId)
+
+  return (
+    <NFlex align="center" wrap={false}>
+      <ItemImage
+        name={item.key}
+        sizes={[32, 64, 96]}
+        formats={['avif', 'webp', 'png']}
+      />
+      <NFlex size={2} vertical>
+        <div class="text-sm leading-3.5 truncate">{t(`items.${item.key}`)}</div>
+        <div class="text-xs leading-4 opacity-75 truncate">
+          {quantityPerMinute}
+          {t(`perMinute`)}
+        </div>
+      </NFlex>
+    </NFlex>
+  )
+}
 
 function createColumns({
   onDelete,
@@ -24,6 +54,8 @@ function createColumns({
   onDelete: (id: Id) => void
 }): DataTableColumns<AssemblyLine> {
   const { t } = useI18n()
+
+  const modularFactoryList = useModularFactoryList()
 
   return [
     {
@@ -83,21 +115,84 @@ function createColumns({
       title: t('building'),
       key: 'building',
       minWidth: 160,
+      render: (row) => {
+        const assemblyLineComputed =
+          modularFactoryList.assemblyLineComputedList[row.id]
+        if (!assemblyLineComputed) {
+          return null
+        }
+        const building = getBuildingById(assemblyLineComputed.buildingId)
+        return (
+          <NFlex align="center" wrap={false}>
+            <BuildingImage
+              name={building.key}
+              sizes={[48, 96, 144]}
+              formats={['avif', 'webp', 'png']}
+            />
+            <NFlex size={2} vertical>
+              <div class="text-sm leading-3.5 truncate">
+                {t(`buildings.${building.key}`)}
+              </div>
+              <div class="text-xs leading-4 opacity-75 truncate">
+                {assemblyLineComputed.buildingQuantity}
+                {assemblyLineComputed.buildingQuantity > 1
+                  ? t(`buildingUnits`)
+                  : t(`buildingUnit`)}
+              </div>
+            </NFlex>
+          </NFlex>
+        )
+      },
     },
     {
       title: t('power'),
       key: 'power',
       minWidth: 80,
+      render: (row) => {
+        const assemblyLineComputed =
+          modularFactoryList.assemblyLineComputedList[row.id]
+        if (!assemblyLineComputed?.averageTotalPowerUsage) {
+          return null
+        }
+        if (isArray(assemblyLineComputed.totalPowerUsage)) {
+          return `${assemblyLineComputed.totalPowerUsage.join(' - ')}MW 平均${assemblyLineComputed.averageTotalPowerUsage}`
+        }
+        return `${assemblyLineComputed.averageTotalPowerUsage}MW`
+      },
     },
     {
       title: t('inputs'),
       key: 'inputs',
       minWidth: 160,
+      render: (row) => {
+        const assemblyLineComputed =
+          modularFactoryList.assemblyLineComputedList[row.id]
+        if (!assemblyLineComputed) {
+          return null
+        }
+        return (
+          <NFlex size={8} vertical>
+            {assemblyLineComputed.inputs.map(renderItemQuantityPerMinute)}
+          </NFlex>
+        )
+      },
     },
     {
       title: t('outputs'),
       key: 'outputs',
       minWidth: 160,
+      render: (row) => {
+        const assemblyLineComputed =
+          modularFactoryList.assemblyLineComputedList[row.id]
+        if (!assemblyLineComputed) {
+          return null
+        }
+        return (
+          <NFlex size={8} vertical>
+            {assemblyLineComputed.outputs.map(renderItemQuantityPerMinute)}
+          </NFlex>
+        )
+      },
     },
     {
       title: t('action'),
@@ -146,7 +241,7 @@ export default defineComponent({
     return () => (
       <NFlex size="large" vertical align="start">
         <NForm labelPlacement="left" labelWidth="auto" inline>
-          <NFormItem label={t('factoryName')} path="name">
+          <NFormItem label={t('name')} path="name">
             <NInput
               value={modularFactory.value.name}
               onUpdateValue={(value) => {
