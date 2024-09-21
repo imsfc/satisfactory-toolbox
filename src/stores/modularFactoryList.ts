@@ -13,16 +13,6 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
     direction: 'ltr',
   })
 
-  const modularFactoryMap = new Map<Id, ModularFactory>()
-  const assemblyLineMap = new Map<Id, AssemblyLine>()
-
-  data.value.forEach((modularFactory) => {
-    modularFactoryMap.set(modularFactory.id, modularFactory)
-    modularFactory.data.forEach((assemblyLine) => {
-      assemblyLineMap.set(assemblyLine.id, assemblyLine)
-    })
-  })
-
   // 自增ID
   let currentId: Id = Math.max(
     0,
@@ -36,44 +26,32 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
 
   const newModularFactory = (): Id => {
     const id = generateId()
-    const modularFactory: ModularFactory = {
+    data.value.unshift({
       id,
       name: `Factory_${id}`,
       remark: '',
       data: [],
-    }
-    data.value.unshift(modularFactory)
-    modularFactoryMap.set(id, modularFactory)
+    })
     return id
   }
 
   const deleteModularFactory = (modularFactoryId: Id) => {
-    const modularFactory = getModularFactory(modularFactoryId)
-    modularFactory.data.forEach(({ id }) => {
-      deleteAssemblyLine(modularFactoryId, id)
-    })
     data.value = data.value.filter(({ id }) => id !== modularFactoryId)
-    modularFactoryMap.delete(modularFactoryId)
   }
 
   const getModularFactory = (modularFactoryId: Id): ModularFactory => {
-    if (modularFactoryMap.has(modularFactoryId)) {
-      return modularFactoryMap.get(modularFactoryId)!
-    }
-    throw new Error(`工厂不存在: ${modularFactoryId}`)
+    return data.value.find(({ id }) => id === modularFactoryId)!
   }
 
   const newAssemblyLine = (modularFactoryId: Id): Id => {
     const modularFactory = getModularFactory(modularFactoryId)
     const id = generateId()
-    const assemblyLine: AssemblyLine = {
+    modularFactory.data.unshift({
       id,
       targetItemId: null,
       targetItemSpeed: null,
       recipeId: null,
-    }
-    modularFactory.data.unshift(assemblyLine)
-    assemblyLineMap.set(id, assemblyLine)
+    })
     return id
   }
 
@@ -82,20 +60,17 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
     modularFactory.data = modularFactory.data.filter(
       ({ id }) => id !== assemblyLineId,
     )
-    assemblyLineMap.delete(assemblyLineId)
   }
 
-  const getAssemblyLine = (assemblyLineId: Id) => {
-    if (assemblyLineMap.has(assemblyLineId)) {
-      return assemblyLineMap.get(assemblyLineId)!
-    }
-    throw new Error(`流水线不存在: ${assemblyLineId}`)
+  const getAssemblyLine = (assemblyLineId: Id): AssemblyLine => {
+    const modularFactory = data.value.find(({ data }) => {
+      return data.some(({ id }) => id === assemblyLineId)
+    })!
+    return modularFactory.data.find(({ id }) => id === assemblyLineId)!
   }
 
   const deleteAll = () => {
-    data.value.forEach(({ id }) => {
-      deleteModularFactory(id)
-    })
+    data.value = []
   }
 
   return {
