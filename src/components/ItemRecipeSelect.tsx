@@ -9,7 +9,7 @@ import {
 
 import type { Id } from '@/types'
 import { getBuildingById, getItemById, getRecipeById, recipes } from '@/data'
-import { calculatePerMinute } from '@/utils/dataCalculators'
+import { calculateQuantityPerMinute } from '@/utils/dataCalculators'
 
 import BuildingImage from './BuildingImage'
 import ItemImage from './ItemImage'
@@ -69,7 +69,7 @@ const renderLabel: SelectRenderLabel = (option) => {
               renderItem(
                 itemId,
                 quantity,
-                calculatePerMinute(quantity, recipe.productionDuration),
+                calculateQuantityPerMinute(quantity, recipe.productionDuration),
               ),
             )}
           </NFlex>
@@ -90,7 +90,7 @@ const renderLabel: SelectRenderLabel = (option) => {
               renderItem(
                 itemId,
                 quantity,
-                calculatePerMinute(quantity, recipe.productionDuration),
+                calculateQuantityPerMinute(quantity, recipe.productionDuration),
               ),
             )}
           </NFlex>

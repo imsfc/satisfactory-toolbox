@@ -1,10 +1,9 @@
 import { Decimal } from 'decimal.js'
 
-export const calculatePerMinute = (
+export const calculateQuantityPerMinute = (
   quantity: number,
   productionDuration: number,
 ) => {
-  return new Decimal(quantity)
-    .div(new Decimal(productionDuration).div(new Decimal(60)))
-    .toNumber()
+  const cyclesPerMinute = new Decimal(60).div(productionDuration).toNumber()
+  return new Decimal(quantity).mul(cyclesPerMinute).toNumber()
 }
