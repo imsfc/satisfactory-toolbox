@@ -1,461 +1,155 @@
 [
-  {
-    "id": "Iron_Ingot"
-  },
-  {
-    "id": "Iron_Ore"
-  },
-  {
-    "id": "Iron_Plate"
-  },
-  {
-    "id": "Iron_Rod"
-  },
-  {
-    "id": "Reinforced_Iron_Plate"
-  },
-  {
-    "id": "Cable"
-  },
-  {
-    "id": "Wire"
-  },
-  {
-    "id": "Copper_Ingot"
-  },
-  {
-    "id": "Copper_Ore"
-  },
-  {
-    "id": "Concrete"
-  },
-  {
-    "id": "Limestone"
-  },
-  {
-    "id": "Screw"
-  },
-  {
-    "id": "Biomass"
-  },
-  {
-    "id": "Wood"
-  },
-  {
-    "id": "Leaves"
-  },
-  {
-    "id": "Alien_Protein"
-  },
-  {
-    "id": "Hog_Remains"
-  },
-  {
-    "id": "Solid_Biofuel"
-  },
-  {
-    "id": "Rotor"
-  },
-  {
-    "id": "Copper_Sheet"
-  },
-  {
-    "id": "Modular_Frame"
-  },
-  {
-    "id": "Smart_Plating"
-  },
-  {
-    "id": "Power_Shard"
-  },
-  {
-    "id": "Blue_Power_Slug"
-  },
-  {
-    "id": "Mycelia"
-  },
-  {
-    "id": "Steel_Ingot"
-  },
-  {
-    "id": "Coal"
-  },
-  {
-    "id": "Steel_Beam"
-  },
-  {
-    "id": "Steel_Pipe"
-  },
-  {
-    "id": "Versatile_Framework"
-  },
-  {
-    "id": "Stinger_Remains"
-  },
-  {
-    "id": "Silica"
-  },
-  {
-    "id": "Raw_Quartz"
-  },
-  {
-    "id": "Yellow_Power_Slug"
-  },
-  {
-    "id": "Hatcher_Remains"
-  },
-  {
-    "id": "Spitter_Remains"
-  },
-  {
-    "id": "Alien_DNA_Capsule"
-  },
-  {
-    "id": "Black_Powder"
-  },
-  {
-    "id": "Sulfur"
-  },
-  {
-    "id": "Fabric"
-  },
-  {
-    "id": "Iron_Rebar"
-  },
-  {
-    "id": "Gas_Filter"
-  },
-  {
-    "id": "Nobelisk"
-  },
-  {
-    "id": "Quartz_Crystal"
-  },
-  {
-    "id": "Crystal_Oscillator"
-  },
-  {
-    "id": "Shatter_Rebar"
-  },
-  {
-    "id": "Encased_Industrial_Beam"
-  },
-  {
-    "id": "Stator"
-  },
-  {
-    "id": "Motor"
-  },
-  {
-    "id": "Automated_Wiring"
-  },
-  {
-    "id": "Gas_Nobelisk"
-  },
-  {
-    "id": "Purple_Power_Slug"
-  },
-  {
-    "id": "Reanimated_SAM"
-  },
-  {
-    "id": "SAM"
-  },
-  {
-    "id": "Caterium_Ingot"
-  },
-  {
-    "id": "Caterium_Ore"
-  },
-  {
-    "id": "SAM_Fluctuator"
-  },
-  {
-    "id": "Mercer_Sphere"
-  },
-  {
-    "id": "Quickwire"
-  },
-  {
-    "id": "Stun_Rebar"
-  },
-  {
-    "id": "AI_Limiter"
-  },
-  {
-    "id": "Petroleum_Coke"
-  },
-  {
-    "id": "Heavy_Oil_Residue"
-  },
-  {
-    "id": "Circuit_Board"
-  },
-  {
-    "id": "Plastic"
-  },
-  {
-    "id": "Polymer_Resin"
-  },
-  {
-    "id": "Water"
-  },
-  {
-    "id": "Rubber"
-  },
-  {
-    "id": "Fuel"
-  },
-  {
-    "id": "Crude_Oil"
-  },
-  {
-    "id": "High-Speed_Connector"
-  },
-  {
-    "id": "Empty_Canister"
-  },
-  {
-    "id": "Packaged_Water"
-  },
-  {
-    "id": "Packaged_Oil"
-  },
-  {
-    "id": "Packaged_Fuel"
-  },
-  {
-    "id": "Packaged_Heavy_Oil_Residue"
-  },
-  {
-    "id": "Packaged_Liquid_Biofuel"
-  },
-  {
-    "id": "Liquid_Biofuel"
-  },
-  {
-    "id": "Computer"
-  },
-  {
-    "id": "Heavy_Modular_Frame"
-  },
-  {
-    "id": "Modular_Engine"
-  },
-  {
-    "id": "Adaptive_Control_Unit"
-  },
-  {
-    "id": "Smokeless_Powder"
-  },
-  {
-    "id": "Somersloop"
-  },
-  {
-    "id": "Pulse_Nobelisk"
-  },
-  {
-    "id": "Rifle_Ammo"
-  },
-  {
-    "id": "Alclad_Aluminum_Sheet"
-  },
-  {
-    "id": "Iodine-Infused_Filter"
-  },
-  {
-    "id": "Aluminum_Casing"
-  },
-  {
-    "id": "Cluster_Nobelisk"
-  },
-  {
-    "id": "Homing_Rifle_Ammo"
-  },
-  {
-    "id": "Alumina_Solution"
-  },
-  {
-    "id": "Bauxite"
-  },
-  {
-    "id": "Packaged_Alumina_Solution"
-  },
-  {
-    "id": "Aluminum_Scrap"
-  },
-  {
-    "id": "Aluminum_Ingot"
-  },
-  {
-    "id": "Sulfuric_Acid"
-  },
-  {
-    "id": "Packaged_Sulfuric_Acid"
-  },
-  {
-    "id": "Battery"
-  },
-  {
-    "id": "Radio_Control_Unit"
-  },
-  {
-    "id": "Supercomputer"
-  },
-  {
-    "id": "Assembly_Director_System"
-  },
-  {
-    "id": "Empty_Fluid_Tank"
-  },
-  {
-    "id": "Packaged_Nitrogen_Gas"
-  },
-  {
-    "id": "Nitrogen_Gas"
-  },
-  {
-    "id": "Heat_Sink"
-  },
-  {
-    "id": "Cooling_System"
-  },
-  {
-    "id": "Fused_Modular_Frame"
-  },
-  {
-    "id": "Dissolved_Silica"
-  },
-  {
-    "id": "Nitric_Acid"
-  },
-  {
-    "id": "Encased_Uranium_Cell"
-  },
-  {
-    "id": "Uranium"
-  },
-  {
-    "id": "Electromagnetic_Control_Rod"
-  },
-  {
-    "id": "Uranium_Fuel_Rod"
-  },
-  {
-    "id": "Magnetic_Field_Generator"
-  },
-  {
-    "id": "Packaged_Nitric_Acid"
-  },
-  {
-    "id": "Non-Fissile_Uranium"
-  },
-  {
-    "id": "Uranium_Waste"
-  },
-  {
-    "id": "Plutonium_Pellet"
-  },
-  {
-    "id": "Encased_Plutonium_Cell"
-  },
-  {
-    "id": "Plutonium_Fuel_Rod"
-  },
-  {
-    "id": "Turbo_Motor"
-  },
-  {
-    "id": "Copper_Powder"
-  },
-  {
-    "id": "Pressure_Conversion_Cube"
-  },
-  {
-    "id": "Nuclear_Pasta"
-  },
-  {
-    "id": "Thermal_Propulsion_Rocket"
-  },
-  {
-    "id": "Turbofuel"
-  },
-  {
-    "id": "Packaged_Turbofuel"
-  },
-  {
-    "id": "Ficsite_Ingot"
-  },
-  {
-    "id": "Ficsite_Trigon"
-  },
-  {
-    "id": "Diamonds"
-  },
-  {
-    "id": "Time_Crystal"
-  },
-  {
-    "id": "Biochemical_Sculptor"
-  },
-  {
-    "id": "Dark_Matter_Residue"
-  },
-  {
-    "id": "Dark_Matter_Crystal"
-  },
-  {
-    "id": "Excited_Photonic_Matter"
-  },
-  {
-    "id": "Explosive_Rebar"
-  },
-  {
-    "id": "Compacted_Coal"
-  },
-  {
-    "id": "Rocket_Fuel"
-  },
-  {
-    "id": "Packaged_Rocket_Fuel"
-  },
-  {
-    "id": "Ionized_Fuel"
-  },
-  {
-    "id": "Packaged_Ionized_Fuel"
-  },
-  {
-    "id": "Turbo_Rifle_Ammo"
-  },
-  {
-    "id": "Superposition_Oscillator"
-  },
-  {
-    "id": "Neural-Quantum_Processor"
-  },
-  {
-    "id": "AI_Expansion_Server"
-  },
-  {
-    "id": "Nuke_Nobelisk"
-  },
-  {
-    "id": "Ficsonium"
-  },
-  {
-    "id": "Plutonium_Waste"
-  },
-  {
-    "id": "Singularity_Cell"
-  },
-  {
-    "id": "Ficsonium_Fuel_Rod"
-  },
-  {
-    "id": "Ballistic_Warp_Drive"
-  },
-  {
-    "id": "Alien_Power_Matrix"
-  }
+  { "id": 1, "key": "Iron_Ingot" },
+  { "id": 2, "key": "Iron_Ore" },
+  { "id": 3, "key": "Iron_Plate" },
+  { "id": 4, "key": "Iron_Rod" },
+  { "id": 5, "key": "Reinforced_Iron_Plate" },
+  { "id": 6, "key": "Cable" },
+  { "id": 7, "key": "Wire" },
+  { "id": 8, "key": "Copper_Ingot" },
+  { "id": 9, "key": "Copper_Ore" },
+  { "id": 10, "key": "Concrete" },
+  { "id": 11, "key": "Limestone" },
+  { "id": 12, "key": "Screw" },
+  { "id": 13, "key": "Biomass" },
+  { "id": 14, "key": "Wood" },
+  { "id": 15, "key": "Leaves" },
+  { "id": 16, "key": "Alien_Protein" },
+  { "id": 17, "key": "Hog_Remains" },
+  { "id": 18, "key": "Solid_Biofuel" },
+  { "id": 19, "key": "Rotor" },
+  { "id": 20, "key": "Copper_Sheet" },
+  { "id": 21, "key": "Modular_Frame" },
+  { "id": 22, "key": "Smart_Plating" },
+  { "id": 23, "key": "Power_Shard" },
+  { "id": 24, "key": "Blue_Power_Slug" },
+  { "id": 25, "key": "Mycelia" },
+  { "id": 26, "key": "Steel_Ingot" },
+  { "id": 27, "key": "Coal" },
+  { "id": 28, "key": "Steel_Beam" },
+  { "id": 29, "key": "Steel_Pipe" },
+  { "id": 30, "key": "Versatile_Framework" },
+  { "id": 31, "key": "Stinger_Remains" },
+  { "id": 32, "key": "Silica" },
+  { "id": 33, "key": "Raw_Quartz" },
+  { "id": 34, "key": "Yellow_Power_Slug" },
+  { "id": 35, "key": "Hatcher_Remains" },
+  { "id": 36, "key": "Spitter_Remains" },
+  { "id": 37, "key": "Alien_DNA_Capsule" },
+  { "id": 38, "key": "Black_Powder" },
+  { "id": 39, "key": "Sulfur" },
+  { "id": 40, "key": "Fabric" },
+  { "id": 41, "key": "Iron_Rebar" },
+  { "id": 42, "key": "Gas_Filter" },
+  { "id": 43, "key": "Nobelisk" },
+  { "id": 44, "key": "Quartz_Crystal" },
+  { "id": 45, "key": "Crystal_Oscillator" },
+  { "id": 46, "key": "Shatter_Rebar" },
+  { "id": 47, "key": "Encased_Industrial_Beam" },
+  { "id": 48, "key": "Stator" },
+  { "id": 49, "key": "Motor" },
+  { "id": 50, "key": "Automated_Wiring" },
+  { "id": 51, "key": "Gas_Nobelisk" },
+  { "id": 52, "key": "Purple_Power_Slug" },
+  { "id": 53, "key": "Reanimated_SAM" },
+  { "id": 54, "key": "SAM" },
+  { "id": 55, "key": "Caterium_Ingot" },
+  { "id": 56, "key": "Caterium_Ore" },
+  { "id": 57, "key": "SAM_Fluctuator" },
+  { "id": 58, "key": "Mercer_Sphere" },
+  { "id": 59, "key": "Quickwire" },
+  { "id": 60, "key": "Stun_Rebar" },
+  { "id": 61, "key": "AI_Limiter" },
+  { "id": 62, "key": "Petroleum_Coke" },
+  { "id": 63, "key": "Heavy_Oil_Residue" },
+  { "id": 64, "key": "Circuit_Board" },
+  { "id": 65, "key": "Plastic" },
+  { "id": 66, "key": "Polymer_Resin" },
+  { "id": 67, "key": "Water" },
+  { "id": 68, "key": "Rubber" },
+  { "id": 69, "key": "Fuel" },
+  { "id": 70, "key": "Crude_Oil" },
+  { "id": 71, "key": "High-Speed_Connector" },
+  { "id": 72, "key": "Empty_Canister" },
+  { "id": 73, "key": "Packaged_Water" },
+  { "id": 74, "key": "Packaged_Oil" },
+  { "id": 75, "key": "Packaged_Fuel" },
+  { "id": 76, "key": "Packaged_Heavy_Oil_Residue" },
+  { "id": 77, "key": "Packaged_Liquid_Biofuel" },
+  { "id": 78, "key": "Liquid_Biofuel" },
+  { "id": 79, "key": "Computer" },
+  { "id": 80, "key": "Heavy_Modular_Frame" },
+  { "id": 81, "key": "Modular_Engine" },
+  { "id": 82, "key": "Adaptive_Control_Unit" },
+  { "id": 83, "key": "Smokeless_Powder" },
+  { "id": 84, "key": "Somersloop" },
+  { "id": 85, "key": "Pulse_Nobelisk" },
+  { "id": 86, "key": "Rifle_Ammo" },
+  { "id": 87, "key": "Alclad_Aluminum_Sheet" },
+  { "id": 88, "key": "Iodine-Infused_Filter" },
+  { "id": 89, "key": "Aluminum_Casing" },
+  { "id": 90, "key": "Cluster_Nobelisk" },
+  { "id": 91, "key": "Homing_Rifle_Ammo" },
+  { "id": 92, "key": "Alumina_Solution" },
+  { "id": 93, "key": "Bauxite" },
+  { "id": 94, "key": "Packaged_Alumina_Solution" },
+  { "id": 95, "key": "Aluminum_Scrap" },
+  { "id": 96, "key": "Aluminum_Ingot" },
+  { "id": 97, "key": "Sulfuric_Acid" },
+  { "id": 98, "key": "Packaged_Sulfuric_Acid" },
+  { "id": 99, "key": "Battery" },
+  { "id": 100, "key": "Radio_Control_Unit" },
+  { "id": 101, "key": "Supercomputer" },
+  { "id": 102, "key": "Assembly_Director_System" },
+  { "id": 103, "key": "Empty_Fluid_Tank" },
+  { "id": 104, "key": "Packaged_Nitrogen_Gas" },
+  { "id": 105, "key": "Nitrogen_Gas" },
+  { "id": 106, "key": "Heat_Sink" },
+  { "id": 107, "key": "Cooling_System" },
+  { "id": 108, "key": "Fused_Modular_Frame" },
+  { "id": 109, "key": "Dissolved_Silica" },
+  { "id": 110, "key": "Nitric_Acid" },
+  { "id": 111, "key": "Encased_Uranium_Cell" },
+  { "id": 112, "key": "Uranium" },
+  { "id": 113, "key": "Electromagnetic_Control_Rod" },
+  { "id": 114, "key": "Uranium_Fuel_Rod" },
+  { "id": 115, "key": "Magnetic_Field_Generator" },
+  { "id": 116, "key": "Packaged_Nitric_Acid" },
+  { "id": 117, "key": "Non-Fissile_Uranium" },
+  { "id": 118, "key": "Uranium_Waste" },
+  { "id": 119, "key": "Plutonium_Pellet" },
+  { "id": 120, "key": "Encased_Plutonium_Cell" },
+  { "id": 121, "key": "Plutonium_Fuel_Rod" },
+  { "id": 122, "key": "Turbo_Motor" },
+  { "id": 123, "key": "Copper_Powder" },
+  { "id": 124, "key": "Pressure_Conversion_Cube" },
+  { "id": 125, "key": "Nuclear_Pasta" },
+  { "id": 126, "key": "Thermal_Propulsion_Rocket" },
+  { "id": 127, "key": "Turbofuel" },
+  { "id": 128, "key": "Packaged_Turbofuel" },
+  { "id": 129, "key": "Ficsite_Ingot" },
+  { "id": 130, "key": "Ficsite_Trigon" },
+  { "id": 131, "key": "Diamonds" },
+  { "id": 132, "key": "Time_Crystal" },
+  { "id": 133, "key": "Biochemical_Sculptor" },
+  { "id": 134, "key": "Dark_Matter_Residue" },
+  { "id": 135, "key": "Dark_Matter_Crystal" },
+  { "id": 136, "key": "Excited_Photonic_Matter" },
+  { "id": 137, "key": "Explosive_Rebar" },
+  { "id": 138, "key": "Compacted_Coal" },
+  { "id": 139, "key": "Rocket_Fuel" },
+  { "id": 140, "key": "Packaged_Rocket_Fuel" },
+  { "id": 141, "key": "Ionized_Fuel" },
+  { "id": 142, "key": "Packaged_Ionized_Fuel" },
+  { "id": 143, "key": "Turbo_Rifle_Ammo" },
+  { "id": 144, "key": "Superposition_Oscillator" },
+  { "id": 145, "key": "Neural-Quantum_Processor" },
+  { "id": 146, "key": "AI_Expansion_Server" },
+  { "id": 147, "key": "Nuke_Nobelisk" },
+  { "id": 148, "key": "Ficsonium" },
+  { "id": 149, "key": "Plutonium_Waste" },
+  { "id": 150, "key": "Singularity_Cell" },
+  { "id": 151, "key": "Ficsonium_Fuel_Rod" },
+  { "id": 152, "key": "Ballistic_Warp_Drive" },
+  { "id": 153, "key": "Alien_Power_Matrix" }
 ]

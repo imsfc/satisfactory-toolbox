@@ -1,7 +1,7 @@
 import { computed, defineComponent } from 'vue'
 import { RouterView } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { useColorMode } from '@vueuse/core'
+import { syncRef, useColorMode, useLocalStorage } from '@vueuse/core'
 import {
   darkTheme,
   dateZhCN,
@@ -13,6 +13,9 @@ import {
 export default defineComponent({
   setup() {
     const { locale } = useI18n()
+
+    const _locale = useLocalStorage('locale', locale.value)
+    syncRef(locale, _locale)
 
     const colorMode = useColorMode()
 

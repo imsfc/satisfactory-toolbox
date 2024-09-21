@@ -1,6 +1,4 @@
-import { Decimal } from 'decimal.js'
-
-import type { Building, Id, Item, PowerUsage, Recipe } from '@/types'
+import type { Building, Id, Item, Recipe } from '@/types'
 
 import buildingsJson from './buildings.json'
 import itemsJson from './items.json'
@@ -8,41 +6,17 @@ import recipesJson from './recipes.json'
 
 export const buildings: Building[] = buildingsJson as Building[]
 export const items: Item[] = itemsJson as Item[]
-export const recipes = recipesJson.map(
-  ({
-    id,
-    inputs,
-    outputs,
-    producedIn,
-    productionDuration,
-    powerUsage,
-  }): Recipe => {
-    return {
-      id,
-      inputs: inputs.map(({ itemId, quantity }) => {
-        return {
-          itemId,
-          quantity,
-          quantityPerMinute: new Decimal(quantity)
-            .div(new Decimal(productionDuration).div(60))
-            .toNumber(),
-        }
-      }),
-      outputs: outputs.map(({ itemId, quantity }) => {
-        return {
-          itemId,
-          quantity,
-          quantityPerMinute: new Decimal(quantity)
-            .div(new Decimal(productionDuration).div(60))
-            .toNumber(),
-        }
-      }),
-      producedIn,
-      productionDuration,
-      powerUsage: powerUsage as PowerUsage | undefined,
-    }
-  },
-)
+export const recipes: Recipe[] = recipesJson as Recipe[]
+
+// ID 映射表
+const buildingMap = new Map<Id, Building>()
+const itemMap = new Map<Id, Item>()
+const recipeMap = new Map<Id, Recipe>()
+
+// 在导入数据后，将数据放入 Map 中
+buildings.forEach((building) => buildingMap.set(building.id, building))
+items.forEach((item) => itemMap.set(item.id, item))
+recipes.forEach((recipe) => recipeMap.set(recipe.id, recipe))
 
 /**
  * 获取建筑
@@ -51,11 +25,10 @@ export const recipes = recipesJson.map(
  * @throws {Error} 建筑不存在
  */
 export function getBuildingById(buildingId: Id): Building {
-  const building = buildings.find(({ id }) => id === buildingId)
-  if (!building) {
-    throw new Error(`建筑不存在: ${buildingId}`)
+  if (buildingMap.has(buildingId)) {
+    return buildingMap.get(buildingId)!
   }
-  return building
+  throw new Error(`建筑不存在: ${buildingId}`)
 }
 
 /**
@@ -65,11 +38,10 @@ export function getBuildingById(buildingId: Id): Building {
  * @throws {Error} 物品不存在
  */
 export function getItemById(itemId: Id): Item {
-  const item = items.find(({ id }) => id === itemId)
-  if (!item) {
-    throw new Error(`物品不存在: ${itemId}`)
+  if (itemMap.has(itemId)) {
+    return itemMap.get(itemId)!
   }
-  return item
+  throw new Error(`物品不存在: ${itemId}`)
 }
 
 /**
@@ -79,9 +51,8 @@ export function getItemById(itemId: Id): Item {
  * @throws {Error} 配方不存在
  */
 export function getRecipeById(recipeId: Id): Recipe {
-  const recipe = recipes.find(({ id }) => id === recipeId)
-  if (!recipe) {
-    throw new Error(`配方不存在: ${recipeId}`)
+  if (recipeMap.has(recipeId)) {
+    return recipeMap.get(recipeId)!
   }
-  return recipe
+  throw new Error(`配方不存在: ${recipeId}`)
 }

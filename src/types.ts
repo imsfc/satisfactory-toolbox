@@ -1,23 +1,16 @@
-export type Id = string
+export type Id = number
 
 export type PowerUsage = number | [number, number]
 
-export interface AssemblyLine {
+export interface Building {
   id: Id
-  outputItemId: Id | null
-  outputsPerMinute: number | null
-  recipeId: Id | null
-}
-
-export interface ModuleFactory {
-  id: Id
-  name: string
-  remark: string
-  data: AssemblyLine[]
+  key: string
+  powerUsage: PowerUsage | 'variable'
 }
 
 export interface Item {
   id: Id
+  key: string
 }
 
 export interface ItemQuantity {
@@ -25,20 +18,26 @@ export interface ItemQuantity {
   quantity: number
 }
 
-export interface RecipeItemQuantity extends ItemQuantity {
-  quantityPerMinute: number
-}
-
 export interface Recipe {
   id: Id
-  inputs: RecipeItemQuantity[]
-  outputs: RecipeItemQuantity[]
-  producedIn: Id
+  key: string
+  inputs: ItemQuantity[]
+  outputs: ItemQuantity[]
+  producedInId: Id
   productionDuration: number
-  powerUsage?: PowerUsage
+  powerUsage?: PowerUsage // producedIn.powerUsage === 'variable' 时生效
 }
 
-export interface Building {
+export interface ModularFactory {
   id: Id
-  powerUsage: PowerUsage | 'variable'
+  name: string
+  remark: string
+  data: AssemblyLine[]
+}
+
+export interface AssemblyLine {
+  id: Id
+  targetItemId: Id | null
+  targetItemSpeed: number | null
+  recipeId: Id | null
 }

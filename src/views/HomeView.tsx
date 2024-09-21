@@ -8,24 +8,19 @@ import {
   type DataTableColumns,
 } from 'naive-ui'
 
-import ModuleFactoryDrawer, {
-  type Exposed as ModuleFactoryDrawerExposed,
-} from '@/components/ModuleFactoryDrawer'
-import type { Id, ModuleFactory } from '@/types'
-import {
-  moduleFactoryList,
-  newModuleFactory,
-  removeModuleFactory,
-  removeModuleFactoryAll,
-} from '@/store'
+import { useModularFactoryList } from '@/stores/modularFactoryList'
+import ModularFactoryDrawer, {
+  type Exposed as ModularFactoryDrawerExposed,
+} from '@/components/ModularFactoryDrawer'
+import type { Id, ModularFactory } from '@/types'
 
 function createColumns({
-  open,
-  remove,
+  onEdit,
+  onDelete,
 }: {
-  open: (id: Id) => void
-  remove: (id: Id) => void
-}): DataTableColumns<ModuleFactory> {
+  onEdit: (id: Id) => void
+  onDelete: (id: Id) => void
+}): DataTableColumns<ModularFactory> {
   const { t } = useI18n()
 
   return [
@@ -59,14 +54,14 @@ function createColumns({
             <NButton
               size="small"
               onClick={() => {
-                open(row.id)
+                onEdit(row.id)
               }}
             >
               {t('config')}
             </NButton>
             <NPopconfirm
               onPositiveClick={() => {
-                remove(row.id)
+                onDelete(row.id)
               }}
             >
               {{
@@ -89,9 +84,11 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
 
-    const moduleFactoryInstance = useTemplateRef<
-      InstanceType<typeof ModuleFactoryDrawer> & ModuleFactoryDrawerExposed
-    >('moduleFactoryInstance')
+    const modularFactoryList = useModularFactoryList()
+
+    const modularFactoryInstance = useTemplateRef<
+      InstanceType<typeof ModularFactoryDrawer> & ModularFactoryDrawerExposed
+    >('modularFactoryInstance')
 
     return () => (
       <>
@@ -101,7 +98,9 @@ export default defineComponent({
               <NButton
                 type="primary"
                 onClick={() => {
-                  moduleFactoryInstance.value!.open(newModuleFactory())
+                  modularFactoryInstance.value!.open(
+                    modularFactoryList.newModularFactory(),
+                  )
                 }}
               >
                 {t('newFactory')}
@@ -118,7 +117,7 @@ export default defineComponent({
               <NPopconfirm
                 placement="bottom"
                 onPositiveClick={() => {
-                  removeModuleFactoryAll()
+                  modularFactoryList.deleteAll()
                 }}
               >
                 {{
@@ -132,17 +131,17 @@ export default defineComponent({
           </NFlex>
           <NDataTable
             columns={createColumns({
-              open: (id) => {
-                moduleFactoryInstance.value!.open(id)
+              onEdit: (id) => {
+                modularFactoryInstance.value!.open(id)
               },
-              remove: (id) => {
-                removeModuleFactory(id)
+              onDelete: (id) => {
+                modularFactoryList.deleteModularFactory(id)
               },
             })}
-            data={moduleFactoryList.value}
+            data={modularFactoryList.data}
           />
         </NFlex>
-        <ModuleFactoryDrawer ref="moduleFactoryInstance" />
+        <ModularFactoryDrawer ref="modularFactoryInstance" />
       </>
     )
   },

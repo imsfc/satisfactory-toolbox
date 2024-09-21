@@ -1,46 +1,13 @@
 [
-  {
-    "id": "Constructor",
-    "powerUsage": 4
-  },
-  {
-    "id": "Assembler",
-    "powerUsage": 15
-  },
-  {
-    "id": "Manufacturer",
-    "powerUsage": 55
-  },
-  {
-    "id": "Packager",
-    "powerUsage": 10
-  },
-  {
-    "id": "Refinery",
-    "powerUsage": 30
-  },
-  {
-    "id": "Blender",
-    "powerUsage": 75
-  },
-  {
-    "id": "Particle_Accelerator",
-    "powerUsage": "variable"
-  },
-  {
-    "id": "Converter",
-    "powerUsage": "variable"
-  },
-  {
-    "id": "Quantum_Encoder",
-    "powerUsage": "variable"
-  },
-  {
-    "id": "Smelter",
-    "powerUsage": 4
-  },
-  {
-    "id": "Foundry",
-    "powerUsage": 16
-  }
+  { "id": 1, "key": "Constructor", "powerUsage": 4 },
+  { "id": 2, "key": "Assembler", "powerUsage": 15 },
+  { "id": 3, "key": "Manufacturer", "powerUsage": 55 },
+  { "id": 4, "key": "Packager", "powerUsage": 10 },
+  { "id": 5, "key": "Refinery", "powerUsage": 30 },
+  { "id": 6, "key": "Blender", "powerUsage": 75 },
+  { "id": 7, "key": "Particle_Accelerator", "powerUsage": "variable" },
+  { "id": 8, "key": "Converter", "powerUsage": "variable" },
+  { "id": 9, "key": "Quantum_Encoder", "powerUsage": "variable" },
+  { "id": 10, "key": "Smelter", "powerUsage": 4 },
+  { "id": 11, "key": "Foundry", "powerUsage": 16 }
 ]

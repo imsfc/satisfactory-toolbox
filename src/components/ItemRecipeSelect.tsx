@@ -8,7 +8,8 @@ import {
 } from 'naive-ui'
 
 import type { Id } from '@/types'
-import { getRecipeById, recipes } from '@/data'
+import { getBuildingById, getItemById, getRecipeById, recipes } from '@/data'
+import { calculatePerMinute } from '@/utils/dataCalculators'
 
 import BuildingImage from './BuildingImage'
 import ItemImage from './ItemImage'
@@ -16,10 +17,12 @@ import ItemImage from './ItemImage'
 const renderItem = (itemId: Id, quantity: number, perMinute: number) => {
   const { t } = useI18n()
 
+  const item = getItemById(itemId)
+
   return (
     <NFlex size={4} align="center" vertical>
       <ItemImage
-        name={itemId}
+        name={item.key}
         sizes={[32, 64, 96]}
         formats={['avif', 'webp', 'png']}
       />
@@ -29,7 +32,7 @@ const renderItem = (itemId: Id, quantity: number, perMinute: number) => {
         vertical
       >
         <div class="grow line-clamp-2">
-          {quantity}×{t(`items.${itemId}`)}
+          {quantity}×{t(`items.${item.key}`)}
         </div>
         <div class="opacity-75 truncate">
           {perMinute}
@@ -44,25 +47,30 @@ const renderLabel: SelectRenderLabel = (option) => {
   const { t } = useI18n()
 
   const recipe = getRecipeById(option.value as Id)
+  const building = getBuildingById(recipe.producedInId)
 
   return (
     <NFlex class="py-2" align="center">
       <NFlex vertical>
         <BuildingImage
-          name={recipe.producedIn}
+          name={building.key}
           sizes={[48, 96, 144]}
           formats={['avif', 'webp', 'png']}
         />
         <div class="w-12 text-xs text-center whitespace-normal">
-          {t(`buildings.${recipe.producedIn}`)}
+          {t(`buildings.${building.key}`)}
         </div>
       </NFlex>
       <NFlex size={8} vertical>
         <div class="text-sm">{option.label}</div>
         <NFlex>
           <NFlex>
-            {recipe.inputs.map(({ itemId, quantity, quantityPerMinute }) =>
-              renderItem(itemId, quantity, quantityPerMinute),
+            {recipe.inputs.map(({ itemId, quantity }) =>
+              renderItem(
+                itemId,
+                quantity,
+                calculatePerMinute(quantity, recipe.productionDuration),
+              ),
             )}
           </NFlex>
           <NFlex
@@ -78,8 +86,12 @@ const renderLabel: SelectRenderLabel = (option) => {
             </div>
           </NFlex>
           <NFlex>
-            {recipe.outputs.map(({ itemId, quantity, quantityPerMinute }) =>
-              renderItem(itemId, quantity, quantityPerMinute),
+            {recipe.outputs.map(({ itemId, quantity }) =>
+              renderItem(
+                itemId,
+                quantity,
+                calculatePerMinute(quantity, recipe.productionDuration),
+              ),
             )}
           </NFlex>
         </NFlex>
@@ -92,14 +104,11 @@ const renderTag: SelectRenderTag = ({ option }) => option.label as string
 
 export default defineComponent({
   props: {
-    value: String as PropType<Id | null>,
-    itemId: String as PropType<Id | null>,
+    itemId: Number as PropType<Id | null>,
+    value: Number as PropType<Id | null>,
+    onUpdateValue: Function as PropType<(value: Id | null) => void>,
   },
-  emits: {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    'update:value': (value: Id | null) => true,
-  },
-  setup(props, { emit }) {
+  setup(props) {
     const { t } = useI18n()
 
     const options = computed(() => {
@@ -108,9 +117,9 @@ export default defineComponent({
           .filter(({ outputs }) => {
             return outputs.some(({ itemId }) => itemId === props.itemId)
           })
-          .map(({ id }) => {
+          .map(({ id, key }) => {
             return {
-              label: t(`recipes.${id}`),
+              label: t(`recipes.${key}`),
               value: id,
             }
           })
@@ -121,18 +130,16 @@ export default defineComponent({
 
     watch(options, (options) => {
       if (options.length === 0) {
-        emit('update:value', null)
+        props.onUpdateValue?.(null)
       } else {
-        emit('update:value', options[0].value)
+        props.onUpdateValue?.(options[0].value)
       }
     })
 
     return () => (
       <NSelect
         value={props.value}
-        onUpdateValue={(newValue) => {
-          emit('update:value', newValue)
-        }}
+        onUpdateValue={props.onUpdateValue}
         options={options.value}
         consistent-menu-width={false}
         renderLabel={renderLabel}

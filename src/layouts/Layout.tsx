@@ -1,4 +1,4 @@
-import { defineComponent, watchEffect } from 'vue'
+import { defineComponent } from 'vue'
 import { RouterView } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useColorMode } from '@vueuse/core'
@@ -15,10 +15,6 @@ import logo from '@/assets/logo.png'
 export default defineComponent({
   setup() {
     const { t, locale } = useI18n()
-
-    watchEffect(() => {
-      localStorage.setItem('locale', locale.value)
-    })
 
     const colorMode = useColorMode()
 
