@@ -11,6 +11,7 @@ export interface Building {
 export interface Item {
   id: Id
   key: string
+  type: 'solid' | 'fluid'
 }
 
 export interface ItemQuantityPerCycle {

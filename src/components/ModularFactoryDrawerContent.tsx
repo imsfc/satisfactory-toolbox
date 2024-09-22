@@ -49,7 +49,10 @@ const renderItemQuantityPerMinute = ({
         <div class="text-xs leading-4 opacity-75 truncate">
           <I18nT keypath="unitsPerMinute">
             <b>{quantityPerMinuteCeil2}</b>
-            {t('itemUnitName', quantityPerMinuteCeil2)}
+            {t(
+              item.type === 'solid' ? 'itemUnitName' : 'fluidUnitName',
+              quantityPerMinuteCeil2,
+            )}
           </I18nT>
         </div>
       </NFlex>
