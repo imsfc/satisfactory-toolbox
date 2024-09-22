@@ -7,7 +7,9 @@ import type {
   AssemblyLine,
   AssemblyLineComputed,
   Id,
+  ItemQuantityPerMinute,
   ModularFactory,
+  ModularFactoryComputed,
 } from '@/types'
 import { getBuildingById, getRecipeById } from '@/data'
 import {
@@ -132,6 +134,75 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
     return _data
   })
 
+  const modularFactoryComputedRecord = computed(() => {
+    const _data: Record<Id, ModularFactoryComputed | null> = {}
+    data.value.forEach(({ id, data }) => {
+      const inputAndOutputs: {
+        itemId: Id
+        input: number
+        output: number
+      }[] = []
+      const inputAndOutputsAdd = (
+        type: 'input' | 'output',
+        itemId: Id,
+        quantityPerMinute: number,
+      ) => {
+        let inputAndOutput = inputAndOutputs.find(
+          (item) => item.itemId === itemId,
+        )
+        if (!inputAndOutput) {
+          inputAndOutput = {
+            itemId,
+            input: 0,
+            output: 0,
+          }
+          inputAndOutputs.push(inputAndOutput)
+        }
+        inputAndOutput[type] += quantityPerMinute
+      }
+      data.forEach(({ id }) => {
+        const assemblyLineComputed = assemblyLineComputedRecord.value[id]
+        if (!assemblyLineComputed) {
+          return
+        }
+        assemblyLineComputed.inputs.forEach(({ itemId, quantityPerMinute }) => {
+          inputAndOutputsAdd('input', itemId, quantityPerMinute)
+        })
+        assemblyLineComputed.outputs.forEach(
+          ({ itemId, quantityPerMinute }) => {
+            inputAndOutputsAdd('output', itemId, quantityPerMinute)
+          },
+        )
+      })
+      const inputAndOutputsAbs = inputAndOutputs.map(
+        ({ itemId, input, output }): ItemQuantityPerMinute => {
+          return {
+            itemId,
+            quantityPerMinute: new Decimal(output).sub(input).toNumber(),
+          }
+        },
+      )
+      _data[id] = {
+        modularFactoryId: id,
+        inputs: inputAndOutputsAbs
+          .filter(({ quantityPerMinute }) => quantityPerMinute < 0)
+          .map(({ itemId, quantityPerMinute }) => {
+            return {
+              itemId,
+              quantityPerMinute: new Decimal(quantityPerMinute)
+                .abs()
+                .toNumber(),
+            }
+          })
+          .sort((a, b) => b.quantityPerMinute - a.quantityPerMinute),
+        outputs: inputAndOutputsAbs
+          .filter(({ quantityPerMinute }) => quantityPerMinute > 0.0001)
+          .sort((a, b) => b.quantityPerMinute - a.quantityPerMinute),
+      }
+    })
+    return _data
+  })
+
   // 自增ID
   let currentId: Id = Math.max(
     0,
@@ -196,6 +267,7 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
   return {
     data,
     assemblyLineComputedRecord,
+    modularFactoryComputedRecord,
     newModularFactory,
     deleteModularFactory,
     getModularFactory,

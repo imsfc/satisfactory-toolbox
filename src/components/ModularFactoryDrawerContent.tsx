@@ -306,8 +306,14 @@ export default defineComponent({
       return modularFactoryList.getModularFactory(props.modularFactoryId)
     })
 
+    const modularFactoryComputed = computed(() => {
+      return modularFactoryList.modularFactoryComputedRecord[
+        props.modularFactoryId
+      ]
+    })
+
     return () => (
-      <NFlex size="large" vertical align="start">
+      <NFlex size="large" vertical>
         <NForm labelPlacement="left" labelWidth="auto" inline>
           <NFormItem label={t('name')} path="name">
             <NInput
@@ -343,6 +349,7 @@ export default defineComponent({
         </NFlex>
 
         <NDataTable
+          rowKey={({ id }) => id}
           columns={createColumns({
             onDelete: (id) => {
               modularFactoryList.deleteAssemblyLine(modularFactory.value.id, id)
@@ -350,6 +357,21 @@ export default defineComponent({
           })}
           data={modularFactory.value.data}
         />
+
+        <NFlex size="large" align="start" wrap={false}>
+          <NFlex class="flex-[1_1_50%]">
+            <div class="w-full">{t('totalInputs')}</div>
+            {modularFactoryComputed.value?.inputs.map(
+              renderItemQuantityPerMinute,
+            )}
+          </NFlex>
+          <NFlex class="flex-[1_1_50%]">
+            <div class="w-full">{t('totalOutputs')}</div>
+            {modularFactoryComputed.value?.outputs.map(
+              renderItemQuantityPerMinute,
+            )}
+          </NFlex>
+        </NFlex>
       </NFlex>
     )
   },

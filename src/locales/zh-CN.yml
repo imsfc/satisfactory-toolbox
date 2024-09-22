@@ -18,6 +18,8 @@ remark: 备注
 power: 功率
 inputs: 输入
 outputs: 输出
+totalInputs: 总输入
+totalOutputs: 总输出
 action: 操作
 
 delete: 删除

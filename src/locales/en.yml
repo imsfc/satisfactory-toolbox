@@ -18,6 +18,8 @@ remark: Remark
 power: Power
 inputs: Inputs
 outputs: Outputs
+totalInputs: Total Inputs
+totalOutputs: Total Outputs
 action: Action
 
 delete: Delete

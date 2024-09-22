@@ -41,6 +41,12 @@ export interface ModularFactory {
   data: AssemblyLine[]
 }
 
+export interface ModularFactoryComputed {
+  modularFactoryId: Id
+  inputs: ItemQuantityPerMinute[]
+  outputs: ItemQuantityPerMinute[]
+}
+
 export interface AssemblyLine {
   id: Id
   targetItemId: Id | null
