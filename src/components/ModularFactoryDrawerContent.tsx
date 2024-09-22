@@ -152,7 +152,7 @@ function createColumns({
       width: 140,
       render: (row) => {
         const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedList[row.id]
+          modularFactoryList.assemblyLineComputedRecord[row.id]
         if (!assemblyLineComputed) {
           return null
         }
@@ -198,7 +198,7 @@ function createColumns({
       width: 120,
       render: (row) => {
         const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedList[row.id]
+          modularFactoryList.assemblyLineComputedRecord[row.id]
         if (!assemblyLineComputed?.averageTotalPowerUsage) {
           return null
         }
@@ -233,7 +233,7 @@ function createColumns({
       width: 160,
       render: (row) => {
         const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedList[row.id]
+          modularFactoryList.assemblyLineComputedRecord[row.id]
         if (!assemblyLineComputed) {
           return null
         }
@@ -251,7 +251,7 @@ function createColumns({
       width: 160,
       render: (row) => {
         const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedList[row.id]
+          modularFactoryList.assemblyLineComputedRecord[row.id]
         if (!assemblyLineComputed) {
           return null
         }

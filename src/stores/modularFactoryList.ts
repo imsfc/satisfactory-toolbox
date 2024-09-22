@@ -25,8 +25,8 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
     direction: 'ltr',
   })
 
-  const assemblyLineComputedList = computed(() => {
-    const assemblyLineComputed: Record<Id, AssemblyLineComputed | null> = {}
+  const assemblyLineComputedRecord = computed(() => {
+    const _data: Record<Id, AssemblyLineComputed | null> = {}
     data.value.forEach(({ data }) => {
       data.forEach(
         ({ id, targetItemId, targetItemSpeed, recipeId, clockSpeed }) => {
@@ -34,10 +34,19 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
             const recipe = getRecipeById(recipeId)
             const building = getBuildingById(recipe.producedInId)
 
-            // 目标物品每周期生产数量
-            const targetItemQuantityPerCycle = recipe.outputs.find(
+            // 配方输出的目标物品对象
+            const targetOutputItem = recipe.outputs.find(
               ({ itemId }) => itemId === targetItemId,
-            )!.quantityPerCycle
+            )
+
+            // 目标物品 和 配方 选择不匹配
+            if (!targetOutputItem) {
+              _data[id] = null
+              return
+            }
+
+            // 目标物品每周期生产数量
+            const targetItemQuantityPerCycle = targetOutputItem.quantityPerCycle
 
             // 目标物品 100% 频率每分钟生产数量
             const targetItemQuantityPerMinutePerBuilding =
@@ -105,7 +114,7 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
               },
             )
 
-            assemblyLineComputed[id] = {
+            _data[id] = {
               buildingId: building.id,
               buildingQuantity,
               powerUsage,
@@ -115,12 +124,12 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
               outputs,
             }
           } else {
-            assemblyLineComputed[id] = null
+            _data[id] = null
           }
         },
       )
     })
-    return assemblyLineComputed
+    return _data
   })
 
   // 自增ID
@@ -186,7 +195,7 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
 
   return {
     data,
-    assemblyLineComputedList,
+    assemblyLineComputedRecord,
     newModularFactory,
     deleteModularFactory,
     getModularFactory,
