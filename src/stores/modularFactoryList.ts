@@ -1,6 +1,7 @@
 import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 import { syncRef, useLocalStorage } from '@vueuse/core'
+import Decimal from 'decimal.js'
 
 import type {
   AssemblyLine,
@@ -27,73 +28,97 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
   const assemblyLineComputedList = computed(() => {
     const assemblyLineComputed: Record<Id, AssemblyLineComputed | null> = {}
     data.value.forEach(({ data }) => {
-      data.forEach(({ id, targetItemId, targetItemSpeed, recipeId }) => {
-        if (recipeId && targetItemId && targetItemSpeed) {
-          const recipe = getRecipeById(recipeId)
-          const building = getBuildingById(recipe.producedInId)
+      data.forEach(
+        ({ id, targetItemId, targetItemSpeed, recipeId, clockSpeed }) => {
+          if (recipeId && targetItemId && targetItemSpeed && clockSpeed) {
+            const recipe = getRecipeById(recipeId)
+            const building = getBuildingById(recipe.producedInId)
 
-          // 100%频率下目标物品每次生产数量
-          const targetItemQuantityPerCycle = recipe.outputs.find(
-            ({ itemId }) => itemId === targetItemId,
-          )!.quantityPerCycle
+            // 目标物品每周期生产数量
+            const targetItemQuantityPerCycle = recipe.outputs.find(
+              ({ itemId }) => itemId === targetItemId,
+            )!.quantityPerCycle
 
-          // 100%频率下单个建筑每秒产出的目标物品数量
-          const targetItemQuantityPerMinutePerBuilding =
-            calculateQuantityPerMinute(
-              targetItemQuantityPerCycle,
-              recipe.productionDuration,
+            // 目标物品 100% 频率每分钟生产数量
+            const targetItemQuantityPerMinutePerBuilding =
+              calculateQuantityPerMinute(
+                targetItemQuantityPerCycle,
+                recipe.productionDuration,
+              )
+
+            // 达到目标产量需要的总频率
+            const totalClockSpeed = new Decimal(targetItemSpeed)
+              .div(targetItemQuantityPerMinutePerBuilding)
+              .toNumber()
+
+            // 需要的建筑数量
+            const buildingQuantity = new Decimal(targetItemSpeed)
+              .div(
+                new Decimal(targetItemQuantityPerMinutePerBuilding).mul(
+                  clockSpeed,
+                ),
+              )
+              .toNumber()
+
+            // 目标物品 100% 频率的功率
+            const powerUsage =
+              building.powerUsage === 'variable'
+                ? recipe.powerUsage
+                : building.powerUsage
+
+            // 总功率
+            const totalPowerUsage =
+              powerUsage &&
+              calculateTotalPowerUsage(powerUsage, buildingQuantity, clockSpeed)
+            const averageTotalPowerUsage =
+              totalPowerUsage && calculateAveragePowerUsage(totalPowerUsage)
+
+            // 流水线总输入
+            const inputs = recipe.inputs.map(({ itemId, quantityPerCycle }) => {
+              return {
+                itemId,
+                quantityPerMinute: new Decimal(
+                  calculateQuantityPerMinute(
+                    quantityPerCycle,
+                    recipe.productionDuration,
+                  ),
+                )
+                  .mul(totalClockSpeed)
+                  .toNumber(),
+              }
+            })
+
+            // 流水线总输出
+            const outputs = recipe.outputs.map(
+              ({ itemId, quantityPerCycle }) => {
+                return {
+                  itemId,
+                  quantityPerMinute: new Decimal(
+                    calculateQuantityPerMinute(
+                      quantityPerCycle,
+                      recipe.productionDuration,
+                    ),
+                  )
+                    .mul(totalClockSpeed)
+                    .toNumber(),
+                }
+              },
             )
 
-          // 100%频率下需要的建筑数量
-          const buildingQuantity =
-            targetItemSpeed / targetItemQuantityPerMinutePerBuilding
-
-          const powerUsage =
-            building.powerUsage === 'variable'
-              ? recipe.powerUsage
-              : building.powerUsage
-          const totalPowerUsage =
-            powerUsage && calculateTotalPowerUsage(powerUsage, buildingQuantity)
-          const averageTotalPowerUsage =
-            totalPowerUsage && calculateAveragePowerUsage(totalPowerUsage)
-
-          // 流水线总输入
-          const inputs = recipe.inputs.map(({ itemId, quantityPerCycle }) => {
-            return {
-              itemId,
-              quantityPerMinute:
-                calculateQuantityPerMinute(
-                  quantityPerCycle,
-                  recipe.productionDuration,
-                ) * buildingQuantity,
+            assemblyLineComputed[id] = {
+              buildingId: building.id,
+              buildingQuantity,
+              powerUsage,
+              totalPowerUsage,
+              averageTotalPowerUsage,
+              inputs,
+              outputs,
             }
-          })
-
-          // 流水线总输出
-          const outputs = recipe.outputs.map(({ itemId, quantityPerCycle }) => {
-            return {
-              itemId,
-              quantityPerMinute:
-                calculateQuantityPerMinute(
-                  quantityPerCycle,
-                  recipe.productionDuration,
-                ) * buildingQuantity,
-            }
-          })
-
-          assemblyLineComputed[id] = {
-            buildingId: building.id,
-            buildingQuantity,
-            powerUsage,
-            totalPowerUsage,
-            averageTotalPowerUsage,
-            inputs,
-            outputs,
+          } else {
+            assemblyLineComputed[id] = null
           }
-        } else {
-          assemblyLineComputed[id] = null
-        }
-      })
+        },
+      )
     })
     return assemblyLineComputed
   })
@@ -136,6 +161,7 @@ export const useModularFactoryList = defineStore('modularFactoryList', () => {
       targetItemId: null,
       targetItemSpeed: null,
       recipeId: null,
+      clockSpeed: 1,
     })
     return id
   }

@@ -37,3 +37,4 @@ itemUnitName: unit | units
 fluidUnitName: m³
 unitsPerMinute: '{0} {1}/min'
 seconds: s
+clockSpeed: Clock Speed (%)

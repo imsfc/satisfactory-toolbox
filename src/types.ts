@@ -46,6 +46,7 @@ export interface AssemblyLine {
   targetItemId: Id | null
   targetItemSpeed: number | null
   recipeId: Id | null
+  clockSpeed: number | null
 }
 
 export interface AssemblyLineComputed {

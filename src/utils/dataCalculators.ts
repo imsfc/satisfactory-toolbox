@@ -2,6 +2,8 @@ import { Decimal } from 'decimal.js'
 
 import type { PowerUsage } from '@/types'
 
+const overclockingPowerIndex = 1.321928
+
 export const calculateQuantityPerMinute = (
   quantityPerCycle: number,
   productionDuration: number,
@@ -13,13 +15,15 @@ export const calculateQuantityPerMinute = (
 export const calculateTotalPowerUsage = (
   powerUsage: PowerUsage,
   buildingQuantity: number,
+  clockSpeed: number,
 ): PowerUsage => {
+  const powerMul = new Decimal(clockSpeed).pow(overclockingPowerIndex)
   if (typeof powerUsage === 'number') {
-    return new Decimal(powerUsage).mul(buildingQuantity).toNumber()
+    return powerMul.mul(powerUsage).mul(buildingQuantity).toNumber()
   }
   return [
-    new Decimal(powerUsage[0]).mul(buildingQuantity).toNumber(),
-    new Decimal(powerUsage[1]).mul(buildingQuantity).toNumber(),
+    powerMul.mul(powerUsage[0]).mul(buildingQuantity).toNumber(),
+    powerMul.mul(powerUsage[1]).mul(buildingQuantity).toNumber(),
   ]
 }
 

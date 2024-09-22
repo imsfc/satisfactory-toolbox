@@ -122,6 +122,28 @@ function createColumns({
       },
     },
     {
+      title: t('clockSpeed'),
+      key: 'clockSpeed',
+      minWidth: 120,
+      width: 140,
+      render: (row) => {
+        return (
+          <NInputNumber
+            value={
+              row.clockSpeed && new Decimal(row.clockSpeed).mul(100).toNumber()
+            }
+            onUpdateValue={(value) => {
+              row.clockSpeed = value
+                ? new Decimal(value).div(100).toNumber()
+                : null // todo
+            }}
+            min={1}
+            max={250}
+          />
+        )
+      },
+    },
+    {
       title: t('building'),
       key: 'building',
       minWidth: 120,
