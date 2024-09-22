@@ -73,7 +73,8 @@ function createColumns({
     {
       title: t('targetItem'),
       key: 'targetItem',
-      minWidth: 160,
+      minWidth: 120,
+      width: 160,
       render(row) {
         return (
           <ItemSelect
@@ -88,7 +89,8 @@ function createColumns({
     {
       title: t('recipe'),
       key: 'recipe',
-      minWidth: 160,
+      minWidth: 120,
+      width: 160,
       render(row) {
         return (
           <ItemRecipeSelect
@@ -104,8 +106,8 @@ function createColumns({
     {
       title: t('targetItemSpeed'),
       key: 'targetItemSpeed',
-      minWidth: 180,
-      width: 200,
+      minWidth: 120,
+      width: 160,
       render(row) {
         return (
           <NInputNumber
@@ -122,7 +124,8 @@ function createColumns({
     {
       title: t('building'),
       key: 'building',
-      minWidth: 160,
+      minWidth: 120,
+      width: 140,
       render: (row) => {
         const assemblyLineComputed =
           modularFactoryList.assemblyLineComputedList[row.id]
@@ -168,6 +171,7 @@ function createColumns({
       title: t('power'),
       key: 'power',
       minWidth: 80,
+      width: 120,
       render: (row) => {
         const assemblyLineComputed =
           modularFactoryList.assemblyLineComputedList[row.id]
@@ -201,7 +205,8 @@ function createColumns({
     {
       title: t('inputs'),
       key: 'inputs',
-      minWidth: 160,
+      minWidth: 120,
+      width: 160,
       render: (row) => {
         const assemblyLineComputed =
           modularFactoryList.assemblyLineComputedList[row.id]
@@ -218,7 +223,8 @@ function createColumns({
     {
       title: t('outputs'),
       key: 'outputs',
-      minWidth: 160,
+      minWidth: 120,
+      width: 160,
       render: (row) => {
         const assemblyLineComputed =
           modularFactoryList.assemblyLineComputedList[row.id]
