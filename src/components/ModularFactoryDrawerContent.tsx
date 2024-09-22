@@ -31,12 +31,7 @@ const renderItemQuantityPerMinute = ({
 
   const item = getItemById(itemId)
 
-  const quantityPerMinuteCeil2 = new Decimal(quantityPerMinute)
-    .mul(100)
-    .ceil()
-    .div(100)
-    .toNumber()
-
+  const quantityPerMinuteDP = new Decimal(quantityPerMinute).toDP(4).toNumber()
   return (
     <NFlex align="center" wrap={false}>
       <ItemImage
@@ -48,10 +43,10 @@ const renderItemQuantityPerMinute = ({
         <div class="text-sm leading-3.5 truncate">{t(`items.${item.key}`)}</div>
         <div class="text-xs leading-4 opacity-75 truncate">
           <I18nT keypath="unitsPerMinute">
-            <b>{quantityPerMinuteCeil2}</b>
+            <b>{quantityPerMinuteDP}</b>
             {t(
               item.type === 'solid' ? 'itemUnitName' : 'fluidUnitName',
-              quantityPerMinuteCeil2,
+              quantityPerMinuteDP,
             )}
           </I18nT>
         </div>
@@ -115,6 +110,11 @@ function createColumns({
             onUpdateValue={(value) => {
               row.targetItemSpeed = value // todo
             }}
+            onBlur={() => {
+              row.targetItemSpeed =
+                row.targetItemSpeed &&
+                new Decimal(row.targetItemSpeed).toDP(4).toNumber()
+            }}
             min={0}
             max={1000000}
           />
@@ -133,9 +133,11 @@ function createColumns({
               row.clockSpeed && new Decimal(row.clockSpeed).mul(100).toNumber()
             }
             onUpdateValue={(value) => {
-              row.clockSpeed = value
-                ? new Decimal(value).div(100).toNumber()
-                : null // todo
+              row.clockSpeed = value && new Decimal(value).div(100).toNumber() // todo
+            }}
+            onBlur={() => {
+              row.clockSpeed =
+                row.clockSpeed && new Decimal(row.clockSpeed).toDP(6).toNumber()
             }}
             min={1}
             max={250}
@@ -205,7 +207,7 @@ function createColumns({
             <div class="text-sm leading-3.5">
               <b>
                 {new Decimal(assemblyLineComputed.averageTotalPowerUsage)
-                  .ceil()
+                  .toDP(1)
                   .toNumber()}
               </b>
               {' MW'}
@@ -215,7 +217,7 @@ function createColumns({
                 {assemblyLineComputed.totalPowerUsage
                   .map(
                     (powerUsage) =>
-                      `${new Decimal(powerUsage).ceil().toNumber()} MW`,
+                      `${new Decimal(powerUsage).toDP(1).toNumber()} MW`,
                   )
                   .join(' - ')}
               </div>
