@@ -1,6 +1,6 @@
-import { computed, defineComponent, type PropType } from 'vue'
+import { type PropType, computed, defineComponent } from 'vue'
 
-import { hasImg, img, type Format, type Size } from '@/assets/items'
+import { type Format, type Size, hasImg, img } from '@/assets/items'
 
 import BaseImage, { type Option } from './BaseImage'
 

@@ -1,14 +1,14 @@
-import { computed, defineComponent } from 'vue'
-import { RouterView } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import { syncRef, useColorMode, useLocalStorage } from '@vueuse/core'
 import {
-  darkTheme,
-  dateZhCN,
   NConfigProvider,
   NMessageProvider,
+  darkTheme,
+  dateZhCN,
   zhCN,
 } from 'naive-ui'
+import { computed, defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { RouterView } from 'vue-router'
 
 export default defineComponent({
   name: 'App',

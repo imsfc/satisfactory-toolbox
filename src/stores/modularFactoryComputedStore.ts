@@ -1,6 +1,6 @@
-import { computed } from 'vue'
+import { Decimal } from 'decimal.js'
 import { defineStore } from 'pinia'
-import Decimal from 'decimal.js'
+import { computed } from 'vue'
 
 import type {
   AllComputed,
@@ -8,11 +8,10 @@ import type {
   ModularFactoryComputed,
   PowerUsage,
 } from '@/types'
-
-import { useModularFactoryStore } from './modularFactoryStore'
-import { useAssemblyLineComputedStore } from './assemblyLineComputedStore'
-import { isObject } from 'radash'
 import { calculateAveragePowerUsage } from '@/utils/dataCalculators'
+
+import { useAssemblyLineComputedStore } from './assemblyLineComputedStore'
+import { useModularFactoryStore } from './modularFactoryStore'
 
 const makeNetValues = () => {
   const netValues: {
@@ -133,23 +132,37 @@ export const useModularFactoryComputedStore = defineStore(storeKey, () => {
       max: new Decimal(0),
     }
 
-    Object.values(data.value)
-      .filter((data) => isObject(data))
-      .forEach(({ totalPowerUsage: _totalPowerUsage, inputs, outputs }) => {
-        if (Decimal.isDecimal(_totalPowerUsage)) {
-          totalPowerUsage.min = totalPowerUsage.min.add(_totalPowerUsage)
-          totalPowerUsage.max = totalPowerUsage.max.add(_totalPowerUsage)
-        } else {
-          totalPowerUsage.min = totalPowerUsage.min.add(_totalPowerUsage.min)
-          totalPowerUsage.max = totalPowerUsage.max.add(_totalPowerUsage.max)
+    for (const key in data.value) {
+      if (Object.prototype.hasOwnProperty.call(data.value, key)) {
+        const dataValue = data.value[key]
+        if (!dataValue) {
+          continue
         }
-        inputs.forEach(({ itemId, quantityPerMinute }) => {
+
+        if (Decimal.isDecimal(dataValue.totalPowerUsage)) {
+          totalPowerUsage.min = totalPowerUsage.min.add(
+            dataValue.totalPowerUsage,
+          )
+          totalPowerUsage.max = totalPowerUsage.max.add(
+            dataValue.totalPowerUsage,
+          )
+        } else {
+          totalPowerUsage.min = totalPowerUsage.min.add(
+            dataValue.totalPowerUsage.min,
+          )
+          totalPowerUsage.max = totalPowerUsage.max.add(
+            dataValue.totalPowerUsage.max,
+          )
+        }
+
+        dataValue.inputs.forEach(({ itemId, quantityPerMinute }) => {
           addNetValue('input', itemId, quantityPerMinute)
         })
-        outputs.forEach(({ itemId, quantityPerMinute }) => {
+        dataValue.outputs.forEach(({ itemId, quantityPerMinute }) => {
           addNetValue('output', itemId, quantityPerMinute)
         })
-      })
+      }
+    }
 
     return {
       totalPowerUsage,

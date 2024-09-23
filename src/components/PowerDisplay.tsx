@@ -1,5 +1,5 @@
-import { defineComponent, type PropType } from 'vue'
-import Decimal from 'decimal.js'
+import { Decimal } from 'decimal.js'
+import { type PropType, defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'PowerDisplay',

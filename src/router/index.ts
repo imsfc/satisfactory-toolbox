@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import Layout from '@/layouts/Layout'
 
 const router = createRouter({

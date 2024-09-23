@@ -1,10 +1,10 @@
-import { computed, defineComponent, type PropType } from 'vue'
-import { useI18n } from 'vue-i18n'
+import type { Decimal } from 'decimal.js'
 import { NSelect } from 'naive-ui'
-import type Decimal from 'decimal.js'
+import { type PropType, computed, defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-import type { Id } from '@/types'
 import { getBuilding, getItem, getRecipe, recipes } from '@/data'
+import type { Id } from '@/types'
 import { calculateQuantityPerMinute } from '@/utils/dataCalculators'
 
 import BuildingImage from './BuildingImage'

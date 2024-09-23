@@ -1,6 +1,6 @@
-import { computed, ref, watchEffect } from 'vue'
-import { defineStore } from 'pinia'
 import { nanoid } from 'nanoid'
+import { defineStore } from 'pinia'
+import { computed, ref, watchEffect } from 'vue'
 
 import type { AssemblyLine, Id, ModularFactory } from '@/types'
 

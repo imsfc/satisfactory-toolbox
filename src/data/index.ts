@@ -1,5 +1,5 @@
+import { Decimal } from 'decimal.js'
 import { isNumber, isObject } from 'radash'
-import Decimal from 'decimal.js'
 
 import type {
   Building,

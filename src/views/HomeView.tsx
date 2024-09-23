@@ -1,6 +1,6 @@
-import { computed, defineComponent, useTemplateRef, type PropType } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { Decimal } from 'decimal.js'
 import {
+  type DataTableColumns,
   NButton,
   NDataTable,
   NEmpty,
@@ -9,19 +9,19 @@ import {
   NGridItem,
   NPopconfirm,
   NStatistic,
-  type DataTableColumns,
 } from 'naive-ui'
-import Decimal from 'decimal.js'
 import { isEmpty } from 'radash'
+import { type PropType, computed, defineComponent, useTemplateRef } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+import ItemQuantityPerMinuteDisplay from '@/components/ItemQuantityPerMinuteDisplay'
 import ModularFactoryDrawer, {
   type Exposed as ModularFactoryDrawerExposed,
 } from '@/components/ModularFactoryDrawer'
-import ItemQuantityPerMinuteDisplay from '@/components/ItemQuantityPerMinuteDisplay'
 import PowerDisplay from '@/components/PowerDisplay'
-import type { Id, ModularFactory } from '@/types'
-import { useModularFactoryStore } from '@/stores/modularFactoryStore'
 import { useModularFactoryComputedStore } from '@/stores/modularFactoryComputedStore'
+import { useModularFactoryStore } from '@/stores/modularFactoryStore'
+import type { Id, ModularFactory } from '@/types'
 
 const ItemQuantityPerMinuteDisplayList = defineComponent({
   name: 'ItemQuantityPerMinuteDisplayList',

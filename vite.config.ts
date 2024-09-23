@@ -1,10 +1,10 @@
-import { fileURLToPath, URL } from 'node:url'
+import { URL, fileURLToPath } from 'node:url'
 
-import { defineConfig } from 'vite'
+import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vite'
 import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({

@@ -1,9 +1,9 @@
-import { computed, defineComponent, type PropType } from 'vue'
+import { Decimal } from 'decimal.js'
+import { type PropType, computed, defineComponent } from 'vue'
 import { I18nT, useI18n } from 'vue-i18n'
-import Decimal from 'decimal.js'
 
-import { ItemType, type Id } from '@/types'
 import { getItem } from '@/data'
+import { type Id, ItemType } from '@/types'
 
 import ItemImage from './ItemImage'
 

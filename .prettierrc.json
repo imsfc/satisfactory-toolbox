@@ -3,5 +3,17 @@
   "semi": false,
   "tabWidth": 2,
   "singleQuote": true,
-  "trailingComma": "all"
+  "trailingComma": "all",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^node:",
+    "^(?!(@/|\\.|@intlify/unplugin-vue-i18n/messages|virtual:uno\\.css))",
+    "^@/",
+    "^\\.{1,2}/",
+    "@intlify/unplugin-vue-i18n/messages",
+    "virtual:uno\\.css"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrderGroupNamespaceSpecifiers": true
 }

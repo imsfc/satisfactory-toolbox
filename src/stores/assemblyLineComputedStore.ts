@@ -1,9 +1,9 @@
-import { computed } from 'vue'
+import { Decimal } from 'decimal.js'
 import { defineStore } from 'pinia'
-import Decimal from 'decimal.js'
+import { computed } from 'vue'
 
-import type { AssemblyLineComputed, Id } from '@/types'
 import { getBuilding, getRecipe } from '@/data'
+import type { AssemblyLineComputed, Id } from '@/types'
 import {
   calculateAveragePowerUsage,
   calculateQuantityPerMinute,

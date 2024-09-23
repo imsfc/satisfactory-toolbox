@@ -1,10 +1,10 @@
-import { computed, defineComponent, type PropType } from 'vue'
+import { Decimal } from 'decimal.js'
+import { type PropType, computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Decimal from 'decimal.js'
 
-import type { Id } from '@/types'
 import { getBuilding } from '@/data'
 import { useAssemblyLineComputedStore } from '@/stores/assemblyLineComputedStore'
+import type { Id } from '@/types'
 
 import BuildingImage from './BuildingImage'
 

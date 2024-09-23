@@ -1,14 +1,14 @@
-import { defineComponent } from 'vue'
-import { RouterView } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import { useColorMode } from '@vueuse/core'
-import { NLayout, NLayoutHeader, NLayoutContent, NButton } from 'naive-ui'
+import { NButton, NLayout, NLayoutContent, NLayoutHeader } from 'naive-ui'
+import { defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { RouterView } from 'vue-router'
 
 // @ts-ignore
 import logo from '@/assets/logo.png?w=96'
 
 export default defineComponent({
-  name: 'DefaultLayout',
+  name: 'Layout',
   setup() {
     const { t, locale } = useI18n()
 

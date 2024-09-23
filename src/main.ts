@@ -1,12 +1,12 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import { createI18n } from 'vue-i18n'
 import { useLocalStorage } from '@vueuse/core'
-
-import messages from '@intlify/unplugin-vue-i18n/messages'
+import { createPinia } from 'pinia'
+import { createApp } from 'vue'
+import { createI18n } from 'vue-i18n'
 
 import App from './App'
 import router from './router'
+
+import messages from '@intlify/unplugin-vue-i18n/messages'
 
 import 'virtual:uno.css'
 

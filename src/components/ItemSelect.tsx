@@ -1,9 +1,9 @@
-import { computed, defineComponent, type PropType } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { NSelect } from 'naive-ui'
+import { type PropType, computed, defineComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-import type { Id } from '@/types'
 import { getItem, items, recipes } from '@/data'
+import type { Id } from '@/types'
 
 import ItemImage from './ItemImage'
 
