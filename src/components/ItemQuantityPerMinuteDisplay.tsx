@@ -38,10 +38,10 @@ export default defineComponent({
           formats={['avif', 'webp', 'png']}
         />
         <div class="flex flex-col gap-y-0.5">
-          <div class="text-sm leading-3.5 truncate">
+          <div class="text-sm leading-4 truncate">
             {t(`items.${item.value.key}`)}
           </div>
-          <div class="text-xs leading-4 opacity-75 truncate">
+          <div class="text-xs leading-3.5 opacity-75 truncate">
             <I18nT keypath="unitsPerMinute" scope="global">
               <NPopover>
                 {{
