@@ -28,6 +28,9 @@ import ItemQuantityPerMinuteDisplay from './ItemQuantityPerMinuteDisplay'
 import ItemRecipeSelect from './ItemRecipeSelect'
 import ItemSelect from './ItemSelect'
 import PowerDisplay from './PowerDisplay'
+import VueDraggableExt from './VueDraggableExt.vue'
+import AddOutlined from './icons/AddOutlined'
+import DragHandleOutlined from './icons/DragHandleOutlined'
 
 const ItemQuantityPerMinuteDisplayList = defineComponent({
   name: 'ItemQuantityPerMinuteDisplayList',
@@ -87,6 +90,14 @@ export default defineComponent({
     })
 
     const columns = computed<DataTableColumns<AssemblyLine>>(() => [
+      {
+        title: t('sort'),
+        key: 'sort',
+        width: 60,
+        render: () => (
+          <DragHandleOutlined class="sort-handle cursor-move w-7 h-7" />
+        ),
+      },
       {
         title: t('targetItem'),
         key: 'targetItem',
@@ -282,15 +293,36 @@ export default defineComponent({
               modularFactoryStore.newAssemblyLine(modularFactory.value.id)
             }}
           >
-            {t('newAssemblyLine')}
+            {{
+              icon: () => <AddOutlined />,
+              default: () => t('newAssemblyLine'),
+            }}
           </NButton>
         </NFlex>
 
-        <NDataTable
-          rowKey={({ id }: AssemblyLine) => id}
-          columns={columns.value}
-          data={modularFactory.value.data}
-        />
+        {modularFactory.value.data.length > 0 ? (
+          <VueDraggableExt
+            value={modularFactory.value.data}
+            onUpdateValue={(value: AssemblyLine[]) => {
+              modularFactory.value.data = value
+            }}
+            target=".n-data-table-tbody"
+            handle=".sort-handle"
+            animation={150}
+          >
+            <NDataTable
+              rowKey={({ id }: AssemblyLine) => id}
+              columns={columns.value}
+              data={modularFactory.value.data}
+            />
+          </VueDraggableExt>
+        ) : (
+          <NDataTable
+            rowKey={({ id }: AssemblyLine) => id}
+            columns={columns.value}
+            data={modularFactory.value.data}
+          />
+        )}
 
         {modularFactoryComputed.value?.averageTotalPowerUsage && (
           <NStatistic label={t('averageTotalPowerUsage')}>

@@ -13,6 +13,7 @@ globalConfig: Global Config
 clearAllData: Clear All Data
 clearAllDataConfirm: Are you sure you want to clear all data?
 
+sort: Sort
 name: Name
 remark: Remark
 power: Power

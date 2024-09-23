@@ -19,6 +19,9 @@ import ModularFactoryDrawer, {
   type Exposed as ModularFactoryDrawerExposed,
 } from '@/components/ModularFactoryDrawer'
 import PowerDisplay from '@/components/PowerDisplay'
+import VueDraggableExt from '@/components/VueDraggableExt.vue'
+import AddOutlined from '@/components/icons/AddOutlined'
+import DragHandleOutlined from '@/components/icons/DragHandleOutlined'
 import { useModularFactoryComputedStore } from '@/stores/modularFactoryComputedStore'
 import { useModularFactoryStore } from '@/stores/modularFactoryStore'
 import type { Id, ModularFactory } from '@/types'
@@ -72,22 +75,27 @@ export default defineComponent({
     const columns = computed<DataTableColumns<ModularFactory>>(() => {
       return [
         {
+          title: t('sort'),
+          key: 'sort',
+          width: 60,
+          render: () => (
+            <DragHandleOutlined class="sort-handle cursor-move w-7 h-7" />
+          ),
+        },
+        {
           title: t('name'),
           key: 'name',
           minWidth: 160,
-          width: 240,
         },
         {
           title: t('remark'),
           key: 'remark',
           minWidth: 240,
-          width: 320,
         },
         {
           title: t('power'),
           key: 'power',
           minWidth: 120,
-          width: 160,
           render: (row) => {
             const modularFactoryComputed =
               modularFactoryComputedStore.data[row.id]
@@ -116,7 +124,6 @@ export default defineComponent({
           title: t('inputs'),
           key: 'inputs',
           minWidth: 120,
-          width: 160,
           render: (row) => (
             <ItemQuantityPerMinuteDisplayList
               modularFactoryId={row.id}
@@ -128,7 +135,6 @@ export default defineComponent({
           title: t('outputs'),
           key: 'outputs',
           minWidth: 120,
-          width: 160,
           render: (row) => (
             <ItemQuantityPerMinuteDisplayList
               modularFactoryId={row.id}
@@ -183,7 +189,10 @@ export default defineComponent({
                   )
                 }}
               >
-                {t('newFactory')}
+                {{
+                  icon: () => <AddOutlined />,
+                  default: () => t('newFactory'),
+                }}
               </NButton>
               <NButton disabled>{t('globalConfig')}</NButton>
             </NFlex>
@@ -210,11 +219,29 @@ export default defineComponent({
             </NFlex>
           </NFlex>
 
-          <NDataTable
-            rowKey={({ id }: ModularFactory) => id}
-            columns={columns.value}
-            data={modularFactoryStore.data}
-          />
+          {modularFactoryStore.data.length > 0 ? (
+            <VueDraggableExt
+              value={modularFactoryStore.data}
+              onUpdateValue={(value) => {
+                modularFactoryStore.data = value
+              }}
+              target=".n-data-table-tbody"
+              handle=".sort-handle"
+              animation={150}
+            >
+              <NDataTable
+                rowKey={({ id }: ModularFactory) => id}
+                columns={columns.value}
+                data={modularFactoryStore.data}
+              />
+            </VueDraggableExt>
+          ) : (
+            <NDataTable
+              rowKey={({ id }: ModularFactory) => id}
+              columns={columns.value}
+              data={modularFactoryStore.data}
+            />
+          )}
 
           {modularFactoryComputedStore.finalComputed
             ?.averageTotalPowerUsage && (
