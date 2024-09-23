@@ -100,7 +100,10 @@ export default defineComponent({
                   powerUsageRange={
                     !Decimal.isDecimal(
                       modularFactoryComputed.totalPowerUsage,
-                    ) && modularFactoryComputed.totalPowerUsage.max.gt(0)
+                    ) &&
+                    !modularFactoryComputed.totalPowerUsage.max.eq(
+                      modularFactoryComputed.totalPowerUsage.min,
+                    )
                       ? modularFactoryComputed.totalPowerUsage
                       : undefined
                   }
