@@ -213,6 +213,19 @@ export default defineComponent({
             data={modularFactoryStore.data}
           />
 
+          {modularFactoryComputedStore.finalComputed
+            ?.averageTotalPowerUsage && (
+            <NStatistic label={t('globalAverageTotalPowerUsage')}>
+              {{
+                suffix: () => 'MW',
+                default: () =>
+                  modularFactoryComputedStore.finalComputed?.averageTotalPowerUsage
+                    .toDP(1)
+                    .toNumber(),
+              }}
+            </NStatistic>
+          )}
+
           <NGrid xGap={16} cols={2}>
             <NGridItem>
               <NStatistic label={t('finalTotalInputs')}>

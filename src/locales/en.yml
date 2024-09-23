@@ -23,6 +23,7 @@ totalOutputs: Net Supply
 finalTotalInputs: Global Item Shortage
 finalTotalOutputs: Global Item Surplus
 averageTotalPowerUsage: Net Power
+globalAverageTotalPowerUsage: Global Net Power
 action: Action
 
 delete: Delete
