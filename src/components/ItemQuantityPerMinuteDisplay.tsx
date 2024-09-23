@@ -1,10 +1,12 @@
 import { Decimal } from 'decimal.js'
+import { NPopover } from 'naive-ui'
 import { type PropType, computed, defineComponent } from 'vue'
 import { I18nT, useI18n } from 'vue-i18n'
 
-import { getItem } from '@/data'
+import { conveyorBelts, getItem, pipelines } from '@/data'
 import { type Id, ItemType } from '@/types'
 
+import BuildingImage from './BuildingImage'
 import ItemImage from './ItemImage'
 
 export default defineComponent({
@@ -41,7 +43,48 @@ export default defineComponent({
           </div>
           <div class="text-xs leading-4 opacity-75 truncate">
             <I18nT keypath="unitsPerMinute" scope="global">
-              <b>{quantityPerMinuteDP.value}</b>
+              <NPopover>
+                {{
+                  trigger: () => (
+                    <b class="cursor-help hover:underline decoration-dashed underline-offset-2">
+                      {quantityPerMinuteDP.value}
+                    </b>
+                  ),
+                  default: () => (
+                    <div class="flex flex-col gap-y-1">
+                      {(item.value.type === ItemType.solid
+                        ? conveyorBelts
+                        : pipelines
+                      ).map(({ key, itemsPerMinute }) => (
+                        <div class="flex items-center gap-x-1">
+                          <BuildingImage
+                            name={key}
+                            sizes={[48, 96]}
+                            formats={['avif', 'webp', 'png']}
+                            width={24}
+                            height={24}
+                          />
+                          <span>{t(`buildings.${key}`)}</span>
+                          <span>
+                            <b>
+                              {props.quantityPerMinute
+                                .div(itemsPerMinute)
+                                .toDP(0, Decimal.ROUND_UP)
+                                .toNumber()}
+                            </b>{' '}
+                            (
+                            {props.quantityPerMinute
+                              .div(itemsPerMinute)
+                              .toDP(1, Decimal.ROUND_UP)
+                              .toNumber()}
+                            )
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  ),
+                }}
+              </NPopover>
               {t(
                 item.value.type === ItemType.solid
                   ? 'itemUnitName'

@@ -1,0 +1,4 @@
+[
+  { "id": 1, "key": "Pipeline_Mk_1", "itemsPerMinute": 300 },
+  { "id": 2, "key": "Pipeline_Mk_2", "itemsPerMinute": 600 }
+]

@@ -1,0 +1,8 @@
+[
+  { "id": 1, "key": "Conveyor_Belt_Mk_1", "itemsPerMinute": 60 },
+  { "id": 2, "key": "Conveyor_Belt_Mk_2", "itemsPerMinute": 120 },
+  { "id": 3, "key": "Conveyor_Belt_Mk_3", "itemsPerMinute": 270 },
+  { "id": 4, "key": "Conveyor_Belt_Mk_4", "itemsPerMinute": 480 },
+  { "id": 5, "key": "Conveyor_Belt_Mk_5", "itemsPerMinute": 780 },
+  { "id": 6, "key": "Conveyor_Belt_Mk_6", "itemsPerMinute": 1200 }
+]

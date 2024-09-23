@@ -16,7 +16,9 @@ import type {
 } from '@/types'
 
 import buildingsJson from './buildings.json'
+import conveyorBeltsJson from './conveyorBelts.json'
 import itemsJson from './items.json'
+import pipelinesJson from './pipelines.json'
 import recipesJson from './recipes.json'
 
 const parseDecimal = (value: number): Decimal => {
@@ -68,6 +70,12 @@ buildingsJson.forEach(({ id, key, powerUsage }: BuildingsJson) => {
   buildings.push(building)
   buildingMap[id] = building
 })
+
+// 传送带数据
+export const conveyorBelts = conveyorBeltsJson
+
+// 管道数据
+export const pipelines = pipelinesJson
 
 // 物品数据
 export const items: Item[] = []
