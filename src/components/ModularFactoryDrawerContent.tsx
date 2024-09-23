@@ -22,6 +22,7 @@ import { useAssemblyLineComputedStore } from '@/stores/assemblyLineComputedStore
 import { useModularFactoryComputedStore } from '@/stores/modularFactoryComputedStore'
 import { useModularFactoryStore } from '@/stores/modularFactoryStore'
 import type { AssemblyLine, Id } from '@/types'
+import { decimalRound } from '@/utils/decimalHelper'
 
 import BuildingQuantityDisplay from './BuildingQuantityDisplay'
 import ItemQuantityPerMinuteDisplay from './ItemQuantityPerMinuteDisplay'
@@ -138,8 +139,7 @@ export default defineComponent({
             onUpdateValue={(value) => {
               modularFactoryStore.setAssemblyLineTargetItemSpeed(
                 row.id,
-                value &&
-                  new Decimal(value).toDP(4, Decimal.ROUND_UP).toNumber(),
+                value && decimalRound(value, 4),
               )
             }}
             min={0}
@@ -162,11 +162,7 @@ export default defineComponent({
               onUpdateValue={(value) => {
                 modularFactoryStore.setAssemblyLineClockSpeed(
                   row.id,
-                  value &&
-                    new Decimal(value)
-                      .toDP(4, Decimal.ROUND_UP)
-                      .div(100)
-                      .toNumber(),
+                  value && decimalRound(new Decimal(value).div(100), 6),
                 )
               }}
               min={1}
@@ -329,9 +325,11 @@ export default defineComponent({
             {{
               suffix: () => 'MW',
               default: () =>
-                modularFactoryComputed.value?.averageTotalPowerUsage
-                  .toDP(1)
-                  .toNumber(),
+                modularFactoryComputed.value &&
+                decimalRound(
+                  modularFactoryComputed.value.averageTotalPowerUsage,
+                  1,
+                ),
             }}
           </NStatistic>
         )}

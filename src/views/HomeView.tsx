@@ -25,6 +25,7 @@ import DragHandleOutlined from '@/components/icons/DragHandleOutlined'
 import { useModularFactoryComputedStore } from '@/stores/modularFactoryComputedStore'
 import { useModularFactoryStore } from '@/stores/modularFactoryStore'
 import type { Id, ModularFactory } from '@/types'
+import { decimalRound } from '@/utils/decimalHelper'
 
 const ItemQuantityPerMinuteDisplayList = defineComponent({
   name: 'ItemQuantityPerMinuteDisplayList',
@@ -249,9 +250,12 @@ export default defineComponent({
               {{
                 suffix: () => 'MW',
                 default: () =>
-                  modularFactoryComputedStore.finalComputed?.averageTotalPowerUsage
-                    .toDP(1)
-                    .toNumber(),
+                  modularFactoryComputedStore.finalComputed &&
+                  decimalRound(
+                    modularFactoryComputedStore.finalComputed
+                      .averageTotalPowerUsage,
+                    1,
+                  ),
               }}
             </NStatistic>
           )}

@@ -5,6 +5,7 @@ import { I18nT, useI18n } from 'vue-i18n'
 
 import { conveyorBelts, getItem, pipelines } from '@/data'
 import { type Id, ItemType } from '@/types'
+import { decimalRound } from '@/utils/decimalHelper'
 
 import BuildingImage from './BuildingImage'
 import ItemImage from './ItemImage'
@@ -26,8 +27,8 @@ export default defineComponent({
 
     const item = computed(() => getItem(props.itemId))
 
-    const quantityPerMinuteDP = computed(() =>
-      props.quantityPerMinute.toDP(4, Decimal.ROUND_UP).toNumber(),
+    const quantityPerMinuteRound4 = computed(() =>
+      decimalRound(props.quantityPerMinute, 4),
     )
 
     return () => (
@@ -47,7 +48,7 @@ export default defineComponent({
                 {{
                   trigger: () => (
                     <b class="cursor-help hover:underline decoration-dashed underline-offset-2">
-                      {quantityPerMinuteDP.value}
+                      {quantityPerMinuteRound4.value}
                     </b>
                   ),
                   default: () => (
@@ -67,16 +68,16 @@ export default defineComponent({
                           <span>{t(`buildings.${key}`)}</span>
                           <span>
                             <b>
-                              {props.quantityPerMinute
-                                .div(itemsPerMinute)
-                                .toDP(0, Decimal.ROUND_UP)
-                                .toNumber()}
+                              {decimalRound(
+                                props.quantityPerMinute.div(itemsPerMinute),
+                                0,
+                              )}
                             </b>{' '}
                             (
-                            {props.quantityPerMinute
-                              .div(itemsPerMinute)
-                              .toDP(1, Decimal.ROUND_UP)
-                              .toNumber()}
+                            {decimalRound(
+                              props.quantityPerMinute.div(itemsPerMinute),
+                              1,
+                            )}
                             )
                           </span>
                         </div>
@@ -89,7 +90,7 @@ export default defineComponent({
                 item.value.type === ItemType.solid
                   ? 'itemUnitName'
                   : 'fluidUnitName',
-                quantityPerMinuteDP.value,
+                quantityPerMinuteRound4.value,
               )}
             </I18nT>
           </div>

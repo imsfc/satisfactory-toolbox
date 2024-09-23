@@ -1,10 +1,10 @@
-import { Decimal } from 'decimal.js'
 import { type PropType, computed, defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import { getBuilding } from '@/data'
 import { useAssemblyLineComputedStore } from '@/stores/assemblyLineComputedStore'
 import type { Id } from '@/types'
+import { decimalRound } from '@/utils/decimalHelper'
 
 import BuildingImage from './BuildingImage'
 
@@ -31,20 +31,16 @@ export default defineComponent({
         getBuilding(assemblyLineComputed.value.buildingId),
     )
 
-    const buildingQuantityDP = computed(
+    const buildingQuantityRound = computed(
       () =>
         assemblyLineComputed.value &&
-        assemblyLineComputed.value.buildingQuantity
-          .toDP(0, Decimal.ROUND_UP)
-          .toNumber(),
+        decimalRound(assemblyLineComputed.value.buildingQuantity, 0),
     )
 
-    const buildingQuantityDP2 = computed(
+    const buildingQuantityRound2 = computed(
       () =>
         assemblyLineComputed.value &&
-        assemblyLineComputed.value.buildingQuantity
-          .toDP(2, Decimal.ROUND_UP)
-          .toNumber(),
+        decimalRound(assemblyLineComputed.value.buildingQuantity, 2),
     )
 
     return () =>
@@ -60,9 +56,9 @@ export default defineComponent({
               {t(`buildings.${building.value.key}`)}
             </div>
             <div class="text-xs leading-3.5 opacity-75">
-              <b>{buildingQuantityDP.value}</b>
-              {buildingQuantityDP.value !== buildingQuantityDP2.value && (
-                <> ({buildingQuantityDP2.value})</>
+              <b>{buildingQuantityRound.value}</b>
+              {buildingQuantityRound.value !== buildingQuantityRound2.value && (
+                <> ({buildingQuantityRound2.value})</>
               )}
             </div>
           </div>

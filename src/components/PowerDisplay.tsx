@@ -1,6 +1,8 @@
 import { Decimal } from 'decimal.js'
 import { type PropType, defineComponent } from 'vue'
 
+import { decimalRound } from '@/utils/decimalHelper'
+
 export default defineComponent({
   name: 'PowerDisplay',
   props: {
@@ -14,13 +16,13 @@ export default defineComponent({
     return () => (
       <div class="flex flex-col gap-y-1">
         <div class="text-sm leading-4">
-          <b>{props.averagePowerUsage.toDP(1).toNumber()}</b>
+          <b>{decimalRound(props.averagePowerUsage, 1)}</b>
           {' MW'}
         </div>
         {props.powerUsageRange && (
           <div class="text-xs leading-3.5 opacity-75">
-            {props.powerUsageRange.min.toDP(1).toNumber()} MW -{' '}
-            {props.powerUsageRange.max.toDP(1).toNumber()} MW
+            {decimalRound(props.powerUsageRange.min, 1)} MW -{' '}
+            {decimalRound(props.powerUsageRange.max, 1)} MW
           </div>
         )}
       </div>
