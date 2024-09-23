@@ -61,7 +61,7 @@
     "outputs": [{ "itemId": 2, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 7,
@@ -299,7 +299,7 @@
     "outputs": [{ "itemId": 9, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 31,
@@ -311,7 +311,7 @@
     "outputs": [{ "itemId": 9, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 32,
@@ -364,7 +364,7 @@
     "outputs": [{ "itemId": 11, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 37,
@@ -609,7 +609,7 @@
     ],
     "producedInId": 9,
     "productionDuration": 12,
-    "powerUsage": [0, 2000]
+    "powerUsage": { "min": 0, "max": 2000 }
   },
   {
     "id": 63,
@@ -665,7 +665,7 @@
     "outputs": [{ "itemId": 27, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 68,
@@ -677,7 +677,7 @@
     "outputs": [{ "itemId": 27, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 69,
@@ -830,7 +830,7 @@
     "outputs": [{ "itemId": 33, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 84,
@@ -842,7 +842,7 @@
     "outputs": [{ "itemId": 33, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 85,
@@ -884,7 +884,7 @@
     "outputs": [{ "itemId": 39, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 89,
@@ -896,7 +896,7 @@
     "outputs": [{ "itemId": 39, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 90,
@@ -1201,7 +1201,7 @@
     "outputs": [{ "itemId": 56, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 118,
@@ -1213,7 +1213,7 @@
     "outputs": [{ "itemId": 56, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 119,
@@ -1973,7 +1973,7 @@
     "outputs": [{ "itemId": 93, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 186,
@@ -1985,7 +1985,7 @@
     "outputs": [{ "itemId": 93, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 187,
@@ -2225,7 +2225,7 @@
     "outputs": [{ "itemId": 105, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 208,
@@ -2237,7 +2237,7 @@
     "outputs": [{ "itemId": 105, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 209,
@@ -2346,7 +2346,7 @@
     "outputs": [{ "itemId": 112, "quantityPerCycle": 12 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 218,
@@ -2427,7 +2427,7 @@
     "outputs": [{ "itemId": 119, "quantityPerCycle": 30 }],
     "producedInId": 7,
     "productionDuration": 60,
-    "powerUsage": [250, 750]
+    "powerUsage": { "min": 250, "max": 750 }
   },
   {
     "id": 225,
@@ -2450,7 +2450,7 @@
     "outputs": [{ "itemId": 120, "quantityPerCycle": 20 }],
     "producedInId": 7,
     "productionDuration": 120,
-    "powerUsage": [250, 750]
+    "powerUsage": { "min": 250, "max": 750 }
   },
   {
     "id": 227,
@@ -2544,7 +2544,7 @@
     "outputs": [{ "itemId": 125, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 120,
-    "powerUsage": [500, 1500]
+    "powerUsage": { "min": 500, "max": 1500 }
   },
   {
     "id": 235,
@@ -2615,7 +2615,7 @@
     "outputs": [{ "itemId": 129, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 241,
@@ -2627,7 +2627,7 @@
     "outputs": [{ "itemId": 129, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 2,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 242,
@@ -2639,7 +2639,7 @@
     "outputs": [{ "itemId": 129, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 4,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 243,
@@ -2656,7 +2656,7 @@
     "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 2,
-    "powerUsage": [250, 750]
+    "powerUsage": { "min": 250, "max": 750 }
   },
   {
     "id": 245,
@@ -2665,7 +2665,7 @@
     "outputs": [{ "itemId": 131, "quantityPerCycle": 2 }],
     "producedInId": 7,
     "productionDuration": 3,
-    "powerUsage": [250, 750]
+    "powerUsage": { "min": 250, "max": 750 }
   },
   {
     "id": 246,
@@ -2677,7 +2677,7 @@
     "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 4,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 247,
@@ -2689,7 +2689,7 @@
     "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 3,
-    "powerUsage": [250, 750]
+    "powerUsage": { "min": 250, "max": 750 }
   },
   {
     "id": 248,
@@ -2701,7 +2701,7 @@
     "outputs": [{ "itemId": 131, "quantityPerCycle": 3 }],
     "producedInId": 7,
     "productionDuration": 3,
-    "powerUsage": [250, 750]
+    "powerUsage": { "min": 250, "max": 750 }
   },
   {
     "id": 249,
@@ -2710,7 +2710,7 @@
     "outputs": [{ "itemId": 131, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 2,
-    "powerUsage": [250, 750]
+    "powerUsage": { "min": 250, "max": 750 }
   },
   {
     "id": 250,
@@ -2719,7 +2719,7 @@
     "outputs": [{ "itemId": 132, "quantityPerCycle": 1 }],
     "producedInId": 8,
     "productionDuration": 10,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 251,
@@ -2740,7 +2740,7 @@
     "outputs": [{ "itemId": 134, "quantityPerCycle": 10 }],
     "producedInId": 8,
     "productionDuration": 6,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 253,
@@ -2757,7 +2757,7 @@
     ],
     "producedInId": 9,
     "productionDuration": 12,
-    "powerUsage": [0, 2000]
+    "powerUsage": { "min": 0, "max": 2000 }
   },
   {
     "id": 254,
@@ -2774,7 +2774,7 @@
     ],
     "producedInId": 9,
     "productionDuration": 20,
-    "powerUsage": [0, 2000]
+    "powerUsage": { "min": 0, "max": 2000 }
   },
   {
     "id": 255,
@@ -2791,7 +2791,7 @@
     ],
     "producedInId": 9,
     "productionDuration": 15,
-    "powerUsage": [0, 2000]
+    "powerUsage": { "min": 0, "max": 2000 }
   },
   {
     "id": 256,
@@ -2808,7 +2808,7 @@
     ],
     "producedInId": 9,
     "productionDuration": 24,
-    "powerUsage": [0, 2000]
+    "powerUsage": { "min": 0, "max": 2000 }
   },
   {
     "id": 257,
@@ -2825,7 +2825,7 @@
     ],
     "producedInId": 9,
     "productionDuration": 24,
-    "powerUsage": [0, 2000]
+    "powerUsage": { "min": 0, "max": 2000 }
   },
   {
     "id": 258,
@@ -2837,7 +2837,7 @@
     "outputs": [{ "itemId": 135, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 2,
-    "powerUsage": [500, 1500]
+    "powerUsage": { "min": 500, "max": 1500 }
   },
   {
     "id": 259,
@@ -2849,7 +2849,7 @@
     "outputs": [{ "itemId": 135, "quantityPerCycle": 2 }],
     "producedInId": 7,
     "productionDuration": 2,
-    "powerUsage": [500, 1500]
+    "powerUsage": { "min": 500, "max": 1500 }
   },
   {
     "id": 260,
@@ -2858,7 +2858,7 @@
     "outputs": [{ "itemId": 135, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 3,
-    "powerUsage": [500, 1500]
+    "powerUsage": { "min": 500, "max": 1500 }
   },
   {
     "id": 261,
@@ -2867,7 +2867,7 @@
     "outputs": [{ "itemId": 136, "quantityPerCycle": 10 }],
     "producedInId": 8,
     "productionDuration": 3,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 262,
@@ -2933,7 +2933,7 @@
     ],
     "producedInId": 8,
     "productionDuration": 3,
-    "powerUsage": [100, 400]
+    "powerUsage": { "min": 100, "max": 400 }
   },
   {
     "id": 267,
@@ -3021,7 +3021,7 @@
     "outputs": [{ "itemId": 148, "quantityPerCycle": 1 }],
     "producedInId": 7,
     "productionDuration": 6,
-    "powerUsage": [500, 1500]
+    "powerUsage": { "min": 500, "max": 1500 }
   },
   {
     "id": 274,

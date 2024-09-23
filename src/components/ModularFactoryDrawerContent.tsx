@@ -1,277 +1,233 @@
 import { computed, defineComponent, type PropType } from 'vue'
-import { I18nT, useI18n } from 'vue-i18n'
+import { useI18n } from 'vue-i18n'
 import {
   NButton,
   NDataTable,
+  NEmpty,
   NFlex,
   NForm,
   NFormItem,
+  NGrid,
+  NGridItem,
   NInput,
   NInputNumber,
   NPopconfirm,
+  NStatistic,
   type DataTableColumns,
 } from 'naive-ui'
-import { isArray } from 'radash'
 import Decimal from 'decimal.js'
+import { isEmpty } from 'radash'
 
-import type { AssemblyLine, Id, ItemQuantityPerMinute } from '@/types'
-import { getBuildingById, getItemById } from '@/data'
-import { useModularFactoryList } from '@/stores/modularFactoryList'
+import type { AssemblyLine, Id } from '@/types'
+import { useModularFactoryStore } from '@/stores/modularFactoryStore'
+import { useAssemblyLineComputedStore } from '@/stores/assemblyLineComputedStore'
+import { useModularFactoryComputedStore } from '@/stores/modularFactoryComputedStore'
 
-import BuildingImage from './BuildingImage'
-import ItemImage from './ItemImage'
 import ItemRecipeSelect from './ItemRecipeSelect'
 import ItemSelect from './ItemSelect'
+import BuildingQuantityDisplay from './BuildingQuantityDisplay'
+import ItemQuantityPerMinuteDisplay from './ItemQuantityPerMinuteDisplay'
+import PowerDisplay from './PowerDisplay'
 
-const renderItemQuantityPerMinute = ({
-  itemId,
-  quantityPerMinute,
-}: ItemQuantityPerMinute) => {
-  const { t } = useI18n()
+const ItemQuantityPerMinuteDisplayList = defineComponent({
+  name: 'ItemQuantityPerMinuteDisplayList',
+  props: {
+    assemblyLineId: {
+      type: [String, Number] as PropType<Id>,
+      required: true,
+    },
+    type: {
+      type: String as PropType<'inputs' | 'outputs'>,
+      required: true,
+    },
+  },
+  setup(props) {
+    const assemblyLineComputedStore = useAssemblyLineComputedStore()
 
-  const item = getItemById(itemId)
+    const assemblyLineComputed = computed(
+      () => assemblyLineComputedStore.data[props.assemblyLineId],
+    )
 
-  const quantityPerMinuteDP = new Decimal(quantityPerMinute).toDP(4).toNumber()
-  return (
-    <NFlex align="center" wrap={false}>
-      <ItemImage
-        name={item.key}
-        sizes={[32, 64, 96]}
-        formats={['avif', 'webp', 'png']}
-      />
-      <NFlex size={2} vertical>
-        <div class="text-sm leading-3.5 truncate">{t(`items.${item.key}`)}</div>
-        <div class="text-xs leading-4 opacity-75 truncate">
-          <I18nT keypath="unitsPerMinute" scope="global">
-            <b>{quantityPerMinuteDP}</b>
-            {t(
-              item.type === 'solid' ? 'itemUnitName' : 'fluidUnitName',
-              quantityPerMinuteDP,
-            )}
-          </I18nT>
-        </div>
-      </NFlex>
-    </NFlex>
-  )
-}
+    return () => (
+      <div class="flex flex-col gap-y-2">
+        {assemblyLineComputed.value?.[props.type].map(
+          ({ itemId, quantityPerMinute }) => (
+            <ItemQuantityPerMinuteDisplay
+              itemId={itemId}
+              quantityPerMinute={quantityPerMinute}
+            />
+          ),
+        )}
+      </div>
+    )
+  },
+})
 
-function createColumns({
-  onDelete,
-}: {
-  onDelete: (id: Id) => void
-}): DataTableColumns<AssemblyLine> {
-  const { t } = useI18n()
+export default defineComponent({
+  name: 'ModularFactoryDrawerContent',
+  props: {
+    modularFactoryId: {
+      type: [Number, String] as PropType<Id>,
+      required: true,
+    },
+  },
+  setup(props) {
+    const { t } = useI18n()
 
-  const modularFactoryList = useModularFactoryList()
+    const modularFactoryStore = useModularFactoryStore()
+    const assemblyLineComputedStore = useAssemblyLineComputedStore()
+    const modularFactoryComputedStore = useModularFactoryComputedStore()
 
-  return [
-    {
-      title: t('targetItem'),
-      key: 'targetItem',
-      minWidth: 120,
-      width: 160,
-      render(row) {
-        return (
+    const modularFactory = computed(() => {
+      return modularFactoryStore.getModularFactory(props.modularFactoryId)
+    })
+
+    const modularFactoryComputed = computed(() => {
+      return modularFactoryComputedStore.data[props.modularFactoryId]
+    })
+
+    const columns = computed<DataTableColumns<AssemblyLine>>(() => [
+      {
+        title: t('targetItem'),
+        key: 'targetItem',
+        minWidth: 120,
+        width: 160,
+        render: (row) => (
           <ItemSelect
             value={row.targetItemId}
             onUpdateValue={(value) => {
-              row.targetItemId = value //todo
+              modularFactoryStore.setAssemblyLineTargetItem(row.id, value)
             }}
           />
-        )
+        ),
       },
-    },
-    {
-      title: t('recipe'),
-      key: 'recipe',
-      minWidth: 120,
-      width: 160,
-      render(row) {
-        return (
+      {
+        title: t('recipe'),
+        key: 'recipe',
+        minWidth: 120,
+        width: 160,
+        render: (row) => (
           <ItemRecipeSelect
             value={row.recipeId}
             onUpdateValue={(value) => {
-              row.recipeId = value // todo
+              modularFactoryStore.setAssemblyLineRecipe(row.id, value)
             }}
             itemId={row.targetItemId}
           />
-        )
+        ),
       },
-    },
-    {
-      title: t('targetItemSpeed'),
-      key: 'targetItemSpeed',
-      minWidth: 120,
-      width: 160,
-      render(row) {
-        return (
+      {
+        title: t('targetItemSpeed'),
+        key: 'targetItemSpeed',
+        minWidth: 120,
+        width: 160,
+        render: (row) => (
           <NInputNumber
             value={row.targetItemSpeed}
             onUpdateValue={(value) => {
-              row.targetItemSpeed = value // todo
-            }}
-            onBlur={() => {
-              row.targetItemSpeed =
-                row.targetItemSpeed &&
-                new Decimal(row.targetItemSpeed).toDP(4).toNumber()
+              modularFactoryStore.setAssemblyLineTargetItemSpeed(
+                row.id,
+                value &&
+                  new Decimal(value).toDP(4, Decimal.ROUND_UP).toNumber(),
+              )
             }}
             min={0}
             max={1000000}
           />
-        )
+        ),
       },
-    },
-    {
-      title: t('clockSpeed'),
-      key: 'clockSpeed',
-      minWidth: 120,
-      width: 140,
-      render: (row) => {
-        return (
-          <NInputNumber
-            value={
-              row.clockSpeed && new Decimal(row.clockSpeed).mul(100).toNumber()
-            }
-            onUpdateValue={(value) => {
-              row.clockSpeed = value && new Decimal(value).div(100).toNumber() // todo
-            }}
-            onBlur={() => {
-              row.clockSpeed =
-                row.clockSpeed && new Decimal(row.clockSpeed).toDP(6).toNumber()
-            }}
-            min={1}
-            max={250}
-          />
-        )
-      },
-    },
-    {
-      title: t('building'),
-      key: 'building',
-      minWidth: 120,
-      width: 140,
-      render: (row) => {
-        const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedRecord[row.id]
-        if (!assemblyLineComputed) {
-          return null
-        }
-        const building = getBuildingById(assemblyLineComputed.buildingId)
-        const buildingQuantityCeil = new Decimal(
-          assemblyLineComputed.buildingQuantity,
-        )
-          .ceil()
-          .toNumber()
-        const buildingQuantityCeil2 = new Decimal(
-          assemblyLineComputed.buildingQuantity,
-        )
-          .mul(100)
-          .ceil()
-          .div(100)
-          .toNumber()
-        return (
-          <NFlex align="center" wrap={false}>
-            <BuildingImage
-              name={building.key}
-              sizes={[48, 96, 144]}
-              formats={['avif', 'webp', 'png']}
+      {
+        title: t('clockSpeed'),
+        key: 'clockSpeed',
+        minWidth: 120,
+        width: 140,
+        render: (row) => {
+          return (
+            <NInputNumber
+              value={
+                row.clockSpeed &&
+                new Decimal(row.clockSpeed).mul(100).toNumber()
+              }
+              onUpdateValue={(value) => {
+                modularFactoryStore.setAssemblyLineClockSpeed(
+                  row.id,
+                  value &&
+                    new Decimal(value)
+                      .toDP(4, Decimal.ROUND_UP)
+                      .div(100)
+                      .toNumber(),
+                )
+              }}
+              min={1}
+              max={250}
             />
-            <NFlex size={2} vertical>
-              <div class="text-sm leading-3.5 truncate">
-                {t(`buildings.${building.key}`)}
-              </div>
-              <div class="text-xs leading-4 opacity-75">
-                <b>{buildingQuantityCeil}</b>
-                {buildingQuantityCeil !== buildingQuantityCeil2 && (
-                  <> ({buildingQuantityCeil2})</>
-                )}
-              </div>
-            </NFlex>
-          </NFlex>
-        )
+          )
+        },
       },
-    },
-    {
-      title: t('power'),
-      key: 'power',
-      minWidth: 80,
-      width: 120,
-      render: (row) => {
-        const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedRecord[row.id]
-        if (!assemblyLineComputed?.averageTotalPowerUsage) {
-          return null
-        }
-        return (
-          <NFlex vertical>
-            <div class="text-sm leading-3.5">
-              <b>
-                {new Decimal(assemblyLineComputed.averageTotalPowerUsage)
-                  .toDP(1)
-                  .toNumber()}
-              </b>
-              {' MW'}
-            </div>
-            {isArray(assemblyLineComputed.totalPowerUsage) && (
-              <div class="text-xs leading-4 opacity-75">
-                {assemblyLineComputed.totalPowerUsage
-                  .map(
-                    (powerUsage) =>
-                      `${new Decimal(powerUsage).toDP(1).toNumber()} MW`,
-                  )
-                  .join(' - ')}
-              </div>
-            )}
-          </NFlex>
-        )
+      {
+        title: t('building'),
+        key: 'building',
+        minWidth: 120,
+        width: 140,
+        render: (row) => <BuildingQuantityDisplay assemblyLineId={row.id} />,
       },
-    },
-    {
-      title: t('inputs'),
-      key: 'inputs',
-      minWidth: 120,
-      width: 160,
-      render: (row) => {
-        const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedRecord[row.id]
-        if (!assemblyLineComputed) {
-          return null
-        }
-        return (
-          <NFlex size={8} vertical>
-            {assemblyLineComputed.inputs.map(renderItemQuantityPerMinute)}
-          </NFlex>
-        )
+      {
+        title: t('power'),
+        key: 'power',
+        minWidth: 80,
+        width: 120,
+        render: (row) => {
+          const assemblyLineComputed = assemblyLineComputedStore.data[row.id]
+          return (
+            assemblyLineComputed?.averageTotalPowerUsage && (
+              <PowerDisplay
+                averagePowerUsage={assemblyLineComputed.averageTotalPowerUsage}
+                powerUsageRange={
+                  !Decimal.isDecimal(assemblyLineComputed.totalPowerUsage)
+                    ? assemblyLineComputed.totalPowerUsage
+                    : undefined
+                }
+              />
+            )
+          )
+        },
       },
-    },
-    {
-      title: t('outputs'),
-      key: 'outputs',
-      minWidth: 120,
-      width: 160,
-      render: (row) => {
-        const assemblyLineComputed =
-          modularFactoryList.assemblyLineComputedRecord[row.id]
-        if (!assemblyLineComputed) {
-          return null
-        }
-        return (
-          <NFlex size={8} vertical>
-            {assemblyLineComputed.outputs.map(renderItemQuantityPerMinute)}
-          </NFlex>
-        )
+      {
+        title: t('inputs'),
+        key: 'inputs',
+        minWidth: 120,
+        width: 160,
+        render: (row) => (
+          <ItemQuantityPerMinuteDisplayList
+            assemblyLineId={row.id}
+            type="inputs"
+          />
+        ),
       },
-    },
-    {
-      title: t('action'),
-      key: 'action',
-      width: 100,
-      render(row) {
-        return (
+      {
+        title: t('outputs'),
+        key: 'outputs',
+        minWidth: 120,
+        width: 160,
+        render: (row) => (
+          <ItemQuantityPerMinuteDisplayList
+            assemblyLineId={row.id}
+            type="outputs"
+          />
+        ),
+      },
+      {
+        title: t('action'),
+        key: 'action',
+        width: 100,
+        render: (row) => (
           <NFlex>
             <NPopconfirm
               onPositiveClick={() => {
-                onDelete(row.id)
+                modularFactoryStore.deleteAssemblyLine(
+                  modularFactory.value.id,
+                  row.id,
+                )
               }}
             >
               {{
@@ -284,33 +240,9 @@ function createColumns({
               }}
             </NPopconfirm>
           </NFlex>
-        )
+        ),
       },
-    },
-  ]
-}
-
-export default defineComponent({
-  props: {
-    modularFactoryId: {
-      type: Number as PropType<Id>,
-      required: true,
-    },
-  },
-  setup(props) {
-    const { t } = useI18n()
-
-    const modularFactoryList = useModularFactoryList()
-
-    const modularFactory = computed(() => {
-      return modularFactoryList.getModularFactory(props.modularFactoryId)
-    })
-
-    const modularFactoryComputed = computed(() => {
-      return modularFactoryList.modularFactoryComputedRecord[
-        props.modularFactoryId
-      ]
-    })
+    ])
 
     return () => (
       <NFlex size="large" vertical>
@@ -319,7 +251,10 @@ export default defineComponent({
             <NInput
               value={modularFactory.value.name}
               onUpdateValue={(value) => {
-                modularFactory.value.name = value // todo
+                modularFactoryStore.setModularFactoryName(
+                  props.modularFactoryId,
+                  value,
+                )
               }}
               maxlength={20}
               showCount
@@ -329,7 +264,10 @@ export default defineComponent({
             <NInput
               value={modularFactory.value.remark}
               onUpdateValue={(value) => {
-                modularFactory.value.remark = value // todo
+                modularFactoryStore.setModularFactoryRemark(
+                  props.modularFactoryId,
+                  value,
+                )
               }}
               maxlength={100}
               showCount
@@ -341,7 +279,7 @@ export default defineComponent({
           <NButton
             type="primary"
             onClick={() => {
-              modularFactoryList.newAssemblyLine(modularFactory.value.id)
+              modularFactoryStore.newAssemblyLine(modularFactory.value.id)
             }}
           >
             {t('newAssemblyLine')}
@@ -349,29 +287,61 @@ export default defineComponent({
         </NFlex>
 
         <NDataTable
-          rowKey={({ id }) => id}
-          columns={createColumns({
-            onDelete: (id) => {
-              modularFactoryList.deleteAssemblyLine(modularFactory.value.id, id)
-            },
-          })}
+          rowKey={({ id }: AssemblyLine) => id}
+          columns={columns.value}
           data={modularFactory.value.data}
         />
 
-        <NFlex size="large" align="start" wrap={false}>
-          <NFlex class="flex-[1_1_50%]">
-            <div class="w-full">{t('totalInputs')}</div>
-            {modularFactoryComputed.value?.inputs.map(
-              renderItemQuantityPerMinute,
-            )}
-          </NFlex>
-          <NFlex class="flex-[1_1_50%]">
-            <div class="w-full">{t('totalOutputs')}</div>
-            {modularFactoryComputed.value?.outputs.map(
-              renderItemQuantityPerMinute,
-            )}
-          </NFlex>
-        </NFlex>
+        {modularFactoryComputed.value?.averageTotalPowerUsage && (
+          <NStatistic label={t('averageTotalPowerUsage')}>
+            {{
+              suffix: () => 'MW',
+              default: () =>
+                modularFactoryComputed.value?.averageTotalPowerUsage
+                  .toDP(1)
+                  .toNumber(),
+            }}
+          </NStatistic>
+        )}
+
+        <NGrid xGap={16} cols={2}>
+          <NGridItem>
+            <NStatistic label={t('totalInputs')}>
+              {isEmpty(modularFactoryComputed.value?.inputs) ? (
+                <NEmpty />
+              ) : (
+                <NFlex>
+                  {modularFactoryComputed.value?.inputs.map(
+                    ({ itemId, quantityPerMinute }) => (
+                      <ItemQuantityPerMinuteDisplay
+                        itemId={itemId}
+                        quantityPerMinute={quantityPerMinute}
+                      />
+                    ),
+                  )}
+                </NFlex>
+              )}
+            </NStatistic>
+          </NGridItem>
+          <NGridItem>
+            <NStatistic label={t('totalOutputs')}>
+              {isEmpty(modularFactoryComputed.value?.outputs) ? (
+                <NEmpty />
+              ) : (
+                <NFlex>
+                  {modularFactoryComputed.value?.outputs.map(
+                    ({ itemId, quantityPerMinute }) => (
+                      <ItemQuantityPerMinuteDisplay
+                        itemId={itemId}
+                        quantityPerMinute={quantityPerMinute}
+                      />
+                    ),
+                  )}
+                </NFlex>
+              )}
+            </NStatistic>
+          </NGridItem>
+        </NGrid>
       </NFlex>
     )
   },

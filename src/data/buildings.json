@@ -5,9 +5,9 @@
   { "id": 4, "key": "Packager", "powerUsage": 10 },
   { "id": 5, "key": "Refinery", "powerUsage": 30 },
   { "id": 6, "key": "Blender", "powerUsage": 75 },
-  { "id": 7, "key": "Particle_Accelerator", "powerUsage": "variable" },
-  { "id": 8, "key": "Converter", "powerUsage": "variable" },
-  { "id": 9, "key": "Quantum_Encoder", "powerUsage": "variable" },
+  { "id": 7, "key": "Particle_Accelerator" },
+  { "id": 8, "key": "Converter" },
+  { "id": 9, "key": "Quantum_Encoder" },
   { "id": 10, "key": "Smelter", "powerUsage": 4 },
   { "id": 11, "key": "Foundry", "powerUsage": 16 }
 ]

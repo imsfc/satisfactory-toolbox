@@ -1,27 +1,48 @@
-export type Id = number
+import type Decimal from 'decimal.js'
 
-export type PowerUsage = number | [number, number]
+export type Id = number | string
+
+export type PowerUsage = Decimal | { min: Decimal; max: Decimal }
+export type PowerUsageJson = number | { min: number; max: number }
 
 export interface Building {
   id: Id
   key: string
-  powerUsage: PowerUsage | 'variable'
+  powerUsage?: PowerUsage
+}
+
+export type BuildingsJson = Omit<Building, 'powerUsage'> & {
+  powerUsage?: PowerUsageJson
+}
+
+export enum ItemType {
+  solid,
+  fluid,
 }
 
 export interface Item {
   id: Id
   key: string
-  type: 'solid' | 'fluid'
+  type: ItemType
 }
+
+export type ItemJson = Item
 
 export interface ItemQuantityPerCycle {
   itemId: Id
+  quantityPerCycle: Decimal
+}
+
+export type ItemQuantityPerCycleJson = Omit<
+  ItemQuantityPerCycle,
+  'quantityPerCycle'
+> & {
   quantityPerCycle: number
 }
 
 export interface ItemQuantityPerMinute {
   itemId: Id
-  quantityPerMinute: number
+  quantityPerMinute: Decimal
 }
 
 export interface Recipe {
@@ -30,21 +51,18 @@ export interface Recipe {
   inputs: ItemQuantityPerCycle[]
   outputs: ItemQuantityPerCycle[]
   producedInId: Id
+  productionDuration: Decimal
+  powerUsage?: PowerUsage
+}
+
+export type RecipeJson = Omit<
+  Recipe,
+  'inputs' | 'outputs' | 'productionDuration' | 'powerUsage'
+> & {
+  inputs: ItemQuantityPerCycleJson[]
+  outputs: ItemQuantityPerCycleJson[]
   productionDuration: number
-  powerUsage?: PowerUsage // producedIn.powerUsage === 'variable' 时生效
-}
-
-export interface ModularFactory {
-  id: Id
-  name: string
-  remark: string
-  data: AssemblyLine[]
-}
-
-export interface ModularFactoryComputed {
-  modularFactoryId: Id
-  inputs: ItemQuantityPerMinute[]
-  outputs: ItemQuantityPerMinute[]
+  powerUsage?: PowerUsageJson
 }
 
 export interface AssemblyLine {
@@ -57,10 +75,32 @@ export interface AssemblyLine {
 
 export interface AssemblyLineComputed {
   buildingId: Id
-  buildingQuantity: number
-  powerUsage?: PowerUsage
-  totalPowerUsage?: PowerUsage
-  averageTotalPowerUsage?: number
+  buildingQuantity: Decimal
+  powerUsage: PowerUsage
+  totalPowerUsage: PowerUsage
+  averageTotalPowerUsage: Decimal
+  inputs: ItemQuantityPerMinute[]
+  outputs: ItemQuantityPerMinute[]
+}
+
+export interface ModularFactory {
+  id: Id
+  name: string
+  remark: string
+  data: AssemblyLine[]
+}
+
+export interface ModularFactoryComputed {
+  modularFactoryId: Id
+  totalPowerUsage: PowerUsage
+  averageTotalPowerUsage: Decimal
+  inputs: ItemQuantityPerMinute[]
+  outputs: ItemQuantityPerMinute[]
+}
+
+export interface AllComputed {
+  totalPowerUsage: PowerUsage
+  averageTotalPowerUsage: Decimal
   inputs: ItemQuantityPerMinute[]
   outputs: ItemQuantityPerMinute[]
 }

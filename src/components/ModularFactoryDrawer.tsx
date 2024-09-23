@@ -12,6 +12,7 @@ export interface Exposed {
 }
 
 export default defineComponent({
+  name: 'ModularFactoryDrawer',
   setup(props, { expose }) {
     const { t } = useI18n()
 
@@ -20,7 +21,7 @@ export default defineComponent({
     const show = ref(false)
     const modularFactoryId = ref<Id>()
 
-    function open(id: Id) {
+    const open = (id: Id) => {
       modularFactoryId.value = id
       show.value = true
     }

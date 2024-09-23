@@ -2,34 +2,59 @@ import { Decimal } from 'decimal.js'
 
 import type { PowerUsage } from '@/types'
 
-const overclockingPowerIndex = 1.321928
+// 超频功率指数
+const OVERCLOCKING_POWER_EXPONENT = 1.321928
 
+// 计算每分钟的产量
 export const calculateQuantityPerMinute = (
-  quantityPerCycle: number,
-  productionDuration: number,
+  quantityPerCycle: Decimal,
+  productionDuration: Decimal,
 ) => {
-  const cyclesPerMinute = new Decimal(60).div(productionDuration).toNumber()
-  return new Decimal(quantityPerCycle).mul(cyclesPerMinute).toNumber()
+  // 每分钟的周期数
+  const cyclesPerMinute = Decimal.div(60, productionDuration)
+  // 每分钟的产量 = 每周期数量 × 每分钟的周期数
+  return Decimal.mul(quantityPerCycle, cyclesPerMinute)
 }
 
+// 计算功率
+export const calculatePowerUsage = (
+  powerUsage: PowerUsage,
+  clockSpeed: Decimal,
+) => {
+  // 超频功率乘数 = 时钟速度 的 超频功率指数 次方
+  const overclockingPowerMultiplier = Decimal.pow(
+    clockSpeed,
+    OVERCLOCKING_POWER_EXPONENT,
+  )
+  if (Decimal.isDecimal(powerUsage)) {
+    return Decimal.mul(powerUsage, overclockingPowerMultiplier)
+  }
+  return {
+    min: Decimal.mul(powerUsage.min, overclockingPowerMultiplier),
+    max: Decimal.mul(powerUsage.max, overclockingPowerMultiplier),
+  }
+}
+
+// 计算总功率
 export const calculateTotalPowerUsage = (
   powerUsage: PowerUsage,
-  buildingQuantity: number,
-  clockSpeed: number,
+  clockSpeed: Decimal,
+  buildingQuantity: Decimal,
 ): PowerUsage => {
-  const powerMul = new Decimal(clockSpeed).pow(overclockingPowerIndex)
-  if (typeof powerUsage === 'number') {
-    return powerMul.mul(powerUsage).mul(buildingQuantity).toNumber()
+  const powerUsagePerBuilding = calculatePowerUsage(powerUsage, clockSpeed)
+
+  if (Decimal.isDecimal(powerUsagePerBuilding)) {
+    return Decimal.mul(powerUsagePerBuilding, buildingQuantity)
   }
-  return [
-    powerMul.mul(powerUsage[0]).mul(buildingQuantity).toNumber(),
-    powerMul.mul(powerUsage[1]).mul(buildingQuantity).toNumber(),
-  ]
+  return {
+    min: Decimal.mul(powerUsagePerBuilding.min, buildingQuantity),
+    max: Decimal.mul(powerUsagePerBuilding.max, buildingQuantity),
+  }
 }
 
-export const calculateAveragePowerUsage = (powerUsage: PowerUsage): number => {
-  if (typeof powerUsage === 'number') {
+export const calculateAveragePowerUsage = (powerUsage: PowerUsage): Decimal => {
+  if (Decimal.isDecimal(powerUsage)) {
     return powerUsage
   }
-  return new Decimal(powerUsage[0]).add(powerUsage[1]).div(2).toNumber()
+  return Decimal.add(powerUsage.min, powerUsage.max).div(2)
 }

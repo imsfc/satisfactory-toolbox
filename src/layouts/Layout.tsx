@@ -2,17 +2,13 @@ import { defineComponent } from 'vue'
 import { RouterView } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useColorMode } from '@vueuse/core'
-import {
-  NLayout,
-  NLayoutHeader,
-  NLayoutContent,
-  NButton,
-  NFlex,
-} from 'naive-ui'
+import { NLayout, NLayoutHeader, NLayoutContent, NButton } from 'naive-ui'
 
-import logo from '@/assets/logo.png'
+// @ts-ignore
+import logo from '@/assets/logo.png?w=96'
 
 export default defineComponent({
+  name: 'DefaultLayout',
   setup() {
     const { t, locale } = useI18n()
 
@@ -21,12 +17,12 @@ export default defineComponent({
     return () => (
       <NLayout class="h-screen">
         <NLayoutHeader class="px-8 h-16 flex items-center gap-4" bordered>
-          <NFlex class="cursor-pointer" align="center">
+          <div class="flex items-center gap-x-3 cursor-pointer">
             <img src={logo} width={32} height={32} />
             <div class="text-lg font-bold leading-none">{t('logoTitle')}</div>
-          </NFlex>
+          </div>
           <div class="flex-1"></div>
-          <NFlex align="center">
+          <div class="flex items-center gap-x-3">
             <NButton
               quaternary
               onClick={() => {
@@ -56,7 +52,7 @@ export default defineComponent({
               }
             </NButton>
             <div class="leading-none">v0.1</div>
-          </NFlex>
+          </div>
         </NLayoutHeader>
 
         <NLayoutContent

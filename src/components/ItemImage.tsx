@@ -1,8 +1,11 @@
-import { defineComponent, type PropType } from 'vue'
+import { computed, defineComponent, type PropType } from 'vue'
 
 import { hasImg, img, type Format, type Size } from '@/assets/items'
 
+import BaseImage, { type Option } from './BaseImage'
+
 export default defineComponent({
+  name: 'ItemImage',
   props: {
     name: {
       type: String,
@@ -20,40 +23,36 @@ export default defineComponent({
     height: Number,
   },
   setup(props) {
-    return () => (
-      <picture class="flex">
-        {hasImg(props.name) &&
-        props.sizes.length > 0 &&
-        props.formats.length > 0 ? (
-          props.formats.map((format, index) => {
-            if (index < props.formats.length - 1) {
-              return (
-                <source
-                  type={`image/${format}`}
-                  srcset={props.sizes
-                    .map((size, index) => {
-                      return `${img(props.name, size, format)} ${index + 1}x`
-                    })
-                    .join(', ')}
-                />
-              )
-            }
+    const options = computed<Option[]>(() => {
+      if (!hasImg(props.name) || props.sizes.length === 0) {
+        return []
+      }
+      return [
+        ...props.formats.map((format): Option => {
+          return {
+            type: 'source',
+            format,
+            srcset: props.sizes.map((size, index) => {
+              return {
+                src: img(props.name, size, format),
+                dpr: index + 1,
+              }
+            }),
+          }
+        }),
+        {
+          type: 'img',
+          src: img(props.name, props.sizes[props.sizes.length - 1], 'png'),
+        },
+      ]
+    })
 
-            return (
-              <img
-                src={img(props.name, props.sizes[0], format)}
-                width={props.width ?? props.sizes[0]}
-                height={props.height ?? props.sizes[0]}
-              />
-            )
-          })
-        ) : (
-          <img
-            width={props.width ?? props.sizes[0]}
-            height={props.height ?? props.sizes[0]}
-          />
-        )}
-      </picture>
+    return () => (
+      <BaseImage
+        options={options.value}
+        width={props.width ?? props.sizes[0]}
+        height={props.height ?? props.sizes[0]}
+      />
     )
   },
 })

@@ -1,122 +1,136 @@
-import { computed, defineComponent, watch, type PropType } from 'vue'
+import { computed, defineComponent, type PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
-import {
-  NFlex,
-  NSelect,
-  type SelectRenderLabel,
-  type SelectRenderTag,
-} from 'naive-ui'
+import { NSelect } from 'naive-ui'
+import type Decimal from 'decimal.js'
 
 import type { Id } from '@/types'
-import { getBuildingById, getItemById, getRecipeById, recipes } from '@/data'
+import { getBuilding, getItem, getRecipe, recipes } from '@/data'
 import { calculateQuantityPerMinute } from '@/utils/dataCalculators'
 
 import BuildingImage from './BuildingImage'
 import ItemImage from './ItemImage'
 
-const renderItem = (
-  itemId: Id,
-  quantityPerCycle: number,
-  quantityPerMinute: number,
-) => {
-  const { t } = useI18n()
+const ItemRecipeSelectLabelItem = defineComponent({
+  name: 'ItemRecipeSelectLabelItem',
+  props: {
+    itemId: {
+      type: [Number, String] as PropType<Id>,
+      required: true,
+    },
+    quantityPerCycle: {
+      type: Object as PropType<Decimal>,
+      required: true,
+    },
+    quantityPerMinute: {
+      type: Object as PropType<Decimal>,
+      required: true,
+    },
+  },
+  setup(props) {
+    const { t } = useI18n()
 
-  const item = getItemById(itemId)
+    const item = computed(() => getItem(props.itemId))
 
-  return (
-    <NFlex size={4} align="center" vertical>
-      <ItemImage
-        name={item.key}
-        sizes={[32, 64, 96]}
-        formats={['avif', 'webp', 'png']}
-      />
-      <NFlex
-        class="w-16 text-xs text-center whitespace-normal grow"
-        size={0}
-        vertical
-      >
-        <div class="grow line-clamp-2">
-          {quantityPerCycle}×{t(`items.${item.key}`)}
-        </div>
-        <div class="opacity-75 truncate">
-          {quantityPerMinute}
-          {t('perMinute')}
-        </div>
-      </NFlex>
-    </NFlex>
-  )
-}
-
-const renderLabel: SelectRenderLabel = (option) => {
-  const { t } = useI18n()
-
-  const recipe = getRecipeById(option.value as Id)
-  const building = getBuildingById(recipe.producedInId)
-
-  return (
-    <NFlex class="py-2" align="center">
-      <NFlex vertical>
-        <BuildingImage
-          name={building.key}
-          sizes={[48, 96, 144]}
+    return () => (
+      <div class="flex flex-col items-center gap-y-1">
+        <ItemImage
+          name={item.value.key}
+          sizes={[32, 64, 96]}
           formats={['avif', 'webp', 'png']}
         />
-        <div class="w-12 text-xs text-center whitespace-normal">
-          {t(`buildings.${building.key}`)}
+        <div class="w-16 flex flex-col grow text-xs text-center whitespace-normal">
+          <div class="grow line-clamp-2">
+            {props.quantityPerCycle.toNumber()}×{t(`items.${item.value.key}`)}
+          </div>
+          <div class="opacity-75 truncate">
+            {props.quantityPerMinute.toNumber()}
+            {t('perMinute')}
+          </div>
         </div>
-      </NFlex>
-      <NFlex size={8} vertical>
-        <div class="text-sm">{option.label}</div>
-        <NFlex>
-          <NFlex>
-            {recipe.inputs.map(({ itemId, quantityPerCycle }) =>
-              renderItem(
-                itemId,
-                quantityPerCycle,
-                calculateQuantityPerMinute(
-                  quantityPerCycle,
-                  recipe.productionDuration,
-                ),
-              ),
-            )}
-          </NFlex>
-          <NFlex
-            class="w-12 self-center"
-            justify="center"
-            align="center"
-            vertical
-          >
-            <div class="text-xl leading-none">→</div>
-            <div class="text-sm leading-none">
-              {recipe.productionDuration}
-              {t('seconds')}
-            </div>
-          </NFlex>
-          <NFlex>
-            {recipe.outputs.map(({ itemId, quantityPerCycle }) =>
-              renderItem(
-                itemId,
-                quantityPerCycle,
-                calculateQuantityPerMinute(
-                  quantityPerCycle,
-                  recipe.productionDuration,
-                ),
-              ),
-            )}
-          </NFlex>
-        </NFlex>
-      </NFlex>
-    </NFlex>
-  )
-}
+      </div>
+    )
+  },
+})
 
-const renderTag: SelectRenderTag = ({ option }) => option.label as string
+const ItemRecipeSelectLabel = defineComponent({
+  name: 'ItemRecipeSelectLabel',
+  props: {
+    label: {
+      type: String,
+      required: true,
+    },
+    recipeId: {
+      type: [Number, String] as PropType<Id>,
+      required: true,
+    },
+  },
+  setup(props) {
+    const { t } = useI18n()
+
+    const recipe = computed(() => getRecipe(props.recipeId))
+    const building = computed(() => getBuilding(recipe.value.producedInId))
+
+    return () => (
+      <div class="py-2 flex items-center gap-x-3">
+        <div class="flex flex-col gap-y-2">
+          <BuildingImage
+            name={building.value.key}
+            sizes={[48, 96, 144]}
+            formats={['avif', 'webp', 'png']}
+          />
+          <div class="w-12 text-xs text-center whitespace-normal">
+            {t(`buildings.${building.value.key}`)}
+          </div>
+        </div>
+        <div class="flex flex-col gap-y-2">
+          <div class="text-sm">{props.label}</div>
+          <div class="flex gap-x-3">
+            <div class="flex gap-x-3">
+              {recipe.value.inputs.map(({ itemId, quantityPerCycle }) => (
+                <ItemRecipeSelectLabelItem
+                  key={itemId}
+                  itemId={itemId}
+                  quantityPerCycle={quantityPerCycle}
+                  quantityPerMinute={calculateQuantityPerMinute(
+                    quantityPerCycle,
+                    recipe.value.productionDuration,
+                  )}
+                />
+              ))}
+            </div>
+            <div class="w-12 self-center flex flex-col justify-center items-center gap-y-2">
+              <div class="text-xl leading-none">→</div>
+              <div class="text-sm leading-none">
+                {recipe.value.productionDuration.toNumber()}
+                {t('seconds')}
+              </div>
+            </div>
+            <div class="flex gap-x-3">
+              {recipe.value.outputs.map(({ itemId, quantityPerCycle }) => (
+                <ItemRecipeSelectLabelItem
+                  key={itemId}
+                  itemId={itemId}
+                  quantityPerCycle={quantityPerCycle}
+                  quantityPerMinute={calculateQuantityPerMinute(
+                    quantityPerCycle,
+                    recipe.value.productionDuration,
+                  )}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  },
+})
 
 export default defineComponent({
+  name: 'ItemRecipeSelect',
   props: {
-    itemId: Number as PropType<Id | null>,
     value: Number as PropType<Id | null>,
     onUpdateValue: Function as PropType<(value: Id | null) => void>,
+    itemId: Number as PropType<Id | null>,
   },
   setup(props) {
     const { t } = useI18n()
@@ -138,13 +152,7 @@ export default defineComponent({
       return []
     })
 
-    watch(options, (options) => {
-      if (options.length === 0) {
-        props.onUpdateValue?.(null)
-      } else {
-        props.onUpdateValue?.(options[0].value)
-      }
-    })
+    type Option = (typeof options.value)[number]
 
     return () => (
       <NSelect
@@ -152,8 +160,10 @@ export default defineComponent({
         onUpdateValue={props.onUpdateValue}
         options={options.value}
         consistent-menu-width={false}
-        renderLabel={renderLabel}
-        renderTag={renderTag}
+        renderLabel={(option: Option) => (
+          <ItemRecipeSelectLabel label={option.label} recipeId={option.value} />
+        )}
+        renderTag={({ option }) => option.label as Option['label']}
         filterable
         clearable
       />

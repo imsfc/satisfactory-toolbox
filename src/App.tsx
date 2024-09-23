@@ -11,11 +11,12 @@ import {
 } from 'naive-ui'
 
 export default defineComponent({
+  name: 'App',
   setup() {
     const { locale } = useI18n()
 
-    const _locale = useLocalStorage('locale', locale.value)
-    syncRef(locale, _locale)
+    const localStorageLocale = useLocalStorage('locale', locale.value)
+    syncRef(locale, localStorageLocale)
 
     const colorMode = useColorMode()
 
@@ -29,9 +30,9 @@ export default defineComponent({
 
     return () => (
       <NConfigProvider
-        theme={isDark.value ? darkTheme : undefined}
-        locale={locale.value === 'zh-CN' ? zhCN : undefined}
-        dateLocale={locale.value === 'zh-CN' ? dateZhCN : undefined}
+        theme={isDark.value ? darkTheme : null}
+        locale={locale.value === 'zh-CN' ? zhCN : null}
+        dateLocale={locale.value === 'zh-CN' ? dateZhCN : null}
       >
         <NMessageProvider>
           <RouterView />

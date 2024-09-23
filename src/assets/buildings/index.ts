@@ -16,9 +16,6 @@ export const hasImg = (name: string) => {
 
 export const img = (name: string, size: Size, format: Format) => {
   const image = images[`./${name}.png`]
-  if (!image) {
-    return undefined
-  }
 
   const index = sizes.indexOf(size) * formats.length + formats.indexOf(format)
   return image[index]

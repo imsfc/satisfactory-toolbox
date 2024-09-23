@@ -18,8 +18,11 @@ remark: 备注
 power: 功率
 inputs: 输入
 outputs: 输出
-totalInputs: 总输入
-totalOutputs: 总输出
+totalInputs: 净需求
+totalOutputs: 净产出
+finalTotalInputs: 全局物品缺口
+finalTotalOutputs: 全局物品盈余
+averageTotalPowerUsage: 净平均功率
 action: 操作
 
 delete: 删除
