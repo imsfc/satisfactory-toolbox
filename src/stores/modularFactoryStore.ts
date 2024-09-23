@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid'
 import { defineStore } from 'pinia'
 import { computed, ref, watchEffect } from 'vue'
 
+import { recipes } from '@/data'
 import type { AssemblyLine, Id, ModularFactory } from '@/types'
 
 const storeKey = 'modularFactoryStore'
@@ -94,6 +95,34 @@ export const useModularFactoryStore = defineStore(storeKey, () => {
   ) => {
     const assemblyLine = getAssemblyLine(assemblyLineId)
     assemblyLine.targetItemId = targetItemId
+
+    // 过滤出输出这个物品的配方
+    const filteredRecipes = targetItemId
+      ? recipes.filter(({ outputs }) => {
+          return outputs.some(({ itemId }) => itemId === targetItemId)
+        })
+      : []
+
+    // 如果配方为空(包括未选择目标物品的情况) 则清除选中配方
+    if (assemblyLine.recipeId && filteredRecipes.length === 0) {
+      assemblyLine.recipeId = null
+      return
+    }
+
+    // 如果当前没有选中配方 则默认选择过滤后的第一个配方
+    if (!assemblyLine.recipeId && filteredRecipes.length > 0) {
+      assemblyLine.recipeId = filteredRecipes[0].id
+      return
+    }
+
+    // 如果配方不为空，但是当前选中的配方不存在于过滤后的配方列表中，则默认选择过滤后的第一个配方
+    if (
+      filteredRecipes.length > 0 &&
+      !filteredRecipes.some(({ id }) => id === assemblyLine.recipeId)
+    ) {
+      assemblyLine.recipeId = filteredRecipes[0].id
+      return
+    }
   }
 
   const setAssemblyLineRecipe = (assemblyLineId: Id, recipeId: Id | null) => {
