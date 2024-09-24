@@ -23,7 +23,9 @@ export default defineComponent({
         <NLayoutHeader class="px-8 h-16 flex items-center gap-4" bordered>
           <div class="flex items-center gap-x-3 cursor-pointer">
             <img src={logo} width={32} height={32} />
-            <div class="text-lg font-bold leading-none">{t('logoTitle')}</div>
+            <div class="text-lg font-bold leading-none truncate">
+              {t('logoTitle')}
+            </div>
           </div>
           <div class="flex-1"></div>
           <div class="flex items-center gap-x-3">
