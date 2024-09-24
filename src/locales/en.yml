@@ -16,7 +16,7 @@ clearAllData: Clear All Data
 clearAllDataConfirm: Are you sure you want to clear all data?
 
 sort: Sort
-name: Name
+factoryName: Factory Name
 remark: Remark
 power: Power
 inputs: Inputs

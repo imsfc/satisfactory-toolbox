@@ -7,7 +7,7 @@ import {
   NEmpty,
   NFlex,
   NForm,
-  NFormItem,
+  NFormItemGi,
   NGrid,
   NGridItem,
   NInput,
@@ -257,32 +257,34 @@ export default defineComponent({
     return () => (
       <NFlex class="h-full" size="large" vertical>
         <NForm labelPlacement="left" labelWidth="auto" inline>
-          <NFormItem label={t('name')} path="name">
-            <NInput
-              value={modularFactory.value.name}
-              onUpdateValue={(value) => {
-                modularFactoryStore.setModularFactoryName(
-                  props.modularFactoryId,
-                  value,
-                )
-              }}
-              maxlength={20}
-              showCount
-            />
-          </NFormItem>
-          <NFormItem label={t('remark')} path="remark">
-            <NInput
-              value={modularFactory.value.remark}
-              onUpdateValue={(value) => {
-                modularFactoryStore.setModularFactoryRemark(
-                  props.modularFactoryId,
-                  value,
-                )
-              }}
-              maxlength={100}
-              showCount
-            />
-          </NFormItem>
+          <NGrid cols="2 s:3 m:4 l:5 xl:6" xGap={16} responsive="screen">
+            <NFormItemGi span={1} label={t('factoryName')}>
+              <NInput
+                value={modularFactory.value.name}
+                onUpdateValue={(value) => {
+                  modularFactoryStore.setModularFactoryName(
+                    props.modularFactoryId,
+                    value,
+                  )
+                }}
+                maxlength={20}
+                showCount
+              />
+            </NFormItemGi>
+            <NFormItemGi span="1 s:2 m:3" label={t('remark')}>
+              <NInput
+                value={modularFactory.value.remark}
+                onUpdateValue={(value) => {
+                  modularFactoryStore.setModularFactoryRemark(
+                    props.modularFactoryId,
+                    value,
+                  )
+                }}
+                maxlength={100}
+                showCount
+              />
+            </NFormItemGi>
+          </NGrid>
         </NForm>
 
         <NFlex>

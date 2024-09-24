@@ -16,7 +16,7 @@ clearAllData: 清空全部数据
 clearAllDataConfirm: 确定清空全部数据吗？
 
 sort: 排序
-name: 名称
+factoryName: 工厂名称
 remark: 备注
 power: 功率
 inputs: 输入

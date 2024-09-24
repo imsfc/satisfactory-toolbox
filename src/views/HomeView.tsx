@@ -94,7 +94,7 @@ export default defineComponent({
           ),
         },
         {
-          title: t('name'),
+          title: t('factoryName'),
           key: 'name',
         },
         {
