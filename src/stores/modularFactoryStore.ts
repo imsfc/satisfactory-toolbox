@@ -40,7 +40,7 @@ export const useModularFactoryStore = defineStore(storeKey, () => {
     const id = nanoid()
     data.value.unshift({
       id,
-      name: `Factory_${id}`,
+      name: `Factory_${id.slice(0, 6)}`,
       remark: '',
       data: [],
     })
