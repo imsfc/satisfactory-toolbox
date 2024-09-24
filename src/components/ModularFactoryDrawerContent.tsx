@@ -1,3 +1,4 @@
+import { useElementSize, useWindowSize } from '@vueuse/core'
 import { Decimal } from 'decimal.js'
 import {
   type DataTableColumns,
@@ -15,7 +16,7 @@ import {
   NStatistic,
 } from 'naive-ui'
 import { isEmpty } from 'radash'
-import { type PropType, computed, defineComponent } from 'vue'
+import { type PropType, computed, defineComponent, useTemplateRef } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import { useAssemblyLineComputedStore } from '@/stores/assemblyLineComputedStore'
@@ -78,6 +79,22 @@ export default defineComponent({
   setup(props) {
     const { t } = useI18n()
 
+    const { height: windowHeight } = useWindowSize()
+    const { height: summaryHeight } = useElementSize(useTemplateRef('summary'))
+    const tableHeight = computed(() => {
+      return (
+        windowHeight.value -
+        64 -
+        51 -
+        32 -
+        48 -
+        58 -
+        34 -
+        64.78125 -
+        summaryHeight.value
+      )
+    })
+
     const modularFactoryStore = useModularFactoryStore()
     const assemblyLineComputedStore = useAssemblyLineComputedStore()
     const modularFactoryComputedStore = useModularFactoryComputedStore()
@@ -94,16 +111,15 @@ export default defineComponent({
       {
         title: t('sort'),
         key: 'sort',
-        width: 60,
+        width: 50,
+        fixed: 'left',
         render: () => (
-          <DragHandleOutlined class="sort-handle cursor-move w-7 h-7" />
+          <DragHandleOutlined class="sort-handle flex cursor-move w-7 h-7" />
         ),
       },
       {
         title: t('targetItem'),
         key: 'targetItem',
-        minWidth: 120,
-        width: 160,
         render: (row) => (
           <ItemSelect
             value={row.targetItemId}
@@ -116,8 +132,6 @@ export default defineComponent({
       {
         title: t('recipe'),
         key: 'recipe',
-        minWidth: 120,
-        width: 160,
         render: (row) => (
           <ItemRecipeSelect
             value={row.recipeId}
@@ -131,8 +145,6 @@ export default defineComponent({
       {
         title: t('targetItemSpeed'),
         key: 'targetItemSpeed',
-        minWidth: 120,
-        width: 160,
         render: (row) => (
           <NInputNumber
             value={row.targetItemSpeed}
@@ -150,8 +162,6 @@ export default defineComponent({
       {
         title: t('clockSpeed'),
         key: 'clockSpeed',
-        minWidth: 120,
-        width: 140,
         render: (row) => {
           return (
             <NInputNumber
@@ -174,15 +184,11 @@ export default defineComponent({
       {
         title: t('building'),
         key: 'building',
-        minWidth: 120,
-        width: 140,
         render: (row) => <BuildingQuantityDisplay assemblyLineId={row.id} />,
       },
       {
         title: t('power'),
         key: 'power',
-        minWidth: 80,
-        width: 120,
         render: (row) => {
           const assemblyLineComputed = assemblyLineComputedStore.data[row.id]
           return (
@@ -202,8 +208,6 @@ export default defineComponent({
       {
         title: t('inputs'),
         key: 'inputs',
-        minWidth: 120,
-        width: 160,
         render: (row) => (
           <ItemQuantityPerMinuteDisplayList
             assemblyLineId={row.id}
@@ -214,8 +218,6 @@ export default defineComponent({
       {
         title: t('outputs'),
         key: 'outputs',
-        minWidth: 120,
-        width: 160,
         render: (row) => (
           <ItemQuantityPerMinuteDisplayList
             assemblyLineId={row.id}
@@ -226,7 +228,8 @@ export default defineComponent({
       {
         title: t('action'),
         key: 'action',
-        width: 100,
+        width: 80,
+        fixed: 'right',
         render: (row) => (
           <NFlex>
             <NPopconfirm
@@ -252,7 +255,7 @@ export default defineComponent({
     ])
 
     return () => (
-      <NFlex size="large" vertical>
+      <NFlex class="h-full" size="large" vertical>
         <NForm labelPlacement="left" labelWidth="auto" inline>
           <NFormItem label={t('name')} path="name">
             <NInput
@@ -307,16 +310,26 @@ export default defineComponent({
             animation={150}
           >
             <NDataTable
+              class="min-h-52"
+              style={{ height: `${tableHeight.value}px` }}
               rowKey={({ id }: AssemblyLine) => id}
               columns={columns.value}
               data={modularFactory.value.data}
+              scrollX={1280}
+              size="small"
+              flexHeight
             />
           </VueDraggableExt>
         ) : (
           <NDataTable
+            class="min-h-52"
+            style={{ height: `${tableHeight.value}px` }}
             rowKey={({ id }: AssemblyLine) => id}
             columns={columns.value}
             data={modularFactory.value.data}
+            scrollX={1280}
+            size="small"
+            flexHeight
           />
         )}
 
@@ -334,7 +347,7 @@ export default defineComponent({
           </NStatistic>
         )}
 
-        <NGrid xGap={16} cols={2}>
+        <NGrid ref="summary" xGap={16} cols={2}>
           <NGridItem>
             <NStatistic label={t('totalInputs')}>
               {isEmpty(modularFactoryComputed.value?.inputs) ? (

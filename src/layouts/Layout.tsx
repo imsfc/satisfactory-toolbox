@@ -85,7 +85,7 @@ export default defineComponent({
 
         <NLayoutContent
           class="!top-16"
-          contentClass="px-8 py-6"
+          contentClass="px-6 py-4"
           position="absolute"
           nativeScrollbar={false}
         >

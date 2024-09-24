@@ -1,3 +1,4 @@
+import { useElementSize, useWindowSize } from '@vueuse/core'
 import { Decimal } from 'decimal.js'
 import {
   type DataTableColumns,
@@ -66,6 +67,14 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
 
+    const { height: windowHeight } = useWindowSize()
+    const { height: summaryHeight } = useElementSize(useTemplateRef('summary'))
+    const tableHeight = computed(() => {
+      return (
+        windowHeight.value - 64 - 48 - 36 - 34 - 64.78125 - summaryHeight.value
+      )
+    })
+
     const modularFactoryStore = useModularFactoryStore()
     const modularFactoryComputedStore = useModularFactoryComputedStore()
 
@@ -78,25 +87,23 @@ export default defineComponent({
         {
           title: t('sort'),
           key: 'sort',
-          width: 60,
+          width: 50,
+          fixed: 'left',
           render: () => (
-            <DragHandleOutlined class="sort-handle cursor-move w-7 h-7" />
+            <DragHandleOutlined class="sort-handle flex cursor-move w-7 h-7" />
           ),
         },
         {
           title: t('name'),
           key: 'name',
-          minWidth: 160,
         },
         {
           title: t('remark'),
           key: 'remark',
-          minWidth: 240,
         },
         {
           title: t('power'),
           key: 'power',
-          minWidth: 120,
           render: (row) => {
             const modularFactoryComputed =
               modularFactoryComputedStore.data[row.id]
@@ -124,7 +131,6 @@ export default defineComponent({
         {
           title: t('inputs'),
           key: 'inputs',
-          minWidth: 120,
           render: (row) => (
             <ItemQuantityPerMinuteDisplayList
               modularFactoryId={row.id}
@@ -135,7 +141,6 @@ export default defineComponent({
         {
           title: t('outputs'),
           key: 'outputs',
-          minWidth: 120,
           render: (row) => (
             <ItemQuantityPerMinuteDisplayList
               modularFactoryId={row.id}
@@ -146,7 +151,8 @@ export default defineComponent({
         {
           title: t('action'),
           key: 'action',
-          width: 180,
+          width: 160,
+          fixed: 'right',
           render: (row) => (
             <NFlex>
               <NButton
@@ -179,7 +185,7 @@ export default defineComponent({
 
     return () => (
       <>
-        <NFlex size="large" vertical>
+        <NFlex class="h-full" size="large" vertical>
           <NFlex justify="space-between">
             <NFlex>
               <NButton
@@ -231,16 +237,26 @@ export default defineComponent({
               animation={150}
             >
               <NDataTable
+                class="min-h-52"
+                style={{ height: `${tableHeight.value}px` }}
                 rowKey={({ id }: ModularFactory) => id}
                 columns={columns.value}
                 data={modularFactoryStore.data}
+                scrollX={960}
+                size="small"
+                flexHeight
               />
             </VueDraggableExt>
           ) : (
             <NDataTable
+              class="min-h-52"
+              style={{ height: `${tableHeight.value}px` }}
               rowKey={({ id }: ModularFactory) => id}
               columns={columns.value}
               data={modularFactoryStore.data}
+              scrollX={960}
+              size="small"
+              flexHeight
             />
           )}
 
@@ -260,7 +276,7 @@ export default defineComponent({
             </NStatistic>
           )}
 
-          <NGrid xGap={16} cols={2}>
+          <NGrid ref="summary" xGap={16} cols={2}>
             <NGridItem>
               <NStatistic label={t('finalTotalInputs')}>
                 {isEmpty(modularFactoryComputedStore.finalComputed?.inputs) ? (
