@@ -56,32 +56,36 @@ export default defineComponent({
                       {(item.value.type === ItemType.solid
                         ? conveyorBelts
                         : pipelines
-                      ).map(({ key, itemsPerMinute }) => (
-                        <div class="flex items-center gap-x-1">
-                          <BuildingImage
-                            name={key}
-                            sizes={[48, 96]}
-                            formats={['avif', 'webp', 'png']}
-                            width={24}
-                            height={24}
-                          />
-                          <span>{t(`buildings.${key}`)}</span>
-                          <span>
-                            <b>
-                              {decimalRound(
-                                props.quantityPerMinute.div(itemsPerMinute),
-                                0,
+                      ).map(({ key, itemsPerMinute }) => {
+                        const quantityPerMinuteRound = decimalRound(
+                          props.quantityPerMinute.div(itemsPerMinute),
+                          0,
+                        )
+                        const quantityPerMinuteRound2 = decimalRound(
+                          props.quantityPerMinute.div(itemsPerMinute),
+                          2,
+                        )
+                        return (
+                          <div class="flex items-center gap-x-1">
+                            <BuildingImage
+                              name={key}
+                              sizes={[48, 96]}
+                              formats={['avif', 'webp', 'png']}
+                              width={24}
+                              height={24}
+                            />
+                            <span>{t(`buildings.${key}`)}</span>
+                            <span>: </span>
+                            <span>
+                              <b>{quantityPerMinuteRound}</b>
+                              {quantityPerMinuteRound !==
+                                quantityPerMinuteRound2 && (
+                                <span> ({quantityPerMinuteRound2})</span>
                               )}
-                            </b>{' '}
-                            (
-                            {decimalRound(
-                              props.quantityPerMinute.div(itemsPerMinute),
-                              1,
-                            )}
-                            )
-                          </span>
-                        </div>
-                      ))}
+                            </span>
+                          </div>
+                        )
+                      })}
                     </div>
                   ),
                 }}
