@@ -12,7 +12,7 @@ import 'virtual:uno.css'
 
 const i18n = createI18n({
   locale: useLocalStorage('locale', 'zh-CN').value,
-  fallbackLocale: 'zh-CN',
+  fallbackLocale: 'en',
   messages,
 })
 

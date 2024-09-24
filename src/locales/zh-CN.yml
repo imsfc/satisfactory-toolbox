@@ -1,6 +1,8 @@
 logoTitle: 幸福工厂小助手
-switchLanguage: English
-switchLanguageCode: en
+
+en: English
+zh-CN: 中文
+
 auto: 自动
 light: 浅色
 dark: 深色

@@ -1,6 +1,8 @@
 logoTitle: Satisfactory Helper
-switchLanguage: 中文
-switchLanguageCode: zh-CN
+
+en: English
+zh-CN: 中文
+
 auto: Auto
 light: Light
 dark: Dark

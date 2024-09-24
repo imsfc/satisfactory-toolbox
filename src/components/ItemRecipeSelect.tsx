@@ -159,7 +159,7 @@ export default defineComponent({
         value={props.value}
         onUpdateValue={props.onUpdateValue}
         options={options.value}
-        consistent-menu-width={false}
+        consistentMenuWidth={false}
         renderLabel={(option: Option) => (
           <ItemRecipeSelectLabel label={option.label} recipeId={option.value} />
         )}
