@@ -115,7 +115,9 @@ export default defineComponent({
         width: 50,
         fixed: 'left',
         render: () => (
-          <DragHandleOutlined class="sort-handle flex cursor-move w-7 h-7" />
+          <div class="sort-handle cursor-move w-6 h-6">
+            <DragHandleOutlined class="w-4 h-4 p-1 flex" />
+          </div>
         ),
       },
       {
