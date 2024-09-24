@@ -28,15 +28,10 @@ finalTotalOutputs: Global Item Surplus
 averageTotalPowerUsage: Net Power
 globalAverageTotalPowerUsage: Global Net Power
 action: Action
-
-delete: Delete
 deleteConfirm: Are you sure you want to delete?
 
-config: Config
 factoryConfig: Factory Config
-
 newAssemblyLine: New Assembly Line
-
 recipe: Recipe
 targetItem: Target Item
 building: Building

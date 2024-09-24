@@ -22,7 +22,9 @@ import ModularFactoryDrawer, {
 import PowerDisplay from '@/components/PowerDisplay'
 import VueDraggableExt from '@/components/VueDraggableExt.vue'
 import AddOutlined from '@/components/icons/AddOutlined'
+import DeleteOutlined from '@/components/icons/DeleteOutlined'
 import DragHandleOutlined from '@/components/icons/DragHandleOutlined'
+import EditOutlined from '@/components/icons/EditOutlined'
 import { useModularFactoryComputedStore } from '@/stores/modularFactoryComputedStore'
 import { useModularFactoryStore } from '@/stores/modularFactoryStore'
 import type { Id, ModularFactory } from '@/types'
@@ -151,17 +153,20 @@ export default defineComponent({
         {
           title: t('action'),
           key: 'action',
-          width: 160,
+          width: 120,
           fixed: 'right',
           render: (row) => (
             <NFlex>
               <NButton
                 size="small"
+                tertiary
                 onClick={() => {
                   modularFactoryDrawerInstance.value?.open(row.id)
                 }}
               >
-                {t('config')}
+                {{
+                  icon: () => <EditOutlined />,
+                }}
               </NButton>
               <NPopconfirm
                 onPositiveClick={() => {
@@ -171,8 +176,10 @@ export default defineComponent({
                 {{
                   default: () => t('deleteConfirm'),
                   trigger: () => (
-                    <NButton type="error" size="small" ghost>
-                      {t('delete')}
+                    <NButton type="error" size="small" tertiary>
+                      {{
+                        icon: () => <DeleteOutlined />,
+                      }}
                     </NButton>
                   ),
                 }}

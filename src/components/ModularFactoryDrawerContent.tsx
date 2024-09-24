@@ -32,6 +32,7 @@ import ItemSelect from './ItemSelect'
 import PowerDisplay from './PowerDisplay'
 import VueDraggableExt from './VueDraggableExt.vue'
 import AddOutlined from './icons/AddOutlined'
+import DeleteOutlined from './icons/DeleteOutlined'
 import DragHandleOutlined from './icons/DragHandleOutlined'
 
 const ItemQuantityPerMinuteDisplayList = defineComponent({
@@ -243,8 +244,10 @@ export default defineComponent({
               {{
                 default: () => t('deleteConfirm'),
                 trigger: () => (
-                  <NButton type="error" size="small" ghost>
-                    {t('delete')}
+                  <NButton type="error" size="small" tertiary>
+                    {{
+                      icon: () => <DeleteOutlined />,
+                    }}
                   </NButton>
                 ),
               }}

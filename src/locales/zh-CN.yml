@@ -28,15 +28,10 @@ finalTotalOutputs: 全局物品盈余
 averageTotalPowerUsage: 平均功率
 globalAverageTotalPowerUsage: 全局平均功率
 action: 操作
-
-delete: 删除
 deleteConfirm: 确定要删除吗？
 
-config: 配置
 factoryConfig: 工厂配置
-
 newAssemblyLine: 新增流水线
-
 recipe: 配方
 targetItem: 目标物品
 building: 建筑
