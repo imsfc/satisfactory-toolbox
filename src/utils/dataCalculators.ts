@@ -27,11 +27,20 @@ export const calculatePowerUsage = (
     OVERCLOCKING_POWER_EXPONENT,
   )
   if (Decimal.isDecimal(powerUsage)) {
-    return Decimal.mul(powerUsage, overclockingPowerMultiplier)
+    return Decimal.mul(
+      powerUsage,
+      powerUsage.lt(0) ? clockSpeed : overclockingPowerMultiplier,
+    )
   }
   return {
-    min: Decimal.mul(powerUsage.min, overclockingPowerMultiplier),
-    max: Decimal.mul(powerUsage.max, overclockingPowerMultiplier),
+    min: Decimal.mul(
+      powerUsage.min,
+      powerUsage.min.lt(0) ? clockSpeed : overclockingPowerMultiplier,
+    ),
+    max: Decimal.mul(
+      powerUsage.max,
+      powerUsage.min.lt(0) ? clockSpeed : overclockingPowerMultiplier,
+    ),
   }
 }
 

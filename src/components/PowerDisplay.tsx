@@ -16,13 +16,18 @@ export default defineComponent({
     return () => (
       <div class="flex flex-col gap-y-1">
         <div class="text-sm leading-4">
-          <b>{decimalRound(props.averagePowerUsage, 1)}</b>
+          <b>
+            {props.averagePowerUsage.lt(0) && '+'}
+            {decimalRound(props.averagePowerUsage.abs(), 1)}
+          </b>
           {' MW'}
         </div>
         {props.powerUsageRange && (
           <div class="text-xs leading-3.5 opacity-75">
-            {decimalRound(props.powerUsageRange.min, 1)} MW -{' '}
-            {decimalRound(props.powerUsageRange.max, 1)} MW
+            {props.powerUsageRange.min.lt(0) && '+'}
+            {decimalRound(props.powerUsageRange.min.abs(), 1)} MW -{' '}
+            {props.powerUsageRange.max.lt(0) && '+'}
+            {decimalRound(props.powerUsageRange.max.abs(), 1)} MW
           </div>
         )}
       </div>

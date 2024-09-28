@@ -9,5 +9,6 @@
   { "id": 8, "key": "Converter" },
   { "id": 9, "key": "Quantum_Encoder" },
   { "id": 10, "key": "Smelter", "powerUsage": 4 },
-  { "id": 11, "key": "Foundry", "powerUsage": 16 }
+  { "id": 11, "key": "Foundry", "powerUsage": 16 },
+  { "id": 10001, "key": "Nuclear_Power_Plant", "powerUsage": -2500 }
 ]

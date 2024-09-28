@@ -3048,5 +3048,27 @@
     "outputs": [{ "itemId": 152, "quantityPerCycle": 1 }],
     "producedInId": 3,
     "productionDuration": 60
+  },
+  {
+    "id": 10001,
+    "key": "Uranium_Fuel_Rod_(burning)",
+    "inputs": [
+      { "itemId": 114, "quantityPerCycle": 1 },
+      { "itemId": 67, "quantityPerCycle": 1200 }
+    ],
+    "outputs": [{ "itemId": 118, "quantityPerCycle": 50 }],
+    "producedInId": 10001,
+    "productionDuration": 300
+  },
+  {
+    "id": 10002,
+    "key": "Plutonium_Fuel_Rod_(burning)",
+    "inputs": [
+      { "itemId": 121, "quantityPerCycle": 1 },
+      { "itemId": 67, "quantityPerCycle": 2400 }
+    ],
+    "outputs": [{ "itemId": 149, "quantityPerCycle": 10 }],
+    "producedInId": 10001,
+    "productionDuration": 600
   }
 ]
