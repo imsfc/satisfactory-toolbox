@@ -708,7 +708,7 @@
     "key": "Molded_Beam",
     "inputs": [
       { "itemId": 26, "quantityPerCycle": 24 },
-      { "itemId": 11, "quantityPerCycle": 16 }
+      { "itemId": 10, "quantityPerCycle": 16 }
     ],
     "outputs": [{ "itemId": 28, "quantityPerCycle": 9 }],
     "producedInId": 11,
