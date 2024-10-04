@@ -39,7 +39,7 @@ const makeNetValues = () => {
 
   const getInputs = () => {
     return netValues
-      .filter(({ netValue }) => netValue.lt(0))
+      .filter(({ netValue }) => netValue.lt(-0.00001))
       .sort((a, b) => a.netValue.sub(b.netValue).toNumber())
       .map(({ itemId, netValue }) => ({
         itemId,
@@ -49,7 +49,7 @@ const makeNetValues = () => {
 
   const getOutputs = () => {
     return netValues
-      .filter(({ netValue }) => netValue.gt(0))
+      .filter(({ netValue }) => netValue.gt(0.00001))
       .sort((a, b) => b.netValue.sub(a.netValue).toNumber())
       .map(({ itemId, netValue }) => ({
         itemId,
