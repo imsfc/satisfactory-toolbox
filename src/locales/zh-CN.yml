@@ -33,6 +33,7 @@ deleteConfirm: 确定要删除吗？
 factoryConfig: 工厂配置
 newAssemblyLine: 新增流水线
 recipe: 配方
+targetItemType: 目标物品类型
 targetItem: 目标物品
 building: 建筑
 targetItemSpeed: 目标物品速率

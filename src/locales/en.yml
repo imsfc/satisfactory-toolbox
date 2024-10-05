@@ -33,6 +33,7 @@ deleteConfirm: Are you sure you want to delete?
 factoryConfig: Factory Config
 newAssemblyLine: New Assembly Line
 recipe: Recipe
+targetItemType: Target Item Type
 targetItem: Target Item
 building: Building
 targetItemSpeed: Target Item Speed

@@ -130,6 +130,7 @@ export default defineComponent({
   props: {
     value: Number as PropType<Id | null>,
     onUpdateValue: Function as PropType<(value: Id | null) => void>,
+    itemType: String as PropType<'input' | 'output'>,
     itemId: Number as PropType<Id | null>,
   },
   setup(props) {
@@ -138,8 +139,10 @@ export default defineComponent({
     const options = computed(() => {
       if (props.itemId) {
         return recipes
-          .filter(({ outputs }) => {
-            return outputs.some(({ itemId }) => itemId === props.itemId)
+          .filter(({ inputs, outputs }) => {
+            return (props.itemType === 'input' ? inputs : outputs).some(
+              ({ itemId }) => itemId === props.itemId,
+            )
           })
           .map(({ id, key }) => {
             return {

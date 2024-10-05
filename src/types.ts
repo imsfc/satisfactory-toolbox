@@ -67,6 +67,7 @@ export type RecipeJson = Omit<
 
 export interface AssemblyLine {
   id: Id
+  targetItemType: 'input' | 'output'
   targetItemId: Id | null
   targetItemSpeed: number | null
   recipeId: Id | null

@@ -13,6 +13,8 @@ import {
   NInput,
   NInputNumber,
   NPopconfirm,
+  NRadioButton,
+  NRadioGroup,
   NStatistic,
 } from 'naive-ui'
 import { isEmpty } from 'radash'
@@ -121,6 +123,21 @@ export default defineComponent({
         ),
       },
       {
+        title: t('targetItemType'),
+        key: 'targetItemType',
+        render: (row) => (
+          <NRadioGroup
+            value={row.targetItemType}
+            onUpdateValue={(value) => {
+              modularFactoryStore.setAssemblyLineTargetItemType(row.id, value)
+            }}
+          >
+            <NRadioButton value="input" label="原料" />
+            <NRadioButton value="output" label="产物" />
+          </NRadioGroup>
+        ),
+      },
+      {
         title: t('targetItem'),
         key: 'targetItem',
         render: (row) => (
@@ -129,6 +146,7 @@ export default defineComponent({
             onUpdateValue={(value) => {
               modularFactoryStore.setAssemblyLineTargetItem(row.id, value)
             }}
+            itemType={row.targetItemType}
           />
         ),
       },
@@ -141,6 +159,7 @@ export default defineComponent({
             onUpdateValue={(value) => {
               modularFactoryStore.setAssemblyLineRecipe(row.id, value)
             }}
+            itemType={row.targetItemType}
             itemId={row.targetItemId}
           />
         ),

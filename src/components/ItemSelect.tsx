@@ -42,6 +42,7 @@ export default defineComponent({
   props: {
     value: Number as PropType<Id | null>,
     onUpdateValue: Function as PropType<(value: Id | null) => void>,
+    itemType: String as PropType<'input' | 'output'>,
   },
   setup(props) {
     const { t } = useI18n()
@@ -49,8 +50,10 @@ export default defineComponent({
     const options = computed(() =>
       items
         .filter(({ id }) => {
-          return recipes.some(({ outputs }) => {
-            return outputs.some(({ itemId }) => itemId === id)
+          return recipes.some(({ inputs, outputs }) => {
+            return (props.itemType === 'input' ? inputs : outputs).some(
+              ({ itemId }) => itemId === id,
+            )
           })
         })
         .map(({ id, key }) => {

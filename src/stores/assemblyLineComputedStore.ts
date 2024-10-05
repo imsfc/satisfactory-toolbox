@@ -24,12 +24,14 @@ export const useAssemblyLineComputedStore = defineStore(storeKey, () => {
       data.forEach(
         ({
           id,
+          targetItemType,
           targetItemId,
           targetItemSpeed: targetItemSpeedNumber,
           recipeId,
           clockSpeed: clockSpeedNumber,
         }) => {
           if (
+            targetItemType &&
             targetItemId &&
             targetItemSpeedNumber &&
             recipeId &&
@@ -44,10 +46,10 @@ export const useAssemblyLineComputedStore = defineStore(storeKey, () => {
             // 配方的建筑
             const building = getBuilding(recipe.producedInId)
 
-            // 配方输出中的的目标物品对象
-            const targetOutputItem = recipe.outputs.find(
-              ({ itemId }) => itemId === targetItemId,
-            )
+            // 配方中的的目标物品对象
+            const targetOutputItem = recipe[
+              targetItemType === 'input' ? 'inputs' : 'outputs'
+            ].find(({ itemId }) => itemId === targetItemId)
 
             // 目标物品和配方不匹配
             if (!targetOutputItem) {

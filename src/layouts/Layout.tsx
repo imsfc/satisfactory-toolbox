@@ -81,7 +81,7 @@ export default defineComponent({
                 </div>
               )}
             />
-            <div class="leading-none">v0.1</div>
+            <div class="leading-none">v0.2</div>
           </div>
         </NLayoutHeader>
 

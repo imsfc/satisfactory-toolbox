@@ -70,6 +70,7 @@ export const useModularFactoryStore = defineStore(storeKey, () => {
     const id = nanoid()
     modularFactory.data.unshift({
       id,
+      targetItemType: 'output',
       targetItemId: null,
       targetItemSpeed: null,
       recipeId: null,
@@ -89,17 +90,14 @@ export const useModularFactoryStore = defineStore(storeKey, () => {
     return assemblyLineMap.value[assemblyLineId]
   }
 
-  const setAssemblyLineTargetItem = (
-    assemblyLineId: Id,
-    targetItemId: Id | null,
-  ) => {
+  const updateRecipe = (assemblyLineId: Id) => {
     const assemblyLine = getAssemblyLine(assemblyLineId)
-    assemblyLine.targetItemId = targetItemId
-
     // 过滤出输出这个物品的配方
-    const filteredRecipes = targetItemId
-      ? recipes.filter(({ outputs }) => {
-          return outputs.some(({ itemId }) => itemId === targetItemId)
+    const filteredRecipes = assemblyLine.targetItemId
+      ? recipes.filter(({ inputs, outputs }) => {
+          return (
+            assemblyLine.targetItemType === 'input' ? inputs : outputs
+          ).some(({ itemId }) => itemId === assemblyLine.targetItemId)
         })
       : []
 
@@ -123,6 +121,24 @@ export const useModularFactoryStore = defineStore(storeKey, () => {
       assemblyLine.recipeId = filteredRecipes[0].id
       return
     }
+  }
+
+  const setAssemblyLineTargetItemType = (
+    assemblyLineId: Id,
+    targetItemType: 'input' | 'output',
+  ) => {
+    const assemblyLine = getAssemblyLine(assemblyLineId)
+    assemblyLine.targetItemType = targetItemType
+    updateRecipe(assemblyLineId)
+  }
+
+  const setAssemblyLineTargetItem = (
+    assemblyLineId: Id,
+    targetItemId: Id | null,
+  ) => {
+    const assemblyLine = getAssemblyLine(assemblyLineId)
+    assemblyLine.targetItemId = targetItemId
+    updateRecipe(assemblyLineId)
   }
 
   const setAssemblyLineRecipe = (assemblyLineId: Id, recipeId: Id | null) => {
@@ -160,6 +176,7 @@ export const useModularFactoryStore = defineStore(storeKey, () => {
     newAssemblyLine,
     deleteAssemblyLine,
     getAssemblyLine,
+    setAssemblyLineTargetItemType,
     setAssemblyLineTargetItem,
     setAssemblyLineRecipe,
     setAssemblyLineTargetItemSpeed,
