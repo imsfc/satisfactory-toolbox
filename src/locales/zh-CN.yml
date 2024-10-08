@@ -43,3 +43,4 @@ fluidUnitName: 立方米
 unitsPerMinute: '每分钟 {0} {1}'
 seconds: 秒
 clockSpeed: 超频 (%)
+energySaving: 节能

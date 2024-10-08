@@ -28,6 +28,7 @@ import type { AssemblyLine, Id } from '@/types'
 import { decimalRound } from '@/utils/decimalHelper'
 
 import BuildingQuantityDisplay from './BuildingQuantityDisplay'
+import ClockSpeed from './ClockSpeed'
 import ItemQuantityPerMinuteDisplay from './ItemQuantityPerMinuteDisplay'
 import ItemRecipeSelect from './ItemRecipeSelect'
 import ItemSelect from './ItemSelect'
@@ -185,22 +186,7 @@ export default defineComponent({
         title: t('clockSpeed'),
         key: 'clockSpeed',
         render: (row) => {
-          return (
-            <NInputNumber
-              value={
-                row.clockSpeed &&
-                new Decimal(row.clockSpeed).mul(100).toNumber()
-              }
-              onUpdateValue={(value) => {
-                modularFactoryStore.setAssemblyLineClockSpeed(
-                  row.id,
-                  value && decimalRound(new Decimal(value).div(100), 6),
-                )
-              }}
-              min={1}
-              max={250}
-            />
-          )
+          return <ClockSpeed assemblyLineId={row.id} />
         },
       },
       {
